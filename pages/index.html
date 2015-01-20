@@ -35,13 +35,7 @@
                 <div class="modal-content">
 
                     <div class="modal-body">
-                        <video id="demo_video" class="video-js vjs-default-skin"
-                               controls preload="auto"
-                               data-setup='{ "bigPlayButton": true, "controlBar": false }'>
-                            <source id="mp4-path" src="../Content/pres1/videos/Subtitles.mp4" type='video/mp4' />
-                            <!--<track kind="subtitles" src="../Content/pres1/videos/Subtitles.vtt" srclang="en" label="English" default>-->
-                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-                        </video>
+
                     </div>
 
                 </div>
@@ -84,52 +78,6 @@
         videojs.options.flash.swf = "../Scripts/video-js/video-js.swf";
     </script>
 
-    <script>
-        $(document).ready(function () {
-            //show_animated_overlay();
-            get_available_presentations();
 
-            videojs('demo_video').ready(function () {
-
-                alert('video-ready');
-                // Store the video object
-                var myPlayer = this, id = myPlayer.id();
-
-                // Make up an aspect ratio
-                var aspectRatio = 9 / 16;
-
-                function resizeVideoJS() {
-                    var width = document.getElementById(id).parentElement.offsetWidth;
-                    myPlayer.width(width).height(width * aspectRatio);
-                }
-
-                $("#videoModal").on('show.bs.modal', function () {
-
-                    var width = $(document).width();
-                    myPlayer.width(width).height(width * aspectRatio);
-                    myPlayer.play();
-
-                    $(window).resize(function () {
-                        resizeVideoJS();
-                    });
-
-                    $('.video-js').click(function () {
-                        $('#videoModal').modal('hide');
-                    });
-
-                });
-
-                $("#videoModal").on('hidden.bs.modal', function () {
-                    myPlayer.pause();
-                });
-
-            });
-
-            var source = $('source');
-            console.log(source);
-
-
-        });
-    </script>
 </body>
 </html>

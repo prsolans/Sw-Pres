@@ -1,26 +1,26 @@
 var pagelist = '{ "pages": [ ' +
-      '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"none", "background":"home" },' +
-      '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "two", "parent":"none" },' +
-      '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none" },' +
-      '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none" },' +
-      '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none" },' +
-      '{ "id": 5, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"capabilities" },' +
-      '{ "id": 6, "title": "Fittings", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-      '{ "id": 7, "title": "Power","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-      '{ "id": 8, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-      '{ "id": 9, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-      '{ "id": 10, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"capabilities" },' +
-      '{ "id": 11, "title": "Valves", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-      '{ "id": 12, "title": "Filters", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-      '{ "id": 13, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"none" }' +
-      ']}';
+    '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"none", "background":"home" },' +
+    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "two", "parent":"none" },' +
+    '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none" },' +
+    '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none" },' +
+    '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none" },' +
+    '{ "id": 5, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"capabilities" },' +
+    '{ "id": 6, "title": "Fittings", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
+    '{ "id": 7, "title": "Power","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
+    '{ "id": 8, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
+    '{ "id": 9, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
+    '{ "id": 10, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"capabilities" },' +
+    '{ "id": 11, "title": "Valves", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
+    '{ "id": 12, "title": "Filters", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
+    '{ "id": 13, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"none" }' +
+    ']}';
 
 $(document).on("pagebeforecreate", function (event) {
 
     $.ajaxPrefilter(function (options) {
         options.crossDomain = true;
     });
-    $.ajaxSetup({ async: false });
+    $.ajaxSetup({async: false});
 
     get_child_pages('capabilities');
     get_child_pages('products');
@@ -29,28 +29,30 @@ $(document).on("pagebeforecreate", function (event) {
     var path = filepath.split("Content/");
     var fileDepth = path[0];
 
-
     var presentationID = getParameterByName('presID');
     if (presentationID) {
         $.getScript(fileDepth + 'Content/pres' + presentationID + '/settings.js');
-
-        $('.row a').each(function () {
-            this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
-        });
-        $('.panel-link-item').each(function () {
-            this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
-        });
     }
 
     load_page_elements(fileDepth);
 
     var pageID = getParameterByName('pageId');
-    if (pageID == "") { pageID = 0; }
+    if (pageID == "") {
+        pageID = 0;
+    }
     load_page_info(pageID);
 });
 
 $(document).ready(function () {
-    get_video_details();
+    var presentationID = getParameterByName('presID');
+
+    $('.row a').each(function () {
+        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
+    });
+    $('.panel-link-item').each(function () {
+        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
+    });
+
 });
 
 function load_page_elements(fileDepth) {
@@ -58,13 +60,22 @@ function load_page_elements(fileDepth) {
     if (fileDepth == "../../") {
         var menuDepth = "../";
     }
-    else { var menuDepth = ""; }
+    else {
+        var menuDepth = "";
+    }
 
     var sidebarMenuHTML = '<ul><li><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul>';
     $('#sectionMenu').html(sidebarMenuHTML);
 
     var headerRow = '<a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br /><h1 id="header-title">PRS</h1><a href="#sectionMenu" data-icon="bars" id="section-menu-button">Menu</a><br/>';
     $("#header-row").html(headerRow).enhanceWithin();
+
+    var pageID = getParameterByName('pageId');
+    var presID = getParameterByName('presID');
+
+    if (pageID == 13) {
+        $('#view-content-link').attr('href', 'mainMenu.html?pageId=1&presID=' + presID);
+    }
 
 }
 
@@ -133,12 +144,6 @@ function get_available_presentations() {
         var html = '<a href="pages/index.html?pageId=13&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
         $('#presentations-list').append(html);
 
-        var presentationID = getParameterByName('presID');
-
-        if (this.id == presentationID) {
-            $('#view-content-link').attr('href', 'mainMenu.html?pageId=1&presID=' + this.id);
-        }
-
     });
 
 }
@@ -149,7 +154,7 @@ function get_available_markets() {
     $.each(livemarkets, function () {
         var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
         pageId = obj[0].id;
-        var html = '<div class="navigation-item"><img src="' + fileDepth + 'Content/images/item-menu-' + this.slug + '.gif" /><br /> <a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID='+presID+'" data-ajax="false">' + this.title + '</a></div>'
+        var html = '<div class="navigation-item"><img src="' + fileDepth + 'Content/images/item-menu-' + this.slug + '.gif" /><br /> <a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false">' + this.title + '</a></div>';
         $('.item-menu').append(html);
     });
 }
@@ -169,9 +174,7 @@ function get_file_location() {
 
     var path = filepath.split("Content/");
 
-    var fileDepth = path[0];
-
-    return fileDepth;
+    return path[0];
 }
 
 function get_video_settings() {
@@ -180,7 +183,9 @@ function get_video_settings() {
     $.each(livevideos, function () {
 
         var path = menuDepth + 'Content/videos';
-        if (this.custom == true) { path = menuDepth + 'Content/pres' + presID + '/videos'; }
+        if (this.custom == true) {
+            path = menuDepth + 'Content/pres' + presID + '/videos';
+        }
         var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
         $('#video-list').append(html);
     });
@@ -189,24 +194,58 @@ function get_video_settings() {
 function get_video_details() {
     livevideos = JSON.parse(videoList);
     $.each(livevideos, function () {
-        alert(fileDepth);
         var path = fileDepth + 'Content/videos';
-        if (this.custom == true) { path = fileDepth + 'Content/pres' + presID + '/videos'; }
+        if (this.custom == true) {
+            path = fileDepth + 'Content/pres' + presID + '/videos';
+        }
         var posterImage = path + '/' + this.filename + '.gif';
         var video = path + '/' + this.filename + '.mp4';
-        console.log(posterImage);
-        console.log(video);
+
         $('#video-poster').attr('src', posterImage);
-        $('#mp4-path').attr('src', video);
 
-        //var data = $('#demo_video_html5_api').data('setup');
-        //console.log(data);
-        //$('.video-js').data("setup", { "bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video })
-        //var data = $('.video-js').data('setup');
-        //console.log(data);
+        var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
+        $('.modal-body').html(html);
+        $('.video-js').data("setup", {"bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video})
 
     });
+
+
+    videojs('demo_video').ready(function () {
+
+        // Store the video object
+        var myPlayer = this, id = myPlayer.id();
+
+        // Make up an aspect ratio
+        var aspectRatio = 9 / 16;
+
+        function resizeVideoJS() {
+            var width = document.getElementById(id).parentElement.offsetWidth;
+            myPlayer.width(width).height(width * aspectRatio);
+        }
+
+        $("#videoModal").on('show.bs.modal', function () {
+
+            var width = $(document).width();
+            myPlayer.width(width).height(width * aspectRatio);
+            myPlayer.play();
+
+            $(window).resize(function () {
+                resizeVideoJS();
+            });
+
+            $('.video-js').click(function () {
+                $('#videoModal').modal('hide');
+            });
+
+        });
+
+        $("#videoModal").on('hidden.bs.modal', function () {
+            myPlayer.pause();
+        });
+
+    });
+    
 }
 
 /**
@@ -271,57 +310,57 @@ function show_animated_overlay() {
     $("body").append("<div id='overlay-bottom'></div>");
 
     $("#overlay-top")
-       .height(narrowHeight)
-       .css({
-           'opacity': 0.8,
-           'position': 'absolute',
-           'top': 0,
-           'left': 0,
-           'background-color': 'blue',
-           'width': '100%',
-           'z-index': 5000
-       });
+        .height(narrowHeight)
+        .css({
+            'opacity': 0.8,
+            'position': 'absolute',
+            'top': 0,
+            'left': 0,
+            'background-color': 'blue',
+            'width': '100%',
+            'z-index': 5000
+        });
     $("#overlay-center")
-   .height(centerHeight)
-   .css({
-       'opacity': 0.8,
-       'position': 'absolute',
-       'top': narrowHeight,
-       'left': 0,
-       'background-color': 'blue',
-       'width': '100%',
-       'z-index': 5000,
-       'margin-top': 5,
-       'margin-bottom': 5
-   });
+        .height(centerHeight)
+        .css({
+            'opacity': 0.8,
+            'position': 'absolute',
+            'top': narrowHeight,
+            'left': 0,
+            'background-color': 'blue',
+            'width': '100%',
+            'z-index': 5000,
+            'margin-top': 5,
+            'margin-bottom': 5
+        });
     $("#overlay-bottom")
-   .height(narrowHeight)
-   .css({
-       'opacity': 0.8,
-       'position': 'absolute',
-       'top': docBottom,
-       'left': 0,
-       'background-color': 'blue',
-       'width': '100%',
-       'z-index': 5000
-   });
+        .height(narrowHeight)
+        .css({
+            'opacity': 0.8,
+            'position': 'absolute',
+            'top': docBottom,
+            'left': 0,
+            'background-color': 'blue',
+            'width': '100%',
+            'z-index': 5000
+        });
 
     $(".fly-in")
-    .css({
-        'position': 'absolute',
-        'top': narrowHeight,
-        'left': -3000,
-        'width': '100%'
-    });
+        .css({
+            'position': 'absolute',
+            'top': narrowHeight,
+            'left': -3000,
+            'width': '100%'
+        });
 
     $('#overlay-center').delay(delayTime).animate({
-        left: 3000,
+        left: 3000
     }, 600);
     $('#overlay-top').delay(delayTime).animate({
-        left: -3000,
+        left: -3000
     }, 1000);
     $('#overlay-bottom').delay(delayTime).animate({
-        left: -3000,
+        left: -3000
     }, 800);
 
     $('.fly-in').delay(delayTime).animate({

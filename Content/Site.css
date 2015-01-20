@@ -106,19 +106,16 @@ footer p {
     color: aquamarine;
 }
 
-/*.ribbon .capabilities-header {
-    background-color: darkseagreen;
-    filter: alpha(opacity=80);
-    opacity: 0.8;
-    height: 180px;
+#sectionMenu ul li {
+    list-style: none;
 }
 
-.ribbon .capabilities-list {
-    background-color: darkseagreen;
-    filter: alpha(opacity=40);
-    opacity: 1;
-    height: 180px;
-}*/
+#sectionMenu ul li:after {
+    color: red;
+    content: ' \25CF';
+    font-size: 30px;
+    margin-top: 5px;
+}
 
 /* LANDING ANIMATIONS */
 .landing-animation {
@@ -187,8 +184,6 @@ footer p {
     height: 100%;
     border-radius: 0;
 }
-
-
 
 /* DEBUGGING - NOT UTILIZED FOR PRODUCTION CODE */
 
