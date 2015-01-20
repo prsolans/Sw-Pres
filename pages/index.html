@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
+    <link href="../Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-1.11.2.min.js"></script>
+    <script src="../Scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../Scripts/modernizr-2.6.2.js"></script>
+    <script src="../Scripts/main.js"></script>
+
+</head>
+<body>
+    <!-- Add your site or application content here -->
+    <div data-role='page' data-pageid="1" id="page-container" data-ajax="false">
+        <!-- Modal -->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <video id="demo_video" class="video-js vjs-default-skin"
+                               controls preload="auto"
+                               data-setup='{ "bigPlayButton": true, "controlBar": false }'>
+                            <source id="mp4-path" src="../Content/pres1/videos/Subtitles.mp4" type='video/mp4' />
+                            <!--<track kind="subtitles" src="../Content/pres1/videos/Subtitles.vtt" srclang="en" label="English" default>-->
+                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- END Modal -->
+        <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+
+        </div>
+        <!-- /panel -->
+        <div id="header-row" class='header-row' data-role='header' data-position='fixed'>
+
+        </div>
+        <!-- /header -->
+
+        <div class="row fly-in">
+            <div class="full-width-band">
+                <div class="col-xs-4">
+                    <div id="video-list"></div>
+                    <button id="video-poster" data-toggle="modal" data-target="#videoModal">VIDEO</button>
+                </div> <div class="col-xs-4 client-callout">
+                        <h1 id="client-name"></h1>
+                        <img src="" id="client-logo" height="100" />
+                </div>
+                <div class="col-xs-4">
+                    <img src="../Content/images/video-placeholder.gif" height="200" />
+                </div>
+
+            </div>
+            <a id="view-content-link" href="" class="ui-btn view-content-link" data-ajax="false">View Content</a>
+        </div>
+
+
+
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Scripts/video-js/video-js.min.css" rel="stylesheet">
+    <script src="../Scripts/video-js/video.js"></script>
+    <script>
+        videojs.options.flash.swf = "../Scripts/video-js/video-js.swf";
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            //show_animated_overlay();
+            get_available_presentations();
+
+            videojs('demo_video').ready(function () {
+
+                alert('video-ready');
+                // Store the video object
+                var myPlayer = this, id = myPlayer.id();
+
+                // Make up an aspect ratio
+                var aspectRatio = 9 / 16;
+
+                function resizeVideoJS() {
+                    var width = document.getElementById(id).parentElement.offsetWidth;
+                    myPlayer.width(width).height(width * aspectRatio);
+                }
+
+                $("#videoModal").on('show.bs.modal', function () {
+
+                    var width = $(document).width();
+                    myPlayer.width(width).height(width * aspectRatio);
+                    myPlayer.play();
+
+                    $(window).resize(function () {
+                        resizeVideoJS();
+                    });
+
+                    $('.video-js').click(function () {
+                        $('#videoModal').modal('hide');
+                    });
+
+                });
+
+                $("#videoModal").on('hidden.bs.modal', function () {
+                    myPlayer.pause();
+                });
+
+            });
+
+            var source = $('source');
+            console.log(source);
+
+
+        });
+    </script>
+</body>
+</html>
