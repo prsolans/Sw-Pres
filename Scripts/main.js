@@ -1,18 +1,22 @@
 var pagelist = '{ "pages": [ ' +
     '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"none", "background":"home" },' +
-    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "two", "parent":"none" },' +
-    '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none" },' +
-    '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none" },' +
-    '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none" },' +
-    '{ "id": 5, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"capabilities" },' +
-    '{ "id": 6, "title": "Fittings", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-    '{ "id": 7, "title": "Power","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-    '{ "id": 8, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-    '{ "id": 9, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"markets" },' +
-    '{ "id": 10, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"capabilities" },' +
-    '{ "id": 11, "title": "Valves", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-    '{ "id": 12, "title": "Filters", "filename": "pages/products/detail", "layout": "three", "parent":"products" },' +
-    '{ "id": 13, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"none" }' +
+    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "two", "parent":"none", "background":"main-menu" },' +
+    '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none", "background":"main-menu" },' +
+    '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none", "background":"products" },' +
+    '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none", "background":"markets" },' +
+    '{ "id": 5, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"capabilities", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 6, "title": "Fittings", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-fittings" },' +
+    '{ "id": 7, "title": "Power","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"power", "menu":"ma-power" },' +
+    '{ "id": 8, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"main-menu", "menu":"ma-oil" },' +
+    '{ "id": 9, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"main-menu", "menu":"ma-alternative" },' +
+    '{ "id": 10, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"capabilities", "background":"main-menu", "menu":"ca-services" },' +
+    '{ "id": 11, "title": "Valves", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-valves" },' +
+    '{ "id": 12, "title": "Filters", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-filters" },' +
+    '{ "id": 13, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"none", "background":"home" },' +
+    '{ "id": 14, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "id": 15, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-leak" },' +
+    '{ "id": 16, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-measure" },' +
+    '{ "id": 17, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "three", "parent":"power", "background":"power-blur", "menu":"pr-leak" }' +
     ']}';
 
 $(document).on("pagebeforecreate", function (event) {
@@ -28,7 +32,6 @@ $(document).on("pagebeforecreate", function (event) {
     filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
     var fileDepth = path[0];
-
     var presentationID = getParameterByName('presID');
     if (presentationID) {
         $.getScript(fileDepth + 'Content/pres' + presentationID + '/settings.js');
@@ -40,14 +43,15 @@ $(document).on("pagebeforecreate", function (event) {
     if (pageID == "") {
         pageID = 0;
     }
-    load_page_info(pageID);
+
+    load_page_info(pageID, fileDepth);
 });
 
 $(document).ready(function () {
     var presentationID = getParameterByName('presID');
 
     $('.row a').each(function () {
-        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
+   //     this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
     });
     $('.panel-link-item').each(function () {
         this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
@@ -55,82 +59,16 @@ $(document).ready(function () {
 
 });
 
-function load_page_elements(fileDepth) {
 
-    if (fileDepth == "../../") {
-        var menuDepth = "../";
-    }
-    else {
-        var menuDepth = "";
-    }
+function get_available_markets() {
+    livemarkets = JSON.parse(marketList);
 
-    var sidebarMenuHTML = '<ul><li><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul>';
-    $('#sectionMenu').html(sidebarMenuHTML);
-
-    var headerRow = '<a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br /><h1 id="header-title">PRS</h1><a href="#sectionMenu" data-icon="bars" id="section-menu-button">Menu</a><br/>';
-    $("#header-row").html(headerRow).enhanceWithin();
-
-    var pageID = getParameterByName('pageId');
-    var presID = getParameterByName('presID');
-
-    if (pageID == 13) {
-        $('#view-content-link').attr('href', 'mainMenu.html?pageId=1&presID=' + presID);
-    }
-
-}
-
-/**
- * Get the ID of the page content
- * @returns int;
- */
-function get_container_id() {
-    var item;
-    item = $('#page-container').data('pageid');
-
-    return item;
-}
-
-function get_page_details(id) {
-
-    var select = JSON.parse(pagelist);
-    item = select.pages[id];
-
-    return item;
-}
-
-function get_child_pages(section) {
-
-    var select = JSON.parse(pagelist);
-    var items = select.pages;
-    var fileDepth = get_file_location();
-    $.each(items, function () {
-        if (this.parent == section) {
-
-            var html = '<div class="col-sm-2"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false">' + this.title + '</a></div>';
-            var element = section + '-child-pages-list';
-            $("." + element).append(html);
-        }
+    $.each(livemarkets, function () {
+        var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
+        pageId = obj[0].id;
+        var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="80" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+        $('.item-menu').append(html);
     });
-}
-
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-function getObjects(obj, key, val) {
-    var objects = [];
-    for (var i in obj) {
-        if (!obj.hasOwnProperty(i)) continue;
-        if (typeof obj[i] == 'object') {
-            objects = objects.concat(getObjects(obj[i], key, val));
-        } else if (i == key && obj[key] == val) {
-            objects.push(obj);
-        }
-    }
-    return objects;
 }
 
 function get_available_presentations() {
@@ -148,25 +86,30 @@ function get_available_presentations() {
 
 }
 
-function get_available_markets() {
-    livemarkets = JSON.parse(marketList);
+function get_child_pages(section) {
 
-    $.each(livemarkets, function () {
-        var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-        pageId = obj[0].id;
-        var html = '<div class="navigation-item"><img src="' + fileDepth + 'Content/images/item-menu-' + this.slug + '.gif" /><br /> <a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false">' + this.title + '</a></div>';
-        $('.item-menu').append(html);
+    var select = JSON.parse(pagelist);
+    var items = select.pages;
+    var fileDepth = get_file_location();
+    $.each(items, function () {
+        if (this.parent == section) {
+
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="80" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var element = section + '-child-pages-list';
+            $("." + element).append(html);
+        }
     });
 }
 
-function get_presentation_settings() {
-    settings = JSON.parse(settings);
+/**
+ * Get the ID of the page content
+ * @returns int;
+ */
+function get_container_id() {
+    var item;
+    item = $('#page-container').data('pageid');
 
-    $.each(settings, function () {
-        $('#header-title').html(this.division);
-        $('#client-name').html(this.client);
-        $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
-    });
+    return item;
 }
 
 function get_file_location() {
@@ -177,17 +120,20 @@ function get_file_location() {
     return path[0];
 }
 
-function get_video_settings() {
+function get_page_details(id) {
 
-    livevideos = JSON.parse(videoList);
-    $.each(livevideos, function () {
+    var select = JSON.parse(pagelist);
+    item = select.pages[id];
 
-        var path = menuDepth + 'Content/videos';
-        if (this.custom == true) {
-            path = menuDepth + 'Content/pres' + presID + '/videos';
-        }
-        var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
-        $('#video-list').append(html);
+    return item;
+}
+
+function get_presentation_settings() {
+    settings = JSON.parse(settings);
+
+    $.each(settings, function () {
+        $('#header-title').html(this.division);
+        $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
     });
 }
 
@@ -206,7 +152,7 @@ function get_video_details() {
         var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
         $('.modal-body').html(html);
-        $('.video-js').data("setup", {"bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video})
+        $('.video-js').data("setup", { "bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video })
 
     });
 
@@ -245,26 +191,73 @@ function get_video_details() {
         });
 
     });
-    
+
+}
+
+function get_video_settings() {
+
+    livevideos = JSON.parse(videoList);
+    $.each(livevideos, function () {
+
+        var path = menuDepth + 'Content/videos';
+        if (this.custom == true) {
+            path = menuDepth + 'Content/pres' + presID + '/videos';
+        }
+        var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
+        $('#video-list').append(html);
+    });
+}
+
+function load_page_elements(fileDepth) {
+    var pageID = getParameterByName('pageId');
+    var presID = getParameterByName('presID');
+
+    if (fileDepth == "../../") {
+        var menuDepth = "../";
+    }
+    else {
+        var menuDepth = "";
+    }
+
+    var sidebarMenuHTML = '<ul><li><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul><p><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br />';
+    $('#sectionMenu').html(sidebarMenuHTML);
+
+    var headerRow = '<a href="'+fileDepth+'pages/index.html?pageId=13&presID='+presID+'" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="'+fileDepth+'Content/images/icons-png/bars-black.png"/></a><br/>';
+    $("#header-row").html(headerRow).enhanceWithin();
+
+    if (pageID == 13) {
+        $('#view-content-link').attr('href', 'mainMenu.html?pageId=1&presID=' + presID);
+    }
+
 }
 
 /**
  * Using the page ID, gather and display page layout and HTML content
  * @param id
  */
-function load_page_info(id) {
+function load_page_info(id, fileDepth) {
     var filename;
     var pageLayout;
     var title;
+    var background;
 
     var page = get_page_details(id);
 
     filename = page.filename;
     pageLayout = page.layout;
     title = page.title;
+    background = page.background;
+
+    if (fileDepth == undefined) {
+        filepath = $('link').first().attr('href');
+        var path = filepath.split("Content/");
+        var fileDepth = path[0];
+    }
 
     // Display page information
     $('#page-container').attr('data-pageid', id);
+    $('body').css('background', 'url('+fileDepth+'Content/images/backgrounds/' + background + '.jpg)');
+    $('body').css('background-size', 'cover').css('background-repeat', 'no-repeat');
     $('#page-title').html(title);
 
     // Set page layout
@@ -312,7 +305,7 @@ function show_animated_overlay() {
     $("#overlay-top")
         .height(narrowHeight)
         .css({
-            'opacity': 0.8,
+            'opacity': 1,
             'position': 'absolute',
             'top': 0,
             'left': 0,
@@ -323,7 +316,7 @@ function show_animated_overlay() {
     $("#overlay-center")
         .height(centerHeight)
         .css({
-            'opacity': 0.8,
+            'opacity':1,
             'position': 'absolute',
             'top': narrowHeight,
             'left': 0,
@@ -336,7 +329,7 @@ function show_animated_overlay() {
     $("#overlay-bottom")
         .height(narrowHeight)
         .css({
-            'opacity': 0.8,
+            'opacity': 1,
             'position': 'absolute',
             'top': docBottom,
             'left': 0,
@@ -381,3 +374,24 @@ function show_animated_overlay() {
 //
 //    return settings;
 //}
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getObjects(obj[i], key, val));
+        } else if (i == key && obj[key] == val) {
+            objects.push(obj);
+        }
+    }
+    return objects;
+}

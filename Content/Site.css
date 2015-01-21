@@ -1,4 +1,9 @@
-﻿body {
+﻿html {
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-weight: normal;
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -19,10 +24,6 @@ textarea {
 
 p {
     font-size: .8em;
-}
-
-#autoplay-control {
-    // display: none;
 }
 
 .capabilities-intro {
@@ -60,30 +61,39 @@ footer p {
 }
 
 .header-row {
+    background: none !important;
     height: 125px;
 }
 
+    .header-row h1 {
+        color: white;
+        float: left;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .header-row #header-logo {
+        float: left;
+        width: 80px;
+    }
+
+.landing-menu-item {
+    font-size: .8rem;
+    text-align: center;
+}
+.market-panel {
+    color: white;
+    padding: 30px;
+    margin: 0 30px;
+}
 .markets-intro {
     margin-top: 360px;
 }
 
-.navigation-item {
-    width: 150px;
-    border: 2px solid gray;
-    height: 150px;
-    float: left;
-}
-
-    .navigation-item img {
-        border-radius: 79px;
-        padding: 5px;
-        margin: 0;
-    }
-
 #page-container {
-    background: darkblue;
-    color: white;
-    /*background: url('/untitled/img/bg/capabilities.png') !important;*/
+    background: none;
 }
 
     #page-container a {
@@ -101,21 +111,21 @@ footer p {
     vertical-align: middle;
 }
 
-#sectionMenu{
+#sectionMenu {
     background: none;
     color: aquamarine;
 }
 
-#sectionMenu ul li {
-    list-style: none;
-}
+    #sectionMenu ul li {
+        list-style: none;
+    }
 
-#sectionMenu ul li:after {
-    color: red;
-    content: ' \25CF';
-    font-size: 30px;
-    margin-top: 5px;
-}
+        #sectionMenu ul li:after {
+            color: red;
+            content: ' \25CF';
+            font-size: 30px;
+            margin-top: 5px;
+        }
 
 /* LANDING ANIMATIONS */
 .landing-animation {
@@ -184,6 +194,21 @@ footer p {
     height: 100%;
     border-radius: 0;
 }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover, .nav > li > a:focus {
+    background: #6d1a42;
+    border: none;
+    color: white;
+}
+
+.ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover {
+    color: white;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #6d1a42;
+}
+
 
 /* DEBUGGING - NOT UTILIZED FOR PRODUCTION CODE */
 
