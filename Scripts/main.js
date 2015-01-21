@@ -1,6 +1,6 @@
 var pagelist = '{ "pages": [ ' +
     '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"none", "background":"home" },' +
-    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "two", "parent":"none", "background":"main-menu" },' +
+    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "menu", "parent":"none", "background":"main-menu" },' +
     '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none", "background":"main-menu" },' +
     '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none", "background":"products" },' +
     '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none", "background":"markets" },' +
@@ -50,42 +50,43 @@ $(document).on("pagebeforecreate", function (event) {
 $(document).ready(function () {
     var presentationID = getParameterByName('presID');
 
-    $('.row a').each(function () {
-   //     this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
+    $('.row a').not('.slide-tab').not('.view-content-link').each(function () {
+        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
     });
     $('.panel-link-item').each(function () {
         this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
     });
 
+    $('#sectionMenu').on('panelbeforeopen', function () {
+        $('#section-menu-button').hide();
+    });
+
+    $('#sectionMenu').on('panelclose', function () {
+        $('#section-menu-button').show();
+    });
+
 });
 
-
+/**
+ * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ */
 function get_available_markets() {
     livemarkets = JSON.parse(marketList);
 
     $.each(livemarkets, function () {
         var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
         pageId = obj[0].id;
-        var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="80" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+        var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="100" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
         $('.item-menu').append(html);
     });
 }
 
-function get_available_presentations() {
-
-    var presentations = '[{ "id": "1", "company":"Bulls" },' +
-        '{ "id":2, "company":"Blackhawks"}' +
-        ']';
-
-    livepresentations = JSON.parse(presentations);
-    $.each(livepresentations, function () {
-        var html = '<a href="pages/index.html?pageId=13&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
-        $('#presentations-list').append(html);
-
-    });
-
-}
-
+/**
+ * Get child pages for Capabilities and Products sections, and display links to the pages
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ * @param section
+ */
 function get_child_pages(section) {
 
     var select = JSON.parse(pagelist);
@@ -94,7 +95,7 @@ function get_child_pages(section) {
     $.each(items, function () {
         if (this.parent == section) {
 
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="80" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="100" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = section + '-child-pages-list';
             $("." + element).append(html);
         }
@@ -102,7 +103,7 @@ function get_child_pages(section) {
 }
 
 /**
- * Get the ID of the page content
+ * Get the ID of the current page container
  * @returns int;
  */
 function get_container_id() {
@@ -112,6 +113,10 @@ function get_container_id() {
     return item;
 }
 
+/**
+ * Checks page header to determine the depth of the current page within the file structure
+ * @returns {*}
+ */
 function get_file_location() {
     filepath = $('link').first().attr('href');
 
@@ -120,6 +125,12 @@ function get_file_location() {
     return path[0];
 }
 
+/**
+ * Given the current page container ID, checks the JSON containing generic page information and returns array of information relative to the existing page
+ * Information includes: Page title, page parent, page layout, template filename, background image, navigation menu image
+ * @param id
+ * @returns {*}
+ */
 function get_page_details(id) {
 
     var select = JSON.parse(pagelist);
@@ -152,7 +163,7 @@ function get_video_details() {
         var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
         $('.modal-body').html(html);
-        $('.video-js').data("setup", { "bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video })
+        $('.video-js').data("setup", {"bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video})
 
     });
 
@@ -219,10 +230,10 @@ function load_page_elements(fileDepth) {
         var menuDepth = "";
     }
 
-    var sidebarMenuHTML = '<ul><li><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul><p><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br />';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul><p><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br />';
     $('#sectionMenu').html(sidebarMenuHTML);
 
-    var headerRow = '<a href="'+fileDepth+'pages/index.html?pageId=13&presID='+presID+'" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="'+fileDepth+'Content/images/icons-png/bars-black.png"/></a><br/>';
+    var headerRow = '<a href="' + fileDepth + 'pages/index.html?pageId=13&presID=' + presID + '" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a><br/>';
     $("#header-row").html(headerRow).enhanceWithin();
 
     if (pageID == 13) {
@@ -256,7 +267,7 @@ function load_page_info(id, fileDepth) {
 
     // Display page information
     $('#page-container').attr('data-pageid', id);
-    $('body').css('background', 'url('+fileDepth+'Content/images/backgrounds/' + background + '.jpg)');
+    $('body').css('background', 'url(' + fileDepth + 'Content/images/backgrounds/' + background + '.jpg)');
     $('body').css('background-size', 'cover').css('background-repeat', 'no-repeat');
     $('#page-title').html(title);
 
@@ -266,15 +277,20 @@ function load_page_info(id, fileDepth) {
     $('#footer-menu').show();
 
 
+    // Home will be replaced by app functionality
     if (pageLayout == 'home') {
         get_available_presentations();
-
         $('#section-menu-button').hide();
         $('#view-content-button').show();
         $('#footer-menu').hide();
     }
+    if (pageLayout == 'menu') {
+        show_animated_menu();
+        $('#section-menu-button').hide();
+    }
     if (pageLayout == 'splash') {
         show_animated_overlay();
+        $('#section-menu-button').hide();
     }
     if (pageLayout == 'two') {
         $('#footer-menu').hide();
@@ -290,6 +306,9 @@ function load_page_info(id, fileDepth) {
     }
 }
 
+/**
+ * Controls the display of the overlay when the intro page is loaded.
+ */
 function show_animated_overlay() {
     var delayTime = 1000;
 
@@ -309,18 +328,18 @@ function show_animated_overlay() {
             'position': 'absolute',
             'top': 0,
             'left': 0,
-            'background-color': 'blue',
+            'background-color': '#003a77',
             'width': '100%',
             'z-index': 5000
         });
     $("#overlay-center")
         .height(centerHeight)
         .css({
-            'opacity':1,
+            'opacity': 1,
             'position': 'absolute',
             'top': narrowHeight,
             'left': 0,
-            'background-color': 'blue',
+            'background-color': '#003a77',
             'width': '100%',
             'z-index': 5000,
             'margin-top': 5,
@@ -333,7 +352,7 @@ function show_animated_overlay() {
             'position': 'absolute',
             'top': docBottom,
             'left': 0,
-            'background-color': 'blue',
+            'background-color': '#003a77',
             'width': '100%',
             'z-index': 5000
         });
@@ -360,21 +379,29 @@ function show_animated_overlay() {
         left: 0
     }, 1500);
 
-    //$('.view-content-link').delay(delayTime).fadeIn();
 }
-///**
-// * Collects app settings array
-// * @returns array
-// */
-//function get_app_settings() {
-//    var settings;
-//    settings = {
-//        culture: "EN"
-//    };
-//
-//    return settings;
-//}
 
+function show_animated_menu() {
+    var delayTime = 500;
+
+    $('.menu-header').animate({
+        left:0
+    }, 1000);
+
+    // Calculate width of header element
+    // It is set as a percentage, but we need a px dimension
+    var width = $('.menu-header').width()/100;
+    var pxwidth = $(document).width() * width;
+
+    $('.menu-list').delay(delayTime).animate({
+        left: pxwidth
+    }, 800);
+
+
+}
+
+
+/** UTILITY FUNCTIONS */
 
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -394,4 +421,24 @@ function getObjects(obj, key, val) {
         }
     }
     return objects;
+}
+
+/** DEBUG FUNCTIONS */
+
+/**
+ This function will be replaced by app-driven functionality to select available presentations
+ */
+function get_available_presentations() {
+
+    var presentations = '[{ "id": "1", "company":"Bulls" },' +
+        '{ "id":2, "company":"Blackhawks"}' +
+        ']';
+
+    livepresentations = JSON.parse(presentations);
+    $.each(livepresentations, function () {
+        var html = '<a href="pages/index.html?pageId=13&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
+        $('#presentations-list').append(html);
+
+    });
+
 }
