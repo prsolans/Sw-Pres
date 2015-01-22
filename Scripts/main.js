@@ -1,35 +1,39 @@
 var pagelist = '{ "pages": [ ' +
-    '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"none", "background":"home" },' +
-    '{ "id": 1, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "menu", "parent":"none", "background":"main-menu" },' +
-    '{ "id": 2, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"none", "background":"main-menu" },' +
-    '{ "id": 3, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"none", "background":"products" },' +
-    '{ "id": 4, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"none", "background":"markets" },' +
-    '{ "id": 5, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"capabilities", "background":"mission", "menu":"ca-mission" },' +
-    '{ "id": 6, "title": "Fittings", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-fittings" },' +
-    '{ "id": 7, "title": "Power","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"power", "menu":"ma-power" },' +
-    '{ "id": 8, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"main-menu", "menu":"ma-oil" },' +
-    '{ "id": 9, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"markets", "background":"main-menu", "menu":"ma-alternative" },' +
-    '{ "id": 10, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"capabilities", "background":"main-menu", "menu":"ca-services" },' +
-    '{ "id": 11, "title": "Valves", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-valves" },' +
-    '{ "id": 12, "title": "Filters", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-filters" },' +
-    '{ "id": 13, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"none", "background":"home" },' +
-    '{ "id": 14, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-hoses" },' +
-    '{ "id": 15, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-leak" },' +
-    '{ "id": 16, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "three", "parent":"products", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "id": 17, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "three", "parent":"power", "background":"power-blur", "menu":"pr-leak" }' +
+    '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"0", "background":"home" },' +
+    '{ "id": 1, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"0", "background":"home" },' +
+    '{ "id": 2, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
+    '{ "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "two", "parent":"0", "background":"main-menu" },' +
+    '{ "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "two", "parent":"0", "background":"products" },' +
+    '{ "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "two", "parent":"0", "background":"markets" },' +
+    '{ "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 7, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
+    '{ "id": 8, "title": "Power", "filename": "pages/markets/detail","layout": "three", "parent":"5", "background":"power", "menu":"ma-power" },' +
+    '{ "id": 9, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "three", "parent":"8", "background":"power-blur", "menu":"pr-leak" },' +
+    '{ "id": 10, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "three", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
+    '{ "id": 11, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "three", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
+    '{ "id": 12, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"main-menu", "menu":"pr-fittings", "headline":"Fittings Landing Page", "content":"LIST of Items" },' +
+    '{ "id": 13, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "content":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
+    '{ "id": 14, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "content":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
+    '{ "id": 15, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"TS Fittings", "content":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
+    '{ "id": 16, "title": "Valves", "filename": "pages/products/detail", "layout": "product", "initial_product":true, "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
+    '{ "id": 17, "title": "Filters", "filename": "pages/products/detail", "layout": "product", "initial_product":true, "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
+    '{ "id": 18, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "initial_product":true, "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "id": 19, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "initial_product":true, "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
+    '{ "id": 20, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "initial_product":true, "parent":"4", "background":"main-menu", "menu":"pr-measure" }' +
     ']}';
 
-$(document).on("pagebeforecreate", function (event) {
+
+$(document).on("pagebeforecreate", function () {
 
     $.ajaxPrefilter(function (options) {
         options.crossDomain = true;
     });
     $.ajaxSetup({async: false});
 
-    get_child_pages('capabilities');
-    get_child_pages('products');
+    get_child_pages('4'); // Products
+    get_child_pages('3'); // Capabilities
 
-    filepath = $('link').first().attr('href');
+    var filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
     var fileDepth = path[0];
     var presentationID = getParameterByName('presID');
@@ -48,6 +52,9 @@ $(document).on("pagebeforecreate", function (event) {
 });
 
 $(document).ready(function () {
+
+    $('body').removeClass('ui-overlay-a');
+    $('div').removeClass('ui-page-theme-a');
     var presentationID = getParameterByName('presID');
 
     $('.row a').not('.slide-tab').not('.view-content-link').each(function () {
@@ -57,13 +64,18 @@ $(document).ready(function () {
         this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
     });
 
-    $('#sectionMenu').on('panelbeforeopen', function () {
+    var panelmenu = $('#sectionMenu');
+
+    panelmenu.on('panelbeforeopen', function () {
         $('#section-menu-button').hide();
     });
 
-    $('#sectionMenu').on('panelclose', function () {
+    panelmenu.on('panelclose', function () {
         $('#section-menu-button').show();
     });
+
+    $('#page-container').css('height', $(window).height());
+
 
 });
 
@@ -72,14 +84,18 @@ $(document).ready(function () {
  * Utilized for main menu page, section landing page, and bottom nav within the section
  */
 function get_available_markets() {
-    livemarkets = JSON.parse(marketList);
+    var livemarkets = JSON.parse(marketList);
 
-    $.each(livemarkets, function () {
-        var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-        pageId = obj[0].id;
-        var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="100" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
-        $('.item-menu').append(html);
-    });
+    var thisPage = get_container_id();
+
+    if(thisPage > 1) {
+        $.each(livemarkets, function () {
+            var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
+            var pageId = obj[0].id;
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="100" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            $('.item-menu').append(html);
+        });
+    }
 }
 
 /**
@@ -92,11 +108,13 @@ function get_child_pages(section) {
     var select = JSON.parse(pagelist);
     var items = select.pages;
     var fileDepth = get_file_location();
+
     $.each(items, function () {
         if (this.parent == section) {
-
+            var parent = get_page_details(section);
+            var title = parent.title.toLowerCase();
             var html = '<div class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="100" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
-            var element = section + '-child-pages-list';
+            var element = title + '-child-pages-list';
             $("." + element).append(html);
         }
     });
@@ -107,10 +125,8 @@ function get_child_pages(section) {
  * @returns int;
  */
 function get_container_id() {
-    var item;
-    item = $('#page-container').data('pageid');
 
-    return item;
+    return $('#page-container').data('pageid');
 }
 
 /**
@@ -118,7 +134,7 @@ function get_container_id() {
  * @returns {*}
  */
 function get_file_location() {
-    filepath = $('link').first().attr('href');
+    var filepath = $('link').first().attr('href');
 
     var path = filepath.split("Content/");
 
@@ -134,22 +150,24 @@ function get_file_location() {
 function get_page_details(id) {
 
     var select = JSON.parse(pagelist);
-    item = select.pages[id];
 
-    return item;
+    return select.pages[id];
 }
 
 function get_presentation_settings() {
-    settings = JSON.parse(settings);
+    if(settings){
+        var presSettings = JSON.parse(settings);
+    }
+    else {console.log('ERROR: Presentations settings JSON feed');}
+    $.each(presSettings, function () {
 
-    $.each(settings, function () {
         $('#header-title').html(this.division);
         $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
     });
 }
 
 function get_video_details() {
-    livevideos = JSON.parse(videoList);
+    var livevideos = JSON.parse(videoList);
     $.each(livevideos, function () {
         var path = fileDepth + 'Content/videos';
         if (this.custom == true) {
@@ -181,7 +199,9 @@ function get_video_details() {
             myPlayer.width(width).height(width * aspectRatio);
         }
 
-        $("#videoModal").on('show.bs.modal', function () {
+        var videoModal = $("#videoModal");
+
+        videoModal.on('show.bs.modal', function () {
 
             var width = $(document).width();
             myPlayer.width(width).height(width * aspectRatio);
@@ -197,7 +217,7 @@ function get_video_details() {
 
         });
 
-        $("#videoModal").on('hidden.bs.modal', function () {
+        videoModal.on('hidden.bs.modal', function () {
             myPlayer.pause();
         });
 
@@ -207,7 +227,7 @@ function get_video_details() {
 
 function get_video_settings() {
 
-    livevideos = JSON.parse(videoList);
+    var livevideos = JSON.parse(videoList);
     $.each(livevideos, function () {
 
         var path = menuDepth + 'Content/videos';
@@ -223,21 +243,24 @@ function load_page_elements(fileDepth) {
     var pageID = getParameterByName('pageId');
     var presID = getParameterByName('presID');
 
+    var menuDepth;
+
     if (fileDepth == "../../") {
-        var menuDepth = "../";
+        menuDepth = "../";
     }
     else {
-        var menuDepth = "";
+        menuDepth = "";
     }
 
-    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="' + menuDepth + 'capabilities/index.html?pageId=2" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="' + menuDepth + 'products/index.html?pageId=3" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="' + menuDepth + 'markets/index.html?pageId=4" data-ajax="false" class="panel-link-item">Markets</a></li></ul><p><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br />';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="' + menuDepth + 'capabilities/index.html?pageId=3" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="' + menuDepth + 'products/index.html?pageId=4" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="' + menuDepth + 'markets/index.html?pageId=5" data-ajax="false" class="panel-link-item">Markets</a></li></ul><p><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">HOME</a><br />';
     $('#sectionMenu').html(sidebarMenuHTML);
 
-    var headerRow = '<a href="' + fileDepth + 'pages/index.html?pageId=13&presID=' + presID + '" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a><br/>';
-    $("#header-row").html(headerRow).enhanceWithin();
+    var headerRow = '<div id="header-left"><a href="' + fileDepth + 'pages/index.html?pageId=1&presID=' + presID + '" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
 
-    if (pageID == 13) {
-        $('#view-content-link').attr('href', 'mainMenu.html?pageId=1&presID=' + presID);
+    $("#header-row").html(headerRow);
+
+    if (pageID == 1) {
+        $('#view-content-link').attr('href', 'mainMenu.html?pageId=2&presID=' + presID);
     }
 
 }
@@ -245,55 +268,94 @@ function load_page_elements(fileDepth) {
 /**
  * Using the page ID, gather and display page layout and HTML content
  * @param id
+ * @param fileDepth
  */
 function load_page_info(id, fileDepth) {
-    var filename;
+
+    var parent;
     var pageLayout;
-    var title;
     var background;
+
+    var title;
+    var headline;
+    var content;
 
     var page = get_page_details(id);
 
-    filename = page.filename;
+    var pres = getParameterByName('presID');
+
+    parent = page.parent;
     pageLayout = page.layout;
-    title = page.title;
     background = page.background;
 
+    title = page.title;
+    content = page.content;
+    headline = page.headline;
+
     if (fileDepth == undefined) {
-        filepath = $('link').first().attr('href');
+        var filepath = $('link').first().attr('href');
         var path = filepath.split("Content/");
-        var fileDepth = path[0];
+        fileDepth = path[0];
     }
 
     // Display page information
     $('#page-container').attr('data-pageid', id);
     $('body').css('background', 'url(' + fileDepth + 'Content/images/backgrounds/' + background + '.jpg)');
     $('body').css('background-size', 'cover').css('background-repeat', 'no-repeat');
-    $('#page-title').html(title);
+
+    if (headline == undefined) {
+        $('#page-title').html(title);
+    }
+    else {
+        $('#page-title').html(headline);
+    }
+
+    if (parent != '0') {
+
+        var thisParent = get_page_details(parent);
+        var thisParentsParent = get_page_details(thisParent.parent);
+
+        var submenu = '<br/><span><a href="' + fileDepth + 'pages/' + thisParent.title.toLowerCase() + '/index.html?pageId=' + thisParent.id + '&presID=' + pres + '" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+
+
+        if(thisParentsParent.id == '4'){ // Parent is Products homepage
+            var submenu = '<br/><span><a href="' + fileDepth + 'pages/' + thisParentsParent.title.toLowerCase() + '/index.html?pageId=' + thisParentsParent.id + '&presID=' + pres + '" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+        }
+
+        $("#submenu").html(submenu);
+
+        if (thisParent.id == '4' || thisParentsParent.id == '4') { // Parent or Grandparent is in Products category
+            var html = ' | <a href="" id="show-menu">' + title + '</a>';
+            $('#submenu').append(html);
+            show_submenu(pres, id);
+        }
+
+    }
+
+    show_bottom_nav();
 
     // Set page layout
     $('#section-menu-button').show();
     $('#view-content-button').hide();
-    $('#footer-menu').show();
-
-
     // Home will be replaced by app functionality
     if (pageLayout == 'home') {
         get_available_presentations();
         $('#section-menu-button').hide();
         $('#view-content-button').show();
-        $('#footer-menu').hide();
-    }
-    if (pageLayout == 'menu') {
-        show_animated_menu();
-        $('#section-menu-button').hide();
     }
     if (pageLayout == 'splash') {
         show_animated_overlay();
         $('#section-menu-button').hide();
     }
-    if (pageLayout == 'two') {
-        $('#footer-menu').hide();
+    if (pageLayout == 'menu') {
+        show_animated_menu();
+        $('#section-menu-button').hide();
+    }
+    if (pageLayout == 'three') {
+
+    }
+    if (pageLayout == 'product') {
+        $('#page-content').html(content);
     }
     if (pageLayout == 'text-video') {
     }
@@ -317,9 +379,11 @@ function show_animated_overlay() {
     var centerHeight = docHeight * .5;
     var docBottom = $(document).height() - narrowHeight;
 
-    $("body").append("<div id='overlay-top'></div>");
-    $("body").append("<div id='overlay-center'></div>");
-    $("body").append("<div id='overlay-bottom'></div>");
+    var body = $("body");
+
+    body.append("<div id='overlay-top'></div>");
+    body.append("<div id='overlay-center'></div>");
+    body.append("<div id='overlay-bottom'></div>");
 
     $("#overlay-top")
         .height(narrowHeight)
@@ -385,18 +449,78 @@ function show_animated_menu() {
     var delayTime = 500;
 
     $('.menu-header').animate({
-        left:0
+        left: 0
     }, 1000);
 
     // Calculate width of header element
     // It is set as a percentage, but we need a px dimension
-    var width = $('.menu-header').width()/100;
+    var width = $('.menu-header').width() / 100;
     var pxwidth = $(document).width() * width;
 
     $('.menu-list').delay(delayTime).animate({
         left: pxwidth
     }, 800);
 
+
+}
+
+function show_bottom_nav() {
+    var delayTime = 600;
+
+    var docHeight = $(document).height();
+
+    var linkTop = docHeight - 25;
+
+
+    $("#footer-menu-link")
+        .css({
+            'position': 'absolute',
+            'top' : linkTop + 'px',
+            'text-align': 'center',
+            'margin': 'auto',
+            'height': '25px',
+            'width': '100%',
+            'z-index': 5000
+        });
+
+    $("#footer-menu-link").on("click", function () {
+        var position = $("#footer-menu-link").offset().top;
+
+        if(position == linkTop) {
+            $("#footer-menu-link").animate({
+                top: docHeight - 185
+            }, delayTime);
+        }
+        else {
+            $("#footer-menu-link").animate({
+                top: linkTop
+            }, delayTime);
+        }
+
+    });
+}
+
+function show_submenu(pres, id) {
+
+    var page = get_page_details(id);
+
+    var select = JSON.parse(pagelist);
+    var items = select.pages;
+
+    var html = '<div id="submenu-content" style="display: none;">&nbsp;MENUS<ul>';
+
+    $.each(items, function () {
+        if (this.title == page.title) {
+            html += '<li><a href="detail.html?pageId=' + this.id + '&presID=' + pres + '" data-ajax="false">' + this.headline + '</a></li>';
+        }
+    });
+
+    html += '</ul></div>';
+    $('#submenu').append(html);
+
+    $('#show-menu').on('click', function () {
+        $('#submenu-content').slideToggle();
+    });
 
 }
 
@@ -434,9 +558,9 @@ function get_available_presentations() {
         '{ "id":2, "company":"Blackhawks"}' +
         ']';
 
-    livepresentations = JSON.parse(presentations);
+    var livepresentations = JSON.parse(presentations);
     $.each(livepresentations, function () {
-        var html = '<a href="pages/index.html?pageId=13&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
+        var html = '<a href="pages/index.html?pageId=1&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
         $('#presentations-list').append(html);
 
     });

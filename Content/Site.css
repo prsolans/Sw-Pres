@@ -27,6 +27,11 @@ h1 {
     color       : white;
 }
 
+h3 {
+    font-size: 3rem;
+    font-color: pink;
+}
+
 p {
     text-shadow : none;
     color       : white;
@@ -140,6 +145,7 @@ footer p {
 }
 #page-container {
     background : none;
+    min-height: 768px !important;
 }
 
 #page-container a {
@@ -167,34 +173,34 @@ footer p {
 .capabilities-header {
     background-color : rgba(0, 96, 102, .7);
     border-right     : 5px solid rgba(0, 96, 102, 1);
-
 }
 
 .markets-header {
     background-color : rgba(109, 26, 66, .7);
     border-right     : 5px solid rgba(109, 26, 66, 1);
-
 }
 
 .products-header {
     background-color : rgba(166, 63, 30, .7);
     border-right     : 5px solid rgba(166, 63, 30, 1);
-
 }
 
-.capabilities-list {
-
+.capabilities-list, .capabilities-bottom-menu-list {
     background-color : rgba(0, 96, 102, .4);
 }
 
-.markets-list {
+.markets-list, .markets-bottom-menu-list {
     background-color : rgba(109, 26, 66, .4);
-
 }
 
-.products-list {
+.products-list, .products-bottom-menu-list {
     background-color : rgba(166, 63, 30, .4);
+}
 
+.capabilities-bottom-menu-list, .products-bottom-menu-list, .markets-bottom-menu-list {
+    margin-top: 5px;
+    width: 101%;
+    min-height: 180px;
 }
 
 #sectionMenu {
@@ -253,6 +259,22 @@ footer p {
 
 }
 
+#submenu {
+    float: left;
+    clear: both;
+    margin-left: 150px;
+    margin-top: -85px;
+    text-transform : capitalize;
+}
+
+#submenu-content {
+    position: relative;
+    top: 0;
+    left: 95px;
+    width: 300px;
+    height: 100px;
+    background: pink;
+}
 .view-content-link {
     width      : 20%;
     margin     : auto;
