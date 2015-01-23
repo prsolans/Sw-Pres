@@ -30,6 +30,7 @@ var pagelist = '{ "pages": [ ' +
     '{ "id": 28, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" }' +
     ']}';
 
+var idleTime = 0;
 
 $(document).on("pagebeforecreate", function () {
 
@@ -57,9 +58,26 @@ $(document).on("pagebeforecreate", function () {
     }
 
     load_page_info(pageID, fileDepth);
+
+    if(typeof(Storage) !== "undefined") {
+        // Code for localStorage/sessionStorage.
+        localStorage.setItem('presentationID', presentationID);
+        localStorage.setItem('pageID', pageID);
+    } else {
+        // Sorry! No Web Storage support..
+
+        alert('Sorry! No Web Storage support...');
+    }
+
 });
 
 $(document).ready(function () {
+
+
+
+
+
+   start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
     $('div').removeClass('ui-page-theme-a');
@@ -84,8 +102,8 @@ $(document).ready(function () {
 
     $('#page-container').css('height', $(window).height());
 
-
 });
+
 
 /**
  * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
@@ -185,10 +203,11 @@ function get_video_details() {
         }
         var posterImage = path + '/' + this.filename + '.gif';
         var video = path + '/' + this.filename + '.mp4';
+        var subtitles = path + '/' + this.filename + '.vtt';
 
         $('#video-poster').attr('src', posterImage);
 
-        var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /><track kind="subtitles" src="'+subtitles+'" srclang="en" label="English" default data-ajax="false"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
         $('.modal-body').html(html);
         $('.video-js').data("setup", {"bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video})
@@ -213,16 +232,25 @@ function get_video_details() {
 
         videoModal.on('show.bs.modal', function () {
 
-            var width = $(document).width();
-            myPlayer.width(width).height(width * aspectRatio);
+            var width = $(window).width();
+            myPlayer.width(width).height($(window).height());
+
+            $('.modal-dialog').css('margin', '0 !important');
+
             myPlayer.play();
 
             $(window).resize(function () {
                 resizeVideoJS();
             });
 
-            $('.video-js').click(function () {
-                $('#videoModal').modal('hide');
+            $('#demo_video_html5_api').on('click', function () {
+                videoModal.modal('hide');
+                show_animated_overlay();
+            });
+
+            $('#demo_video_html5_api').on('tap', function () {
+                videoModal.modal('hide');
+                show_animated_overlay();
             });
 
         });
@@ -232,6 +260,7 @@ function get_video_details() {
         });
 
     });
+
 
 }
 
@@ -565,6 +594,25 @@ function show_submenu(pres, id) {
 
 }
 
+function start_inactivity_timer(){
+
+    //Increment the idle time counter every minute.
+    var idleInterval = setInterval(timerIncrement, 1000); // 1 second
+
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        localStorage.setItem("inactive", "false");
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        localStorage.setItem("inactive", "false");
+        idleTime = 0;
+    });
+    $(this).on("tap", function() {
+        localStorage.setItem("inactive", "false");
+        idleTime = 0;
+    })
+}
 
 /** UTILITY FUNCTIONS */
 
@@ -586,6 +634,33 @@ function getObjects(obj, key, val) {
         }
     }
     return objects;
+}
+
+function timerIncrement() {
+
+    var thisPage = get_container_id();
+    var inactive = getParameterByName('inactive');
+    idleTime = idleTime + 1;
+    console.log("Idletime: " + idleTime);
+
+    if(thisPage == '1') {
+        if (localStorage.inactive == 'true') {
+            $('#video-modal-link').click();
+            idleTime = 0;
+        }
+    }
+    if (idleTime > 180) { // 3 minutes
+        if(thisPage != '1') {
+            var home = fileDepth + 'pages/index.html?pageId=1&presID=1';
+            localStorage.setItem("inactive", "true");
+            window.location.href = home;
+        }
+        else {
+            $('#video-modal-link').click();
+            localStorage.setItem("inactive", "true");
+            idleTime = 0;
+        }
+    }
 }
 
 /** DEBUG FUNCTIONS */
