@@ -28,8 +28,8 @@ h1 {
 }
 
 h3 {
-    font-size: 3rem;
-    font-color: pink;
+    font-size  : 3rem;
+    font-color : pink;
 }
 
 p {
@@ -110,9 +110,9 @@ footer p {
 }
 
 .landing-menu-item {
-    font-size  : .8rem;
-    padding-top: 25px;
-    text-align : center;
+    font-size   : .8rem;
+    padding-top : 25px;
+    text-align  : center;
 }
 
 .market-panel {
@@ -129,7 +129,7 @@ footer p {
     height       : 180px;
     padding-left : 35px;
     position     : relative;
-    left: -2000px;
+    left         : -2000px;
 }
 
 .menu-header a {
@@ -141,11 +141,12 @@ footer p {
 
 .menu-list {
     position : absolute;
-    left: -2000px;
+    left     : -2000px;
 }
+
 #page-container {
     background : none;
-    min-height: 768px !important;
+    min-height : 768px !important;
 }
 
 #page-container a {
@@ -198,55 +199,58 @@ footer p {
 }
 
 .capabilities-bottom-menu-list, .products-bottom-menu-list, .markets-bottom-menu-list {
-    margin-top: 5px;
-    width: 101%;
-    min-height: 180px;
+    margin-top : 5px;
+    width      : 101%;
+    min-height : 180px;
 }
 
 #sectionMenu {
-    background : none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color      : aquamarine;
-    font-size: 1.2rem;
-    padding-top: 50px;
-    z-index : 500000;
+    background         : -webkit-linear-gradient(right, rgba(0, 0, 0, .8), transparent); /* For Safari 5.1 to 6.0 */
+    background         : -o-linear-gradient(left, rgba(0, 0, 0, .8), transparent); /* For Opera 11.1 to 12.0 */
+    background         : -moz-linear-gradient(left, rgba(0, 0, 0, .8), transparent); /* For Firefox 3.6 to 15 */
+    background         : linear-gradient(to left, rgba(0, 0, 0, .8), transparent); /* Standard syntax (must be last) */
+    -webkit-box-shadow : none;
+    box-shadow         : none;
+    color              : aquamarine;
+    font-size          : 1.2rem;
+    padding-top        : 50px;
+    z-index            : 500000;
 }
 
 #sectionMenu ul li {
-    list-style : none;
-    direction: ltr;
-    margin-bottom: 35px;
-    text-align: right;
+    list-style    : none;
+    direction     : ltr;
+    margin-bottom : 35px;
+    text-align    : right;
 }
 
 #sectionMenu ul li.capabilities-panel-item:after {
-    color      : rgba(0, 96, 102, 1);
-    content    : ' \25CF';
-    font-size  : 80px;
-    float: right;
-    margin-top: -50px;
-    margin-right: 40px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    color              : rgba(0, 96, 102, 1);
+    content            : ' \25CF';
+    font-size          : 80px;
+    float              : right;
+    margin-top         : -50px;
+    margin-right       : 40px;
+    -webkit-box-shadow : none;
+    box-shadow         : none;
 }
 
 #sectionMenu ul li.markets-panel-item:after {
-    color      : rgba(109, 26, 66, 1);
-    content    : ' \25CF';
-    font-size  : 80px;
-    float: right;
-    margin-top: -50px;
-    margin-right: 40px;
+    color        : rgba(109, 26, 66, 1);
+    content      : ' \25CF';
+    font-size    : 80px;
+    float        : right;
+    margin-top   : -50px;
+    margin-right : 40px;
 }
 
 #sectionMenu ul li.products-panel-item:after {
-    color      : rgba(166, 63, 30, 1);
-    content    : ' \25CF';
-    font-size  : 80px;
-    float: right;
-    margin-top: -50px;
-    margin-right: 40px;
+    color        : rgba(166, 63, 30, 1);
+    content      : ' \25CF';
+    font-size    : 80px;
+    float        : right;
+    margin-top   : -50px;
+    margin-right : 40px;
 }
 
 #section-menu-button {
@@ -254,27 +258,54 @@ footer p {
     border-radius : 50%;
     height        : 50px;
     padding       : 12.5px;
-    margin        : 70px;
+    margin        : 60px;
     width         : 50px;
 
 }
 
 #submenu {
-    float: left;
-    clear: both;
-    margin-left: 150px;
-    margin-top: -85px;
+    float          : left;
+    clear          : both;
+    margin-left    : 150px;
+    margin-top     : -85px;
     text-transform : capitalize;
 }
 
 #submenu-content {
-    position: relative;
-    top: 0;
-    left: 95px;
-    width: 300px;
-    height: 100px;
-    background: pink;
+
+    background  : -webkit-linear-gradient(rgb(166, 63, 30, .8), transparent); /* For Safari 5.1 to 6.0 */
+    background  : -o-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Opera 11.1 to 12.0 */
+    background  : -moz-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Firefox 3.6 to 15 */
+    background  : linear-gradient(rgba(166, 63, 30, .8), transparent); /* Standard syntax (must be last) */
+
+    /*background-color: rgba(166, 63, 30, .7);*/
+    border-top  : 5px solid rgba(166, 63, 30, 1);
+    margin-top  : 5px;
+    padding-top : 15px;
+    position    : relative;
+    top         : 0;
+    left        : 0;
 }
+
+#submenu-content ul {
+    z-index         : 7000;
+    max-width       : 720px;
+    min-height      : 500px;
+
+    list-style-type : none;
+    padding         : 0;
+}
+
+#submenu-content ul li {
+    display       : inline;
+    float         : left;
+    height        : 60px;
+    margin-bottom : 5px;
+    padding       : 5px;
+    width         : 33%;
+    max-width     : 240px;
+}
+
 .view-content-link {
     width      : 20%;
     margin     : auto;
