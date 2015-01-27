@@ -1,11 +1,10 @@
 presID = 2;
 
 var fileDepth = get_file_location();
-
+var menuDepth = "";
 if (fileDepth == "../../") {
-    var menuDepth = "../";
+    menuDepth = "../";
 }
-else { var menuDepth = ""; }
 
 var settings = '[{ "id": 0, "division": "Swagelok International", "client":"Blackhawks", "assetDir":"' + fileDepth + 'Content/pres' + presID + '/" }]';
 
@@ -17,8 +16,22 @@ var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
 var videoList = '[{ "id": 0, "title": "Video 1", "filename":"Subtitles", "custom":true}' +
     ']';
 
-get_video_settings();
+var layoutsList = '[]';
+var content = '[]';
+
+var theseSettings = get_presentation_settings();
+
+if(theseSettings[0].hasCaseStudy == true){
+    localStorage.setItem('hasCaseStudy', true);
+}
+
 get_available_markets(marketList);
-get_presentation_settings();
-get_video_details();
+get_custom_content(layoutsList, content);
+
+var thisLayout = get_page_layout(layoutsList, get_container_id());
+
+if(thisLayout == 'text-video'){
+    get_video_settings();
+    get_video_details();
+}
 

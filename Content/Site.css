@@ -6,8 +6,8 @@
 body {
     padding-top    : 50px;
     padding-bottom : 20px;
-    font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    overflow:      : hidden;
+    font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;
+    overflow      : hidden;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,13 +24,14 @@ textarea {
 }
 
 h1 {
-    text-shadow : none;
     color       : white;
+    text-shadow : none;
 }
 
 h3 {
-    font-size  : 3rem;
-    font-color : pink;
+    color : white;
+    font-size  : .8rem;
+    margin-bottom: 0;
 }
 
 p {
@@ -116,6 +117,10 @@ footer p {
     text-align  : center;
 }
 
+.landing-menu-item:nth-child(7n+7){
+    clear:left;
+}
+
 .market-panel {
     color   : white;
     padding : 30px;
@@ -182,6 +187,9 @@ footer p {
     border-right     : 5px solid rgba(109, 26, 66, 1);
 }
 
+#page-headline {
+    height: 31px;
+}
 .products-header {
     background-color : rgba(166, 63, 30, .7);
     border-right     : 5px solid rgba(166, 63, 30, 1);
@@ -236,6 +244,15 @@ footer p {
     box-shadow         : none;
 }
 
+#sectionMenu ul li.casestudy-panel-item:after {
+    color        : rgba(115, 104, 103, 1);
+    content      : ' \25CF';
+    font-size    : 80px;
+    float        : right;
+    margin-top   : -50px;
+    margin-right : 40px;
+}
+
 #sectionMenu ul li.markets-panel-item:after {
     color        : rgba(109, 26, 66, 1);
     content      : ' \25CF';
@@ -253,6 +270,8 @@ footer p {
     margin-top   : -50px;
     margin-right : 40px;
 }
+
+
 
 #section-menu-button {
     background    : none;
@@ -274,7 +293,7 @@ footer p {
 
 #submenu-content {
 
-    background  : -webkit-linear-gradient(rgb(166, 63, 30, .8), transparent); /* For Safari 5.1 to 6.0 */
+    background  : -webkit-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Safari 5.1 to 6.0 */
     background  : -o-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Opera 11.1 to 12.0 */
     background  : -moz-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Firefox 3.6 to 15 */
     background  : linear-gradient(rgba(166, 63, 30, .8), transparent); /* Standard syntax (must be last) */
@@ -305,6 +324,10 @@ footer p {
     padding       : 5px;
     width         : 33%;
     max-width     : 240px;
+}
+
+#video-poster {
+    width: 320px;
 }
 
 .view-content-link {
@@ -380,8 +403,8 @@ footer p {
 }
 
 .ofTest {
-    overflow-y  : hidden;
     overflow    : auto;
+    overflow-y  : hidden;
     height      : 150px;
     width       : 1500px;
     white-space : nowrap;
