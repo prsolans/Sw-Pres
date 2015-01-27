@@ -1,4 +1,5 @@
-var pagelist = '{ "pages": [ ' +
+var pagelist = '{' +
+    '"pages": [ ' +
     '{ "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"0", "background":"home" },' +
     '{ "id": 1, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"0", "background":"home" },' +
     '{ "id": 2, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
@@ -6,28 +7,33 @@ var pagelist = '{ "pages": [ ' +
     '{ "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
     '{ "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
-    '{ "id": 7, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
-    '{ "id": 8, "title": "Power", "filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
-    '{ "id": 9, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "market", "parent":"8", "background":"power-blur", "menu":"pr-leak" },' +
-    '{ "id": 10, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
-    '{ "id": 11, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
-    '{ "id": 12, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"main-menu", "menu":"pr-fittings", "headline":"Fittings Landing Page", "content":"LIST of Items" },' +
-    '{ "id": 13, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "content":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
-    '{ "id": 14, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "content":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
-    '{ "id": 15, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "content":""},' +
-    '{ "id": 16, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Flange tSwagelok Tube Fitting Pipe", "content":""},' +
-    '{ "id": 17, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "content":""},' +
-    '{ "id": 18, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "content":""},' +
-    '{ "id": 19, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "content":""},' +
-    '{ "id": 20, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "content":""},' +
-    '{ "id": 21, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "content":""},' +
-    '{ "id": 22, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"B \'VCO\' Fittings", "content":""},' +
-    '{ "id": 23, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"TS Fittings", "content":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
-    '{ "id": 24, "title": "Valves", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
-    '{ "id": 25, "title": "Filters", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
-    '{ "id": 26, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
-    '{ "id": 27, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
-    '{ "id": 28, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" }' +
+    '{ "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
+    '{ "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 10, "title": "Custom Solutions", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 11, "title": "One Swagelok", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 12, "title": "Applications", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "id": 13, "title": "Power", "filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
+    '{ "id": 14, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "market", "parent":"8", "background":"power-blur", "menu":"pr-leak" },' +
+    '{ "id": 15, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
+    '{ "id": 16, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
+    '{ "id": 17, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"main-menu", "menu":"pr-fittings", "headline":"Fittings Landing Page", "content":"LIST of Items" },' +
+    '{ "id": 18, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "content":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
+    '{ "id": 19, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "content":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
+    '{ "id": 20, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "content":""},' +
+    '{ "id": 21, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Flange tSwagelok Tube Fitting Pipe", "content":""},' +
+    '{ "id": 22, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "content":""},' +
+    '{ "id": 23, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "content":""},' +
+    '{ "id": 24, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "content":""},' +
+    '{ "id": 25, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "content":""},' +
+    '{ "id": 26, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "content":""},' +
+    '{ "id": 27, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"B \'VCO\' Fittings", "content":""},' +
+    '{ "id": 28, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"12", "background":"main-menu", "menu":"pr-fittings", "headline":"TS Fittings", "content":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
+    '{ "id": 29, "title": "Valves", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
+    '{ "id": 30, "title": "Filters", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
+    '{ "id": 31, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "id": 32, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
+    '{ "id": 33, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" }' +
     ']}';
 
 var idleTime = 0;
@@ -48,6 +54,7 @@ $(document).on("pagebeforecreate", function () {
     var fileDepth = path[0];
     var presentationID = getParameterByName('presID');
     if (presentationID) {
+        $.getScript(fileDepth + 'Content/content_en_us.js');
         $.getScript(fileDepth + 'Content/pres' + presentationID + '/settings.js');
     }
 
@@ -74,7 +81,7 @@ $(document).on("pagebeforecreate", function () {
 
 $(document).ready(function () {
 
-   start_inactivity_timer();
+    //start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
     $('div').removeClass('ui-page-theme-a');
@@ -137,6 +144,18 @@ function get_available_markets() {
     }
 }
 
+function get_capabilities_content(layouts, content) {
+
+    var thisPage = get_container_id();
+    var thisLayout = getObjects(JSON.parse(layouts), 'page_id', thisPage);
+    var thisContent = getObjects(JSON.parse(content), 'page_id', thisPage);
+    set_page_layout(thisLayout[0].page_layout);
+
+    var elementId = thisContent[0].page_element;
+    var html = thisContent[0].html;
+    $('#' + elementId).html(html);
+
+}
 /**
  * Get child pages for Capabilities and Products sections, and display links to the pages
  * Utilized for main menu page, section landing page, and bottom nav within the section
@@ -383,6 +402,11 @@ function load_page_info(id, fileDepth) {
 
     }
 
+    set_page_layout(pageLayout);
+
+}
+
+function set_page_layout(pageLayout) {
 
     // Set page layout
     $('#section-menu-button').show();
@@ -403,7 +427,6 @@ function load_page_info(id, fileDepth) {
     }
     if (pageLayout == 'market') {
         show_bottom_nav();
-
     }
     if (pageLayout == 'product') {
         $('#page-content').html(content);
@@ -411,14 +434,13 @@ function load_page_info(id, fileDepth) {
     }
     if (pageLayout == 'text-video') {
         show_bottom_nav();
-
     }
     if (pageLayout == 'text-image') {
         show_bottom_nav();
-
+        $('#video-container').remove();
+        $('#video-container-setup').remove();
     }
     if (pageLayout == 'text-only') {
-
         show_bottom_nav();
         $('#video-container').remove();
         $('#video-container-setup').remove();
@@ -560,7 +582,7 @@ function show_bottom_nav() {
             $('.row').css('opacity', '.6');
             $("#footer-menu-link").animate({
                 top: docHeight - 185
-            }, delayTime).css('opacity', '1');;
+            }, delayTime).css('opacity', '1');
         }
         else {
             $('.row').css('opacity', '1');
@@ -612,11 +634,11 @@ function start_inactivity_timer(){
     var idleInterval = setInterval(timerIncrement, 1000); // 1 second
 
     //Zero the idle timer on mouse movement.
-    $(this).mousemove(function (e) {
+    $(this).mousemove(function () {
         localStorage.setItem("inactive", "false");
         idleTime = 0;
     });
-    $(this).keypress(function (e) {
+    $(this).keypress(function () {
         localStorage.setItem("inactive", "false");
         idleTime = 0;
     });
