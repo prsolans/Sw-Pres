@@ -7,7 +7,7 @@ body {
     padding-top    : 50px;
     padding-bottom : 20px;
     font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;
-    overflow      : hidden;
+    overflow       : hidden;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -29,15 +29,53 @@ h1 {
 }
 
 h3 {
-    color : white;
-    font-size  : .8rem;
-    margin-bottom: 0;
+    color         : white;
+    font-size     : .8rem;
+    margin-bottom : 0;
 }
 
 p {
     text-shadow : none;
     color       : white;
     font-size   : .8em;
+}
+
+.arrow-up {
+    width         : 0;
+    height        : 0;
+    border-left   : 10px solid transparent;
+    border-right  : 10px solid transparent;
+    border-bottom : 10px solid goldenrod;
+    display       : inline-block;
+
+}
+
+.arrow-down {
+    width        : 0;
+    height       : 0;
+    border-left  : 10px solid transparent;
+    border-right : 10px solid transparent;
+    border-top   : 10px solid goldenrod;
+    display      : inline-block;
+}
+
+.arrow-right {
+    float         : right;
+    width         : 0;
+    height        : 0;
+    border-top    : 10px solid transparent;
+    border-bottom : 10px solid transparent;
+    border-left   : 10px solid goldenrod;
+    margin-top    : 70px;
+}
+
+.arrow-left {
+    width         : 0;
+    height        : 0;
+    border-top    : 10px solid transparent;
+    border-bottom : 10px solid transparent;
+
+    border-right  : 10px solid blue;
 }
 
 .button {
@@ -80,6 +118,37 @@ footer p {
     width      : 100%;
 }
 
+.footer-title, .footer-title a, .footer-title a:visited, .footer-title a:hover, .footer-title a:focus {
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+
+.frame {
+    overflow   : hidden;
+    height     : 160px;
+    padding    : 0;
+    margin-top : 5px;
+}
+
+.frame .slidee {
+    margin     : 0;
+    padding    : 0;
+    height     : 100%;
+    list-style : none;
+    min-width  : 956px;
+}
+
+.frame .slidee li {
+    float       : left;
+    margin      : 0;
+    padding     : 0;
+    width       : 180px;
+    height      : 100%;
+    font-size   : .8rem;
+    padding-top : 30px;
+    text-align  : center;
+}
+
 .full-width-band {
     margin     : 0;
     height     : 200px;
@@ -112,13 +181,15 @@ footer p {
 }
 
 .landing-menu-item {
+    float       : left;
     font-size   : .8rem;
-    padding-top : 25px;
+    list-style  : none;
+    padding-top : 35px;
     text-align  : center;
 }
 
-.landing-menu-item:nth-child(7n+7){
-    clear:left;
+.landing-menu-item:nth-child(7n+7) {
+    clear : left;
 }
 
 .market-panel {
@@ -179,20 +250,18 @@ footer p {
 
 .capabilities-header {
     background-color : rgba(0, 96, 102, .7);
-    border-right     : 5px solid rgba(0, 96, 102, 1);
 }
 
 .markets-header {
     background-color : rgba(109, 26, 66, .7);
-    border-right     : 5px solid rgba(109, 26, 66, 1);
 }
 
 #page-headline {
-    height: 31px;
+    height : 31px;
 }
+
 .products-header {
     background-color : rgba(166, 63, 30, .7);
-    border-right     : 5px solid rgba(166, 63, 30, 1);
 }
 
 .capabilities-list, .capabilities-bottom-menu-list {
@@ -271,8 +340,6 @@ footer p {
     margin-right : 40px;
 }
 
-
-
 #section-menu-button {
     background    : none;
     border-radius : 50%;
@@ -327,7 +394,7 @@ footer p {
 }
 
 #video-poster {
-    width: 320px;
+    width : 320px;
 }
 
 .view-content-link {

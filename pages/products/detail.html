@@ -24,11 +24,12 @@
     <script src="../../Scripts/modernizr-2.6.2.js"></script>
     <script src="../../Scripts/mt.js"></script>
     <script src="../../Scripts/hammer.min.js"></script>
+    <script src="../../Scripts/sly.js"></script>
     <script src="../../Scripts/main.js"></script>
 </head>
 <body>
     <!-- Add your site or application content here -->
-    <div data-role='page' data-pageid="5" id="page-container" style="">
+    <div data-role='page' data-pageid="4" id="page-container" style="">
 
         <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
         </div>
@@ -51,11 +52,52 @@
         </div>
         <div class="row products-header" id="footer-menu-link">
             <a href="#" >Products</a>
-            <div class=" products-child-pages-list bottom-nav products-bottom-menu-list"></div>
+            <div class="frame">
+                <ul class="slidee">
+                </ul>
+            </div>
 
         </div>
 
     </div>
     <script src="../../Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // -------------------------------------------------------------
+            //   Basic Navigation
+            // -------------------------------------------------------------
+            (function () {
+                var $frame = $('.frame');
+                var $slidee = $frame.children('ul').eq(0);
+                var $wrap = $frame.parent();
+
+                // Call Sly on frame
+                $frame.sly({
+                    horizontal: 1,
+                    itemNav: 'basic',
+                    smart: 1,
+                    activateOn: 'drag',
+                    mouseDragging: 1,
+                    touchDragging: 1,
+                    releaseSwing: 1,
+                    startAt: 3,
+                    scrollBy: 0,
+                    pagesBar: $wrap.find('.pages'),
+                    activatePageOn: 'tap',
+                    speed: 300,
+                    elasticBounds: 0,
+                    dragHandle: 1,
+                    dynamicHandle: 1,
+                    clickBar: 1
+
+                });
+
+
+            }());
+        });
+
+    </script>
+
+    </div>
 </body>
 </html>

@@ -28,7 +28,7 @@ if(theseSettings[0].hasCaseStudy == true){
 get_available_markets(marketList);
 get_custom_content(layoutsList, content);
 
-var thisLayout = get_page_layout(layoutsList, get_container_id());
+var thisLayout = get_page_layout(layoutsList);
 
 if(thisLayout == 'text-video'){
     get_video_settings();
