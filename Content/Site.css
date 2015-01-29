@@ -497,8 +497,9 @@ footer p {
 
 /* DEBUGGING - NOT UTILIZED FOR PRODUCTION CODE */
 
-.border {
-    border : 1px solid black;
+.debug {
+    border : 3px solid pink;
+    color: #ffff00;
 }
 
 .ofTest {

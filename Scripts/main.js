@@ -164,7 +164,7 @@ function get_custom_content(layouts, content) {
 
     console.log(thisLayout);
 
-    if (thisLayout != false && thisLayout != 'menu') {
+    if (thisLayout != false) {
         set_page_layout(thisLayout);
     }
 
@@ -489,7 +489,7 @@ function load_page_info(id, fileDepth) {
     }
     $('#page-content').html(content);
 
-    set_page_layout(pageLayout);
+    //set_page_layout(pageLayout);
 
 }
 
@@ -523,7 +523,7 @@ function set_page_layout(pageLayout) {
     if(pageLayout == 'mission') {
         show_bottom_nav();
         $('#right-column').remove();
-        var videoRow = '<div class="col-sm-4>Video</div><div class="col-sm-4>Video</div>';
+        var videoRow = '<div class="col-sm-4 debug">Video</div><div class="col-sm-4 debug">Video</div>';
         $('.row.secondary').append(videoRow);
     }
     if (pageLayout == 'text-video') {
@@ -650,19 +650,20 @@ function show_animated_menu() {
 
     // Calculate width of header element
     // It is set as a percentage, but we need a px dimension
-    var width = $('.menu-header').width() / 100;
-    var pxwidth = $(document).width() * width;
+    var documentWidth = $(document).width();
+    var columnWidth = documentWidth/12;
+    var newWidth = columnWidth*2;
 
     $('.capabilities-row .menu-list').delay(delayTime).animate({
-        left: pxwidth
+        left: newWidth
     }, 800);
 
     $('.products-row .menu-list').delay(delayTime).animate({
-        left: pxwidth
+        left: newWidth
     }, 1200);
 
     $('.markets-row .menu-list').delay(delayTime).animate({
-        left: pxwidth
+        left: newWidth
     }, 1600);
 
 
