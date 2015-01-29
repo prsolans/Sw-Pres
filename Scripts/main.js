@@ -6,7 +6,7 @@ var pagelist = '{' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "text-video", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
     '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
     '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
     '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
@@ -519,6 +519,12 @@ function set_page_layout(pageLayout) {
     }
     if (pageLayout == 'product') {
         show_bottom_nav();
+    }
+    if(pageLayout == 'mission') {
+        show_bottom_nav();
+        $('#right-column').remove();
+        var videoRow = '<div class="col-sm-4>Video</div><div class="col-sm-4>Video</div>';
+        $('.row.secondary').append(videoRow);
     }
     if (pageLayout == 'text-video') {
 
