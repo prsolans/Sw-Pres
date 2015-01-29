@@ -47,7 +47,7 @@ p {
     border-right  : 10px solid transparent;
     border-bottom : 10px solid goldenrod;
     display       : inline-block;
-
+    margin-left : 20px;
 }
 
 .arrow-down {
@@ -57,6 +57,8 @@ p {
     border-right : 10px solid transparent;
     border-top   : 10px solid goldenrod;
     display      : inline-block;
+    margin-top  : 10px;
+    margin-left : 20px;
 }
 
 .arrow-right {
@@ -118,9 +120,39 @@ footer p {
     width      : 100%;
 }
 
-.footer-title, .footer-title a, .footer-title a:visited, .footer-title a:hover, .footer-title a:focus {
-    text-decoration: none !important;
-    text-transform: uppercase;
+.footer-title-up, .footer-title-up a, .footer-title-up a:visited, .footer-title-up a:hover, .footer-title-up a:focus, .footer-title-down, .footer-title-down a, .footer-title-down a:visited, .footer-title-down a:hover, .footer-title-down a:focus {
+    text-decoration : none !important;
+    text-transform  : uppercase;
+}
+
+.footer-title-up:after {
+    content             : ' ';
+    height              : 0;
+    position            : absolute;
+    width               : 0;
+    border              : 8px solid transparent; /* arrow size */
+    border-bottom-color : goldenrod; /* arrow color */
+
+    /* positioning */
+    position            : relative;
+    top                 : -15px;
+    left                : 10px;
+    z-index             : 2;
+}
+
+.footer-title-down:after {
+    content          : ' ';
+    height           : 0;
+    position         : absolute;
+    width            : 0;
+    border           : 8px solid transparent; /* arrow size */
+    border-top-color : goldenrod; /* arrow color */
+
+    /* positioning */
+    position         : relative;
+    top              : 15px;
+    left             : 10px;
+    z-index          : 2;
 }
 
 .frame {
