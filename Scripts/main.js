@@ -307,7 +307,7 @@ function get_video_details() {
         if (this.custom == true) {
             path = fileDepth + 'Content/pres' + presID + '/videos';
         }
-        var posterImage = path + '/' + this.filename + '.gif';
+        var posterImage = path + '/' + this.filename + '.png';
         var video = path + '/' + this.filename + '.mp4';
         var subtitles = path + '/' + this.filename + '.vtt';
         var element = this.page_element;
