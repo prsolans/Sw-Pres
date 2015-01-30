@@ -55,7 +55,6 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
     get_child_pages('4'); // Products
     get_child_pages('3'); // Capabilities
 
-
     var filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
     var fileDepth = path[0];
@@ -197,13 +196,20 @@ function get_child_pages(section) {
 
     var thisPage = get_page_details(getParameterByName('pageId'));
 
+    var thisParent = get_page_details(thisPage.parent);
+
+
+
     var select = JSON.parse(pagelist);
     var items = select.pages;
     var fileDepth = get_file_location();
 
     $.each(items, function () {
 
+
         if (this.parent == section) {
+            console.log(this.id+'/'+this.parent+'/'+thisParent.parent);
+
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
@@ -211,7 +217,7 @@ function get_child_pages(section) {
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
-            if (this.parent == thisPage.parent) {
+            if (thisParent.id == section || thisParent.parent == section) {
                 var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" height="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
