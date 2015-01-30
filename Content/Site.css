@@ -269,6 +269,11 @@ footer p {
     font-weight : normal;
 }
 
+#page-container ul {
+    font-size: .8rem;
+    color: white;
+}
+
 .panel-link-item {
     font-weight    : normal !important;
     text-transform : uppercase;
