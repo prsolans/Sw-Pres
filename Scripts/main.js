@@ -90,7 +90,7 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
 
 $(document).ready(function pageReady() {
 
-    //start_inactivity_timer();
+    start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
     $('div').removeClass('ui-page-theme-a');
@@ -899,7 +899,7 @@ function timerIncrement() {
             videoWasOpenedAtPageLoad = true;
         }
     }
-    if (idleTime > 20) { // 3 minutes
+    if (idleTime > 180) { // 3 minutes
         if (thisPage != '1') {
             var home = fileDepth + 'pages/index.html?pageId=1&presID=1';
             localStorage.setItem("inactive", "true");
