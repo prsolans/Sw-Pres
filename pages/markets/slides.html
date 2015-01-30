@@ -43,24 +43,37 @@
     <div class="market-section">
         <div class="row market-panel" id="one">
             <div class="col-xs-6">
-                <img src="../../content/images/markets/power/slide1.png" width="300" /></div>
-            <div class="col-xs-6"><h1>Keep your plant running</h1><p>Keeping a power plant running....</p></div>
+                <img src="../../content/images/markets/power/slide1.png" width="300"/></div>
+            <div class="col-xs-6"><h1>Keep your plant running</h1>
+
+                <p>Keeping a power plant running....</p></div>
         </div>
         <div class="row market-panel" id="two">
             <div class="col-xs-6">
                 <img src="../../content/images/markets/power/slide2.png" width="300"/></div>
-            <div class="col-xs-6"><h1>Wherever you are, we are</h1><h5>Combined Cycle</h5><p>Whether in the fuel delivery lines...</p><h5>Combined Cycle</h5><p>Whether in the fuel delivery lines...</p><h5>Combined Cycle</h5><p>Whether in the fuel delivery lines...</p></div>
+            <div class="col-xs-6"><h1>Wherever you are, we are</h1><h5>Combined Cycle</h5>
+
+                <p>Whether in the fuel delivery lines...</p><h5>Combined Cycle</h5>
+
+                <p>Whether in the fuel delivery lines...</p><h5>Combined Cycle</h5>
+
+                <p>Whether in the fuel delivery lines...</p></div>
         </div>
         <div class="row market-panel" id="three">
             <h1>Explore solutions for your plant</h1>
+
             <div role="tabpanel">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#connect" aria-controls="connect" role="tab" data-toggle="tab" class="slide-tab">Connect</a></li>
-                    <li role="presentation"><a href="#convey" aria-controls="convey" role="tab" data-toggle="tab" class="slide-tab">Convey</a></li>
-                    <li role="presentation"><a href="#control" aria-controls="control" role="tab" data-toggle="tab" class="slide-tab">Control</a></li>
-                    <li role="presentation"><a href="#customize" aria-controls="customize" role="tab" data-toggle="tab" class="slide-tab">Customize</a></li>
+                    <li role="presentation" class="active"><a href="#connect" aria-controls="connect" role="tab"
+                                                              data-toggle="tab" class="slide-tab">Connect</a></li>
+                    <li role="presentation"><a href="#convey" aria-controls="convey" role="tab" data-toggle="tab"
+                                               class="slide-tab">Convey</a></li>
+                    <li role="presentation"><a href="#control" aria-controls="control" role="tab" data-toggle="tab"
+                                               class="slide-tab">Control</a></li>
+                    <li role="presentation"><a href="#customize" aria-controls="customize" role="tab" data-toggle="tab"
+                                               class="slide-tab">Customize</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -76,78 +89,11 @@
         </div>
     </div>
     <div class="row markets-header" id="footer-menu-link">
-        <a href="#" >Markets</a>
+        <a href="#">Markets</a>
+
         <div class="item-menu bottom-nav markets-bottom-menu-list"></div>
     </div>
 </div>
 <script src="../../Scripts/bootstrap.min.js"></script>
-<style>
-    .market-panel {
-            min-height: 400px;
-            background: none;
-            width: 95%;
-            margin: auto;
-    }
-</style>
-<script>
-    $(document).ready(function () {
-
-        var one = $('.market-panel').first();
-        var two = one.next('.market-panel');
-        var three = two.next('.market-panel');
-
-        var width = one.width();
-        var offset = one.offset();
-
-        var leftEdge = width - offset.left;
-
-        one.css({
-            'opacity': 1,
-            'position': 'absolute',
-            'top': offset.top,
-            'left': offset.left,
-            'width': width,
-            'z-index': 5000
-        })
-
-        two.css({
-            'opacity': 1,
-            'position': 'absolute',
-            'top': offset.top,
-            'left': width,
-            'width': width,
-            'z-index': 5000
-        });
-        three.css({
-            'opacity': 1,
-            'position': 'absolute',
-            'top': offset.top,
-            'left': width * 2,
-            'width': width,
-            'z-index': 5000
-        });
-
-        $('.market-panel').on("swipeleft", function () {
-
-            var id = $(this).attr('id');
-            if (id != 'three') {
-                $('.market-panel').animate({
-                    left: '-=' + leftEdge
-                }, 800);
-            }
-        });
-
-        $('.market-panel').on("swiperight", function () {
-
-            var id = $(this).attr('id');
-            if (id != 'one') {
-                $('.market-panel').animate({
-                    left: '+=' + leftEdge
-                }, 800);
-            }
-
-        });
-    });
-</script>
 </body>
 </html>

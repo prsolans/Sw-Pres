@@ -40,7 +40,7 @@ var pagelist = '{' +
 var idleTime = 0;
 var videoWasOpenedAtPageLoad = false;
 
-$(document).delegate("body", "touchmove", false);
+//$(document).delegate("body", "touchmove", false);
 $(document).delegate("body", "scrollstart", false);
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
@@ -54,6 +54,7 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
 
     get_child_pages('4'); // Products
     get_child_pages('3'); // Capabilities
+
 
     var filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
@@ -159,6 +160,10 @@ function get_custom_content(layouts, content) {
 
     if (thisLayout != false) {
         set_page_layout(thisLayout);
+    }
+
+    if( thisLayout == 'market') {
+        show_market_slides();
     }
 
     var thisContent = getObjects(JSON.parse(content), 'page_id', thisPage);
@@ -643,9 +648,9 @@ function show_bottom_nav() {
     var delayTime = 600;
 
     var docHeight = $(document).height();
-
     var linkTop = docHeight - 25;
-
+    var position = $("#footer-menu-link").offset().top;
+    console.log(linkTop + '/' + position);
 
     $("#footer-menu-link")
         .css({
@@ -658,24 +663,24 @@ function show_bottom_nav() {
             'z-index': 5000
         });
 
-    var position = $("#footer-menu-link").offset().top;
 
-    if (position == linkTop) {
-        $('.row').css('opacity', '.7');
-        $("#footer-menu-link").animate({
-            top: docHeight - 185
-        }, delayTime).css('opacity', '1')
-            .delay(delayTime * 5).animate({
-                top: linkTop
-            }, delayTime);
-        $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
+    // position rendered inoperable based on pageload delays that avoid flicker
+    //if (position == linkTop) {
+    $('.row').css('opacity', '.7');
+    $("#footer-menu-link").animate({
+        top: docHeight - 185
+    }, delayTime).css('opacity', '1')
+        .delay(delayTime * 5).animate({
+            top: linkTop
+        }, delayTime);
+    $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
 
-        setTimeout(function () {
-            $('.row').css('opacity', '1');
-        }, delayTime * 7);
-        $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
+    setTimeout(function () {
+        $('.row').css('opacity', '1');
+    }, delayTime * 7);
+    $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
 
-    }
+    //}
 
     $("#footer-menu-link").on("click", function () {
 
@@ -703,6 +708,64 @@ function show_bottom_nav() {
 
 }
 
+function show_market_slides() {
+
+    var one = $('.market-panel').first();
+    var two = one.next('.market-panel');
+    var three = two.next('.market-panel');
+
+    var width = one.width();
+    var offset = one.offset();
+
+    var leftEdge = width - offset.left;
+
+    one.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': offset.left,
+        'width': width,
+        'z-index': 5000
+    })
+
+    two.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': width,
+        'width': width,
+        'z-index': 5000
+    });
+    three.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': width * 2,
+        'width': width,
+        'z-index': 5000
+    });
+
+    $('.market-panel').on("swipeleft", function () {
+        alert('swipe');
+        var id = $(this).attr('id');
+        if (id != 'three') {
+            $('.market-panel').animate({
+                left: '-=' + leftEdge
+            }, 800);
+        }
+    });
+
+    $('.market-panel').on("swiperight", function () {
+
+        var id = $(this).attr('id');
+        if (id != 'one') {
+            $('.market-panel').animate({
+                left: '+=' + leftEdge
+            }, 800);
+        }
+
+    });
+}
 function show_submenu(pres, id) {
 
     var page = get_page_details(id);
