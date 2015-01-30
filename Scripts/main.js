@@ -195,10 +195,7 @@ function get_custom_content(layouts, content) {
 function get_child_pages(section) {
 
     var thisPage = get_page_details(getParameterByName('pageId'));
-
     var thisParent = get_page_details(thisPage.parent);
-
-
 
     var select = JSON.parse(pagelist);
     var items = select.pages;
@@ -206,9 +203,7 @@ function get_child_pages(section) {
 
     $.each(items, function () {
 
-
         if (this.parent == section) {
-            console.log(this.id+'/'+this.parent+'/'+thisParent.parent);
 
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
@@ -225,8 +220,6 @@ function get_child_pages(section) {
                 var width = viewport / 6;
                 $('.slidee li').css('width', width);
             }
-
-
         }
     });
 
@@ -322,7 +315,7 @@ function get_video_details() {
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
 
-        var html = '<video id="' + element + '" class="' + element + 'video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        var html = '<video id="' + element + '" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
         $('.' + element + '-modal-body').html(html);
 
@@ -331,6 +324,52 @@ function get_video_details() {
             "controlBar": false,
             "type": "video/mp4",
             "src": video
+        });
+
+        videojs(element).ready(function () {
+
+            // Store the video object
+            var myPlayer = this, id = myPlayer.id();
+
+            // Make up an aspect ratio
+            var aspectRatio = 9 / 16;
+
+            function resizeVideoJS() {
+                var width = document.getElementById(id).parentElement.offsetWidth;
+                myPlayer.width(width).height(width * aspectRatio);
+            }
+
+            var videoModal = $("#"+element+"-modal");
+
+            videoModal.on('show.bs.modal', function () {
+
+                var width = $(window).width();
+                myPlayer.width(width).height($(window).height());
+
+                $('.modal-dialog').css('margin', '0 !important');
+
+                myPlayer.play();
+
+                $(window).resize(function () {
+                    resizeVideoJS();
+                });
+
+                $('#'+element+'_html5_api').on('click', function () {
+                    videoModal.modal('hide');
+                    show_animated_overlay();
+                });
+
+                $('#'+element+'_html5_api').on('tap', function () {
+                    videoModal.modal('hide');
+                    show_animated_overlay();
+                });
+
+            });
+
+            videoModal.on('hidden.bs.modal', function () {
+                myPlayer.pause();
+            });
+
         });
 
     });
@@ -476,7 +515,6 @@ function set_page_layout(pageLayout) {
     }
     if (pageLayout == 'menu') {
         show_animated_menu();
-
         $('#section-menu-button').hide();
     }
     if (pageLayout == 'market') {

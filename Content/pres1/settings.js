@@ -42,7 +42,7 @@ if(theseSettings[0].hasCaseStudy == true){
 get_available_markets(marketList);
 get_custom_content(layoutsList, content);
 
-if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission'){
+if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash'){
     get_video_settings();
     get_video_details();
 }
