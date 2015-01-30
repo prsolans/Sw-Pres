@@ -426,6 +426,8 @@ footer p {
 }
 
 #video-poster {
+    min-height: 32px;
+    min-width: 32px;
     width : 320px;
 }
 

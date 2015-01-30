@@ -6,7 +6,7 @@ var pagelist = '{' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow", "content":"Helping you grow means..." },' +
     '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
     '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
     '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
@@ -70,6 +70,7 @@ $(document).on("pagebeforecreate", function () {
 
     var pageDetails = getObjects(JSON.parse(pagelist), 'id', pageID);
 
+    console.log('Page Details:');
     console.log(pageDetails);
 
     load_page_info(pageID, fileDepth);
@@ -157,12 +158,7 @@ function get_available_markets() {
 function get_custom_content(layouts, content) {
 
     var thisPage = localStorage.getItem('pageSlug');
-
-    console.log(thisPage);
-
     var thisLayout = get_page_layout(layouts, thisPage);
-
-    console.log(thisLayout);
 
     if (thisLayout != false) {
         set_page_layout(thisLayout);
@@ -199,8 +195,6 @@ function get_child_pages(section) {
 
     var thisPage = get_page_details(getParameterByName('pageId'));
 
-    console.log(thisPage.pageSlug);
-
     var select = JSON.parse(pagelist);
     var items = select.pages;
     var fileDepth = get_file_location();
@@ -231,7 +225,7 @@ function get_child_pages(section) {
     if (thisPage.pageSlug == 'mainMenu') {
 
         var width = $(window).width();
-        var liWidth = (width * (5 / 6))/6.25;
+        var liWidth = (width * (5 / 6)) / 6.25;
         console.log(width + ':' + liWidth);
         $('.slidee li').css('width', liWidth);
         $('.frame').css('height', '175px');
@@ -280,10 +274,12 @@ function get_page_layout(layouts) {
     var page_layout = false;
     if (typeof thisLayout[0] !== "undefined") {
         page_layout = thisLayout[0].page_layout;
+        localStorage.setItem('pageLayout', page_layout);
     }
     else {
         page_layout = localStorage.getItem('pageLayout');
     }
+    console.log('Layout: ' + page_layout);
 
     return page_layout;
 }
@@ -314,63 +310,74 @@ function get_video_details() {
         var posterImage = path + '/' + this.filename + '.gif';
         var video = path + '/' + this.filename + '.mp4';
         var subtitles = path + '/' + this.filename + '.vtt';
+        var element = this.page_element;
+        var videoCaption = this.caption;
 
-        $('#video-poster').attr('src', posterImage);
+        console.log(element);
 
-        var html = '<video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="mp4-path" src="' + video + '" type="video/mp4" /><track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        $('#' + element + '-poster').attr('src', posterImage);
+        $('#' + element + '-caption').html(videoCaption);
 
-        $('.modal-body').html(html);
-        $('.video-js').data("setup", {"bigPlayButton": true, "controlBar": false, "type": "video/mp4", "src": video})
+        var html = '<video id="' + element + '" class="'+element+'video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
-    });
+        $('.'+element+'-modal-body').html(html);
 
-    videojs('demo_video', {}, function () {
-
-        // Store the video object
-        var myPlayer = this, id = myPlayer.id();
-
-        // Make up an aspect ratio
-        var aspectRatio = 9 / 16;
-
-        function resizeVideoJS() {
-            var width = document.getElementById(id).parentElement.offsetWidth;
-            myPlayer.width(width).height(width * aspectRatio);
-        }
-
-        var videoModal = $("#videoModal");
-
-        videoModal.on('show.bs.modal', function () {
-
-            var width = $(window).width();
-            myPlayer.width(width).height($(window).height());
-
-            $('.modal-dialog').css('margin', '0 !important');
-
-            myPlayer.play();
-
-            $(window).resize(function () {
-                resizeVideoJS();
-            });
-
-            $('#demo_video_html5_api').on('click', function () {
-                videoModal.modal('hide');
-                show_animated_overlay();
-            });
-
-            $('#demo_video_html5_api').on('tap', function () {
-                videoModal.modal('hide');
-                show_animated_overlay();
-            });
+        $('.'+element+'-video-js').data("setup", {
+            "bigPlayButton": true,
+            "controlBar": false,
+            "type": "video/mp4",
+            "src": video
+        });
 
         });
 
-        videoModal.on('hidden.bs.modal', function () {
-            myPlayer.pause();
-        });
+        videojs(element, {}, function () {
+
+            // Store the video object
+            var myPlayer = this, id = myPlayer.id();
+
+            // Make up an aspect ratio
+            var aspectRatio = 9 / 16;
+
+            function resizeVideoJS() {
+                var width = document.getElementById(id).parentElement.offsetWidth;
+                myPlayer.width(width).height(width * aspectRatio);
+            }
+
+            var videoModal = $('#' + element + '-modal');
+
+            videoModal.on('show.bs.modal', function () {
+
+                var width = $(window).width();
+                myPlayer.width(width).height($(window).height());
+
+                $('.modal-dialog').css('margin', '0 !important');
+
+                myPlayer.play();
+
+                $(window).resize(function () {
+                    resizeVideoJS();
+                });
+
+                $('#' + element + '_html5_api').on('click', function () {
+                    videoModal.modal('hide');
+                    show_animated_overlay();
+                });
+
+                $('#' + element + '_html5_api').on('tap', function () {
+                    videoModal.modal('hide');
+                    show_animated_overlay();
+                });
+
+            });
+
+            videoModal.on('hidden.bs.modal', function () {
+                myPlayer.pause();
+            });
+
+       // });
 
     });
-
-
 }
 
 function get_video_settings() {
@@ -384,6 +391,8 @@ function get_video_settings() {
         var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
         $('#video-list').append(html);
     });
+
+    return livevideos;
 
 }
 
@@ -426,7 +435,6 @@ function load_page_elements(fileDepth, presentationID) {
 function load_page_info(id, fileDepth) {
 
     var parent;
-    var pageLayout;
     var background;
 
     var title;
@@ -438,7 +446,6 @@ function load_page_info(id, fileDepth) {
     var pres = getParameterByName('presID');
 
     parent = page.parent;
-    pageLayout = page.layout;
     background = page.background;
 
     title = page.title;
@@ -461,6 +468,13 @@ function load_page_info(id, fileDepth) {
     }
     else {
         $('#page-title').html(headline);
+    }
+
+    if (content == undefined) {
+        $('#page-content').html('XX');
+    }
+    else {
+        $('#page-content').html(content);
     }
 
     if (parent != '0') {
@@ -487,14 +501,10 @@ function load_page_info(id, fileDepth) {
         }
 
     }
-    $('#page-content').html(content);
-
-    //set_page_layout(pageLayout);
 
 }
 
 function set_page_layout(pageLayout) {
-
 
     // Set page layout
     $('#section-menu-button').show();
@@ -520,17 +530,25 @@ function set_page_layout(pageLayout) {
     if (pageLayout == 'product') {
         show_bottom_nav();
     }
-    if(pageLayout == 'mission') {
+    if (pageLayout == 'mission') {
         show_bottom_nav();
         $('#right-column').remove();
-        var videoRow = '<div class="col-sm-4 debug">Video</div><div class="col-sm-4 debug">Video</div>';
+        var videoRow = '<div class="col-sm-4 distributor-video-cell">Video</div><div class="col-sm-4 col-sm-offset-1 ceo-video-cell">Video</div>';
         $('.row.secondary').append(videoRow);
+
+       var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+
+        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+
+        $('.distributor-video-cell').html(distributorContainer);
+        $('.ceo-video-cell').html(ceoContainer);
+        $('#video-setup').html(script);
     }
     if (pageLayout == 'text-video') {
+        show_bottom_nav();
 
         $('#left-column').removeClass('col-sm-6').addClass('col-sm-7');
         $('#right-column').removeClass('col-sm-6').addClass('col-sm-5');
-        show_bottom_nav();
 
         var videoContainer = '<div id="video-container"> <!-- Button trigger modal --> <img id="video-poster" src="" data-toggle="modal" data-target="#videoModal"> <!-- Modal --> <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> <video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
@@ -651,8 +669,8 @@ function show_animated_menu() {
     // Calculate width of header element
     // It is set as a percentage, but we need a px dimension
     var documentWidth = $(document).width();
-    var columnWidth = documentWidth/12;
-    var newWidth = columnWidth*2;
+    var columnWidth = documentWidth / 12;
+    var newWidth = columnWidth * 2;
 
     $('.capabilities-row .menu-list').delay(delayTime).animate({
         left: newWidth
