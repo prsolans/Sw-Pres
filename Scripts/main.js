@@ -6,7 +6,7 @@ var pagelist = '{' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow", "content":"Helping you grow means..." },' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow!!", "htmlContent":"Helping you grow means..." },' +
     '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
     '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
     '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
@@ -43,7 +43,9 @@ var videoWasOpenedAtPageLoad = false;
 $(document).delegate("body", "touchmove", false);
 $(document).delegate("body", "scrollstart", false);
 
-$(document).on("pagebeforecreate", function () {
+$(document).on("pagebeforecreate", function pagePrebuild() {
+
+    $('body').css('display', 'none');
 
     $.ajaxPrefilter(function (options) {
         options.crossDomain = true;
@@ -70,9 +72,6 @@ $(document).on("pagebeforecreate", function () {
 
     var pageDetails = getObjects(JSON.parse(pagelist), 'id', pageID);
 
-    console.log('Page Details:');
-    console.log(pageDetails);
-
     load_page_info(pageID, fileDepth);
 
     if (typeof(Storage) !== "undefined") {
@@ -84,13 +83,12 @@ $(document).on("pagebeforecreate", function () {
 
     } else {
         // Sorry! No Web Storage support..
-
         alert('Sorry! No Web Storage support...');
     }
 
 });
 
-$(document).ready(function () {
+$(document).ready(function pageReady() {
 
     //start_inactivity_timer();
 
@@ -134,7 +132,6 @@ $(document).ready(function () {
     }
 
 });
-
 
 /**
  * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
@@ -205,12 +202,12 @@ function get_child_pages(section) {
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" height="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
             if (this.parent == thisPage.parent) {
-                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" height="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
@@ -226,7 +223,6 @@ function get_child_pages(section) {
 
         var width = $(window).width();
         var liWidth = (width * (5 / 6)) / 6.25;
-        console.log(width + ':' + liWidth);
         $('.slidee li').css('width', liWidth);
         $('.frame').css('height', '175px');
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
@@ -279,7 +275,6 @@ function get_page_layout(layouts) {
     else {
         page_layout = localStorage.getItem('pageLayout');
     }
-    console.log('Layout: ' + page_layout);
 
     return page_layout;
 }
@@ -313,69 +308,19 @@ function get_video_details() {
         var element = this.page_element;
         var videoCaption = this.caption;
 
-        console.log(element);
-
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
 
-        var html = '<video id="' + element + '" class="'+element+'video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        var html = '<video id="' + element + '" class="' + element + 'video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
-        $('.'+element+'-modal-body').html(html);
+        $('.' + element + '-modal-body').html(html);
 
-        $('.'+element+'-video-js').data("setup", {
+        $('.' + element + '-video-js').data("setup", {
             "bigPlayButton": true,
             "controlBar": false,
             "type": "video/mp4",
             "src": video
         });
-
-        });
-
-        videojs(element, {}, function () {
-
-            // Store the video object
-            var myPlayer = this, id = myPlayer.id();
-
-            // Make up an aspect ratio
-            var aspectRatio = 9 / 16;
-
-            function resizeVideoJS() {
-                var width = document.getElementById(id).parentElement.offsetWidth;
-                myPlayer.width(width).height(width * aspectRatio);
-            }
-
-            var videoModal = $('#' + element + '-modal');
-
-            videoModal.on('show.bs.modal', function () {
-
-                var width = $(window).width();
-                myPlayer.width(width).height($(window).height());
-
-                $('.modal-dialog').css('margin', '0 !important');
-
-                myPlayer.play();
-
-                $(window).resize(function () {
-                    resizeVideoJS();
-                });
-
-                $('#' + element + '_html5_api').on('click', function () {
-                    videoModal.modal('hide');
-                    show_animated_overlay();
-                });
-
-                $('#' + element + '_html5_api').on('tap', function () {
-                    videoModal.modal('hide');
-                    show_animated_overlay();
-                });
-
-            });
-
-            videoModal.on('hidden.bs.modal', function () {
-                myPlayer.pause();
-            });
-
-       // });
 
     });
 }
@@ -442,14 +387,13 @@ function load_page_info(id, fileDepth) {
     var content;
 
     var page = get_page_details(id);
-
     var pres = getParameterByName('presID');
 
     parent = page.parent;
     background = page.background;
 
     title = page.title;
-    content = page.content;
+    content = page.htmlContent;
     headline = page.headline;
 
     if (fileDepth == undefined) {
@@ -471,7 +415,7 @@ function load_page_info(id, fileDepth) {
     }
 
     if (content == undefined) {
-        $('#page-content').html('XX');
+        $('#page-content').html(content);
     }
     else {
         $('#page-content').html(content);
@@ -533,12 +477,18 @@ function set_page_layout(pageLayout) {
     if (pageLayout == 'mission') {
         show_bottom_nav();
         $('#right-column').remove();
-        var videoRow = '<div class="col-sm-4 distributor-video-cell">Video</div><div class="col-sm-4 col-sm-offset-1 ceo-video-cell">Video</div>';
+
+        var baseContent = '<div class="col-sm-4"><h1 id="page-title">&nbsp;</h1><div id="page-content"></div></div>';
+        var videoRow = '<div class="col-sm-5 distributor-video-cell">Video</div><div class="col-sm-5 col-sm-offset-1 ceo-video-cell">Video</div>';
+
+        $('#left-column').remove();
+        $('#right-column').remove();
+        $('.row:first').append(baseContent);
         $('.row.secondary').append(videoRow);
 
-       var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="" width="90%" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
-        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="" width="90%" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
         $('.distributor-video-cell').html(distributorContainer);
         $('.ceo-video-cell').html(ceoContainer);
@@ -572,6 +522,8 @@ function set_page_layout(pageLayout) {
         show_bottom_nav();
 
     }
+
+    $('body').show();
 }
 
 /**

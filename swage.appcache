@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# v10
+Content/jquery.mobile.structure-1.4.5.min.css
+Content/jquery.mobile.theme-1.4.5.min.css
+Content/Site.css
+Content/bootstrap.min.css
+Scripts/bootstrap.min.js
+Scripts/jquery-1.11.2.min.js
+Scripts/jquery.mobile-1.4.5.min.js
+Scripts/main.js
+Scripts/modernizr-2.6.2.js
+Scripts/mt.js
+Scripts/hammer.min.js
+Scripts/sly.js
+Scripts/video-js/video.js
+Scripts/video-js/video-js.min.css
+
+NETWORK:
+Content/images
+Content/pres1
+Content/pres2
+Content/videos
+pages/

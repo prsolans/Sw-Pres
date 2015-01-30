@@ -1,9 +1,11 @@
 ﻿html {
     -webkit-font-smoothing : subpixel-antialiased;
     font-weight            : normal;
+    background: black;
 }
 
 body {
+
     padding-top    : 50px;
     padding-bottom : 20px;
     font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;
@@ -228,6 +230,10 @@ footer p {
     color   : white;
     padding : 30px;
     margin  : 0 30px;
+    min-height: 400px;
+    background: none;
+    width: 800px;
+    margin: auto;
 }
 
 .markets-intro {
@@ -312,6 +318,10 @@ footer p {
     margin-top : 5px;
     width      : 101%;
     min-height : 180px;
+}
+
+.secondary {
+    padding-top: 15px;
 }
 
 #sectionMenu {
@@ -425,6 +435,12 @@ footer p {
     max-width     : 240px;
 }
 
+.video-caption {
+    padding-top: 9px;
+    text-align: center;
+    width: 90%;
+}
+
 #video-poster {
     min-height: 32px;
     min-width: 32px;
@@ -455,7 +471,10 @@ footer p {
 /* BOOTSTRAP */
 
 .clearfix {
-    height : 65px;
+    height : 40px;
+}
+.modal {
+    z-index: 10000;
 }
 
 .modal-body {
