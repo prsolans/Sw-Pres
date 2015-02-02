@@ -1,7 +1,7 @@
 ﻿html {
     -webkit-font-smoothing : subpixel-antialiased;
     font-weight            : normal;
-    background: black;
+    background             : black;
 }
 
 body {
@@ -49,7 +49,7 @@ p {
     border-right  : 10px solid transparent;
     border-bottom : 10px solid goldenrod;
     display       : inline-block;
-    margin-left : 20px;
+    margin-left   : 20px;
 }
 
 .arrow-down {
@@ -59,8 +59,8 @@ p {
     border-right : 10px solid transparent;
     border-top   : 10px solid goldenrod;
     display      : inline-block;
-    margin-top  : 10px;
-    margin-left : 20px;
+    margin-top   : 10px;
+    margin-left  : 20px;
 }
 
 .arrow-right {
@@ -227,13 +227,13 @@ footer p {
 }
 
 .market-panel {
-    color   : white;
-    padding : 30px;
-    margin  : 0 30px;
-    min-height: 400px;
-    background: none;
-    width: 95%;
-    margin: auto;
+    color      : white;
+    padding    : 30px;
+    margin     : 0 30px;
+    min-height : 400px;
+    background : none;
+    width      : 95%;
+    margin     : auto;
 }
 
 .markets-intro {
@@ -270,8 +270,8 @@ footer p {
 }
 
 #page-content ul {
-    font-size: .8rem;
-    color: white;
+    font-size : .8rem;
+    color     : white;
 }
 
 .panel-link-item {
@@ -326,7 +326,7 @@ footer p {
 }
 
 .secondary {
-    padding-top: 15px;
+    padding-top : 15px;
 }
 
 #sectionMenu {
@@ -441,15 +441,15 @@ footer p {
 }
 
 .video-caption {
-    padding-top: 9px;
-    text-align: center;
-    width: 90%;
+    padding-top : 9px;
+    text-align  : center;
+    width       : 90%;
 }
 
 #video-poster {
-    min-height: 32px;
-    min-width: 32px;
-    width : 320px;
+    min-height : 32px;
+    min-width  : 32px;
+    width      : 320px;
 }
 
 .view-content-link {
@@ -478,8 +478,9 @@ footer p {
 .clearfix {
     height : 40px;
 }
+
 .modal {
-    z-index: 10000;
+    z-index : 10000;
 }
 
 .modal-body {
@@ -512,6 +513,11 @@ footer p {
     margin-left : 35px;
 }
 
+.tab-content .row {
+    margin-top: 5px;
+    margin-left : 0 !important;
+}
+
 .ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover {
     color : white;
 }
@@ -525,7 +531,7 @@ footer p {
 
 .debug {
     border : 3px solid pink;
-    color: #ffff00;
+    color  : #ffff00;
 }
 
 .ofTest {

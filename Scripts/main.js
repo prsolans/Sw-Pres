@@ -90,7 +90,7 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
 
 $(document).ready(function pageReady() {
 
-    start_inactivity_timer();
+    //start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
     $('div').removeClass('ui-page-theme-a');
