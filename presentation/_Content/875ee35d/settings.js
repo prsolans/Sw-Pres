@@ -14,8 +14,8 @@ var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
 
        ']';
 
-var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "filename":"swagelok_video_artAnton", "caption":"A Word from Art Anton<br/>Swagelok President and CEO", "custom":false},' +
-    '{ "page_element": "distributor-video", "title": "Video 2", "filename":"distributor_video_andreas", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director", "custom":true}' +
+var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", caption":"A Word from Art Anton<br/>Swagelok President and CEO", "custom":false},' +
+    '{ "page_element": "distributor-video", "title": "Video 2", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director", "custom":true}' +
     ']';
 
 var layoutsList = '[' +
@@ -45,7 +45,6 @@ get_available_markets(marketList);
 get_custom_content(layoutsList, content);
 
 if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash'){
-    get_video_settings();
     get_video_details();
 }
 

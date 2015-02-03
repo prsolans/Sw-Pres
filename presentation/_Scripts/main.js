@@ -97,7 +97,7 @@ $(document).delegate("body", "scrollstart", false);
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
 
-    $('body').css('display', 'none');
+    //$('body').css('display', 'none');
 
     $.ajaxPrefilter(function (options) {
         options.crossDomain = true;
@@ -111,7 +111,7 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
     var path = filepath.split("Content/");
     var fileDepth = path[0];
 
-    load_page_elements(fileDepth, PRESENTATION_ID);
+    load_page_elements(fileDepth);
 
     var pageDetails = getObjects(JSON.parse(pagelist), 'id', PAGE_ID);
 
@@ -188,7 +188,6 @@ function get_available_markets() {
     if (thisPage > 1) {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var pageId = obj[0].id;
             var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/'+ obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', '+obj[0].id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
@@ -343,18 +342,19 @@ function get_presentation_settings() {
     return presSettings;
 }
 
-function get_video_details() {
+function get_video_details(videoList) {
     var livevideos = JSON.parse(videoList);
+
     $.each(livevideos, function () {
-        var path = fileDepth + 'Content/videos';
-        if (this.custom == true) {
-            path = fileDepth + 'Content/pres' + presID + '/videos';
-        }
-        var posterImage = path + '/' + this.filename + '.png';
-        var video = path + '/' + this.filename + '.mp4';
-        var subtitles = path + '/' + this.filename + '.vtt';
+        var path = '/presentation/_Content/videos';
+
+        var posterImage = path + '/' + this.posterfile;
+        var video = path + '/' + this.videofile;
+        var subtitles = path + '/' + this.subtitlefile;
         var element = this.page_element;
         var videoCaption = this.caption;
+
+        console.log('P:' + posterImage);
 
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
@@ -419,23 +419,8 @@ function get_video_details() {
     });
 }
 
-function get_video_settings() {
 
-    var livevideos = JSON.parse(videoList);
-    $.each(livevideos, function () {
-        var path = menuDepth + 'Content/videos';
-        if (this.custom == true) {
-            path = menuDepth + 'Content/pres' + presID + '/videos';
-        }
-        var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
-        $('#video-list').append(html);
-    });
-
-    return livevideos;
-
-}
-
-function load_page_elements(fileDepth, presentationID) {
+function load_page_elements(fileDepth) {
     var pageID = getParameterByName('pageId');
 
     var menuDepth;
@@ -481,7 +466,6 @@ function load_page_info(id, fileDepth) {
     var content;
 
     var page = get_page_details(id);
-    var pres = getCookie('PRESENTATION_ID');
 
     parent = page.parent;
     background = page.background;
@@ -535,7 +519,7 @@ function load_page_info(id, fileDepth) {
         if (thisParent.id == '4' || thisParentsParent.id == '4') { // Parent or Grandparent is in Products category
             var html = ' | <a href="" id="show-menu">' + title + '</a>';
             $('#submenu').append(html);
-            show_submenu(pres, id);
+            show_submenu(id);
         }
 
     }
@@ -814,7 +798,7 @@ function show_market_slides() {
         'left': offset.left,
         'width': width,
         'z-index': 5000
-    })
+    });
 
     two.css({
         'opacity': 1,
@@ -853,7 +837,7 @@ function show_market_slides() {
 
     });
 }
-function show_submenu(pres, id) {
+function show_submenu(id) {
 
     var page = get_page_details(id);
 
@@ -994,3 +978,22 @@ function get_available_presentations() {
     });
 
 }
+
+/** LEGACY FUNCTIONS - no longer in user */
+
+
+//function get_video_settings() {
+//
+//    var livevideos = JSON.parse(videoList);
+//    $.each(livevideos, function () {
+//        var path = menuDepth + 'Content/videos';
+//        if (this.custom == true) {
+//            path = menuDepth + 'Content/pres' + presID + '/videos';
+//        }
+//        var html = '<li>' + this.title + ' - ' + path + '/' + this.filename + '</li>';
+//        $('#video-list').append(html);
+//    });
+//
+//    return livevideos;
+//
+//}
