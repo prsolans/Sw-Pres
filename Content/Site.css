@@ -9,7 +9,15 @@ body {
     padding-top    : 50px;
     padding-bottom : 20px;
     font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;
+    font-size: 12pt;
     overflow       : hidden;
+}
+
+@media screen and (min-width: 1400px) {
+
+    body {
+        font-size: 16pt;
+    }
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -216,7 +224,7 @@ footer p {
 
 .landing-menu-item {
     float       : left;
-    font-size   : .8rem;
+    font-size   : .8em;
     list-style  : none;
     padding-top : 35px;
     text-align  : center;
@@ -226,6 +234,18 @@ footer p {
     clear : left;
 }
 
+.landing-menu-item img, .slidee img {
+    width: 90px;
+    height: 90px;
+}
+
+@media screen and (min-width: 1400px) {
+
+    .landing-menu-item img, .slidee img {
+        width: 180px;
+        height: 180px;
+    }
+}
 .market-panel {
     color      : white;
     padding    : 30px;
@@ -234,6 +254,21 @@ footer p {
     background : none;
     width      : 95%;
     margin     : auto;
+}
+
+.market-slide-image {
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1400px) {
+
+    .market-slide-image {
+        max-height: 680px;
+        max-width: 680px;
+        float: right;
+        margin-right: 50px;
+    }
 }
 
 .markets-intro {
@@ -245,6 +280,14 @@ footer p {
     padding-left : 35px;
     position     : relative;
     left         : -2000px;
+}
+
+@media screen and (min-width: 1400px) {
+
+    .menu-header, .menu-list {
+        clear:left;
+        height: 240px;
+    }
 }
 
 .menu-header a {
@@ -295,6 +338,10 @@ footer p {
     background-color : rgba(0, 96, 102, .7);
 }
 
+.case-study-header {
+    background-color : rgba(115, 104, 103, .7);
+}
+
 .markets-header {
     background-color : rgba(109, 26, 66, .7);
 }
@@ -311,6 +358,10 @@ footer p {
     background-color : rgba(0, 96, 102, .4);
 }
 
+.case-study-list, .case-study-bottom-menu-list {
+    background-color : rgba(115, 104, 103, .4);
+}
+
 .markets-list, .markets-bottom-menu-list {
     background-color : rgba(109, 26, 66, .4);
 }
@@ -319,7 +370,7 @@ footer p {
     background-color : rgba(166, 63, 30, .4);
 }
 
-.capabilities-bottom-menu-list, .products-bottom-menu-list, .markets-bottom-menu-list {
+.capabilities-bottom-menu-list, .products-bottom-menu-list, .markets-bottom-menu-list, .case-study-bottom-menu-list {
     margin-top : 5px;
     width      : 101%;
     min-height : 180px;
@@ -514,7 +565,7 @@ footer p {
 }
 
 .tab-content .row {
-    margin-top: 5px;
+    margin-top  : 5px;
     margin-left : 0 !important;
 }
 

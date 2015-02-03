@@ -34,7 +34,7 @@ var pagelist = '{' +
     '{ "pageSlug":"", "id": 31, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
     '{ "pageSlug":"", "id": 32, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
     '{ "pageSlug":"", "id": 33, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "pages/casestudy/slides", "layout": "text-only", "parent":"0", "background":"main-menu" }' +
+    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "pages/casestudy/slides", "layout": "text-only", "parent":"0", "background":"case-study" }' +
     ']}';
 
 var idleTime = 0;
@@ -146,7 +146,7 @@ function get_available_markets() {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
             var pageId = obj[0].id;
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -208,12 +208,12 @@ function get_child_pages(section) {
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" height="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
             if (thisParent.id == section || thisParent.parent == section) {
-                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" height="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
@@ -713,7 +713,7 @@ function show_bottom_nav() {
     $('.row').css('opacity', '.7');
     $("#footer-menu-link").animate({
         top: docHeight - 185
-    }, delayTime).css('opacity', '1')
+    }, 0).css('opacity', '1')
         .delay(delayTime * 5).animate({
             top: linkTop
         }, delayTime);
