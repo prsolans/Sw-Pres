@@ -6,7 +6,7 @@ var pagelist = '{' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow", "content":"Helping you grow means..." },' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow!!", "htmlContent":"Helping you grow means..." },' +
     '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
     '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
     '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
@@ -17,33 +17,35 @@ var pagelist = '{' +
     '{ "pageSlug":"powerDetail", "id": 14, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "market", "parent":"13", "background":"power-blur", "menu":"pr-leak" },' +
     '{ "pageSlug":"oilGas", "id": 15, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
     '{ "pageSlug":"alternativeFuels", "id": 16, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
-    '{ "pageSlug":"fittings", "id": 17, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"main-menu", "menu":"pr-fittings", "headline":"Fittings Landing Page", "content":"LIST of Items" },' +
-    '{ "pageSlug":"", "id": 18, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "content":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
-    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "content":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
-    '{ "pageSlug":"", "id": 20, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "content":""},' +
-    '{ "pageSlug":"", "id": 21, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Flange tSwagelok Tube Fitting Pipe", "content":""},' +
-    '{ "pageSlug":"", "id": 22, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "content":""},' +
-    '{ "pageSlug":"", "id": 23, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "content":""},' +
-    '{ "pageSlug":"", "id": 24, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "content":""},' +
-    '{ "pageSlug":"", "id": 25, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "content":""},' +
-    '{ "pageSlug":"", "id": 26, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "content":""},' +
-    '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"B \'VCO\' Fittings", "content":""},' +
-    '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"main-menu", "menu":"pr-fittings", "headline":"TS Fittings", "content":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
+    '{ "pageSlug":"fittings", "id": 17, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"products", "menu":"pr-fittings", "headline":"Fittings Landing Page", "htmlContent":"LIST of Items" },' +
+    '{ "pageSlug":"", "id": 18, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "htmlContent":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
+    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-biopharm", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "htmlContent":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
+    '{ "pageSlug":"", "id": 20, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-dielectric", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "htmlContent":"<p>Engineered to isolate monitoring instruments from the effects of electrical currents, dielectric fittings work to interrupt cathodic current flow while allowing full fluid flow. These fittings feature molded thermoplastic insulation with excellent electrical, chemical, and ultraviolet resistance, as well as low water absorption. This helps maintain dielectric strength and integrity over a wide range of operating conditions.</p><p>Gaugeable tube fittings and tapered pipe thread end connections provide direct connections to tubing or piping systems. Our selection includes: <ul><li>Tube Fitting, Dielectric Union, 12 mm Tube OD</li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/4 in. Tube OD</li> <li>Tube Fitting, Dielectric Male Connector, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/2 in. Tube OD </li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD</li></ul>"},' +
+    '{ "pageSlug":"", "id": 21, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-flange", "menu":"pr-fittings", "headline":"Flange to Swagelok Tube Fitting Pipe", "htmlContent":"<p>Flange adapters from Swagelok offer a threadless, weldless transition from flanged piping systems to tubing systems, with options designed to meet ASME, DIN, EN, and JIS standards. With a one-piece integrally machined forged body, flange adapters are available with Swagelok tube fitting end connections up to 50 mm and 2 inches. Choose from a range of sizes, pressure classes, and seal faces including flat face, raised face, RTJ, and tongue-and-groove. Our selection includes: <ul><li>ANSI Flanges</li> <li>DIN Flanges</li> <li>Lap Joint Flanges</li></ul>"},' +
+    '{ "pageSlug":"", "id": 22, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-pipe-fittings", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "htmlContent":"<p>Swagelok pipe fittings are precision manufactured for optimal sealing, minimal galling, and consistently tight-fitting installations. Featuring burr-free surfaces and smooth thread flanks, Swagelok pipe fittings and adapters are available in stainless steel, carbon steel, and brass. They range from 1/16- to 1-inch sizes to meet the demands of a wide variety of applications. Our selection includes: <ul> <li>Pipe Adapters</li> <li>Pipe Caps and Plugs</li> <li>Pipe Couplings</li> <li>Pipe Crosses</li> <li>Pipe Elbows</li> <li>Pipe Nipples</li> <li>Pipe Reducers</li> <li>Pipe Tees</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 23, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vacuum", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "htmlContent":"<p>Swagelok vacuum fittings and adapters are engineered to deliver a reliable, repeatable seal that vacuum systems depend on to function properly in operations such as manufacturing, packaging, material handling, and assembly. Easy to install, high-quality Swagelok fittings and adapters are made of stainless steel with fluorocarbon FKM O-rings to offer an array of high-performance solutions for vacuum systems. <ul> <li>Ultra-Torr Straights</li> <li>Ultra-Torr Tees</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 24, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vco-o-ring", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "htmlContent":"<p>Designed for rapid assembly in pipe, tube, and welded systems, VCO® O-ring face seal fittings from Swagelok offer high-integrity seals using a captive O-ring in the body component. Swagelok’s innovative fitting design is easy to install – even in limited spaces – with no axial clearance required. Featuring two ports for easy leak testing, VCO O-ring face seal fittings are ideal for everything from general industry to high-pressure, high-purity, and critical vacuum applications within a wide range of temperatures. Options include: <ul> <li>VCO® O-Ring Bodies Elbow 90°</li> <li>VCO® O-Ring Bodies Straight</li> <li>VCO® O-Ring Bodies Tee Union</li> <li>VCO® O-Ring Glands</li> <li>VCO® O-Ring Nuts, Caps and Plugs</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 25, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vcr-metal", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "htmlContent":"<p>As the authentic VCR® brand, Swagelok VCR metal gasket face seal and split-nut assemblies are the first of their kind and on the forefront of high-performance solutions to today’s high-purity challenges. Made of high-purity stainless steel with a precision manufactured gasket, our fittings offer a metal-to-metal seal that ensures leak-tight service for critical vacuum or positive pressure systems.</p> <p>For highly engineered solutions that minimize entrapment areas, insist on original Swagelok VCR products. Our selection includes: <ul> <li>VCR® Metal Gasket Bodies Cross Union</li> <li>VCR® Metal Gasket Bodies Elbow 90°</li> <li>VCR® Metal Gasket Bodies Straight </li> <li>VCR® Metal Gasket Bodies Tee</li> <li>VCR® Metal Gasket Gaskets</li> <li>VCR® Metal Gasket Glands  </li> <li>VCR® Metal Gasket Nuts, Caps, and Plugs  </li> <li>VCR® Metal Gasket Welded Assemblies, Elbow, 90°  </li> <li>VCR® Metal Gasket Welded Assemblies Straight</li> <li>VCR® Metal Gasket Welded Assemblies Tee</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 26, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-weld", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "htmlContent":"<p>Ultrahigh-purity, specially cleaned, and industrial weld fittings from Swagelok are engineered to make permanent, high-integrity connections. Made from a special grade of SAF 2507TM super duplex material, our weld fittings and adapters offer excellent corrosion resistance in chloride-containing environments. <p>From general industrial to ultrahigh-purity applications, count on high-integrity connections that last with weld fittings from Swagelok, available in a variety of materials, sizes, and shapes. Options include: <ul> <li>Micro-Fit® High-Purity Tube Butt Weld Fittings</li> <li>Pipe Socket Weld Fittings</li> <li>Tube Butt Weld Automatic Fittings</li> <li>Tube Butt Weld Fittings</li> <li>Tube Socket Weld Automatic Fittings</li> <li>Tube Socket Weld Fittings</li> <li>Weld Adapter Fittings</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-bco", "menu":"pr-fittings", "headline":"BType VCO® L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO® fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO® Bodies</li> <li>VCO® Nuts</li> <li>VCO® Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
     '{ "pageSlug":"", "id": 29, "title": "Valves", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
     '{ "pageSlug":"", "id": 30, "title": "Filters", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
     '{ "pageSlug":"", "id": 31, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
     '{ "pageSlug":"", "id": 32, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
     '{ "pageSlug":"", "id": 33, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "pages/casestudy/slides", "layout": "text-only", "parent":"0", "background":"main-menu" }' +
+    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "pages/casestudy/slides", "layout": "text-only", "parent":"0", "background":"case-study" }' +
     ']}';
 
 var idleTime = 0;
 var videoWasOpenedAtPageLoad = false;
 
-$(document).delegate("body", "touchmove", false);
+//$(document).delegate("body", "touchmove", false);
 $(document).delegate("body", "scrollstart", false);
 
-$(document).on("pagebeforecreate", function () {
+$(document).on("pagebeforecreate", function pagePrebuild() {
+
+    $('body').css('display', 'none');
 
     $.ajaxPrefilter(function (options) {
         options.crossDomain = true;
@@ -70,9 +72,6 @@ $(document).on("pagebeforecreate", function () {
 
     var pageDetails = getObjects(JSON.parse(pagelist), 'id', pageID);
 
-    console.log('Page Details:');
-    console.log(pageDetails);
-
     load_page_info(pageID, fileDepth);
 
     if (typeof(Storage) !== "undefined") {
@@ -84,13 +83,12 @@ $(document).on("pagebeforecreate", function () {
 
     } else {
         // Sorry! No Web Storage support..
-
         alert('Sorry! No Web Storage support...');
     }
 
 });
 
-$(document).ready(function () {
+$(document).ready(function pageReady() {
 
     //start_inactivity_timer();
 
@@ -135,7 +133,6 @@ $(document).ready(function () {
 
 });
 
-
 /**
  * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
  * Utilized for main menu page, section landing page, and bottom nav within the section
@@ -149,7 +146,7 @@ function get_available_markets() {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
             var pageId = obj[0].id;
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -162,6 +159,10 @@ function get_custom_content(layouts, content) {
 
     if (thisLayout != false) {
         set_page_layout(thisLayout);
+    }
+
+    if( thisLayout == 'market') {
+        show_market_slides();
     }
 
     var thisContent = getObjects(JSON.parse(content), 'page_id', thisPage);
@@ -194,6 +195,7 @@ function get_custom_content(layouts, content) {
 function get_child_pages(section) {
 
     var thisPage = get_page_details(getParameterByName('pageId'));
+    var thisParent = get_page_details(thisPage.parent);
 
     var select = JSON.parse(pagelist);
     var items = select.pages;
@@ -202,23 +204,22 @@ function get_child_pages(section) {
     $.each(items, function () {
 
         if (this.parent == section) {
+
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
-            if (this.parent == thisPage.parent) {
-                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img width="90" src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+            if (thisParent.id == section || thisParent.parent == section) {
+                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
                 var width = viewport / 6;
                 $('.slidee li').css('width', width);
             }
-
-
         }
     });
 
@@ -226,7 +227,6 @@ function get_child_pages(section) {
 
         var width = $(window).width();
         var liWidth = (width * (5 / 6)) / 6.25;
-        console.log(width + ':' + liWidth);
         $('.slidee li').css('width', liWidth);
         $('.frame').css('height', '175px');
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
@@ -279,7 +279,6 @@ function get_page_layout(layouts) {
     else {
         page_layout = localStorage.getItem('pageLayout');
     }
-    console.log('Layout: ' + page_layout);
 
     return page_layout;
 }
@@ -307,31 +306,27 @@ function get_video_details() {
         if (this.custom == true) {
             path = fileDepth + 'Content/pres' + presID + '/videos';
         }
-        var posterImage = path + '/' + this.filename + '.gif';
+        var posterImage = path + '/' + this.filename + '.png';
         var video = path + '/' + this.filename + '.mp4';
         var subtitles = path + '/' + this.filename + '.vtt';
         var element = this.page_element;
         var videoCaption = this.caption;
 
-        console.log(element);
-
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
 
-        var html = '<video id="' + element + '" class="'+element+'video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false"><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        var html = '<video id="' + element + '" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
-        $('.'+element+'-modal-body').html(html);
+        $('.' + element + '-modal-body').html(html);
 
-        $('.'+element+'-video-js').data("setup", {
+        $('.' + element + '-video-js').data("setup", {
             "bigPlayButton": true,
             "controlBar": false,
             "type": "video/mp4",
             "src": video
         });
 
-        });
-
-        videojs(element, {}, function () {
+        videojs(element).ready(function () {
 
             // Store the video object
             var myPlayer = this, id = myPlayer.id();
@@ -344,7 +339,7 @@ function get_video_details() {
                 myPlayer.width(width).height(width * aspectRatio);
             }
 
-            var videoModal = $('#' + element + '-modal');
+            var videoModal = $("#"+element+"-modal");
 
             videoModal.on('show.bs.modal', function () {
 
@@ -359,12 +354,12 @@ function get_video_details() {
                     resizeVideoJS();
                 });
 
-                $('#' + element + '_html5_api').on('click', function () {
+                $('#'+element+'_html5_api').on('click', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
                 });
 
-                $('#' + element + '_html5_api').on('tap', function () {
+                $('#'+element+'_html5_api').on('tap', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
                 });
@@ -375,7 +370,7 @@ function get_video_details() {
                 myPlayer.pause();
             });
 
-       // });
+        });
 
     });
 }
@@ -442,14 +437,13 @@ function load_page_info(id, fileDepth) {
     var content;
 
     var page = get_page_details(id);
-
     var pres = getParameterByName('presID');
 
     parent = page.parent;
     background = page.background;
 
     title = page.title;
-    content = page.content;
+    content = page.htmlContent;
     headline = page.headline;
 
     if (fileDepth == undefined) {
@@ -471,7 +465,7 @@ function load_page_info(id, fileDepth) {
     }
 
     if (content == undefined) {
-        $('#page-content').html('XX');
+        $('#page-content').html(content);
     }
     else {
         $('#page-content').html(content);
@@ -521,7 +515,6 @@ function set_page_layout(pageLayout) {
     }
     if (pageLayout == 'menu') {
         show_animated_menu();
-
         $('#section-menu-button').hide();
     }
     if (pageLayout == 'market') {
@@ -533,12 +526,18 @@ function set_page_layout(pageLayout) {
     if (pageLayout == 'mission') {
         show_bottom_nav();
         $('#right-column').remove();
-        var videoRow = '<div class="col-sm-4 distributor-video-cell">Video</div><div class="col-sm-4 col-sm-offset-1 ceo-video-cell">Video</div>';
+
+        var baseContent = '<div class="col-sm-4"><h1 id="page-title">&nbsp;</h1><div id="page-content"></div></div>';
+        var videoRow = '<div class="col-sm-5 distributor-video-cell">Video</div><div class="col-sm-5 col-sm-offset-1 ceo-video-cell">Video</div>';
+
+        $('#left-column').remove();
+        $('#right-column').remove();
+        $('.row:first').append(baseContent);
         $('.row.secondary').append(videoRow);
 
-       var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="" width="90%" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
-        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="" width="100%" class="debug" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="" width="90%" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
         $('.distributor-video-cell').html(distributorContainer);
         $('.ceo-video-cell').html(ceoContainer);
@@ -572,6 +571,8 @@ function set_page_layout(pageLayout) {
         show_bottom_nav();
 
     }
+
+    $('body').show();
 }
 
 /**
@@ -691,9 +692,9 @@ function show_bottom_nav() {
     var delayTime = 600;
 
     var docHeight = $(document).height();
-
     var linkTop = docHeight - 25;
-
+    var position = $("#footer-menu-link").offset().top;
+    console.log(linkTop + '/' + position);
 
     $("#footer-menu-link")
         .css({
@@ -706,24 +707,24 @@ function show_bottom_nav() {
             'z-index': 5000
         });
 
-    var position = $("#footer-menu-link").offset().top;
 
-    if (position == linkTop) {
-        $('.row').css('opacity', '.7');
-        $("#footer-menu-link").animate({
-            top: docHeight - 185
-        }, delayTime).css('opacity', '1')
-            .delay(delayTime * 5).animate({
-                top: linkTop
-            }, delayTime);
-        $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
+    // position rendered inoperable based on pageload delays that avoid flicker
+    //if (position == linkTop) {
+    $('.row').css('opacity', '.7');
+    $("#footer-menu-link").animate({
+        top: docHeight - 185
+    }, 0).css('opacity', '1')
+        .delay(delayTime * 5).animate({
+            top: linkTop
+        }, delayTime);
+    $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
 
-        setTimeout(function () {
-            $('.row').css('opacity', '1');
-        }, delayTime * 7);
-        $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
+    setTimeout(function () {
+        $('.row').css('opacity', '1');
+    }, delayTime * 7);
+    $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
 
-    }
+    //}
 
     $("#footer-menu-link").on("click", function () {
 
@@ -751,6 +752,64 @@ function show_bottom_nav() {
 
 }
 
+function show_market_slides() {
+
+    var one = $('.market-panel').first();
+    var two = one.next('.market-panel');
+    var three = two.next('.market-panel');
+
+    var width = one.width();
+    var offset = one.offset();
+
+    var leftEdge = width - offset.left;
+
+    one.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': offset.left,
+        'width': width,
+        'z-index': 5000
+    })
+
+    two.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': width,
+        'width': width,
+        'z-index': 5000
+    });
+    three.css({
+        'opacity': 1,
+        'position': 'absolute',
+        'top': offset.top,
+        'left': width * 2,
+        'width': width,
+        'z-index': 5000
+    });
+
+    $('.market-panel').on("swipeleft", function () {
+        alert('swipe');
+        var id = $(this).attr('id');
+        if (id != 'three') {
+            $('.market-panel').animate({
+                left: '-=' + leftEdge
+            }, 800);
+        }
+    });
+
+    $('.market-panel').on("swiperight", function () {
+
+        var id = $(this).attr('id');
+        if (id != 'one') {
+            $('.market-panel').animate({
+                left: '+=' + leftEdge
+            }, 800);
+        }
+
+    });
+}
 function show_submenu(pres, id) {
 
     var page = get_page_details(id);
@@ -840,7 +899,7 @@ function timerIncrement() {
             videoWasOpenedAtPageLoad = true;
         }
     }
-    if (idleTime > 20) { // 3 minutes
+    if (idleTime > 180) { // 3 minutes
         if (thisPage != '1') {
             var home = fileDepth + 'pages/index.html?pageId=1&presID=1';
             localStorage.setItem("inactive", "true");

@@ -12,8 +12,8 @@ var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
        '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" }' +
        ']';
 
-var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "filename":"swagelok_video_artAnton", "caption":"Caption Art Anton", "custom":false},' +
-    '{ "page_element": "distributor-video", "title": "Video 2", "filename":"distributor_video_andreas", "caption":"Caption Andreas", "custom":true}' +
+var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "filename":"swagelok_video_artAnton", "caption":"A Word from Art Anton<br/>Swagelok President and CEO", "custom":false},' +
+    '{ "page_element": "distributor-video", "title": "Video 2", "filename":"distributor_video_andreas", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director", "custom":true}' +
     ']';
 
 var layoutsList = '[' +
@@ -28,7 +28,8 @@ var content = '[' +
     '{"page_id":"technicalSupportSales", "page_element":"right-custom-content", "html":"<p>This is a right-column custom content for the Technical Support page</p>"},' +
     '{"page_id":"technicalSupportSales", "page_element":"page-title", "html":"<p>Technical support headline</p>"},' +
     '{"page_id":"technicalSupportSales", "page_element":"left-custom-image", "src":"'+fileDepth+'Content/images/capabilities/technical.png"},' +
-    '{"page_id":"mission", "page_element":"page-title", "html":"<p>Mission &amp; Values headline</p>"},' +
+    '{"page_id":"mission", "page_element":"page-title", "html":"<p>Helping our Customers Grow</p>"},' +
+    '{"page_id":"mission", "page_element":"page-content", "html":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
     '{"page_id":"training", "page_element":"page-title", "html":"<p>Training headline</p>"}' +
     ']';
 
@@ -41,7 +42,7 @@ if(theseSettings[0].hasCaseStudy == true){
 get_available_markets(marketList);
 get_custom_content(layoutsList, content);
 
-if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission'){
+if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash'){
     get_video_settings();
     get_video_details();
 }
