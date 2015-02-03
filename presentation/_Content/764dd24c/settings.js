@@ -12,13 +12,17 @@ var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
        '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" }' +
        ']';
 
-var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
-    '{ "page_element": "distributor-video", "title": "Video 2", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"}' +
+var videoList = '[' +
+    '{ "page_element": "ceo-video", "title": "Video 1", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "applications-video", "title": "Video 1", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "distributor-video", "title": "Video 2", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
+    '{ "page_element": "training-video", "title": "Video 2", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"}' +
     ']';
 
 var layoutsList = '[' +
     '{"page_id":"technicalSupportSales", "page_layout":"text-image"},' +
-    '{"page_id":"training", "page_layout":"text-video"}' +
+    '{"page_id":"training", "page_layout":"text-video"},' +
+    '{"page_id":"applications", "page_layout":"text-video"}' +
     ']';
 
 var content = '[' +

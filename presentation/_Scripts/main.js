@@ -42,7 +42,7 @@ var videoWasOpenedAtPageLoad = false;
 
 PAGE_ID = getCookie('PAGE_ID');
 
-if(window.location.protocol == "http:") {
+if (window.location.protocol == "http:") {
 
     if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || window.location.pathname == '/presentation/') {
 
@@ -64,7 +64,7 @@ if(window.location.protocol == "http:") {
     }
 }
 
-if(window.location.protocol == "file:"){
+if (window.location.protocol == "file:") {
     var pathname = window.location.pathname.split('/presentation/');
 
     if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
@@ -89,7 +89,6 @@ if(window.location.protocol == "file:"){
         $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
     }
 }
-
 
 
 //$(document).delegate("body", "touchmove", false);
@@ -188,7 +187,7 @@ function get_available_markets() {
     if (thisPage > 1) {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/'+ obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', '+obj[0].id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -203,7 +202,7 @@ function get_custom_content(layouts, content) {
         set_page_layout(thisLayout);
     }
 
-    if( thisLayout == 'market') {
+    if (thisLayout == 'market') {
         show_market_slides();
     }
 
@@ -251,12 +250,12 @@ function get_child_pages(section) {
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="/presentation/'+ this.filename + '.html" onclick="setCookie(\'PAGE_ID\', '+this.id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<li class="col-sm-2 landing-menu-item"><a href="/presentation/' + this.filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
             if (thisParent.id == section || thisParent.parent == section) {
-                var li = '<li class="' + listClass + '"><a href="/presentation/'+ this.filename + '.html" onclick="setCookie(\'PAGE_ID\', '+this.id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+                var li = '<li class="' + listClass + '"><a href="/presentation/' + this.filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
@@ -345,7 +344,28 @@ function get_presentation_settings() {
 function get_video_details(videoList) {
     var livevideos = JSON.parse(videoList);
 
+    var pickVideo = false;
+
+    if (localStorage.getItem('pageLayout') == 'text-video') {
+        pickVideo = localStorage.getItem('pageSlug') + '-video';
+    }
+    else if (localStorage.getItem('pageLayout') == 'mission') {
+        pickVideo = 'mission';
+    }
+
     $.each(livevideos, function () {
+
+        if (pickVideo == 'mission') {
+            if (this.page_element != 'ceo-video' && this.page_element != 'distributor-video') {
+                return true;
+            }
+        }
+        else if (pickVideo != false) {
+            if (pickVideo != this.page_element) {
+                return true;
+            }
+        }
+
         var path = '/presentation/_Content/videos';
 
         var posterImage = path + '/' + this.posterfile;
@@ -353,8 +373,6 @@ function get_video_details(videoList) {
         var subtitles = path + '/' + this.subtitlefile;
         var element = this.page_element;
         var videoCaption = this.caption;
-
-        console.log('P:' + posterImage);
 
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
@@ -383,7 +401,7 @@ function get_video_details(videoList) {
                 myPlayer.width(width).height(width * aspectRatio);
             }
 
-            var videoModal = $("#"+element+"-modal");
+            var videoModal = $("#" + element + "-modal");
 
             videoModal.on('show.bs.modal', function () {
 
@@ -398,12 +416,12 @@ function get_video_details(videoList) {
                     resizeVideoJS();
                 });
 
-                $('#'+element+'_html5_api').on('click', function () {
+                $('#' + element + '_html5_api').on('click', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
                 });
 
-                $('#'+element+'_html5_api').on('tap', function () {
+                $('#' + element + '_html5_api').on('tap', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
                 });
@@ -569,20 +587,24 @@ function set_page_layout(pageLayout) {
 
         $('.distributor-video-cell').html(distributorContainer);
         $('.ceo-video-cell').html(ceoContainer);
-        $('#video-setup').html(script);
+        //$('#video-setup').html(script);
     }
     if (pageLayout == 'text-video') {
         show_bottom_nav();
 
+        var pageSlug = localStorage.getItem('pageSlug');
+
         $('#left-column').removeClass('col-sm-6').addClass('col-sm-7');
         $('#right-column').removeClass('col-sm-6').addClass('col-sm-5');
 
-        var videoContainer = '<div id="video-container"> <!-- Button trigger modal --> <img id="video-poster" src="" data-toggle="modal" data-target="#videoModal"> <!-- Modal --> <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-body"> <video id="demo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        $('#right-column').html('<div class="' + pageSlug + '-video-cell"></div>');
 
-        var script = ' <script> $(document).ready(function () { videojs("demo_video").ready(function () { var myPlayer = this, id = myPlayer.id(); var aspectRatio = 9 / 16; function resizeVideoJS() { var width = document.getElementById(id).parentElement.offsetWidth; myPlayer.width(width).height(width * aspectRatio); } $("#videoModal").on("show.bs.modal", function () { var width = $(document).width(); myPlayer.width(width).height(width * aspectRatio); myPlayer.play(); $(window).resize(function () { resizeVideoJS(); }); $(".video-js").click(function () { $("#videoModal").modal("hide"); }); }); $("#videoModal").on("hidden.bs.modal", function () { myPlayer.pause(); }); }); }); </script>';
+        var videoContainer = '<div id="' + pageSlug + '-video-container"> <!-- Button trigger modal --> <img id="' + pageSlug + '-video-poster" src="" data-toggle="modal" data-target="#' + pageSlug + 'video-modal"> <p class="' + pageSlug + '-video-caption" id="' + pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' + pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' + pageSlug + '-modal-body"> <video id="' + pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' + pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
-        $('#right-column').html(videoContainer);
-        $('#video-setup').html(script);
+        //var script = ' <script> $(document).ready(function () { videojs("demo_video").ready(function () { var myPlayer = this, id = myPlayer.id(); var aspectRatio = 9 / 16; function resizeVideoJS() { var width = document.getElementById(id).parentElement.offsetWidth; myPlayer.width(width).height(width * aspectRatio); } $("#videoModal").on("show.bs.modal", function () { var width = $(document).width(); myPlayer.width(width).height(width * aspectRatio); myPlayer.play(); $(window).resize(function () { resizeVideoJS(); }); $(".video-js").click(function () { $("#videoModal").modal("hide"); }); }); $("#videoModal").on("hidden.bs.modal", function () { myPlayer.pause(); }); }); }); </script>';
+
+        $('.' + pageSlug + '-video-cell').html(videoContainer);
+        //$('#video-setup').html(script);
 
     }
     if (pageLayout == 'text-image') {
@@ -942,8 +964,8 @@ function timerIncrement() {
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
     sessionStorage.setItem(cname, cvalue);
     document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/presentation";
 }
@@ -951,9 +973,9 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
+        while (c.charAt(0) == ' ') c = c.substring(1);
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";
