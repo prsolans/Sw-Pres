@@ -961,7 +961,7 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+d.toUTCString();
     sessionStorage.setItem(cname, cvalue);
-    document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/presentation; domain="+localStorage.getItem('domain');
+    document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/presentation";
 }
 
 function getCookie(cname) {
