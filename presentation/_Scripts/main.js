@@ -1,44 +1,96 @@
 var pagelist = '{' +
     '"pages": [ ' +
     '{ "pageSlug":"", "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"0", "background":"home" },' +
-    '{ "pageSlug":"introScreen", "id": 1, "title": "Intro Screen", "filename": "pages/index", "layout": "splash", "parent":"0", "background":"home" },' +
-    '{ "pageSlug":"mainMenu", "id": 2, "title": "Main Menu", "filename": "pages/mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
-    '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "pages/capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
-    '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "pages/products/index", "layout": "landing", "parent":"0", "background":"products" },' +
-    '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "pages/markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "pages/capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow!!", "htmlContent":"Helping you grow means..." },' +
-    '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
-    '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
-    '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
-    '{ "pageSlug":"customSolutions", "id": 10, "title": "Custom Solutions", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-partner" },' +
-    '{ "pageSlug":"oneSwagelok", "id": 11, "title": "One Swagelok", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
-    '{ "pageSlug":"applications", "id": 12, "title": "Applications", "filename": "pages/capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-delivery" },' +
-    '{ "pageSlug":"power", "id": 13, "title": "Power", "filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
-    '{ "pageSlug":"powerDetail", "id": 14, "title": "Power - Detail", "filename": "pages/products/slides", "layout": "market", "parent":"13", "background":"power-blur", "menu":"pr-leak" },' +
-    '{ "pageSlug":"oilGas", "id": 15, "title": "Oil &amp; Gas","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
-    '{ "pageSlug":"alternativeFuels", "id": 16, "title": "Alternative Fuels","filename": "pages/markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
-    '{ "pageSlug":"fittings", "id": 17, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"4", "background":"products", "menu":"pr-fittings", "headline":"Fittings Landing Page", "htmlContent":"LIST of Items" },' +
-    '{ "pageSlug":"", "id": 18, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "htmlContent":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
-    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-biopharm", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "htmlContent":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
-    '{ "pageSlug":"", "id": 20, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-dielectric", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "htmlContent":"<p>Engineered to isolate monitoring instruments from the effects of electrical currents, dielectric fittings work to interrupt cathodic current flow while allowing full fluid flow. These fittings feature molded thermoplastic insulation with excellent electrical, chemical, and ultraviolet resistance, as well as low water absorption. This helps maintain dielectric strength and integrity over a wide range of operating conditions.</p><p>Gaugeable tube fittings and tapered pipe thread end connections provide direct connections to tubing or piping systems. Our selection includes: <ul><li>Tube Fitting, Dielectric Union, 12 mm Tube OD</li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/4 in. Tube OD</li> <li>Tube Fitting, Dielectric Male Connector, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/2 in. Tube OD </li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD</li></ul>"},' +
-    '{ "pageSlug":"", "id": 21, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-flange", "menu":"pr-fittings", "headline":"Flange to Swagelok Tube Fitting Pipe", "htmlContent":"<p>Flange adapters from Swagelok offer a threadless, weldless transition from flanged piping systems to tubing systems, with options designed to meet ASME, DIN, EN, and JIS standards. With a one-piece integrally machined forged body, flange adapters are available with Swagelok tube fitting end connections up to 50 mm and 2 inches. Choose from a range of sizes, pressure classes, and seal faces including flat face, raised face, RTJ, and tongue-and-groove. Our selection includes: <ul><li>ANSI Flanges</li> <li>DIN Flanges</li> <li>Lap Joint Flanges</li></ul>"},' +
-    '{ "pageSlug":"", "id": 22, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-pipe-fittings", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "htmlContent":"<p>Swagelok pipe fittings are precision manufactured for optimal sealing, minimal galling, and consistently tight-fitting installations. Featuring burr-free surfaces and smooth thread flanks, Swagelok pipe fittings and adapters are available in stainless steel, carbon steel, and brass. They range from 1/16- to 1-inch sizes to meet the demands of a wide variety of applications. Our selection includes: <ul> <li>Pipe Adapters</li> <li>Pipe Caps and Plugs</li> <li>Pipe Couplings</li> <li>Pipe Crosses</li> <li>Pipe Elbows</li> <li>Pipe Nipples</li> <li>Pipe Reducers</li> <li>Pipe Tees</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 23, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vacuum", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "htmlContent":"<p>Swagelok vacuum fittings and adapters are engineered to deliver a reliable, repeatable seal that vacuum systems depend on to function properly in operations such as manufacturing, packaging, material handling, and assembly. Easy to install, high-quality Swagelok fittings and adapters are made of stainless steel with fluorocarbon FKM O-rings to offer an array of high-performance solutions for vacuum systems. <ul> <li>Ultra-Torr Straights</li> <li>Ultra-Torr Tees</li> <li>Spare Parts and Accessories</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 24, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vco-o-ring", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "htmlContent":"<p>Designed for rapid assembly in pipe, tube, and welded systems, VCO® O-ring face seal fittings from Swagelok offer high-integrity seals using a captive O-ring in the body component. Swagelok’s innovative fitting design is easy to install – even in limited spaces – with no axial clearance required. Featuring two ports for easy leak testing, VCO O-ring face seal fittings are ideal for everything from general industry to high-pressure, high-purity, and critical vacuum applications within a wide range of temperatures. Options include: <ul> <li>VCO® O-Ring Bodies Elbow 90°</li> <li>VCO® O-Ring Bodies Straight</li> <li>VCO® O-Ring Bodies Tee Union</li> <li>VCO® O-Ring Glands</li> <li>VCO® O-Ring Nuts, Caps and Plugs</li> <li>Spare Parts and Accessories</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 25, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-vcr-metal", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "htmlContent":"<p>As the authentic VCR® brand, Swagelok VCR metal gasket face seal and split-nut assemblies are the first of their kind and on the forefront of high-performance solutions to today’s high-purity challenges. Made of high-purity stainless steel with a precision manufactured gasket, our fittings offer a metal-to-metal seal that ensures leak-tight service for critical vacuum or positive pressure systems.</p> <p>For highly engineered solutions that minimize entrapment areas, insist on original Swagelok VCR products. Our selection includes: <ul> <li>VCR® Metal Gasket Bodies Cross Union</li> <li>VCR® Metal Gasket Bodies Elbow 90°</li> <li>VCR® Metal Gasket Bodies Straight </li> <li>VCR® Metal Gasket Bodies Tee</li> <li>VCR® Metal Gasket Gaskets</li> <li>VCR® Metal Gasket Glands  </li> <li>VCR® Metal Gasket Nuts, Caps, and Plugs  </li> <li>VCR® Metal Gasket Welded Assemblies, Elbow, 90°  </li> <li>VCR® Metal Gasket Welded Assemblies Straight</li> <li>VCR® Metal Gasket Welded Assemblies Tee</li> <li>Spare Parts and Accessories</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 26, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-weld", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "htmlContent":"<p>Ultrahigh-purity, specially cleaned, and industrial weld fittings from Swagelok are engineered to make permanent, high-integrity connections. Made from a special grade of SAF 2507TM super duplex material, our weld fittings and adapters offer excellent corrosion resistance in chloride-containing environments. <p>From general industrial to ultrahigh-purity applications, count on high-integrity connections that last with weld fittings from Swagelok, available in a variety of materials, sizes, and shapes. Options include: <ul> <li>Micro-Fit® High-Purity Tube Butt Weld Fittings</li> <li>Pipe Socket Weld Fittings</li> <li>Tube Butt Weld Automatic Fittings</li> <li>Tube Butt Weld Fittings</li> <li>Tube Socket Weld Automatic Fittings</li> <li>Tube Socket Weld Fittings</li> <li>Weld Adapter Fittings</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-bco", "menu":"pr-fittings", "headline":"BType VCO® L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO® fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO® Bodies</li> <li>VCO® Nuts</li> <li>VCO® Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
-    '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "pages/products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
-    '{ "pageSlug":"", "id": 29, "title": "Valves", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
-    '{ "pageSlug":"", "id": 30, "title": "Filters", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
-    '{ "pageSlug":"", "id": 31, "title": "Hoses and Flexible Tubing", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
-    '{ "pageSlug":"", "id": 32, "title": "Leak Detectors, Lubricants and Sealers", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
-    '{ "pageSlug":"", "id": 33, "title": "Measurement Devices", "filename": "pages/products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "pages/casestudy/slides", "layout": "text-only", "parent":"0", "background":"case-study" }' +
+    '{ "pageSlug":"introScreen", "id": 1, "title": "Intro Screen", "filename": "index", "layout": "splash", "parent":"0", "background":"home" },' +
+    '{ "pageSlug":"mainMenu", "id": 2, "title": "Main Menu", "filename": "mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
+    '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
+    '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "products/index", "layout": "landing", "parent":"0", "background":"products" },' +
+    '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "markets/index", "layout" : "landing", "parent":"0", "background":"markets" },' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Mission &amp; Values", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-mission", "headline":"Helping our Customers Grow!!", "htmlContent":"Helping you grow means..." },' +
+    '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Support &amp; Sales", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-support" },' +
+    '{ "pageSlug":"services", "id": 8, "title": "Services", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"main-menu", "menu":"ca-services" },' +
+    '{ "pageSlug":"training", "id": 9, "title": "Training", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-training" },' +
+    '{ "pageSlug":"customSolutions", "id": 10, "title": "Custom Solutions", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-partner" },' +
+    '{ "pageSlug":"oneSwagelok", "id": 11, "title": "One Swagelok", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-mission" },' +
+    '{ "pageSlug":"applications", "id": 12, "title": "Applications", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-delivery" },' +
+    '{ "pageSlug":"power", "id": 13, "title": "Power", "filename": "markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
+    '{ "pageSlug":"powerDetail", "id": 14, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"13", "background":"power-blur", "menu":"pr-leak" },' +
+    '{ "pageSlug":"oilGas", "id": 15, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
+    '{ "pageSlug":"alternativeFuels", "id": 16, "title": "Alternative Fuels","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
+    '{ "pageSlug":"fittings", "id": 17, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"4", "background":"products", "menu":"pr-fittings", "headline":"Fittings Landing Page", "htmlContent":"LIST of Items" },' +
+    '{ "pageSlug":"", "id": 18, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"Tube Fittings and Tube Adapters", "htmlContent":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations.</p> <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes:</p><ul><li>Elbows</li><li>Caps and Plugs</li><li>Chromatograph and Column End</li><li>Straights</li><li>Tees</li><li>Union Crosses</li><li>High Pressure</li><li>Medium Pressure</li><li>Accessories</li></ul>" },' +
+    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-biopharm", "menu":"pr-fittings", "headline":"Biopharmaceutical Fittings & Adapters", "htmlContent":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability, as well as thevirtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria.</p><p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes:</p><ul><li>TS Series Sanitary Clamps</li><li>TS Series SanitaryClamp Caps</li><li>TS Series Sanitary Clamp Ferrules</li></ul>"},' +
+    '{ "pageSlug":"", "id": 20, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-dielectric", "menu":"pr-fittings", "headline":"Dielectric Fittings & Adapters", "htmlContent":"<p>Engineered to isolate monitoring instruments from the effects of electrical currents, dielectric fittings work to interrupt cathodic current flow while allowing full fluid flow. These fittings feature molded thermoplastic insulation with excellent electrical, chemical, and ultraviolet resistance, as well as low water absorption. This helps maintain dielectric strength and integrity over a wide range of operating conditions.</p><p>Gaugeable tube fittings and tapered pipe thread end connections provide direct connections to tubing or piping systems. Our selection includes: <ul><li>Tube Fitting, Dielectric Union, 12 mm Tube OD</li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/4 in. Tube OD</li> <li>Tube Fitting, Dielectric Male Connector, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/2 in. Tube OD </li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD</li></ul>"},' +
+    '{ "pageSlug":"", "id": 21, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-flange", "menu":"pr-fittings", "headline":"Flange to Swagelok Tube Fitting Pipe", "htmlContent":"<p>Flange adapters from Swagelok offer a threadless, weldless transition from flanged piping systems to tubing systems, with options designed to meet ASME, DIN, EN, and JIS standards. With a one-piece integrally machined forged body, flange adapters are available with Swagelok tube fitting end connections up to 50 mm and 2 inches. Choose from a range of sizes, pressure classes, and seal faces including flat face, raised face, RTJ, and tongue-and-groove. Our selection includes: <ul><li>ANSI Flanges</li> <li>DIN Flanges</li> <li>Lap Joint Flanges</li></ul>"},' +
+    '{ "pageSlug":"", "id": 22, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-pipe-fittings", "menu":"pr-fittings", "headline":"Pipe Fittings & Adapters", "htmlContent":"<p>Swagelok pipe fittings are precision manufactured for optimal sealing, minimal galling, and consistently tight-fitting installations. Featuring burr-free surfaces and smooth thread flanks, Swagelok pipe fittings and adapters are available in stainless steel, carbon steel, and brass. They range from 1/16- to 1-inch sizes to meet the demands of a wide variety of applications. Our selection includes: <ul> <li>Pipe Adapters</li> <li>Pipe Caps and Plugs</li> <li>Pipe Couplings</li> <li>Pipe Crosses</li> <li>Pipe Elbows</li> <li>Pipe Nipples</li> <li>Pipe Reducers</li> <li>Pipe Tees</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 23, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-vacuum", "menu":"pr-fittings", "headline":"Vacuum Fittings & Adapters", "htmlContent":"<p>Swagelok vacuum fittings and adapters are engineered to deliver a reliable, repeatable seal that vacuum systems depend on to function properly in operations such as manufacturing, packaging, material handling, and assembly. Easy to install, high-quality Swagelok fittings and adapters are made of stainless steel with fluorocarbon FKM O-rings to offer an array of high-performance solutions for vacuum systems. <ul> <li>Ultra-Torr Straights</li> <li>Ultra-Torr Tees</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 24, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-vco-o-ring", "menu":"pr-fittings", "headline":"VCO-Ring Face Seal", "htmlContent":"<p>Designed for rapid assembly in pipe, tube, and welded systems, VCO® O-ring face seal fittings from Swagelok offer high-integrity seals using a captive O-ring in the body component. Swagelok’s innovative fitting design is easy to install – even in limited spaces – with no axial clearance required. Featuring two ports for easy leak testing, VCO O-ring face seal fittings are ideal for everything from general industry to high-pressure, high-purity, and critical vacuum applications within a wide range of temperatures. Options include: <ul> <li>VCO® O-Ring Bodies Elbow 90°</li> <li>VCO® O-Ring Bodies Straight</li> <li>VCO® O-Ring Bodies Tee Union</li> <li>VCO® O-Ring Glands</li> <li>VCO® O-Ring Nuts, Caps and Plugs</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 25, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-vcr-metal", "menu":"pr-fittings", "headline":"VCR Metal Gasket Face Seal & VCR Split-Nut Assemblies", "htmlContent":"<p>As the authentic VCR® brand, Swagelok VCR metal gasket face seal and split-nut assemblies are the first of their kind and on the forefront of high-performance solutions to today’s high-purity challenges. Made of high-purity stainless steel with a precision manufactured gasket, our fittings offer a metal-to-metal seal that ensures leak-tight service for critical vacuum or positive pressure systems.</p> <p>For highly engineered solutions that minimize entrapment areas, insist on original Swagelok VCR products. Our selection includes: <ul> <li>VCR® Metal Gasket Bodies Cross Union</li> <li>VCR® Metal Gasket Bodies Elbow 90°</li> <li>VCR® Metal Gasket Bodies Straight </li> <li>VCR® Metal Gasket Bodies Tee</li> <li>VCR® Metal Gasket Gaskets</li> <li>VCR® Metal Gasket Glands  </li> <li>VCR® Metal Gasket Nuts, Caps, and Plugs  </li> <li>VCR® Metal Gasket Welded Assemblies, Elbow, 90°  </li> <li>VCR® Metal Gasket Welded Assemblies Straight</li> <li>VCR® Metal Gasket Welded Assemblies Tee</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 26, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-weld", "menu":"pr-fittings", "headline":"Weld Fittings & Adapters", "htmlContent":"<p>Ultrahigh-purity, specially cleaned, and industrial weld fittings from Swagelok are engineered to make permanent, high-integrity connections. Made from a special grade of SAF 2507TM super duplex material, our weld fittings and adapters offer excellent corrosion resistance in chloride-containing environments. <p>From general industrial to ultrahigh-purity applications, count on high-integrity connections that last with weld fittings from Swagelok, available in a variety of materials, sizes, and shapes. Options include: <ul> <li>Micro-Fit® High-Purity Tube Butt Weld Fittings</li> <li>Pipe Socket Weld Fittings</li> <li>Tube Butt Weld Automatic Fittings</li> <li>Tube Butt Weld Fittings</li> <li>Tube Socket Weld Automatic Fittings</li> <li>Tube Socket Weld Fittings</li> <li>Weld Adapter Fittings</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-bco", "menu":"pr-fittings", "headline":"BType VCO® L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO® fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO® Bodies</li> <li>VCO® Nuts</li> <li>VCO® Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"17", "background":"fi-fittings", "menu":"pr-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from ½ to 4 inches, our selection includes:</p><ul><li>TS Fittings</li></ul>" },' +
+    '{ "pageSlug":"", "id": 29, "title": "Valves", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
+    '{ "pageSlug":"", "id": 30, "title": "Filters", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
+    '{ "pageSlug":"", "id": 31, "title": "Hoses and Flexible Tubing", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "pageSlug":"", "id": 32, "title": "Leak Detectors, Lubricants and Sealers", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
+    '{ "pageSlug":"", "id": 33, "title": "Measurement Devices", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
+    '{ "pageSlug":"", "id": 34, "title": "Case Study", "filename": "casestudy/slides", "layout": "text-only", "parent":"0", "background":"case-study" }' +
     ']}';
 
 var idleTime = 0;
 var videoWasOpenedAtPageLoad = false;
+
+PAGE_ID = getCookie('PAGE_ID');
+
+if(window.location.protocol == "http:") {
+
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || window.location.pathname == '/presentation/') {
+
+        PAGE_ID = 1;
+        setCookie('PAGE_ID', PAGE_ID);
+
+        PRESENTATION_ID = getCookie('PRESENTATION_ID');
+
+        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
+            PRESENTATION_ID = getParameterByName('p');
+            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+        }
+    }
+
+    PRESENTATION_ID = getCookie('PRESENTATION_ID');
+
+    if (PRESENTATION_ID) {
+        $.getScript('/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
+    }
+}
+
+if(window.location.protocol == "file:"){
+    var pathname = window.location.pathname.split('/presentation/');
+
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
+
+        PAGE_ID = 1;
+        setCookie('PAGE_ID', PAGE_ID);
+
+        PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
+
+        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
+            PRESENTATION_ID = getParameterByName('p');
+            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+        }
+    }
+
+    DOMAIN = pathname[0];
+
+    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
+    PAGE_ID = sessionStorage.getItem('PAGE_ID');
+
+    if (PRESENTATION_ID) {
+        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
+    }
+}
+
+
 
 //$(document).delegate("body", "touchmove", false);
 $(document).delegate("body", "scrollstart", false);
@@ -58,25 +110,17 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
     var filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
     var fileDepth = path[0];
-    var presentationID = getParameterByName('presID');
-    if (presentationID) {
-        $.getScript(fileDepth + 'Content/pres' + presentationID + '/settings.js');
-    }
 
-    load_page_elements(fileDepth, presentationID);
+    load_page_elements(fileDepth, PRESENTATION_ID);
 
-    var pageID = getParameterByName('pageId');
-    if (pageID == "") {
-        pageID = 0;
-    }
+    var pageDetails = getObjects(JSON.parse(pagelist), 'id', PAGE_ID);
 
-    var pageDetails = getObjects(JSON.parse(pagelist), 'id', pageID);
-
-    load_page_info(pageID, fileDepth);
+    load_page_info(PAGE_ID, fileDepth);
 
     if (typeof(Storage) !== "undefined") {
         // Code for localStorage/sessionStorage.
-        localStorage.setItem('presentationID', presentationID);
+        localStorage.setItem('PAGE_ID', PAGE_ID);
+
         localStorage.setItem('pageSlug', pageDetails[0].pageSlug);
         localStorage.setItem('pageLayout', pageDetails[0].layout);
         localStorage.setItem('hasCaseStudy', false);
@@ -94,14 +138,13 @@ $(document).ready(function pageReady() {
 
     $('body').removeClass('ui-overlay-a');
     $('div').removeClass('ui-page-theme-a');
-    var presentationID = getParameterByName('presID');
 
-    $('.row a').not('.slide-tab').not('.view-content-link').each(function () {
-        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
-    });
-    $('.panel-link-item').each(function () {
-        this.href += (/\?/.test(this.href) ? '&' : '?') + 'presID=' + presentationID;
-    });
+    //$('.row a').not('.slide-tab').not('.view-content-link').each(function () {
+    //    this.href += (/\?/.test(this.href) ? '&' : '?') + 'p=' + PRESENTATION_ID;
+    //});
+    //$('.panel-link-item').each(function () {
+    //    this.href += (/\?/.test(this.href) ? '&' : '?') + 'p=' + PRESENTATION_ID;
+    //});
 
     var panelmenu = $('#sectionMenu');
 
@@ -146,7 +189,7 @@ function get_available_markets() {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
             var pageId = obj[0].id;
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="' + menuDepth + 'markets/detail.html?pageId=' + pageId + '&presID=' + presID + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/'+ obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', '+obj[0].id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -194,7 +237,8 @@ function get_custom_content(layouts, content) {
  */
 function get_child_pages(section) {
 
-    var thisPage = get_page_details(getParameterByName('pageId'));
+    var thisPage = get_page_details(PAGE_ID);
+
     var thisParent = get_page_details(thisPage.parent);
 
     var select = JSON.parse(pagelist);
@@ -208,12 +252,12 @@ function get_child_pages(section) {
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var html = '<li class="col-sm-2 landing-menu-item"><a href="/presentation/'+ this.filename + '.html" onclick="setCookie(\'PAGE_ID\', '+this.id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
             $("." + element).append(html);
             if (thisParent.id == section || thisParent.parent == section) {
-                var li = '<li class="' + listClass + '"><a href="' + fileDepth + this.filename + '.html?pageId=' + this.id + '" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+                var li = '<li class="' + listClass + '"><a href="/presentation/'+ this.filename + '.html" onclick="setCookie(\'PAGE_ID\', '+this.id+')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
@@ -406,18 +450,18 @@ function load_page_elements(fileDepth, presentationID) {
     var caseStudyLink = '';
 
     if (localStorage.hasCaseStudy == 'true') {
-        caseStudyLink = '<li class="casestudy-panel-item"><a href="' + menuDepth + 'casestudy/slides.html?pageId=34" data-ajax="false" class="panel-link-item">Case Study</a></li>';
+        caseStudyLink = '<li class="casestudy-panel-item"><a href="/presentation/casestudy/slides.html" onclick="setCookie(\'PAGE_ID\', 34)" data-ajax="false" class="panel-link-item">Case Study</a></li>';
     }
 
-    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="' + menuDepth + 'capabilities/index.html?pageId=3" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="' + menuDepth + 'products/index.html?pageId=4" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="' + menuDepth + 'markets/index.html?pageId=5" data-ajax="false" class="panel-link-item">Markets</a></li>' + caseStudyLink + '</ul><p style="float: right;"><a href="' + fileDepth + 'index.html?pageId=0" data-ajax="false">{DEBUG} HOME</a><br />';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setCookie(\'PAGE_ID\', 3);" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setCookie(\'PAGE_ID\', 4)" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setCookie(\'PAGE_ID\', 5)" data-ajax="false" class="panel-link-item">Markets</a></li>' + caseStudyLink + '</ul>';
     $('#sectionMenu').html(sidebarMenuHTML);
 
-    var headerRow = '<div id="header-left"><a href="' + fileDepth + 'pages/index.html?pageId=1&presID=' + presentationID + '" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
+    var headerRow = '<div id="header-left"><a href="/presentation/" onclick="setCookie(\'PAGE_ID\', 1)" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
 
     $("#header-row").html(headerRow);
 
     if (pageID == 1) {
-        $('#view-content-link').attr('href', 'mainMenu.html?pageId=2&presID=' + presentationID);
+        $('#view-content-link').attr('href', 'mainMenu.html?pageId=2');
     }
 
 }
@@ -437,7 +481,7 @@ function load_page_info(id, fileDepth) {
     var content;
 
     var page = get_page_details(id);
-    var pres = getParameterByName('presID');
+    var pres = getCookie('PRESENTATION_ID');
 
     parent = page.parent;
     background = page.background;
@@ -476,14 +520,14 @@ function load_page_info(id, fileDepth) {
         var thisParent = get_page_details(parent);
         var thisParentsParent = get_page_details(thisParent.parent);
 
-        var submenu = '<br/><span><a href="' + fileDepth + 'pages/' + thisParent.title.toLowerCase() + '/index.html?pageId=' + thisParent.id + '&presID=' + pres + '" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+        var submenu = '<br/><span><a href="/presentation/' + thisParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
 
         if (thisParentsParent.id == '5') { // Parent is Markets homepage
-            submenu = '<br/><span><a href="' + fileDepth + 'pages/' + thisParentsParent.title.toLowerCase() + '/detail.html?pageId=' + thisParent.id + '&presID=' + pres + '" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+            submenu = '<br/><span><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
         }
 
         if (thisParentsParent.id == '4') { // Parent is Products homepage
-            submenu = '<br/><span><a href="' + fileDepth + 'pages/' + thisParentsParent.title.toLowerCase() + '/index.html?pageId=' + thisParentsParent.id + '&presID=' + pres + '" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+            submenu = '<br/><span><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
         }
 
         $("#submenu").html(submenu);
@@ -790,7 +834,6 @@ function show_market_slides() {
     });
 
     $('.market-panel').on("swipeleft", function () {
-        alert('swipe');
         var id = $(this).attr('id');
         if (id != 'three') {
             $('.market-panel').animate({
@@ -821,7 +864,7 @@ function show_submenu(pres, id) {
 
     $.each(items, function () {
         if (this.title == page.title && this.parent != 4) {
-            html += '<li><a href="detail.html?pageId=' + this.id + '&presID=' + pres + '" data-ajax="false">' + this.headline + '</a></li>';
+            html += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false">' + this.headline + '</a></li>';
         }
     });
 
@@ -901,7 +944,7 @@ function timerIncrement() {
     }
     if (idleTime > 180) { // 3 minutes
         if (thisPage != '1') {
-            var home = fileDepth + 'pages/index.html?pageId=1&presID=1';
+            var home = fileDepth + 'pages/index.html?pageId=1';
             localStorage.setItem("inactive", "true");
             window.location.href = home;
         }
@@ -911,6 +954,25 @@ function timerIncrement() {
             idleTime = 0;
         }
     }
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    sessionStorage.setItem(cname, cvalue);
+    document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/presentation; domain="+localStorage.getItem('domain');
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
 }
 
 /** DEBUG FUNCTIONS */
@@ -926,7 +988,7 @@ function get_available_presentations() {
 
     var livepresentations = JSON.parse(presentations);
     $.each(livepresentations, function () {
-        var html = '<a href="pages/index.html?pageId=1&presID=' + this.id + '" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
+        var html = '<a href="pages/index.html?pageId=1" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
         $('#presentations-list').append(html);
 
     });

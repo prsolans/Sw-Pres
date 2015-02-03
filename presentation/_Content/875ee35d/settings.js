@@ -1,4 +1,4 @@
-presID = 1;
+presID = '875ee35d';
 
 var fileDepth = get_file_location();
 var menuDepth = "";
@@ -6,10 +6,12 @@ if (fileDepth == "../../") {
     menuDepth = "../";
 }
 
-var settings = '[{ "id": 0, "division":"Swagelok D&uuml;sseldorf", "client":"Bulls", "assetDir":"' + fileDepth + 'Content/pres' + presID + '/", "hasCaseStudy":true }]';
+var settings = '[{ "id": 0, "division":"Swagelok International", "client":"Tata", "assetDir":"_Content/' + presID + '/", "hasCaseStudy":true }]';
 
 var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
-       '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" }' +
+       '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" },' +
+              '{ "id": 2, "title": "Alternative Fuels", "slug":"alternative-fuels" }' +
+
        ']';
 
 var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "filename":"swagelok_video_artAnton", "caption":"A Word from Art Anton<br/>Swagelok President and CEO", "custom":false},' +

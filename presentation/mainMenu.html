@@ -15,17 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="../Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
-    <link href="../Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
-    <link href="../Content/Site.css" rel="stylesheet" type="text/css" />
-    <script src="../Scripts/jquery-1.11.2.min.js"></script>
-    <script src="../Scripts/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../Scripts/modernizr-2.6.2.js"></script>
-    <script src="../Scripts/sly.js"></script>
-    <script src="../Scripts/main.js"></script>
-    <script src="../Scripts/mt.js"></script>
-    <script src="../Scripts/hammer.min.js"></script>
+    <link href="_Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="_Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
+    <link href="_Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="_Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="_Scripts/jquery-1.11.2.min.js"></script>
+    <script src="_Scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="_Scripts/modernizr-2.6.2.js"></script>
+    <script src="_Scripts/sly.js"></script>
+    <script src="_Scripts/main.js"></script>
+    <script src="_Scripts/mt.js"></script>
+    <script src="_Scripts/hammer.min.js"></script>
 </head>
 <body>
     <!-- Add your site or application content here -->
@@ -40,7 +40,7 @@
         <div class="clearfix">&nbsp;</div>
         <!-- /header --><div class="ribbon row capabilities-row">
             <div class="menu-header capabilities-header col-sm-2">
-                <a href="capabilities/index.html?pageId=3" data-ajax="false">CAPABILITIES</a>
+                <a href="capabilities/index.html" onclick="setCookie('PAGE_ID', 3)" data-ajax="false">CAPABILITIES</a>
             </div>
             <div class="menu-list capabilities-list col-sm-10">
 
@@ -78,7 +78,7 @@
         </div>
 
     </div>
-    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="_Scripts/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
             // -------------------------------------------------------------

@@ -16,16 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="../Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet"/>
-    <link href="../Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet"/>
-    <link href="../Content/Site.css" rel="stylesheet" type="text/css"/>
-    <script src="../Scripts/jquery-1.11.2.min.js"></script>
-    <script src="../Scripts/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../Scripts/modernizr-2.6.2.js"></script>
-    <script src="../Scripts/mt.js"></script>
-    <script src="../Scripts/hammer.min.js"></script>
-    <script src="../Scripts/main.js"></script>
+    <link href="_Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="_Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet"/>
+    <link href="_Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet"/>
+    <link href="_Content/Site.css" rel="stylesheet" type="text/css"/>
+    <script src="_Scripts/jquery-1.11.2.min.js"></script>
+    <script src="_Scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="_Scripts/modernizr-2.6.2.js"></script>
+    <script src="_Scripts/mt.js"></script>
+    <script src="_Scripts/hammer.min.js"></script>
+    <script src="_Scripts/main.js"></script>
 
 </head>
 <body>
@@ -54,24 +54,24 @@
     <div class="row fly-in">
         <div class="full-width-band">
             <div class="col-xs-4">
-                <img id="video-modal-link" src="../Content/images/index-video.jpg" height="200" data-toggle="modal" data-target="#ceo-video-modal"/>
+                <img id="video-modal-link" src="_Content/images/index-video.jpg" height="200" data-toggle="modal" data-target="#ceo-video-modal"/>
             </div>
             <div class="col-xs-4 client-callout">
                 <img src="" id="client-logo" height="200"/>
             </div>
             <div class="col-xs-4">
-                <img src="../Content/images/index-image.jpg" height="200"/>
+                <img src="_Content/images/index-image.jpg" height="200"/>
             </div>
 
         </div>
-        <a id="view-content-link" href="" class="ui-btn view-content-link button" data-ajax="false">View Content</a>
+        <a id="view-content-link" href="mainMenu.html" onclick="setCookie('PAGE_ID', 2)" class="ui-btn view-content-link button" data-ajax="false">View Content</a>
     </div>
 </div>
-<script src="../Scripts/bootstrap.min.js"></script>
-<link href="../Scripts/video-js/video-js.min.css" rel="stylesheet">
-<script src="../Scripts/video-js/video.js"></script>
+<script src="_Scripts/bootstrap.min.js"></script>
+<link href="_Scripts/video-js/video-js.min.css" rel="stylesheet">
+<script src="_Scripts/video-js/video.js"></script>
 <script>
-    videojs.options.flash.swf = "../Scripts/video-js/video-js.swf";
+    videojs.options.flash.swf = "_Scripts/video-js/video-js.swf";
 </script>
 
 </body>
