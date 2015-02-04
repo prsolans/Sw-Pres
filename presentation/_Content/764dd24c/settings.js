@@ -23,10 +23,10 @@ var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
     ']';
 
 var videoList = '[' +
-    '{ "page_element": "ceo-video", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
-    '{ "page_element": "applications-video", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", "caption":"Application Video from Art Anton<br/>Swagelok President and CEO"},' +
-    '{ "page_element": "distributor-video", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
-    '{ "page_element": "training-video", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"}' +
+    '{ "page_element": "ceo-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "applications-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Application Video from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "distributor-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
+    '{ "page_element": "training-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"}' +
     ']';
 
 var layoutsList = '[' +

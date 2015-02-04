@@ -8,7 +8,10 @@ body {
 
     padding-top    : 50px;
     padding-bottom : 20px;
-    font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;
+    /*font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;
+    font-weight: 100;
     font-size: 12pt;
     overflow       : hidden;
 }
@@ -36,8 +39,8 @@ textarea {
 h1 {
     color       : white;
     text-shadow : none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Forza B', 'Forza A', Arial, Helvetica, sans-serif;
+    font-weight: 100;
 }
 
 h3 {
@@ -250,7 +253,7 @@ footer p {
     margin     : 0 30px;
     min-height : 400px;
     background : none;
-    width      : 95%;
+    width      : 100%;
     margin     : auto;
 }
 
