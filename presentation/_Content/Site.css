@@ -36,6 +36,8 @@ textarea {
 h1 {
     color       : white;
     text-shadow : none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 h3 {
