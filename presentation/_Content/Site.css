@@ -40,7 +40,7 @@ h1 {
 
 h3 {
     color         : white;
-    font-size     : .8rem;
+    font-size     : 1em;
     margin-bottom : 0;
 }
 
@@ -186,7 +186,7 @@ footer p {
     padding     : 0;
     width       : 180px;
     height      : 100%;
-    font-size   : .8rem;
+    font-size   : 1em;
     padding-top : 30px;
     text-align  : center;
 }
@@ -224,7 +224,7 @@ footer p {
 
 .landing-menu-item {
     float       : left;
-    font-size   : .8em;
+    font-size   : 1em;
     list-style  : none;
     padding-top : 35px;
     text-align  : center;
@@ -239,12 +239,8 @@ footer p {
     height: 90px;
 }
 
-@media screen and (min-width: 1400px) {
-
-    .landing-menu-item img, .slidee img {
-        width: 180px;
-        height: 180px;
-    }
+#left-custom-image {
+    width: 95%;
 }
 .market-panel {
     color      : white;
@@ -261,16 +257,6 @@ footer p {
 
 }
 
-@media screen and (min-width: 1400px) {
-
-    .market-slide-image {
-        max-height: 680px;
-        max-width: 680px;
-        float: right;
-        margin-right: 50px;
-    }
-}
-
 .markets-intro {
     margin-top : 360px;
 }
@@ -280,14 +266,6 @@ footer p {
     padding-left : 35px;
     position     : relative;
     left         : -2000px;
-}
-
-@media screen and (min-width: 1400px) {
-
-    .menu-header, .menu-list {
-        clear:left;
-        height: 240px;
-    }
 }
 
 .menu-header a {
@@ -313,7 +291,7 @@ footer p {
 }
 
 #page-content ul {
-    font-size : .8rem;
+    font-size : 1em;
     color     : white;
 }
 
