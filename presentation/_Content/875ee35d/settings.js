@@ -1,50 +1,53 @@
-presID = '875ee35d';
+presID = '875ee35d'
 
 var fileDepth = get_file_location();
-var menuDepth = "";
+var menuDepth = '';
 if (fileDepth == "../../") {
     menuDepth = "../";
 }
 
-var settings = '[{ "id": 0, "division":"Swagelok International", "client":"Tata", "assetDir":"_Content/' + presID + '/", "hasCaseStudy":true }]';
-
-var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
-       '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" },' +
-              '{ "id": 2, "title": "Alternative Fuels", "slug":"alternative-fuels" }' +
-
-       ']';
-
-var videoList = '[{ "page_element": "ceo-video", "title": "Video 1", "videofile":"swagelok_video_artAnton.mp4", "posterfile":"swagelok_video_artAnton.jpg", "subtitlefile":"swagelok_video_artAnton.vtt", caption":"A Word from Art Anton<br/>Swagelok President and CEO", "custom":false},' +
-    '{ "page_element": "distributor-video", "title": "Video 2", "videofile":"distributor_video_andreas.mp4", "posterfile":"distributor_video_andreas.jpg", "subtitlefile":"distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director", "custom":true}' +
-    ']';
-
-var layoutsList = '[' +
-    '{"page_id":"technicalSupportSales", "page_layout":"text-image"},' +
-    '{"page_id":"training", "page_layout":"text-video"}' +
-    ']';
-
-var content = '[' +
-    '{"page_id":"services", "page_element":"left-custom-content", "html":"<h3>Copy Subhead</h3><p>This is a left-column custom content for the Services page. This is a left-column custom content for the Services page. This is a left-column custom content for the Services page. This is a left-column custom content for the Services page.</p><h3>Copy Subhead</h3><p>This is a left-column custom content for the Services page</p><h3>Copy Subhead</h3><p>This is a left-column custom content for the Services page</p>"},' +
-    '{"page_id":"services", "page_element":"right-custom-content", "html":"<h3>Copy Subhead</h3><p>This is a right-column custom content for the Services page</p><h3>Copy Subhead</h3><p>This is a left-column custom content for the Services page</p>"},' +
-    '{"page_id":"services", "page_element":"page-title", "html":"<p>Services headline</p>"},' +
-    '{"page_id":"technicalSupportSales", "page_element":"right-custom-content", "html":"<p>This is a right-column custom content for the Technical Support page</p>"},' +
-    '{"page_id":"technicalSupportSales", "page_element":"page-title", "html":"<p>Technical support headline</p>"},' +
-    '{"page_id":"technicalSupportSales", "page_element":"left-custom-image", "src":"'+fileDepth+'Content/images/capabilities/technical.png"},' +
-    '{"page_id":"mission", "page_element":"page-title", "html":"<p>Helping our Customers Grow</p>"},' +
-    '{"page_id":"mission", "page_element":"page-content", "html":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
-    '{"page_id":"training", "page_element":"page-title", "html":"<p>Training headline</p>"}' +
-    ']';
+var settings='[{ "id":"875ee35d", "division":"D&#252;sseldorf Test Company", "client":"D&#252;sseldorf Test Company", "assetDir":"/presentation/_content/764dd24c/", "hasCaseStudy":"true"}]';
 
 var theseSettings = get_presentation_settings();
 
-if(theseSettings[0].hasCaseStudy == true){
+var presentationDirectory = theseSettings[0].assetDir;
+
+if (theseSettings[0].hasCaseStudy == true) {
     localStorage.setItem('hasCaseStudy', true);
 }
 
+var marketList = '[{ "id": 0, "title": "Power", "slug": "power" }]';
+var videoList='[' +
+    '{ "page_element": "ceo-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"A Word from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "marketsCustomers-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Application Video from Art Anton<br/>Swagelok President and CEO"},' +
+    '{ "page_element": "distributor-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
+    '{ "page_element": "services-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
+    '{"page_element":"caseStudy-video", "videofile":"/presentation/_content/videos/510f9ae1-36da-417d-a1ca-72108aaa3405/510f9ae1-36da-417d-a1ca-72108aaa3405.mp4", "posterfile":"/presentation/_content/videos/510f9ae1-36da-417d-a1ca-72108aaa3405/510f9ae1-36da-417d-a1ca-72108aaa3405.jpg", "caption":"andreas"}' +
+    ']';
+
+var layoutsList='[' +
+    '{"page_id":"services", "page_layout":"text-video"},' +
+    '{"page_id":"customSolutions", "page_layout":"text-only"}' +
+    //'{"page_id":"mission", "page_layout":"text-image"}' +
+    ']';
+
+var content='[' +
+    '{"page_id":"services", "page_element":"page-title", "html":"Case study"},' +
+    '{"page_id":"services", "page_element":"left-custom-content", "html":"D&uuml;sseldorf Case study text"},' +
+    '{"page_id":"customSolutions", "page_element":"page-title", "html":"We like cheese"},' +
+    '{"page_id":"customSolutions", "page_element":"left-custom-content", "html":"<p>test"},' +
+    '{"page_id":"customSolutions", "page_element":"right-custom-content", "html":"<p>test two"}' +
+    //'{"page_id":"mission", "page_element":"page-title", "html":"This is our mission"},' +
+    //'{"page_id":"mission", "page_element":"left-custom-image", "src":"/presentation/_Content/764dd24c.jpg"},' +
+    //'{"page_id":"mission", "page_element":"right-custom-content", "html":"<p>But we have <strong>glaucoma</strong>, so our <em>vision </em>is impaired.&trade;</p>"}' +
+    ']';
+
 get_available_markets(marketList);
 get_custom_content(layoutsList, content);
+load_page_info(localStorage.getItem('PAGE_ID'));
 
-if(localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash'){
-    get_video_details();
+
+if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash') {
+    get_video_details(videoList);
 }
 

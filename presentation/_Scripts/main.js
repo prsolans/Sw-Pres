@@ -15,7 +15,7 @@ var pagelist = '{' +
     '{ "pageSlug":"oneSwagelok", "id": 12, "title": "Your Global Partner", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"mission", "menu":"ca-partner", "headline":"One Swagelok", "htmlContent":"<p>We’ve always been known for our quality products. Recently, in response to growing customer needs, we’ve improved and increased our expertise and range of global services. We now provide customers with local relationships through our distributors and augment them with advanced services and the backing of a global organization. <p>These services relate not only to logistics and coordination among different regions of the world, but also to advanced training and design in systems and processes; expertise in materials science; fabrication of assemblies; and custom product design. <p>As “One Swagelok”&mdash;one interconnected global organization&mdash;we are developing products and services that are intended to lighten the burden of our customers" },' +
     '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"mission", "menu":"ca-partner" },' +
     '{ "pageSlug":"power", "id": 14, "title": "Power", "filename": "markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
-    '{ "pageSlug":"powerDetail", "id": 15, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"13", "background":"power-blur", "menu":"pr-leak" },' +
+    '{ "pageSlug":"powerDetail", "id": 15, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"14", "background":"power-blur", "menu":"pr-leak" },' +
     '{ "pageSlug":"oilGas", "id": 16, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
     '{ "pageSlug":"alternativeFuels", "id": 17, "title": "Alternative Fuels","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
     '{ "pageSlug":"fittings", "id": 18, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"4", "background":"products", "menu":"pr-fittings", "headline":"High-Performance Fittings &amp; Adapters", "htmlContent":"<p>When the world’s most respected companies want to make lasting connections, they turn to Swagelok. From high-purity fittings designed to minimize particle generation and entrapment to high-strength fittings engineered to hold high pressure, Swagelok products deliver dependable, leak-free performance. <p>For more than 65 years, we’ve been solving tough challenges in the oil and gas, chemical processing, power generation, alternative energy, aerospace, and defense industries, establishing a reputation for high quality and high performance. <p>Whether you need fittings for corrosive environments or extreme temperatures, fittings to maintain vacuum or withstand high pressure, or a proven partner who understands your industry&mdash;you’ll be well connected with Swagelok." },' +
@@ -187,9 +187,9 @@ $(document).ready(function pageReady() {
 function get_available_markets() {
     var livemarkets = JSON.parse(marketList);
 
-    var thisPage = get_container_id();
+    var thisPage = getObjects(JSON.parse(pagelist), 'pageSlug', localStorage.getItem('pageSlug'));
 
-    if (thisPage > 1) {
+    if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
             var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
@@ -200,15 +200,12 @@ function get_available_markets() {
 
 function get_custom_content(layouts, content) {
 
+
     var thisPage = localStorage.getItem('pageSlug');
     var thisLayout = get_page_layout(layouts, thisPage);
 
     if (thisLayout != false) {
         set_page_layout(thisLayout);
-    }
-
-    if (thisLayout == 'market') {
-        show_market_slides();
     }
 
     var thisContent = getObjects(JSON.parse(content), 'page_id', thisPage);
@@ -231,6 +228,11 @@ function get_custom_content(layouts, content) {
         }
     });
 
+    load_page_info(localStorage.getItem('PAGE_ID'));
+
+    if (thisLayout == 'market') {
+        show_market_slides();
+    }
 
 }
 /**
@@ -269,6 +271,7 @@ function get_child_pages(section) {
             }
         }
     });
+
 
     if (thisPage.pageSlug == 'mainMenu') {
 
@@ -377,10 +380,11 @@ function get_video_details(videoList) {
         var element = this.page_element;
         var videoCaption = this.caption;
 
+
         $('#' + element + '-poster').attr('src', posterImage);
         $('#' + element + '-caption').html(videoCaption);
 
-        var html = '<video id="' + element + '" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="' + video + '" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
+        var html = '<video id="' + element + '" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' + element + '-mp4-path" src="" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
         $('.' + element + '-modal-body').html(html);
 
@@ -390,6 +394,8 @@ function get_video_details(videoList) {
             "type": "video/mp4",
             "src": video
         });
+
+        $('#' + element + '-mp4-path').attr('src', video);
 
         videojs(element).ready(function () {
 
@@ -479,7 +485,7 @@ function load_page_info(id) {
     var headline;
     var content;
 
-    var page = get_page_details(id);
+    var page = get_page_details(localStorage.getItem('PAGE_ID'));
 
     parent = page.parent;
     background = page.background;
@@ -488,12 +494,6 @@ function load_page_info(id) {
     content = page.htmlContent;
     headline = page.headline;
     layout = page.layout;
-
-    //if (fileDepth == undefined) {
-    //    var filepath = $('link').first().attr('href');
-    //    var path = filepath.split("Content/");
-    //    fileDepth = path[0];
-    //}
 
     // Display page information
     $('#page-container').attr('data-pageid', id);
@@ -511,7 +511,7 @@ function load_page_info(id) {
         if (layout == 'text-video') {
             $('#left-custom-content').html(content);
         }
-        else if(layout == 'mission') {
+        else if (layout == 'mission' || layout == 'product') {
             $('#page-content').append(content);
         }
     }
@@ -599,7 +599,6 @@ function set_page_layout(pageLayout) {
     }
     if (pageLayout == 'mission') {
         show_bottom_nav();
-        $('#right-column').remove();
 
         var baseContent = '<div class="col-sm-5"><h1 id="page-title">&nbsp;</h1><div id="page-content"></div></div>';
         var videoRow = '<div class="col-sm-5 distributor-video-cell">Video</div><div class="col-sm-5 col-sm-offset-1 ceo-video-cell">Video</div>';
@@ -622,18 +621,18 @@ function set_page_layout(pageLayout) {
         var pageSlug = localStorage.getItem('pageSlug');
 
         $('#left-column').removeClass('col-xs-6').addClass('col-xs-6');
-        $('#right-column').removeClass('col-xs-6').addClass('col-xs-5');
-
+        $('#right-column').removeClass('col-xs-6').addClass('col-xs-5').addClass('"+pageSlug+"-video-cell');
         $('#right-column').html('<div class="' + pageSlug + '-video-cell"></div>');
 
-        var videoContainer = '<div id="' + pageSlug + '-video-container"> <!-- Button trigger modal --> <img id="' + pageSlug + '-video-poster" src="" data-toggle="modal" data-target="#' + pageSlug + 'video-modal"> <p class="' + pageSlug + '-video-caption" id="' + pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' + pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' + pageSlug + '-modal-body"> <video id="' + pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' + pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var videoContainer = '<div id="' + pageSlug + '-video-container"> <!-- Button trigger modal --> <img width="100%" id="' + pageSlug + '-video-poster" src="" data-toggle="modal" data-target="#' + pageSlug + '-video-modal"> <p class="video-caption" id="' + pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' + pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' + pageSlug + '-modal-body"> <video id="' + pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' + pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
+        console.log(videoContainer);
         $('.' + pageSlug + '-video-cell').html(videoContainer);
 
     }
     if (pageLayout == 'text-image') {
         $('#left-column').removeClass('col-xs-6').addClass('col-xs-4 col-lg-5');
-        $('#right-column').removeClass('col-xs-6').addClass('col-xs-8 col-lg-6');
+        $('#right-column').removeClass('col-xs-6').addClass('col-xs-7 col-lg-6');
         $('#left-column h1').remove();
         var imageContainer = '<img src="" id="left-custom-image" />';
         $('#left-custom-content').html(imageContainer);
@@ -766,7 +765,7 @@ function show_bottom_nav() {
     var delayTime = 300;
 
     var docHeight = $(document).height();
-    var linkTop = docHeight - 25;
+    var linkTop = docHeight - 30;
 
     $("#footer-menu-link")
         .css({
@@ -774,7 +773,7 @@ function show_bottom_nav() {
             'top': linkTop + 'px',
             'text-align': 'center',
             'margin': 'auto',
-            'height': '25px',
+            'height': '30px',
             'width': '100%',
             'z-index': 5000
         });
@@ -783,7 +782,7 @@ function show_bottom_nav() {
     if (sessionStorage.getItem('displayedBottomNav') != 'true') {
         $('.row').css('opacity', '.9');
         $("#footer-menu-link").animate({
-            top: docHeight - 185
+            top: docHeight * .2
         }, 0).css('opacity', '1')
             .delay(delayTime * 5).animate({
                 top: linkTop
@@ -806,7 +805,7 @@ function show_bottom_nav() {
         if (position == linkTop) {
             $('.row').css('opacity', '.6');
             $("#footer-menu-link").animate({
-                top: docHeight - 185
+                top: docHeight * .75
             }, delayTime).css('opacity', '1');
 
             $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
@@ -826,6 +825,8 @@ function show_bottom_nav() {
 }
 
 function show_market_slides() {
+
+    $('#dot-one').addClass('dot-active');
 
     var one = $('.market-panel').first();
     var two = one.next('.market-panel');
@@ -865,6 +866,8 @@ function show_market_slides() {
     $('.market-panel').on("swipeleft", function () {
         var id = $(this).attr('id');
         if (id != 'three') {
+            $('.dot').removeClass('dot-active');
+            $('#dot-' + id).addClass('dot-active');
             $('.market-panel').animate({
                 left: '-=' + leftEdge
             }, 800);
@@ -875,12 +878,59 @@ function show_market_slides() {
 
         var id = $(this).attr('id');
         if (id != 'one') {
+            $('.dot').removeClass('dot-active');
+            $('#dot-' + id).addClass('dot-active');
+
             $('.market-panel').animate({
                 left: '+=' + leftEdge
             }, 800);
         }
 
     });
+
+    $('.dot').on("click", function () {
+
+        var thisSlide = this.id.split('-')[1];
+        $('.dot').removeClass('dot-active');
+        $(this).addClass('dot-active');
+
+        if (thisSlide == "one") {
+            $('#one').animate({
+                left: offset.left
+            }, 800);
+            $('#two').animate({
+                left: width
+            }, 800);
+            $('#three').animate({
+                left: width * 2
+            }, 800);
+        }
+        if (thisSlide == "two") {
+            $('#two').animate({
+                left: offset.left
+            }, 800);
+            $('#one').animate({
+                left: offset.left - width
+            }, 800);
+            $('#three').animate({
+                left: width
+            }, 800);
+        }
+        if (thisSlide == "three") {
+            $('#three').animate({
+                left: offset.left
+            }, 800);
+            $('#two').animate({
+                left: offset.left - width
+            }, 800);
+            $('#one').animate({
+                left: offset.left - width * 2
+            }, 800);
+        }
+
+
+    });
+
 }
 
 function show_submenu(id) {

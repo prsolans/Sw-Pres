@@ -10,16 +10,16 @@ body {
     padding-bottom : 20px;
     /*font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;*/
     /*font-family: 'Open Sans', sans-serif;*/
-    font-family: 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 12pt;
+    font-family    : 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;
+    font-weight    : 100;
+    font-size      : 12pt;
     overflow       : hidden;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width : 1400px) {
 
     body {
-        font-size: 16pt;
+        font-size : 16pt;
     }
 }
 
@@ -39,8 +39,8 @@ textarea {
 h1 {
     color       : white;
     text-shadow : none;
-    font-family: 'Forza B', 'Forza A', Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-family : 'Forza B', 'Forza A', Arial, Helvetica, sans-serif;
+    font-weight : 100;
 }
 
 h3 {
@@ -121,6 +121,19 @@ p, li, li ul li {
     max-width : 100%;
 }
 
+.dot {
+    display          : inline-block;
+    width            : 20px;
+    height           : 20px;
+    border-radius    : 10px;
+    background-color : #8999A6;
+    padding          : 5px;
+}
+
+.dot-active {
+    background-color: goldenrod;
+}
+
 .fly-in {
     margin      : 0;
     margin-left : 0px !important;
@@ -170,10 +183,8 @@ footer p {
 }
 
 .frame {
-    overflow   : hidden;
-    height     : 160px;
-    padding    : 0;
-    margin-top : 5px;
+    overflow : hidden;
+    padding  : 0;
 }
 
 .frame .slidee {
@@ -203,9 +214,9 @@ footer p {
 }
 
 .full-width-band img {
-    max-width: auto;
-    max-height: 100%;
-    object-fit: contain;
+    max-width  : auto;
+    max-height : 100%;
+    object-fit : contain;
 
 }
 
@@ -219,8 +230,7 @@ footer p {
 .header-row h1 {
     color          : white;
     float          : left;
-    font-size      : 1.5rem;
-    margin         : 70px 0 !important;
+    margin         : 61px 0 !important;
     padding        : 0 10px !important;
     text-align     : left;
     text-transform : uppercase;
@@ -245,13 +255,14 @@ footer p {
 }
 
 .landing-menu-item img, .slidee img {
-    width: 90px;
-    height: 90px;
+    width  : 90px;
+    height : 90px;
 }
 
 #left-custom-image {
-    width: 95%;
+    width : 95%;
 }
+
 .market-panel {
     color      : white;
     padding    : 30px;
@@ -263,7 +274,7 @@ footer p {
 }
 
 .market-slide-image {
-    width: 100%;
+    width : 100%;
 
 }
 
@@ -322,8 +333,9 @@ footer p {
 }
 
 #right-custom-content {
-    margin-right: 10px;
+    margin-right : 10px;
 }
+
 .capabilities-header {
     background-color : rgba(0, 96, 102, .7);
 }
@@ -488,8 +500,9 @@ footer p {
 }
 
 #video-modal-link {
-    float: right;
+    float : right;
 }
+
 #video-poster {
     min-height : 32px;
     min-width  : 32px;
@@ -497,7 +510,7 @@ footer p {
 }
 
 #video-container {
-    width: 100%;
+    width : 100%;
 }
 
 .view-content-link {
@@ -505,7 +518,6 @@ footer p {
     margin     : auto;
     margin-top : 50px;
 }
-
 
 /* LANDING ANIMATIONS */
 .landing-animation {
