@@ -265,7 +265,7 @@ footer p {
 
 .market-panel {
     color      : white;
-    padding    : 30px;
+    padding    : 0 30px;
     margin     : 0 30px;
     min-height : 400px;
     background : none;
