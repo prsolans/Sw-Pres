@@ -192,7 +192,7 @@ function get_available_markets() {
     if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<div class="col-sm-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-sm-2 col-lg-1 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -242,6 +242,8 @@ function get_custom_content(layouts, content) {
  */
 function get_child_pages(section) {
 
+    var count = 0;
+
     var thisPage = get_page_details(PAGE_ID);
 
     var thisParent = get_page_details(thisPage.parent);
@@ -276,8 +278,16 @@ function get_child_pages(section) {
     if (thisPage.pageSlug == 'mainMenu') {
 
         var width = $(window).width();
-        var liWidth = (width * (5 / 6)) / 6.25;
-        $('.slidee li').css('width', liWidth);
+        if(width < 1200) {
+            var liWidth = (width * (5 / 6)) / 6.25;
+            $('.slidee li').css('width', liWidth);
+        }
+        //else {
+        //    count = $('.slidee li').length;
+        //    alert(count);
+        //    alert(width/count);
+        //    $('.slidee li').css('width', width/count);
+        //}
         $('.frame').css('height', '175px');
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
     }
@@ -593,6 +603,7 @@ function set_page_layout(pageLayout) {
         var pageHeight = window.innerHeight;
         $(".menu-header").css('height', pageHeight * .27).css('clear', 'both');
         $(".menu-list").css('height', pageHeight * .27).css('clear', 'both');
+        $(".frame").css('height', pageHeight * .27).css('clear', 'both');
         $("#section-menu-button").hide();
     }
     if (pageLayout == 'market') {
@@ -769,7 +780,7 @@ function show_bottom_nav() {
     var delayTime = 300;
 
     var docHeight = $(document).height();
-    var linkTop = docHeight - 30;
+    var linkTop = docHeight * .95;
 
     $("#footer-menu-link")
         .css({
@@ -777,16 +788,22 @@ function show_bottom_nav() {
             'top': linkTop + 'px',
             'text-align': 'center',
             'margin': 'auto',
-            'height': '30px',
+            'height': docHeight *.05,
             'width': '100%',
             'z-index': 5000
+        });
+
+    $('.frame')
+        .css({
+           'margin-top': docHeight *.02 + 'px',
+            'height': docHeight *.20 + 'px'
         });
 
     // If the bottom nav has not been displayed before
     if (sessionStorage.getItem('displayedBottomNav') != 'true') {
         $('.row').css('opacity', '.9');
         $("#footer-menu-link").animate({
-            top: docHeight * .2
+            top: docHeight * .75
         }, 0).css('opacity', '1')
             .delay(delayTime * 5).animate({
                 top: linkTop
@@ -806,7 +823,9 @@ function show_bottom_nav() {
 
         var position = $("#footer-menu-link").offset().top;
 
-        if (position == linkTop) {
+        console.log(position+":"+linkTop);
+
+        if (Math.round(position) == Math.round(linkTop)) {
             $('.row').css('opacity', '.6');
             $("#footer-menu-link").animate({
                 top: docHeight * .75
