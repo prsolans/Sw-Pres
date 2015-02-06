@@ -590,14 +590,14 @@ function load_page_info(id) {
 }
 
 function set_content_area_size() {
-    var height = $(window).height();
-    var headerHeight = $('#header-row').height();
-    var footerHeight = $('#footer-menu-link').height();
+    var height = $(document).height();
+    var headerHeight = 125;
+    var footerHeight = $('.ui-footer').height();
 
     var contentHeight = height - headerHeight - footerHeight;
 
     console.log(height + ':' + headerHeight + ':' + footerHeight);
-    $('.content-body').css('height', contentHeight);
+    $('#main-content').css('height', contentHeight);
 }
 
 
@@ -845,55 +845,23 @@ function show_bottom_nav() {
 
     $('.frame')
         .css({
-            'margin-top': docHeight * .02 + 'px',
             'height': docHeight * .20 + 'px'
         });
 
-    // If the bottom nav has not been displayed before
-    if (sessionStorage.getItem('displayedBottomNav') != 'true') {
-        $('.row').css('opacity', '.9');
-        $("#footer-menu-link").animate({
-            top: docHeight * .75
-        }, 0).css('opacity', '1')
-            .delay(delayTime * 5).animate({
-                top: linkTop
-            }, delayTime);
-        $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
 
-        setTimeout(function () {
+    $('.footer-title-up').on('click', function () {
+        if($('.frame').is(":visible")){
             $('.row').css('opacity', '1');
-        }, delayTime * 7);
-        $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
-
-        // set storage to indicate bottom nav has been displayed
-        sessionStorage.setItem('displayedBottomNav', 'true');
-    }
-
-    $("#footer-menu-link").on("click", function () {
-
-        var position = $("#footer-menu-link").offset().top;
-
-        console.log(position + ":" + linkTop);
-
-        if (Math.round(position) == Math.round(linkTop)) {
-            $('.row').css('opacity', '.6');
-            $("#footer-menu-link").animate({
-                top: docHeight * .75
-            }, delayTime).css('opacity', '1');
-
-            $('#footer-menu-link a:first').removeClass('footer-title-up').addClass('footer-title-down');
+            $('.footer-title').removeClass('footer-title-down').addClass('footer-title-up');
+            $('.frame').hide(400);
         }
         else {
-            $('.row').css('opacity', '1');
-
-            $("#footer-menu-link").animate({
-                top: linkTop
-            }, delayTime);
-
-            $('#footer-menu-link a:first').removeClass('footer-title-down').addClass('footer-title-up');
-
+            $('.row').css('opacity', '.3');
+            $('.footer-title').removeClass('footer-title-up').addClass('footer-title-down');
+            $('.frame').show(400);
         }
     });
+
 
 }
 

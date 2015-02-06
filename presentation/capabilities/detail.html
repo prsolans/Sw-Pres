@@ -29,7 +29,7 @@
     <script src="/presentation/_Scripts/sly.js"></script>
     <script src="/presentation/_Scripts/main.js"></script>
 </head>
-<body style="overflow:hidden;">
+<body>
 
 <!-- Add your site or application content here -->
 <div data-role='page' data-pageid="3" id="page-container" style="">
@@ -38,11 +38,11 @@
     <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
     </div>
     <!-- /panel -->
-    <div id="header-row" class='header-row' data-role='header' data-position='fixed'>
+    <div id="header-row" class='header-row' data-role='header' data-position='fixed' role="banner">
     </div>
     <!-- /header -->
     <div class="clearfix">&nbsp;</div>
-    <div class=" content-body">
+    <div data-role="main" id="main-content">
         <div class="row">
             <div class="col-xs-6" id="left-column">
                 <h1 id="page-title">&nbsp;</h1>
@@ -55,6 +55,42 @@
                     fugiat
                     nulla pariatur.
                 </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat
+                        nulla pariatur.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat
+                        nulla pariatur.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat
+                        nulla pariatur.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat
+                        nulla pariatur.
+                    </p>
                 </div>
             </div>
             <div class="col-xs-6" id="right-column">
@@ -77,21 +113,24 @@
         </div>
 
     </div>
-    <div class="row capabilities-header" id="footer-menu-link" data-position="fixed" data-display="overlay">
-        <a href="#" class="footer-title-up">CAPABILITIES</a>
 
-        <div class="frame">
+    <div id="fixed-footer" data-role="footer" data-position="fixed">
+        <h1 class="footer-title footer-title-up capabilities-header">CAPABILITIES</h1>
+        <div class="frame" style="display: none;">
             <ul class="slidee">
             </ul>
         </div>
+
     </div>
+
     <script src="/presentation/_Scripts/bootstrap.min.js"></script>
     <link href="/presentation/_Scripts/video-js/video-js.min.css" rel="stylesheet">
     <script src="/presentation/_Scripts/video-js/video.js"></script>
-    <div id="video-setup"></div>
 
     <script>
         $(document).ready(function () {
+
+
             // -------------------------------------------------------------
             //   Basic Navigation
             // -------------------------------------------------------------

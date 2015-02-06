@@ -133,12 +133,12 @@ p, li, li ul li {
 }
 
 .content-body {
-    height: 500px;
     width: 100%;
     z-index: 6;
     /*border: 5px solid green;*/
     overflow-y: auto;
     overflow-x: hidden;
+    margin-bottom: 50px;
 }
 
 .dot {
@@ -300,6 +300,16 @@ footer p {
     width : 95%;
 }
 
+#main-content {
+    position: absolute;
+    top: 125px;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    overflow: auto;
+    overflow-x: auto;
+
+}
+
 .market-panel {
     color      : white;
     padding    : 0 30px;
@@ -394,15 +404,20 @@ footer p {
 }
 
 .capabilities-header {
-    background-color : rgba(0, 96, 102, .7);
+    background-color : rgba(0, 96, 102, 1);
+    margin: 0 !important;
 }
 
 .case-study-header {
-    background-color : rgba(115, 104, 103, .7);
+    background-color : rgba(115, 104, 103, 1);
+    margin: 0 !important;
+
 }
 
 .markets-header {
-    background-color : rgba(109, 26, 66, .7);
+    background-color : rgba(109, 26, 66, 1);
+    margin: 0 !important;
+
 }
 
 #page-headline {
@@ -410,7 +425,9 @@ footer p {
 }
 
 .products-header {
-    background-color : rgba(166, 63, 30, .7);
+    background-color : rgba(166, 63, 30, 1);
+    margin: 0 !important;
+
 }
 
 .capabilities-list, .capabilities-bottom-menu-list {
@@ -699,6 +716,10 @@ footer p {
 .tab-content .row {
     margin-top  : 5px;
     margin-left : 0 !important;
+}
+
+.ui-footer-fixed {
+    padding-bottom: 0;
 }
 
 .ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover {

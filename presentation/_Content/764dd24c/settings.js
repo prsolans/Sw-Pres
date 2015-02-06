@@ -7,7 +7,7 @@ if (fileDepth == "../../") {
     }
 
 
-var settings = '[{ "id": "'+presID+'", "division":"Swagelok D&uuml;esseldorf", "client":"Tata", "assetDir":"/presentation/_Content/' + presID + '/", "hasCaseStudy":true }]';
+var settings = '[{ "id": "'+presID+'", "division":"Swagelok D&uuml;sseldorf", "client":"Tata", "assetDir":"/presentation/_Content/' + presID + '/", "hasCaseStudy":true }]';
 
 var theseSettings = get_presentation_settings();
 
