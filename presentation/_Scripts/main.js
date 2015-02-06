@@ -13,7 +13,7 @@ var pagelist = '{' +
     '{ "pageSlug":"training", "id": 10, "title": "Training", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-training" },' +
     '{ "pageSlug":"customSolutions", "id": 11, "title": "Custom Solutions", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
     '{ "pageSlug":"oneSwagelok", "id": 12, "title": "Your Global Partner", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-partner", "headline":"One Swagelok", "htmlContent":"<p>We’ve always been known for our quality products. Recently, in response to growing customer needs, we’ve improved and increased our expertise and range of global services. We now provide customers with local relationships through our distributors and augment them with advanced services and the backing of a global organization. <p>These services relate not only to logistics and coordination among different regions of the world, but also to advanced training and design in systems and processes; expertise in materials science; fabrication of assemblies; and custom product design. <p>As “One Swagelok”&mdash;one interconnected global organization&mdash;we are developing products and services that are intended to lighten the burden of our customers" },' +
-    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
+    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/slides", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
     '{ "pageSlug":"power", "id": 14, "title": "Power", "filename": "markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
     '{ "pageSlug":"powerDetail", "id": 15, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"14", "background":"power-blur", "menu":"pr-leak" },' +
     '{ "pageSlug":"oilGas", "id": 16, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
@@ -346,14 +346,23 @@ function get_page_layout(layouts) {
 function get_presentation_settings() {
     if (settings) {
         var presSettings = JSON.parse(settings);
+
+        if (presSettings[0].hasCaseStudy == true) {
+            localStorage.setItem('hasCaseStudy', true);
+
+        }
     }
     else {
         console.log('ERROR: Presentations settings JSON feed');
     }
     $.each(presSettings, function () {
-
         $('#header-title').html(this.division);
+
         $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
+        if (localStorage.getItem('hasCaseStudy') == 'true') {
+            $('#case-study-link').attr('onclick', 'setCookie("PAGE_ID", "13")');
+            $('#case-study-link').attr('href', 'capabilities/slides.html');
+        }
     });
 
     return presSettings;
@@ -521,7 +530,7 @@ function load_page_info(id) {
         if (layout == 'text-video') {
             $('#left-custom-content').html(content);
         }
-        if(layout == 'text-only'){
+        if (layout == 'text-only') {
             $('#left-custom-content').html(content);
             $('#right-custom-content').html('');
         }

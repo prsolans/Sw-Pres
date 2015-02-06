@@ -13,11 +13,6 @@ var theseSettings = get_presentation_settings();
 
 var presentationDirectory = theseSettings[0].assetDir;
 
-if (theseSettings[0].hasCaseStudy == true) {
-    localStorage.setItem('hasCaseStudy', true);
-
-}
-
 var marketList = '[{ "id": 0, "title": "Power", "slug": "power" },' +
     '{ "id": 1, "title": "Oil &amp; Gas", "slug":"oil-and-gas" }' +
     ']';
