@@ -19,7 +19,7 @@
     <link href="/presentation/_Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/presentation/_Content/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet"/>
     <link href="/presentation/_Content/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6340892/657604/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6340892/657604/css/fonts.css"/>
     <link href="/presentation/_Content/Site.css" rel="stylesheet" type="text/css"/>
     <script src="/presentation/_Scripts/jquery-1.11.2.min.js"></script>
     <script src="/presentation/_Scripts/jquery.mobile-1.4.5.min.js"></script>
@@ -29,7 +29,7 @@
     <script src="/presentation/_Scripts/sly.js"></script>
     <script src="/presentation/_Scripts/main.js"></script>
 </head>
-<body>
+<body style="overflow:hidden;">
 
 <!-- Add your site or application content here -->
 <div data-role='page' data-pageid="3" id="page-container" style="">
@@ -42,38 +42,42 @@
     </div>
     <!-- /header -->
     <div class="clearfix">&nbsp;</div>
-    <div class="row">
-        <div class="col-xs-6" id="left-column">
-            <h1 id="page-title">&nbsp;</h1>
-            <div id="left-custom-content"><p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat
-                nulla pariatur.
-            </p>
+    <div class=" content-body">
+        <div class="row">
+            <div class="col-xs-6" id="left-column">
+                <h1 id="page-title">&nbsp;</h1>
+
+                <div id="left-custom-content"><p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat
+                    nulla pariatur.
+                </p>
+                </div>
+            </div>
+            <div class="col-xs-6" id="right-column">
+                <h1 id="page-title">&nbsp;</h1>
+
+                <div id="right-custom-content"><p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat
+                    nulla pariatur.
+                </p>
+                </div>
             </div>
         </div>
-        <div class="col-xs-6" id="right-column">
-            <h1 id="page-title">&nbsp;</h1>
 
-            <div id="right-custom-content"><p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat
-                nulla pariatur.
-            </p>
-            </div>
+        <div class="row secondary">
+
         </div>
-    </div>
-
-    <div class="row secondary">
 
     </div>
-    <div class="row capabilities-header" id="footer-menu-link">
+    <div class="row capabilities-header" id="footer-menu-link" data-position="fixed" data-display="overlay">
         <a href="#" class="footer-title-up">CAPABILITIES</a>
 
         <div class="frame">
@@ -119,8 +123,6 @@
 
 
             }());
-
-
 
 
         });

@@ -102,7 +102,7 @@ if (window.location.protocol == "file:") {
 }
 
 
-//$(document).delegate("body", "touchmove", false);
+$(document).delegate("body", "touchmove", false);
 $(document).delegate("body", "scrollstart", false);
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
@@ -139,8 +139,6 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
         alert('Sorry! No Web Storage support...');
     }
 
-
-
 });
 
 $(document).ready(function pageReady() {
@@ -148,6 +146,7 @@ $(document).ready(function pageReady() {
     //start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
+
     $('div').removeClass('ui-page-theme-a');
 
     var panelmenu = $('#sectionMenu');
@@ -179,6 +178,8 @@ $(document).ready(function pageReady() {
     }
 
     $('#page-container').show();
+
+    set_content_area_size();
 
 
 });
@@ -588,6 +589,18 @@ function load_page_info(id) {
 
 }
 
+function set_content_area_size() {
+    var height = $(window).height();
+    var headerHeight = $('#header-row').height();
+    var footerHeight = $('#footer-menu-link').height();
+
+    var contentHeight = height-headerHeight-footerHeight;
+
+    console.log(height+':'+headerHeight+':'+footerHeight);
+    $('.content-body').css('height', contentHeight);
+}
+
+
 function set_page_layout(pageLayout) {
 
     // Set page layout
@@ -806,6 +819,11 @@ function show_bottom_nav() {
     var docHeight = $(document).height();
     var linkTop = docHeight * .95;
 
+//<div class="frame">
+//    <ul class="slidee">
+//    </ul>
+//    </div>
+
     $("#footer-menu-link")
         .css({
             'position': 'absolute',
@@ -992,15 +1010,15 @@ function show_submenu(id) {
     var select = JSON.parse(pagelist);
     var items = select.pages;
 
-    var productDropdown = '<div id="submenu-content" style="display: none;"><ul>';
-    var partnerDropdown = '<div id="submenu-content" style="display: none;"><ul>';
+    var productDropdown = '<div id="submenu-content" class="submenu-products" style="display: none;"><ul>';
+    var partnerDropdown = '<div id="submenu-content" class="submenu-capabilities" style="display: none;"><ul>';
 
     $.each(items, function () {
         if (this.title == page.title && this.parent != 4) {
             productDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
         }
         else if (this.parent == 12) {
-            partnerDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.title + '<span></a></li>';
+            partnerDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><span>' + this.title + '<span></a></li>';
         }
     });
 
