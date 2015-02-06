@@ -139,6 +139,8 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
         alert('Sorry! No Web Storage support...');
     }
 
+
+
 });
 
 $(document).ready(function pageReady() {
@@ -177,6 +179,7 @@ $(document).ready(function pageReady() {
     }
 
     $('#page-container').show();
+
 
 });
 
@@ -233,6 +236,8 @@ function get_custom_content(layouts, content) {
     if (thisLayout == 'market') {
         show_market_slides();
     }
+
+    show_accordion_icons();
 
 }
 /**
@@ -361,7 +366,7 @@ function get_presentation_settings() {
         $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
         if (localStorage.getItem('hasCaseStudy') == 'true') {
             $('#case-study-link').attr('onclick', 'setCookie("PAGE_ID", "13")');
-            $('#case-study-link').attr('href', 'capabilities/slides.html');
+            $('#case-study-link').attr('href', '/presentation/capabilities/slides.html');
         }
     });
 
@@ -670,6 +675,16 @@ function set_page_layout(pageLayout) {
     }
 
     $('body').show();
+}
+
+function show_accordion_icons() {
+
+    $('a[data-toggle]').click(function () {
+        $('.collapse').on('shown.bs.collapse', function(){
+            $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hidden.bs.collapse', function(){
+            $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });    });
 }
 
 /**
@@ -1107,27 +1122,27 @@ function getCookie(cname) {
 
 /** DEBUG FUNCTIONS */
 
-/**
- This function will be replaced by app-driven functionality to select available presentations
- */
-function get_available_presentations() {
 
-    var presentations = '[{ "id": "1", "company":"Bulls" },' +
-        '{ "id":2, "company":"Blackhawks"}' +
-        ']';
-
-    var livepresentations = JSON.parse(presentations);
-    $.each(livepresentations, function () {
-        var html = '<a href="pages/index.html?pageId=1" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
-        $('#presentations-list').append(html);
-
-    });
-
-}
 
 /** LEGACY FUNCTIONS - no longer in user */
 
-
+///**
+// This function will be replaced by app-driven functionality to select available presentations
+// */
+////function get_available_presentations() {
+//
+//    var presentations = '[{ "id": "1", "company":"Bulls" },' +
+//        '{ "id":2, "company":"Blackhawks"}' +
+//        ']';
+//
+//    var livepresentations = JSON.parse(presentations);
+//    $.each(livepresentations, function () {
+//        var html = '<a href="pages/index.html?pageId=1" class="ui-btn" id="view-content-button" data-ajax="false">' + this.company + '</a>';
+//        $('#presentations-list').append(html);
+//
+//    });
+//
+//}
 //function get_video_settings() {
 //
 //    var livevideos = JSON.parse(videoList);

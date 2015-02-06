@@ -9,8 +9,8 @@ body {
     padding-top    : 50px;
     padding-bottom : 20px;
     /*font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;*/
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family    : 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;*/
+    /*font-family    : 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;*/
     font-weight    : 100;
     font-size      : 12pt;
     overflow       : hidden;
@@ -47,7 +47,7 @@ textarea {
 h1 {
     color       : white;
     text-shadow : none;
-    font-family : 'Forza B', 'Forza A', Arial, Helvetica, sans-serif;
+    /*font-family : 'Forza B', 'Forza A', Arial, Helvetica, sans-serif;*/
     font-weight : 100;
 }
 
@@ -565,6 +565,10 @@ footer p {
     height : 40px;
 }
 
+.glyphicon {
+    color: white;
+}
+
 .modal {
     z-index : 10000;
 }
@@ -595,6 +599,22 @@ footer p {
     color      : white;
 }
 
+.panel {
+    background: none;
+}
+.panel-body {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.panel-heading, .panel-default>.panel-heading, .panel-default {
+    background: none;
+    border: none;
+    border-color: none;
+}
+
+.panel-title {
+    font-size: inherit;
+}
 .row {
     margin-left : 35px;
 }
