@@ -417,6 +417,18 @@ footer p {
     min-height : 180px;
 }
 
+.product-landing-item {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    margin-bottom: 35px;
+    min-height: 100px;
+}
+
+.product-landing-item img {
+    margin-bottom: 40px;
+}
+
 .secondary {
     padding-top : 15px;
 }
@@ -542,7 +554,7 @@ footer p {
     vertical-align: middle;
 }
 
-#submenu-content img {
+#submenu-content img, .product-landing-item img {
     width         : 60px;
     height        : 60px;
     border-radius : 30px;
@@ -552,10 +564,10 @@ footer p {
 
 #submenu-content.submenu-products {
     border-top  : 5px solid rgba(166, 63, 30, 1);
-    background  : -webkit-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Safari 5.1 to 6.0 */
-    background  : -o-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Opera 11.1 to 12.0 */
-    background  : -moz-linear-gradient(rgba(166, 63, 30, .8), transparent); /* For Firefox 3.6 to 15 */
-    background  : linear-gradient(rgba(166, 63, 30, .8), transparent); /* Standard syntax (must be last) */
+    background  : -webkit-linear-gradient(rgba(166, 63, 30, .8), rgba(166, 63, 30, .5)); /* For Safari 5.1 to 6.0 */
+    background  : -o-linear-gradient(rgba(166, 63, 30, .8), rgba(166, 63, 30, .5)); /* For Opera 11.1 to 12.0 */
+    background  : -moz-linear-gradient(rgba(166, 63, 30, .8), rgba(166, 63, 30, .5)); /* For Firefox 3.6 to 15 */
+    background  : linear-gradient(rgba(166, 63, 30, .8), rgba(166, 63, 30, .5)); /* Standard syntax (must be last) */
 }
 
 #submenu-content.submenu-capabilities {

@@ -3,7 +3,7 @@ var pagelist = '{' +
     '{ "pageSlug":"", "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"0", "background":"home2" },' +
     '{ "pageSlug":"introScreen", "id": 1, "title": "Intro Screen", "filename": "index", "layout": "splash", "parent":"0", "background":"home2" },' +
     '{ "pageSlug":"mainMenu", "id": 2, "title": "Main Menu", "filename": "mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
-    '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu" },' +
+    '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu", "htmlContent":"<p>Our unique business model gives customers the ability to work with a global network of local distributors that offer a wide range of services and the quality products for which we’re known.</p>" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "products/index", "layout": "landing", "parent":"0", "background":"products" },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "markets/index", "layout" : "landing", "parent":"0", "background":"markets2", "htmlContent":"<p>Swagelok is a global developer and provider of high-quality and reliable fluid system solutions including products, assemblies and services for the oil and gas, power, petrochemical, alternative fuels, and semiconductor industries. Select a market to learn more about how we can help you develop solutions to your toughest challenges."},' +
     '{ "pageSlug":"mission", "id": 6, "title": "Local Mission and Vision", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-mission", "headline":"Helping our Customers Grow", "htmlContent":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
@@ -1012,10 +1012,12 @@ function show_submenu(id) {
 
     var productDropdown = '<div id="submenu-content" class="submenu-products" style="display: none;"><ul>';
     var partnerDropdown = '<div id="submenu-content" class="submenu-capabilities" style="display: none;"><ul>';
+    var productLandingList = '';
 
     $.each(items, function () {
         if (this.title == page.title && this.parent != 4) {
             productDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
+            productLandingList += '<div class="col-sm-4 product-landing-item"><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></div>';
         }
         else if (this.parent == 12) {
             partnerDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><span>' + this.title + '<span></a></li>';
@@ -1024,10 +1026,14 @@ function show_submenu(id) {
 
     productDropdown += '</ul></div>';
     partnerDropdown += '</ul></div>';
+    productLandingList += '</ul>';
 
     if (page.parent == 4 || parent.parent == 4) {
 
         $('#submenu').append(productDropdown);
+    }
+    if (page.parent == 4) {
+        $('#product-landing-list').html(productLandingList);
     }
     else if (page.id == 12 || page.parent == 12) {
         $('#submenu').append(partnerDropdown);
@@ -1041,7 +1047,7 @@ function show_submenu(id) {
             $('#submenu-content').slideToggle();
         }
         else {
-            $('.row').css('opacity', '.4');
+            $('.row').css('opacity', '.1');
             $('#submenu-content').slideToggle();
 
         }
