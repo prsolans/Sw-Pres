@@ -196,7 +196,7 @@ function get_available_markets() {
     if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<div class="col-sm-2 col-lg-1 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-xs-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
     }
@@ -284,7 +284,7 @@ function get_child_pages(section) {
     if (thisPage.pageSlug == 'mainMenu') {
 
         var width = $(window).width();
-        if(width < 1200) {
+        if (width < 1200) {
             var liWidth = (width * (5 / 6)) / 6.25;
             $('.slidee li').css('width', liWidth);
         }
@@ -594,9 +594,9 @@ function set_content_area_size() {
     var headerHeight = $('#header-row').height();
     var footerHeight = $('#footer-menu-link').height();
 
-    var contentHeight = height-headerHeight-footerHeight;
+    var contentHeight = height - headerHeight - footerHeight;
 
-    console.log(height+':'+headerHeight+':'+footerHeight);
+    console.log(height + ':' + headerHeight + ':' + footerHeight);
     $('.content-body').css('height', contentHeight);
 }
 
@@ -693,11 +693,12 @@ function set_page_layout(pageLayout) {
 function show_accordion_icons() {
 
     $('a[data-toggle]').click(function () {
-        $('.collapse').on('shown.bs.collapse', function(){
+        $('.collapse').on('shown.bs.collapse', function () {
             $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
-        }).on('hidden.bs.collapse', function(){
+        }).on('hidden.bs.collapse', function () {
             $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
-        });    });
+        });
+    });
 }
 
 /**
@@ -819,10 +820,17 @@ function show_bottom_nav() {
     var docHeight = $(document).height();
     var linkTop = docHeight * .95;
 
-//<div class="frame">
-//    <ul class="slidee">
-//    </ul>
-//    </div>
+    var dotLocation = linkTop - docHeight * .05;
+    var center = $(document).width()/2 - ($('.dot').width()*5);
+
+    $(".dots-row")
+        .css({
+            'position': 'absolute',
+            'top': dotLocation,
+            'left': center,
+            'text-align': 'center',
+            'margin': 'auto'
+        });
 
     $("#footer-menu-link")
         .css({
@@ -830,15 +838,15 @@ function show_bottom_nav() {
             'top': linkTop + 'px',
             'text-align': 'center',
             'margin': 'auto',
-            'height': docHeight *.05,
+            'height': docHeight * .05,
             'width': '100%',
             'z-index': 5000
         });
 
     $('.frame')
         .css({
-           'margin-top': docHeight *.02 + 'px',
-            'height': docHeight *.20 + 'px'
+            'margin-top': docHeight * .02 + 'px',
+            'height': docHeight * .20 + 'px'
         });
 
     // If the bottom nav has not been displayed before
@@ -865,7 +873,7 @@ function show_bottom_nav() {
 
         var position = $("#footer-menu-link").offset().top;
 
-        console.log(position+":"+linkTop);
+        console.log(position + ":" + linkTop);
 
         if (Math.round(position) == Math.round(linkTop)) {
             $('.row').css('opacity', '.6');
