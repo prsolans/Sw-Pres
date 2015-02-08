@@ -48,17 +48,21 @@ var pagelist = '{' +
     '{ "pageSlug":"socialResponsibility", "id": 45, "title": "Engineering a better world.", "filename": "capabilities/detail", "layout": "text-only", "parent":"12", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" }' +
     ']}';
 
-var idleTime = 0;
-var videoWasOpenedAtPageLoad = false;
+//var idleTime = 0;
+//var videoWasOpenedAtPageLoad = false;
 
-PAGE_ID = getCookie('PAGE_ID');
+
+//$(document).delegate("body", "touchmove", false);
+//$(document).delegate("body", "scrollstart", false);
+
+PAGE_ID = sessionStorage.getItem('PAGE_ID');
 
 if (window.location.protocol == "http:") {
 
-    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || window.location.pathname == '/presentation/') {
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '') {
 
         PAGE_ID = 1;
-        setCookie('PAGE_ID', PAGE_ID);
+        setLinks(PAGE_ID, PAGE_ID);
 
         PRESENTATION_ID = getCookie('PRESENTATION_ID');
 
@@ -75,35 +79,104 @@ if (window.location.protocol == "http:") {
     }
 }
 
-if (window.location.protocol == "file:") {
-    var pathname = window.location.pathname.split('/presentation/');
-
-    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
-
-        PAGE_ID = 1;
-        setCookie('PAGE_ID', PAGE_ID);
-
-        PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
-
-        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
-            PRESENTATION_ID = getParameterByName('p');
-            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+var bajb_backdetect = {
+    Version: '1.0.0',
+    Description: 'Back Button Detection',
+    Browser: {IE: !!(window.attachEvent && !window.opera), Safari: navigator.userAgent.indexOf('Apple') > -1, Opera: !!window.opera},
+    FrameLoaded: 0,
+    FrameTry: 0,
+    FrameTimeout: null,
+    OnBack: function () {
+        alert('Back Button Clicked')
+    },
+    BAJBFrame: function () {
+        var BAJBOnBack = document.getElementById('BAJBOnBack');
+        if (bajb_backdetect.FrameLoaded > 1) {
+            if (bajb_backdetect.FrameLoaded == 2) {
+                bajb_backdetect.OnBack();
+                history.back()
+            }
+        }
+        bajb_backdetect.FrameLoaded++;
+        if (bajb_backdetect.FrameLoaded == 1) {
+            if (bajb_backdetect.Browser.IE) {
+                bajb_backdetect.SetupFrames()
+            } else {
+                bajb_backdetect.FrameTimeout = setTimeout("bajb_backdetect.SetupFrames();", 700)
+            }
+        }
+    },
+    SetupFrames: function () {
+        clearTimeout(bajb_backdetect.FrameTimeout);
+        var BBiFrame = document.getElementById('BAJBOnBack');
+        var checkVar = BBiFrame.src.substr(-11, 11);
+        if (bajb_backdetect.FrameLoaded == 1 && checkVar != "HistoryLoad") {
+            BBiFrame.src = "blank.html?HistoryLoad"
+        } else {
+            if (bajb_backdetect.FrameTry < 2 && checkVar != "HistoryLoad") {
+                bajb_backdetect.FrameTry++;
+                bajb_backdetect.FrameTimeout = setTimeout("bajb_backdetect.SetupFrames();", 700)
+            }
+        }
+    },
+    SafariHash: 'false',
+    Safari: function () {
+        if (bajb_backdetect.SafariHash == 'false') {
+            if (window.location.hash == '#b') {
+                bajb_backdetect.SafariHash = 'true'
+            } else {
+                window.location.hash = '#b'
+            }
+            setTimeout("bajb_backdetect.Safari();", 100)
+        } else if (bajb_backdetect.SafariHash == 'true') {
+            if (window.location.hash == '') {
+                bajb_backdetect.SafariHash = 'back';
+                bajb_backdetect.OnBack();
+                history.back()
+            } else {
+                setTimeout("bajb_backdetect.Safari();", 100)
+            }
+        }
+    },
+    Initialise: function () {
+        if (bajb_backdetect.Browser.Safari) {
+            setTimeout("bajb_backdetect.Safari();", 600)
+        } else {
+            document.write('<iframe src="blank.html" style="display:none;" id="BAJBOnBack" onunload="alert(\'de\')" onload="bajb_backdetect.BAJBFrame();"></iframe>')
         }
     }
+};
+bajb_backdetect.Initialise();
 
-    DOMAIN = pathname[0];
-
-    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
-    PAGE_ID = sessionStorage.getItem('PAGE_ID');
-
-    if (PRESENTATION_ID) {
-        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
-    }
+bajb_backdetect.OnBack = function () {
+    setLinks(sessionStorage.getItem("PREVIOUS_PAGE_ID"), sessionStorage.getItem("PAGE_ID"));
 }
 
-
-$(document).delegate("body", "touchmove", false);
-$(document).delegate("body", "scrollstart", false);
+//if (window.location.protocol == "file:") {
+//    var pathname = window.location.pathname.split('/presentation/');
+//
+//    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
+//
+//        PAGE_ID = 1;
+//        setLinks(PAGE_ID, PAGE_ID);
+//
+//        PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
+//
+//        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
+//            PRESENTATION_ID = getParameterByName('p');
+//            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+//        }
+//    }
+//
+//    DOMAIN = pathname[0];
+//
+//    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
+//    PAGE_ID = sessionStorage.getItem('PAGE_ID');
+//
+//    if (PRESENTATION_ID) {
+//        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
+//    }
+//}
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
 
@@ -125,8 +198,6 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
 
     var pageDetails = getObjects(JSON.parse(pagelist), 'id', PAGE_ID);
 
-    //load_page_info(PAGE_ID);
-
     if (typeof(Storage) !== "undefined") {
         // Code for localStorage/sessionStorage.
         localStorage.setItem('PAGE_ID', PAGE_ID);
@@ -142,8 +213,6 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
 });
 
 $(document).ready(function pageReady() {
-
-    //start_inactivity_timer();
 
     $('body').removeClass('ui-overlay-a');
 
@@ -162,28 +231,9 @@ $(document).ready(function pageReady() {
 
     });
 
-    $('#page-container').css('height', $(window).height());
-
-    //var touchArea = document.querySelector("body");
-    //
-    //var mc = new Hammer(touchArea, {preventDefault: false});
-    //mc.on("swipe pan panstart panend pancancel",
-    //    touchInteractionHandler);
-    //
-    //function touchInteractionHandler(ev) {
-    //    if (ev.type == 'panend' && ev.distance > 350 && ev.center.x < 5) {
-    //        try {
-    //            Mt.App.fireEvent('leavePresentation', {});
-    //        } catch (e) {
-    //            alert(e.message + ' ' + e.stack);
-    //        }
-    //    }
-    //}
-
-    $('#page-container').show();
+    $('#page-container').css('height', $(window).height()).show();
 
     set_content_area_size();
-
 
 });
 
@@ -199,9 +249,60 @@ function get_available_markets() {
     if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<div class="col-xs-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + obj[0].id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<div class="col-xs-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
             $('.item-menu').append(html);
         });
+    }
+}
+
+/**
+ * Get child pages for Capabilities and Products sections, and display links to the pages
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ * @param section
+ */
+function get_child_pages(section) {
+
+    var count = 0;
+
+    var thisPage = get_page_details(PAGE_ID);
+
+    var thisParent = get_page_details(thisPage.parent);
+
+    var select = JSON.parse(pagelist);
+    var items = select.pages;
+    var fileDepth = get_file_location();
+
+    $.each(items, function () {
+
+        if (this.parent == section) {
+
+            var parent = get_page_details(section);
+            var title = parent.title.toLowerCase();
+
+            var html = '<li class="col-xs-2 landing-menu-item"><a href="/presentation/' + this.filename + '.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
+            var element = title + '-child-pages-list';
+            var listClass = title + '-bottom-menu-list';
+            $("." + element).append(html);
+            if (thisParent.id == section || thisParent.parent == section) {
+                var li = '<li class="' + listClass + ' bottom-menu-list"><a href="/presentation/' + this.filename + '.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
+                $('.slidee').append(li);
+
+                var viewport = $(window).width();
+                var width = viewport / 6;
+                $('.slidee li').css('width', width);
+            }
+        }
+    });
+
+
+    if (thisPage.pageSlug == 'mainMenu') {
+
+        var width = $(window).width();
+        var liWidth = (width * (5 / 6)) / 6.25;
+        $('.slidee li').css('width', liWidth);
+
+        $('.frame').css('height', '175px');
+        $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
     }
 }
 
@@ -244,72 +345,7 @@ function get_custom_content(layouts, content) {
     show_accordion_icons();
 
 }
-/**
- * Get child pages for Capabilities and Products sections, and display links to the pages
- * Utilized for main menu page, section landing page, and bottom nav within the section
- * @param section
- */
-function get_child_pages(section) {
 
-    var count = 0;
-
-    var thisPage = get_page_details(PAGE_ID);
-
-    var thisParent = get_page_details(thisPage.parent);
-
-    var select = JSON.parse(pagelist);
-    var items = select.pages;
-    var fileDepth = get_file_location();
-
-    $.each(items, function () {
-
-        if (this.parent == section) {
-
-            var parent = get_page_details(section);
-            var title = parent.title.toLowerCase();
-
-            var html = '<li class="col-sm-2 landing-menu-item"><a href="/presentation/' + this.filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></div>';
-            var element = title + '-child-pages-list';
-            var listClass = title + '-bottom-menu-list';
-            $("." + element).append(html);
-            if (thisParent.id == section || thisParent.parent == section) {
-                var li = '<li class="' + listClass + '"><a href="/presentation/' + this.filename + '.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
-                $('.slidee').append(li);
-
-                var viewport = $(window).width();
-                var width = viewport / 6;
-                $('.slidee li').css('width', width);
-            }
-        }
-    });
-
-
-    if (thisPage.pageSlug == 'mainMenu') {
-
-        var width = $(window).width();
-        if (width < 1200) {
-            var liWidth = (width * (5 / 6)) / 6.25;
-            $('.slidee li').css('width', liWidth);
-        }
-        //else {
-        //    count = $('.slidee li').length;
-        //    alert(count);
-        //    alert(width/count);
-        //    $('.slidee li').css('width', width/count);
-        //}
-        $('.frame').css('height', '175px');
-        $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
-    }
-}
-
-/**
- * Get the ID of the current page container
- * @returns int;
- */
-function get_container_id() {
-
-    return $('#page-container').data('pageid');
-}
 
 /**
  * Checks page header to determine the depth of the current page within the file structure
@@ -369,7 +405,7 @@ function get_presentation_settings() {
 
         $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
         if (localStorage.getItem('hasCaseStudy') == 'true') {
-            $('#case-study-link').attr('onclick', 'setCookie(\'PAGE_ID\', 13)');
+            $('#case-study-link').attr('onclick', 'setLinks(13, ' + sessionStorage.getItem("PAGE_ID") + ')');
             $('#case-study-link').attr('href', '/presentation/capabilities/slides.html');
         }
     });
@@ -477,19 +513,19 @@ function get_video_details(videoList) {
 function load_page_elements(fileDepth) {
     var pageID = getParameterByName('pageId');
 
-    var menuDepth;
+    //var menuDepth;
 
-    if (fileDepth == "../../") {
-        menuDepth = "../";
-    }
-    else {
-        menuDepth = "";
-    }
+    //if (fileDepth == "../../") {
+    //    menuDepth = "../";
+    //}
+    //else {
+    //    menuDepth = "";
+    //}
 
-    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setCookie(\'PAGE_ID\', 3);" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setCookie(\'PAGE_ID\', 4)" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setCookie(\'PAGE_ID\', 5)" data-ajax="false" class="panel-link-item">Markets</a></li><li class="mainmenu-panel-item"><a href="/presentation/mainMenu.html" onclick="setCookie(\'PAGE_ID\', 2)" data-ajax="false" class="panel-link-item">Main Menu</a></li></ul>';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setLinks(3, ' + sessionStorage.getItem("PAGE_ID") + '" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setLinks(4, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setLinks(5, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Markets</a></li><li class="mainmenu-panel-item"><a href="/presentation/mainMenu.html" onclick="setLinks(2, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Main Menu</a></li></ul>';
     $('#sectionMenu').html(sidebarMenuHTML);
 
-    var headerRow = '<div id="header-left"><a href="/presentation/" onclick="setCookie(\'PAGE_ID\', 1)" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
+    var headerRow = '<div id="header-left"><a href="/presentation/" onclick="setLinks(1, ' + sessionStorage.getItem("PAGE_ID") + ')" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
 
     $("#header-row").html(headerRow);
 
@@ -556,18 +592,18 @@ function load_page_info(id) {
         var thisParent = get_page_details(parent);
         var thisParentsParent = get_page_details(thisParent.parent);
 
-        var submenu = '<span class="submenu-links"><a href="/presentation/' + thisParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+        var submenu = '<span class="submenu-links"><a href="/presentation/' + thisParent.title.toLowerCase() + '/index.html" onclick="setLinks(' + thisParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
 
         if (thisParentsParent.id == '5') { // Parent is Markets homepage
-            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setLinks(' + thisParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
         }
 
         if (thisParentsParent.id == '4') { // Parent is Products homepage
-            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setLinks(' + thisParentsParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
         }
 
         if (thisParent.id == '12') { // Parent is One Swagelok homepage
-            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setLinks(' + thisParentsParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
         }
 
         $("#submenu").html(submenu);
@@ -609,11 +645,11 @@ function set_page_layout(pageLayout) {
     $('#section-menu-button').show();
     $('#view-content-button').hide();
     // Home will be replaced by app functionality
-    if (pageLayout == 'home') {
-        get_available_presentations();
-        $('#section-menu-button').hide();
-        $('#view-content-button').show();
-    }
+    //if (pageLayout == 'home') {
+    //    get_available_presentations();
+    //    $('#section-menu-button').hide();
+    //    $('#view-content-button').show();
+    //}
     if (pageLayout == 'splash') {
         show_animated_overlay();
 
@@ -621,7 +657,6 @@ function set_page_layout(pageLayout) {
         var pageHeight = window.innerHeight;
         $(".full-width-band").css('height', pageHeight * .30);
         $(".full-width-band img").css('height', pageHeight * .30);
-
 
         $('#section-menu-button').hide();
     }
@@ -632,7 +667,7 @@ function set_page_layout(pageLayout) {
         var pageHeight = window.innerHeight;
         $(".menu-header").css('height', pageHeight * .27).css('clear', 'both');
         $(".menu-list").css('height', pageHeight * .27).css('clear', 'both');
-        $(".frame").css('height', pageHeight * .27).css('clear', 'both');
+        $(".frame").css('height', pageHeight * .27);
         $("#section-menu-button").hide();
     }
     if (pageLayout == 'market') {
@@ -822,7 +857,7 @@ function show_bottom_nav() {
     var linkTop = docHeight * .95;
 
     var dotLocation = linkTop - docHeight * .05;
-    var center = $(document).width()/2 - ($('.dot').width()*5);
+    var center = $(document).width() / 2 - ($('.dot').width() * 5);
 
     $(".dots-row")
         .css({
@@ -851,7 +886,8 @@ function show_bottom_nav() {
 
 
     $('.footer-title-up').on('click', function () {
-        if($('.frame').is(":visible")){
+        //alert('clicked');
+        if ($('.frame').is(":visible")) {
             $('.row').css('opacity', '1');
             $('.footer-title').removeClass('footer-title-down').addClass('footer-title-up');
             $('.frame').hide(200);
@@ -936,9 +972,13 @@ function show_market_slides() {
 
     $('.dot').on("click", function () {
 
+
         var thisSlide = this.id.split('-')[1];
         $('.dot').removeClass('dot-active');
         $(this).addClass('dot-active');
+
+        //alert('clicked' + thisSlide);
+
 
         if (thisSlide == "one") {
             $('#one').animate({
@@ -974,8 +1014,51 @@ function show_market_slides() {
             }, 800);
         }
 
-
     });
+
+    //$('.testClass').on("click", function () {
+    //
+    //    var thisSlide = this.id.split('-')[1];
+    //    $('.dot').removeClass('dot-active');
+    //    $(this).addClass('dot-active');
+    //
+    //    alert('clicked');
+    //
+    //    if (thisSlide == "one") {
+    //        $('#one').animate({
+    //            left: offset.left
+    //        }, 800);
+    //        $('#two').animate({
+    //            left: width
+    //        }, 800);
+    //        $('#three').animate({
+    //            left: width * 2
+    //        }, 800);
+    //    }
+    //    if (thisSlide == "two") {
+    //        $('#two').animate({
+    //            left: offset.left
+    //        }, 800);
+    //        $('#one').animate({
+    //            left: offset.left - width
+    //        }, 800);
+    //        $('#three').animate({
+    //            left: width
+    //        }, 800);
+    //    }
+    //    if (thisSlide == "three") {
+    //        $('#three').animate({
+    //            left: offset.left
+    //        }, 800);
+    //        $('#two').animate({
+    //            left: offset.left - width
+    //        }, 800);
+    //        $('#one').animate({
+    //            left: offset.left - width * 2
+    //        }, 800);
+    //    }
+    //
+    //});
 
 }
 
@@ -993,11 +1076,11 @@ function show_submenu(id) {
 
     $.each(items, function () {
         if (this.title == page.title && this.parent != 4) {
-            productDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
-            productLandingList += '<div class="col-sm-4 product-landing-item"><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></div>';
+            productDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
+            productLandingList += '<div class="col-sm-4 product-landing-item"><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></div>';
         }
         else if (this.parent == 12) {
-            partnerDropdown += '<li><a href="detail.html" onclick="setCookie(\'PAGE_ID\', ' + this.id + ')" data-ajax="false"><span>' + this.title + '<span></a></li>';
+            partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><span>' + this.title + '<span></a></li>';
         }
     });
 
@@ -1064,33 +1147,6 @@ function getObjects(obj, key, val) {
     return objects;
 }
 
-function timerIncrement() {
-
-    var thisPage = get_container_id();
-    var inactive = getParameterByName('inactive');
-    idleTime = idleTime + 1;
-    console.log("Idletime: " + idleTime);
-
-    if (thisPage == '1' && idleTime > 2 && !videoWasOpenedAtPageLoad) {
-        if (localStorage.inactive == 'true') {
-            $('#video-modal-link').click();
-            idleTime = 0;
-            videoWasOpenedAtPageLoad = true;
-        }
-    }
-    if (idleTime > 180) { // 3 minutes
-        if (thisPage != '1') {
-            var home = fileDepth + 'pages/index.html?pageId=1';
-            localStorage.setItem("inactive", "true");
-            window.location.href = home;
-        }
-        else {
-            $('#video-modal-link').click();
-            localStorage.setItem("inactive", "true");
-            idleTime = 0;
-        }
-    }
-}
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -1098,6 +1154,14 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires=" + d.toUTCString();
     sessionStorage.setItem(cname, cvalue);
     document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/presentation";
+}
+
+function setLinks(toPage, fromPage, exdays) {
+    sessionStorage.setItem('PAGE_ID', toPage);
+    sessionStorage.setItem('PREVIOUS_PAGE_ID', fromPage);
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
 }
 
 function getCookie(cname) {
@@ -1116,6 +1180,45 @@ function getCookie(cname) {
 
 
 /** LEGACY FUNCTIONS - no longer in user */
+
+//function timerIncrement() {
+//
+//    var thisPage = localStorage.getItem('PAGE_ID');
+//    var inactive = getParameterByName('inactive');
+//    idleTime = idleTime + 1;
+//    console.log("Idletime: " + idleTime);
+//
+//    if (thisPage == '1' && idleTime > 2 && !videoWasOpenedAtPageLoad) {
+//        if (localStorage.inactive == 'true') {
+//            $('#video-modal-link').click();
+//            idleTime = 0;
+//            videoWasOpenedAtPageLoad = true;
+//        }
+//    }
+//    if (idleTime > 180) { // 3 minutes
+//        if (thisPage != '1') {
+//            var home = fileDepth + 'pages/index.html?pageId=1';
+//            localStorage.setItem("inactive", "true");
+//            window.location.href = home;
+//        }
+//        else {
+//            $('#video-modal-link').click();
+//            localStorage.setItem("inactive", "true");
+//            idleTime = 0;
+//        }
+//    }
+//}
+
+
+///**
+// * Get the ID of the current page container
+// * @returns int;
+// */
+//function get_container_id() {
+//
+//    return $('#page-container').data('pageid');
+//}
+
 //function start_inactivity_timer() {
 //
 //    //Increment the idle time counter every minute.

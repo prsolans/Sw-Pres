@@ -35,8 +35,7 @@ var layoutsList = '[' +
     '{"page_id":"training", "page_layout":"text-image"},' +
     '{"page_id":"services", "page_layout":"text-image"},' +
     '{"page_id":"delivery", "page_layout":"text-image"},' +
-    '{"page_id":"customSolutions", "page_layout":"text-image"},' +
-    '{"page_id":"applications", "page_layout":"text-video"}' +
+    '{"page_id":"customSolutions", "page_layout":"text-image"}' +
     ']';
 
 var content = '[' +
