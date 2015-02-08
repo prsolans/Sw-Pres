@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-x:hidden;
     height: 100%;
     padding-top    : 50px;
     padding-bottom : 20px;
@@ -172,12 +172,12 @@ footer p {
     text-transform  : uppercase;
 }
 
-.footer-title-up:after {
+.footer-title-up:after, .show-menu-up:after {
     content             : ' ';
     height              : 0;
     position            : absolute;
     width               : 0;
-    border              : 8px solid transparent; /* arrow size */
+    border              : 10px solid transparent; /* arrow size */
     border-bottom-color : goldenrod; /* arrow color */
 
     /* positioning */
@@ -187,12 +187,12 @@ footer p {
     z-index             : 2;
 }
 
-.footer-title-down:after {
+.footer-title-down:after, .show-menu-down:after {
     content          : ' ';
     height           : 0;
     position         : absolute;
     width            : 0;
-    border           : 8px solid transparent; /* arrow size */
+    border           : 10px solid transparent; /* arrow size */
     border-top-color : goldenrod; /* arrow color */
 
     /* positioning */
@@ -303,10 +303,10 @@ footer p {
 #main-content {
     position: absolute;
     top: 125px;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-bottom: 100px;
-    overflow: auto;
-    overflow-x: auto;
+    overflow: hidden;
+    overflow-y: auto;
 
 }
 
@@ -493,18 +493,18 @@ footer p {
     content            : ' \25CF';
     font-size          : 80px;
     float              : right;
-    margin-top         : -50px;
+    margin-top         : -40px;
     margin-right       : 40px;
     -webkit-box-shadow : none;
     box-shadow         : none;
 }
 
-#sectionMenu ul li.casestudy-panel-item:after {
+#sectionMenu ul li.mainmenu-panel-item:after {
     color        : rgba(115, 104, 103, 1);
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -50px;
+    margin-top   : -65px;
     margin-right : 40px;
 }
 
@@ -513,7 +513,7 @@ footer p {
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -50px;
+    margin-top   : -65px;
     margin-right : 40px;
 }
 
@@ -522,7 +522,7 @@ footer p {
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -50px;
+    margin-top   : -65px;
     margin-right : 40px;
 }
 
@@ -536,26 +536,52 @@ footer p {
 
 }
 
+#show-menu {
+    border-radius: 25px;
+    padding: 10px 20px 10px 15px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.show-menu-up.capabilities {
+    border: 2px solid rgba(0, 96, 102, 1);
+}
+
+.show-menu-up.products {
+    border: 2px solid rgba(166, 63, 30, 1);
+}
+
+.show-menu-down {
+    border: 2px solid #878f94;
+
+}
+
 #submenu {
     float          : left;
     clear          : both;
     margin-left    : 150px;
-    margin-top     : -85px;
+    margin-top     : -45px;
     text-transform : capitalize;
     width          : 80%;
 }
 
+#submenu a {
+    color: #878f94;
+
+}
+
 #submenu-content {
 
-
-
-    /*background-color: rgba(166, 63, 30, .7);*/
-
-    margin-top  : 5px;
+    margin-top  : 20px;
     padding-top : 15px;
     position    : relative;
     top         : 0;
     left        : 0;
+
+}
+
+#submenu-content a {
+    color: white;
 }
 
 #submenu-content ul {
@@ -612,6 +638,10 @@ footer p {
     background  : -moz-linear-gradient(rgba(0, 96, 102, .8), transparent); /* For Firefox 3.6 to 15 */
     background  : linear-gradient(rgba(0, 96, 102, .8), transparent); /* Standard syntax (must be last) */
 }
+
+.submenu-links {
+    text-decoration: none;
+}
 .video-caption {
     padding-top : 9px;
     text-align  : center;
@@ -660,7 +690,7 @@ footer p {
 }
 
 .glyphicon {
-    color: white;
+    color: goldenrod;
 }
 
 .modal {
@@ -697,7 +727,7 @@ footer p {
     background: none;
 }
 .panel-body {
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 3px;
 }
 .panel-heading, .panel-default>.panel-heading, .panel-default {
@@ -708,6 +738,10 @@ footer p {
 
 .panel-title {
     font-size: inherit;
+}
+
+.panel-title a {
+    text-decoration: none;
 }
 .row {
     margin-left : 35px;

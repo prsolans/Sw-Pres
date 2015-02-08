@@ -13,7 +13,7 @@ var pagelist = '{' +
     '{ "pageSlug":"training", "id": 10, "title": "Training", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-training" },' +
     '{ "pageSlug":"customSolutions", "id": 11, "title": "Custom Solutions", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
     '{ "pageSlug":"oneSwagelok", "id": 12, "title": "Your Global Partner", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-partner", "headline":"One Swagelok", "htmlContent":"<p>We’ve always been known for our quality products. Recently, in response to growing customer needs, we’ve improved and increased our expertise and range of global services. We now provide customers with local relationships through our distributors and augment them with advanced services and the backing of a global organization. <p>These services relate not only to logistics and coordination among different regions of the world, but also to advanced training and design in systems and processes; expertise in materials science; fabrication of assemblies; and custom product design. <p>As “One Swagelok”&mdash;one interconnected global organization&mdash;we are developing products and services that are intended to lighten the burden of our customers" },' +
-    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/slides", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
+    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/slides", "layout": "case-study", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
     '{ "pageSlug":"power", "id": 14, "title": "Power", "filename": "markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
     '{ "pageSlug":"powerDetail", "id": 15, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"14", "background":"power-blur", "menu":"pr-leak" },' +
     '{ "pageSlug":"oilGas", "id": 16, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
@@ -153,29 +153,32 @@ $(document).ready(function pageReady() {
 
     panelmenu.on('panelbeforeopen', function () {
         $('#section-menu-button').hide();
+        $('.row').css('opacity', '.3');
     });
 
     panelmenu.on('panelclose', function () {
         $('#section-menu-button').show();
+        $('.row').css('opacity', '1');
+
     });
 
     $('#page-container').css('height', $(window).height());
 
-    var touchArea = document.querySelector("body");
-
-    var mc = new Hammer(touchArea, {preventDefault: false});
-    mc.on("swipe pan panstart panend pancancel",
-        touchInteractionHandler);
-
-    function touchInteractionHandler(ev) {
-        if (ev.type == 'panend' && ev.distance > 350 && ev.center.x < 5) {
-            try {
-                Mt.App.fireEvent('leavePresentation', {});
-            } catch (e) {
-                alert(e.message + ' ' + e.stack);
-            }
-        }
-    }
+    //var touchArea = document.querySelector("body");
+    //
+    //var mc = new Hammer(touchArea, {preventDefault: false});
+    //mc.on("swipe pan panstart panend pancancel",
+    //    touchInteractionHandler);
+    //
+    //function touchInteractionHandler(ev) {
+    //    if (ev.type == 'panend' && ev.distance > 350 && ev.center.x < 5) {
+    //        try {
+    //            Mt.App.fireEvent('leavePresentation', {});
+    //        } catch (e) {
+    //            alert(e.message + ' ' + e.stack);
+    //        }
+    //    }
+    //}
 
     $('#page-container').show();
 
@@ -234,7 +237,7 @@ function get_custom_content(layouts, content) {
 
     load_page_info(localStorage.getItem('PAGE_ID'));
 
-    if (thisLayout == 'market') {
+    if (thisLayout == 'market' || thisLayout == 'case-study') {
         show_market_slides();
     }
 
@@ -366,7 +369,7 @@ function get_presentation_settings() {
 
         $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
         if (localStorage.getItem('hasCaseStudy') == 'true') {
-            $('#case-study-link').attr('onclick', 'setCookie("PAGE_ID", "13")');
+            $('#case-study-link').attr('onclick', 'setCookie(\'PAGE_ID\', 13)');
             $('#case-study-link').attr('href', '/presentation/capabilities/slides.html');
         }
     });
@@ -483,7 +486,7 @@ function load_page_elements(fileDepth) {
         menuDepth = "";
     }
 
-    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setCookie(\'PAGE_ID\', 3);" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setCookie(\'PAGE_ID\', 4)" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setCookie(\'PAGE_ID\', 5)" data-ajax="false" class="panel-link-item">Markets</a></li></ul>';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setCookie(\'PAGE_ID\', 3);" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setCookie(\'PAGE_ID\', 4)" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setCookie(\'PAGE_ID\', 5)" data-ajax="false" class="panel-link-item">Markets</a></li><li class="mainmenu-panel-item"><a href="/presentation/mainMenu.html" onclick="setCookie(\'PAGE_ID\', 2)" data-ajax="false" class="panel-link-item">Main Menu</a></li></ul>';
     $('#sectionMenu').html(sidebarMenuHTML);
 
     var headerRow = '<div id="header-left"><a href="/presentation/" onclick="setCookie(\'PAGE_ID\', 1)" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
@@ -553,24 +556,24 @@ function load_page_info(id) {
         var thisParent = get_page_details(parent);
         var thisParentsParent = get_page_details(thisParent.parent);
 
-        var submenu = '<br/><span><a href="/presentation/' + thisParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+        var submenu = '<span class="submenu-links"><a href="/presentation/' + thisParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
 
         if (thisParentsParent.id == '5') { // Parent is Markets homepage
-            submenu = '<br/><span><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setCookie(\'PAGE_ID\', ' + thisParent.id + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
         }
 
         if (thisParentsParent.id == '4') { // Parent is Products homepage
-            submenu = '<br/><span><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
         }
 
         if (thisParent.id == '12') { // Parent is One Swagelok homepage
-            submenu = '<br/><span><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
+            submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setCookie(\'PAGE_ID\', ' + thisParentsParent.id + ')" data-ajax="false">&lt; ' + thisParentsParent.title + '</a></span>';
         }
 
         $("#submenu").html(submenu);
 
         if (thisParent.id == '4' || thisParentsParent.id == '4') { // Parent or Grandparent is in Products category
-            var html = ' | <a href="" id="show-menu">' + title + '</a>';
+            var html = '<a href="" id="show-menu" class="show-menu-down">' + title + '</a>';
             $('#submenu').append(html);
             show_submenu(id);
         }
@@ -580,7 +583,7 @@ function load_page_info(id) {
             if (thisParent.id == '12') {
                 displayTitle = thisParent.title;
             }
-            var html = ' | <a href="" id="show-menu">' + displayTitle + '</a>';
+            var html = '<a href="" id="show-menu" class="show-menu-down">' + displayTitle + '</a>';
             $('#submenu').append(html);
             show_submenu(id);
         }
@@ -596,7 +599,6 @@ function set_content_area_size() {
 
     var contentHeight = height - headerHeight - footerHeight;
 
-    console.log(height + ':' + headerHeight + ':' + footerHeight);
     $('#main-content').css('height', contentHeight);
 }
 
@@ -668,7 +670,6 @@ function set_page_layout(pageLayout) {
 
         var videoContainer = '<div id="' + pageSlug + '-video-container"> <!-- Button trigger modal --> <img width="100%" id="' + pageSlug + '-video-poster" src="" data-toggle="modal" data-target="#' + pageSlug + '-video-modal"> <p class="video-caption" id="' + pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' + pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' + pageSlug + '-modal-body"> <video id="' + pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' + pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
-        console.log(videoContainer);
         $('.' + pageSlug + '-video-cell').html(videoContainer);
 
     }
@@ -853,12 +854,12 @@ function show_bottom_nav() {
         if($('.frame').is(":visible")){
             $('.row').css('opacity', '1');
             $('.footer-title').removeClass('footer-title-down').addClass('footer-title-up');
-            $('.frame').hide(400);
+            $('.frame').hide(200);
         }
         else {
             $('.row').css('opacity', '.3');
             $('.footer-title').removeClass('footer-title-up').addClass('footer-title-down');
-            $('.frame').show(400);
+            $('.frame').show(200);
         }
     });
 
@@ -1018,38 +1019,28 @@ function show_submenu(id) {
 
     $('#show-menu').on('click', function () {
 
+        var buttonClass = parent.title.toLowerCase();
+
+        if (page.id == 12 || page.parent == 12) {
+            buttonClass = "capabilities";
+
+        }
+
         if ($('#submenu-content').is(':visible')) {
             $('.row').css('opacity', '1');
-            $('#submenu-content').slideToggle();
+            $('#submenu-content').slideToggle(200);
+            $('.show-menu-up').removeClass('show-menu-up').addClass('show-menu-down').removeClass(buttonClass);
+
         }
         else {
             $('.row').css('opacity', '.1');
-            $('#submenu-content').slideToggle();
-
+            $('#submenu-content').slideToggle(200);
+            $('.show-menu-down').removeClass('show-menu-down').addClass('show-menu-up').addClass(buttonClass);
         }
     });
 
 }
 
-function start_inactivity_timer() {
-
-    //Increment the idle time counter every minute.
-    var idleInterval = setInterval(timerIncrement, 1000); // 1 second
-
-    //Zero the idle timer on mouse movement.
-    $(this).mousemove(function () {
-        localStorage.setItem("inactive", "false");
-        idleTime = 0;
-    });
-    $(this).keypress(function () {
-        localStorage.setItem("inactive", "false");
-        idleTime = 0;
-    });
-    $(this).on("tap", function () {
-        localStorage.setItem("inactive", "false");
-        idleTime = 0;
-    })
-}
 
 /** UTILITY FUNCTIONS */
 
@@ -1125,6 +1116,25 @@ function getCookie(cname) {
 
 
 /** LEGACY FUNCTIONS - no longer in user */
+//function start_inactivity_timer() {
+//
+//    //Increment the idle time counter every minute.
+//    var idleInterval = setInterval(timerIncrement, 1000); // 1 second
+//
+//    //Zero the idle timer on mouse movement.
+//    $(this).mousemove(function () {
+//        localStorage.setItem("inactive", "false");
+//        idleTime = 0;
+//    });
+//    $(this).keypress(function () {
+//        localStorage.setItem("inactive", "false");
+//        idleTime = 0;
+//    });
+//    $(this).on("tap", function () {
+//        localStorage.setItem("inactive", "false");
+//        idleTime = 0;
+//    })
+//}
 
 ///**
 // This function will be replaced by app-driven functionality to select available presentations
