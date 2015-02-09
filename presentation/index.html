@@ -55,14 +55,15 @@
                 <img id="video-modal-link" src="_Content/images/index-video.jpg" data-toggle="modal" data-target="#ceo-video-modal"/>
             </div>
             <div class="col-xs-4 client-callout">
-                <a href="" id="case-study-link" data-ajax="false"><img src="" id="client-logo" /></a>
+                <a href="" id="case-study-link" data-ajax="false"><img src="" id="client-logo"/></a>
             </div>
             <div class="col-xs-4">
-                <img src="_Content/images/index-image.jpg" />
+                <img src="_Content/images/index-image.jpg"/>
             </div>
 
         </div>
-        <a id="view-content-link" href="mainMenu.html" onclick="setLinks(2, 1)" class="ui-btn view-content-link button" data-ajax="false">View Content</a>
+        <div style="text-align: center; margin: auto; margin-top: 3em;"></span><a id="view-content-link" href="mainMenu.html" onclick="setLinks(2, 1)" class="view-content-link" data-ajax="false">
+            <img id="content-rollover" src="/presentation/_Content/images/view-content.png" width="450px" /></a></div>
     </div>
 </div>
 <script src="_Scripts/bootstrap.min.js"></script>
@@ -71,6 +72,16 @@
 <script>
     videojs.options.flash.swf = "_Scripts/video-js/video-js.swf";
 </script>
-
+<script>
+    $(document).ready(function () {
+        $('#content-rollover').hover(
+                function () {
+                    $(this).attr('src', '/presentation/_Content/images/view-content-on.png');
+                }, function () {
+                    $(this).attr('src', '/presentation/_Content/images/view-content.png');
+                }
+        );
+    });
+</script>
 </body>
 </html>

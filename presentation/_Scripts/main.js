@@ -59,7 +59,11 @@ PAGE_ID = sessionStorage.getItem('PAGE_ID');
 
 if (window.location.protocol == "http:") {
 
-    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '') {
+        var pathname = window.location.pathname.split('/presentation/');
+
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
+
+
 
         PAGE_ID = 1;
         setLinks(PAGE_ID, PAGE_ID);
@@ -79,74 +83,7 @@ if (window.location.protocol == "http:") {
     }
 }
 
-var bajb_backdetect = {
-    Version: '1.0.0',
-    Description: 'Back Button Detection',
-    Browser: {IE: !!(window.attachEvent && !window.opera), Safari: navigator.userAgent.indexOf('Apple') > -1, Opera: !!window.opera},
-    FrameLoaded: 0,
-    FrameTry: 0,
-    FrameTimeout: null,
-    OnBack: function () {
-        alert('Back Button Clicked')
-    },
-    BAJBFrame: function () {
-        var BAJBOnBack = document.getElementById('BAJBOnBack');
-        if (bajb_backdetect.FrameLoaded > 1) {
-            if (bajb_backdetect.FrameLoaded == 2) {
-                bajb_backdetect.OnBack();
-                history.back()
-            }
-        }
-        bajb_backdetect.FrameLoaded++;
-        if (bajb_backdetect.FrameLoaded == 1) {
-            if (bajb_backdetect.Browser.IE) {
-                bajb_backdetect.SetupFrames()
-            } else {
-                bajb_backdetect.FrameTimeout = setTimeout("bajb_backdetect.SetupFrames();", 700)
-            }
-        }
-    },
-    SetupFrames: function () {
-        clearTimeout(bajb_backdetect.FrameTimeout);
-        var BBiFrame = document.getElementById('BAJBOnBack');
-        var checkVar = BBiFrame.src.substr(-11, 11);
-        if (bajb_backdetect.FrameLoaded == 1 && checkVar != "HistoryLoad") {
-            BBiFrame.src = "blank.html?HistoryLoad"
-        } else {
-            if (bajb_backdetect.FrameTry < 2 && checkVar != "HistoryLoad") {
-                bajb_backdetect.FrameTry++;
-                bajb_backdetect.FrameTimeout = setTimeout("bajb_backdetect.SetupFrames();", 700)
-            }
-        }
-    },
-    SafariHash: 'false',
-    Safari: function () {
-        if (bajb_backdetect.SafariHash == 'false') {
-            if (window.location.hash == '#b') {
-                bajb_backdetect.SafariHash = 'true'
-            } else {
-                window.location.hash = '#b'
-            }
-            setTimeout("bajb_backdetect.Safari();", 100)
-        } else if (bajb_backdetect.SafariHash == 'true') {
-            if (window.location.hash == '') {
-                bajb_backdetect.SafariHash = 'back';
-                bajb_backdetect.OnBack();
-                history.back()
-            } else {
-                setTimeout("bajb_backdetect.Safari();", 100)
-            }
-        }
-    },
-    Initialise: function () {
-        if (bajb_backdetect.Browser.Safari) {
-            setTimeout("bajb_backdetect.Safari();", 600)
-        } else {
-            document.write('<iframe src="blank.html" style="display:none;" id="BAJBOnBack" onunload="alert(\'de\')" onload="bajb_backdetect.BAJBFrame();"></iframe>')
-        }
-    }
-};
-bajb_backdetect.Initialise();
+var bajb_backdetect={Version:'1.0.0',Description:'Back Button Detection',Browser:{IE:!!(window.attachEvent&&!window.opera),Safari:navigator.userAgent.indexOf('Apple')>-1,Opera:!!window.opera},FrameLoaded:0,FrameTry:0,FrameTimeout:null,OnBack:function(){alert('Back Button Clicked')},BAJBFrame:function(){var BAJBOnBack=document.getElementById('BAJBOnBack');if(bajb_backdetect.FrameLoaded>1){if(bajb_backdetect.FrameLoaded==2){bajb_backdetect.OnBack();history.back()}}bajb_backdetect.FrameLoaded++;if(bajb_backdetect.FrameLoaded==1){if(bajb_backdetect.Browser.IE){bajb_backdetect.SetupFrames()}else{bajb_backdetect.FrameTimeout=setTimeout("bajb_backdetect.SetupFrames();",700)}}},SetupFrames:function(){clearTimeout(bajb_backdetect.FrameTimeout);var BBiFrame=document.getElementById('BAJBOnBack');var checkVar=BBiFrame.src.substr(-11,11);if(bajb_backdetect.FrameLoaded==1&&checkVar!="HistoryLoad"){BBiFrame.src="blank.html?HistoryLoad"}else{if(bajb_backdetect.FrameTry<2&&checkVar!="HistoryLoad"){bajb_backdetect.FrameTry++;bajb_backdetect.FrameTimeout=setTimeout("bajb_backdetect.SetupFrames();",700)}}},SafariHash:'false',Safari:function(){if(bajb_backdetect.SafariHash=='false'){if(window.location.hash=='#b'){bajb_backdetect.SafariHash='true'}else{window.location.hash='#b'}setTimeout("bajb_backdetect.Safari();",100)}else if(bajb_backdetect.SafariHash=='true'){if(window.location.hash==''){bajb_backdetect.SafariHash='back';bajb_backdetect.OnBack();history.back()}else{setTimeout("bajb_backdetect.Safari();",100)}}},Initialise:function(){if(bajb_backdetect.Browser.Safari){setTimeout("bajb_backdetect.Safari();",600)}else{document.write('<iframe src="blank.html" style="display:none;" id="BAJBOnBack" onunload="alert(\'de\')" onload="bajb_backdetect.BAJBFrame();"></iframe>')}}};bajb_backdetect.Initialise();
 
 bajb_backdetect.OnBack = function () {
     setLinks(sessionStorage.getItem("PREVIOUS_PAGE_ID"), sessionStorage.getItem("PAGE_ID"));
@@ -522,7 +459,7 @@ function load_page_elements(fileDepth) {
     //    menuDepth = "";
     //}
 
-    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setLinks(3, ' + sessionStorage.getItem("PAGE_ID") + '" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setLinks(4, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setLinks(5, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Markets</a></li><li class="mainmenu-panel-item"><a href="/presentation/mainMenu.html" onclick="setLinks(2, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Main Menu</a></li></ul>';
+    var sidebarMenuHTML = '<ul><li class="capabilities-panel-item"><a href="/presentation/capabilities/index.html" onclick="setLinks(3, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Capabilities</a></li><li class="products-panel-item"><a href="/presentation/products/index.html" onclick="setLinks(4, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Products</a></li><li class="markets-panel-item"><a href="/presentation/markets/index.html" onclick="setLinks(5, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Markets</a></li><li class="mainmenu-panel-item"><a href="/presentation/mainMenu.html" onclick="setLinks(2, ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="panel-link-item">Main Menu</a></li></ul>';
     $('#sectionMenu').html(sidebarMenuHTML);
 
     var headerRow = '<div id="header-left"><a href="/presentation/" onclick="setLinks(1, ' + sessionStorage.getItem("PAGE_ID") + ')" style="background: none !important; border: none !important" data-ajax="false"><img src="' + fileDepth + 'Content/images/swagelok-logo.jpg" id="header-logo"><h1 id="header-title"></h1></a><span id="submenu"></span></div><a href="#sectionMenu" id="section-menu-button" class="ui-btn-right"><img src="' + fileDepth + 'Content/images/icons-png/bars-white.png" height="23"/></a>';
