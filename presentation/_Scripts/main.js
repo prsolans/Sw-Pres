@@ -892,7 +892,6 @@ function show_market_slides() {
     one.css({
         'opacity': 1,
         'position': 'absolute',
-        'top': offset.top,
         'left': offset.left,
         'width': width,
         'z-index': 5000
@@ -901,7 +900,6 @@ function show_market_slides() {
     two.css({
         'opacity': 1,
         'position': 'absolute',
-        'top': offset.top,
         'left': width,
         'width': width,
         'z-index': 5000
@@ -909,13 +907,12 @@ function show_market_slides() {
     three.css({
         'opacity': 1,
         'position': 'absolute',
-        'top': offset.top,
         'left': width * 2,
         'width': width,
         'z-index': 5000
     });
 
-    var sectionHeight = $('.market-panel').innerHeight();
+    var sectionHeight = $(three).height() - 20;
 
     $('.market-section').css('height', sectionHeight);
 
