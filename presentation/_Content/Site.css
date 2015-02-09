@@ -65,6 +65,11 @@ p, li, li ul li {
     font-size   : 1em;
     font-weight: normal;
 }
+.arrow {
+
+    font-size: 3em;
+    padding-top: 3em;
+}
 
 .arrow-up {
     width         : 0;
@@ -324,21 +329,20 @@ footer p {
     margin     : auto;
 }
 
-/*.market-panel#one:after, .market-panel#two:after {*/
-    /*content             : attr(testClass);*/
-    /*height              : 0;*/
-    /*position            : absolute;*/
-    /*width               : 0;*/
-    /*border              : 40px solid transparent; *//* arrow size */
-    /*border-left-color : goldenrod; *//* arrow color */
-    /*float: right;*/
+.market-panel-right {
+    content             : attr(testClass);
+    height              : 0;
+    position            : absolute;
+    width               : 0;
+    border              : 40px solid transparent;
+    border-left-color : goldenrod;
+    float: right;
 
-    /* positioning */
-    /*position            : relative;*/
-    /*top                 : -200px;*/
-    /*left                : 10px;*/
-    /*z-index             : 2;*/
-/*}*/
+    position            : relative;
+    top                 : 200px;
+    left                : 10px;
+    z-index             : 2;
+}
 
 /*.market-panel#two:before, .market-panel#three:before {*/
     /*content             : ' ';*/

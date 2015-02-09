@@ -59,9 +59,10 @@ PAGE_ID = sessionStorage.getItem('PAGE_ID');
 
 if (window.location.protocol == "http:") {
 
-        var pathname = window.location.pathname.split('/presentation/');
+        var pathname = window.location.pathname;
 
-    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
+console.log(pathname);
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname == '/presentation/') {
 
 
 
@@ -847,7 +848,7 @@ function show_market_slides() {
     var two = one.next('.market-panel');
     var three = two.next('.market-panel');
 
-    var width = one.width();
+    var width = $('.market-section').width();
     var offset = one.offset();
 
     var leftEdge = width - offset.left;
@@ -907,15 +908,19 @@ function show_market_slides() {
 
     });
 
-    $('.dot').on("click", function () {
+    $('.dot, .arrow').on("click", function () {
 
 
         var thisSlide = this.id.split('-')[1];
-        $('.dot').removeClass('dot-active');
-        $(this).addClass('dot-active');
+        $('.dot, .arrow').removeClass('dot-active');
 
-        //alert('clicked' + thisSlide);
 
+        if($(this).hasClass('dot')){
+            $(this).addClass('dot-active');
+        }
+        else{
+            $('#dot-'+thisSlide).addClass('dot-active');
+        }
 
         if (thisSlide == "one") {
             $('#one').animate({
@@ -952,50 +957,6 @@ function show_market_slides() {
         }
 
     });
-
-    //$('.testClass').on("click", function () {
-    //
-    //    var thisSlide = this.id.split('-')[1];
-    //    $('.dot').removeClass('dot-active');
-    //    $(this).addClass('dot-active');
-    //
-    //    alert('clicked');
-    //
-    //    if (thisSlide == "one") {
-    //        $('#one').animate({
-    //            left: offset.left
-    //        }, 800);
-    //        $('#two').animate({
-    //            left: width
-    //        }, 800);
-    //        $('#three').animate({
-    //            left: width * 2
-    //        }, 800);
-    //    }
-    //    if (thisSlide == "two") {
-    //        $('#two').animate({
-    //            left: offset.left
-    //        }, 800);
-    //        $('#one').animate({
-    //            left: offset.left - width
-    //        }, 800);
-    //        $('#three').animate({
-    //            left: width
-    //        }, 800);
-    //    }
-    //    if (thisSlide == "three") {
-    //        $('#three').animate({
-    //            left: offset.left
-    //        }, 800);
-    //        $('#two').animate({
-    //            left: offset.left - width
-    //        }, 800);
-    //        $('#one').animate({
-    //            left: offset.left - width * 2
-    //        }, 800);
-    //    }
-    //
-    //});
 
 }
 
