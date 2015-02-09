@@ -241,6 +241,7 @@ function get_child_pages(section) {
 
         $('.frame').css('height', '175px');
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
+        $('.frame').append('<span class="arrow glyphicon glyphicon-chevron-right" id="arrow-three"></span>');
     }
 }
 

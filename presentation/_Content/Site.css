@@ -71,45 +71,45 @@ p, li, li ul li {
     padding-top: 3em;
 }
 
-.arrow-up {
-    width         : 0;
-    height        : 0;
-    border-left   : 10px solid transparent;
-    border-right  : 10px solid transparent;
-    border-bottom : 10px solid goldenrod;
-    display       : inline-block;
-    margin-left   : 20px;
-}
+/*.arrow-up {*/
+    /*width         : 0;*/
+    /*height        : 0;*/
+    /*border-left   : 10px solid transparent;*/
+    /*border-right  : 10px solid transparent;*/
+    /*border-bottom : 10px solid goldenrod;*/
+    /*display       : inline-block;*/
+    /*margin-left   : 20px;*/
+/*}*/
 
-.arrow-down {
-    width        : 0;
-    height       : 0;
-    border-left  : 10px solid transparent;
-    border-right : 10px solid transparent;
-    border-top   : 10px solid goldenrod;
-    display      : inline-block;
-    margin-top   : 10px;
-    margin-left  : 20px;
-}
+/*.arrow-down {*/
+    /*width        : 0;*/
+    /*height       : 0;*/
+    /*border-left  : 10px solid transparent;*/
+    /*border-right : 10px solid transparent;*/
+    /*border-top   : 10px solid goldenrod;*/
+    /*display      : inline-block;*/
+    /*margin-top   : 10px;*/
+    /*margin-left  : 20px;*/
+/*}*/
 
 .arrow-right {
     float         : right;
     width         : 0;
     height        : 0;
-    border-top    : 10px solid transparent;
-    border-bottom : 10px solid transparent;
-    border-left   : 10px solid goldenrod;
-    margin-top    : 70px;
-}
+    border-top    : 25px solid transparent;
+    border-bottom : 25px solid transparent;
+    border-left   : 25px solid goldenrod;
+position: relative;
+top: 40%;}
 
-.arrow-left {
-    width         : 0;
-    height        : 0;
-    border-top    : 10px solid transparent;
-    border-bottom : 10px solid transparent;
+/*.arrow-left {*/
+    /*width         : 0;*/
+    /*height        : 0;*/
+    /*border-top    : 10px solid transparent;*/
+    /*border-bottom : 10px solid transparent;*/
 
-    border-right  : 10px solid blue;
-}
+    /*border-right  : 10px solid blue;*/
+/*}*/
 
 .bottom-menu-list {
     padding-top: 1em !important;
