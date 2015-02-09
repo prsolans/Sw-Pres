@@ -187,7 +187,7 @@ function get_available_markets() {
     if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
             var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<div class="col-xs-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></div>';
+            var html = '<li class="col-xs-2 landing-menu-item"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></li>';
             $('.item-menu').append(html);
         });
     }
@@ -786,23 +786,40 @@ function show_animated_menu() {
         left: newWidth
     }, 1600);
 
-    var translateX =0;
-
-    if(translateX == 0){
-        $('.arrow-left').hide();
+    var capX =0;
+    var prodX = 0;
+    var liWidth = $('.landing-menu-item').outerWidth();
+    if(capX == 0) {
+        $('.arrow-left.capabilities').hide();
+    }
+    if(prodX==0){
+        $('.arrow-left.products').hide();
     }
 
-    $('.arrow-right').click(function(){
-        translateX -= 234;
-        $('.slidee').css('transform', 'translateX('+translateX+'px)');
-        $('.arrow-left').show();
+    $('.arrow-right.capabilities').click(function(){
+        capX -= liWidth;
+        $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
+        $('.arrow-left.capabilities').show();
     });
 
-    $('.arrow-left').click(function(){
-        translateX += 234;
-        $('.slidee').css('transform', 'translateX('+translateX+'px)');
-        if(translateX == 0){
-            $('.arrow-left').hide();
+    $('.arrow-left.capabilities').click(function(){
+        capX += liWidth;
+        $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
+        if(capX == 0){
+            $('.arrow-left.capabilities').hide();
+        }
+    });
+    $('.arrow-right.products').click(function(){
+        prodX -= liWidth;
+        $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+        $('.arrow-left.products').show();
+    });
+
+    $('.arrow-left.products').click(function(){
+        prodX += liWidth;
+        $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+        if(prodX == 0){
+            $('.arrow-left.products').hide();
         }
     });
 }

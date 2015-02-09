@@ -251,7 +251,6 @@ footer p {
     width       : 180px;
     height      : 100%;
     font-size   : 1em;
-    padding-top : 4%;
     text-align  : center;
 }
 
@@ -422,6 +421,7 @@ footer p {
 .menu-list {
     position : absolute;
     left     : -2000px;
+    padding-top: 10px;
 }
 
 #page-container {
