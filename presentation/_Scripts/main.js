@@ -4,7 +4,7 @@ var pagelist = '{' +
     '{ "pageSlug":"introScreen", "id": 1, "title": "Intro Screen", "filename": "index", "layout": "splash", "parent":"0", "background":"home2" },' +
     '{ "pageSlug":"mainMenu", "id": 2, "title": "Main Menu", "filename": "mainMenu", "layout": "menu", "parent":"0", "background":"main-menu" },' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu", "htmlContent":"<p>Our unique business model gives customers the ability to work with a global network of local distributors that offer a wide range of services and the quality products for which we’re known.</p>" },' +
-    '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "products/index", "layout": "landing", "parent":"0", "background":"products" },' +
+    '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "products/index", "layout": "landing", "parent":"0", "background":"products", "htmlContent":"<p>We manufacture and deliver a wide array of the highest quality valves, fittings, gauges, tubing and other fluid system products and solutions. <p>The breadth of our product offering is always growing. We stock standard parts at 225 locations worldwide (Made to Stock or MTS). In addition, we provide Assemble to Order (ATO) products and products designed especially for your unique needs – Engineered to Order Products (ETOP) and Made to Order (MTO)." },' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "markets/index", "layout" : "landing", "parent":"0", "background":"markets2", "htmlContent":"<p>Swagelok is a global developer and provider of high-quality and reliable fluid system solutions including products, assemblies and services for the oil and gas, power, petrochemical, alternative fuels, and semiconductor industries. Select a market to learn more about how we can help you develop solutions to your toughest challenges."},' +
     '{ "pageSlug":"mission", "id": 6, "title": "Local Mission and Vision", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-mission", "headline":"Helping our Customers Grow", "htmlContent":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
     '{ "pageSlug":"technicalSupportSales", "id": 7, "title": "Technical Sales Support", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-support" },' +
@@ -609,7 +609,7 @@ function set_page_layout(pageLayout) {
         $(".frame").css('height', pageHeight * .27);
         $("#section-menu-button").hide();
     }
-    if (pageLayout == 'market') {
+    if (pageLayout == 'market' || pageLayout == 'case-study') {
         show_bottom_nav();
     }
     if (pageLayout == 'product') {
@@ -786,7 +786,25 @@ function show_animated_menu() {
         left: newWidth
     }, 1600);
 
+    var translateX =0;
 
+    if(translateX == 0){
+        $('.arrow-left').hide();
+    }
+
+    $('.arrow-right').click(function(){
+        translateX -= 234;
+        $('.slidee').css('transform', 'translateX('+translateX+'px)');
+        $('.arrow-left').show();
+    });
+
+    $('.arrow-left').click(function(){
+        translateX += 234;
+        $('.slidee').css('transform', 'translateX('+translateX+'px)');
+        if(translateX == 0){
+            $('.arrow-left').hide();
+        }
+    });
 }
 
 function show_bottom_nav() {

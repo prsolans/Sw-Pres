@@ -1,8 +1,26 @@
-﻿html {
+﻿.EurostileLTPro-Demi {
+    font-family: EurostileLTPro-Demi;
+    font-weight: normal;
+    font-style: normal;
+}
+.EurostileLT {
+    font-family: EurostileLT;
+    font-weight: normal;
+    font-style: normal;
+}
+.EurostileLTPro {
+    font-family: EurostileLTPro;
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
     -webkit-font-smoothing : subpixel-antialiased;
     font-weight            : normal;
     background             : black;
 }
+
+
 
 body {
     margin: 0;
@@ -11,7 +29,7 @@ body {
     padding-top    : 50px;
     padding-bottom : 20px;
     /*font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;*/
-    font-family: 'Open Sans', sans-serif;*/
+    font-family: 'EurostileLTPro', 'Open Sans', sans-serif;
     /*font-family    : 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;*/
     font-weight    : 100;
     font-size      : 12pt;
@@ -102,14 +120,16 @@ p, li, li ul li {
 position: relative;
 top: 40%;}
 
-/*.arrow-left {*/
-    /*width         : 0;*/
-    /*height        : 0;*/
-    /*border-top    : 10px solid transparent;*/
-    /*border-bottom : 10px solid transparent;*/
-
-    /*border-right  : 10px solid blue;*/
-/*}*/
+.arrow-left {
+    float: left;
+    width         : 0;
+    height        : 0;
+    border-top    : 25px solid transparent;
+    border-bottom : 25px solid transparent;
+    border-right   : 25px solid goldenrod;
+    position: relative;
+    top: 40%;}
+}
 
 .bottom-menu-list {
     padding-top: 1em !important;
@@ -409,6 +429,11 @@ footer p {
     min-height : 768px !important;
     overflow-y: scroll;
     height: 100%;
+    padding-top: 125px !important;
+    background  : -webkit-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* For Safari 5.1 to 6.0 */
+    background  : -o-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* For Opera 11.1 to 12.0 */
+    background  : -moz-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* For Firefox 3.6 to 15 */
+    background  : linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* Standard syntax (must be last) */
 }
 
 
@@ -439,10 +464,16 @@ footer p {
     min-height    : 180px;
 }
 
-#right-custom-content {
-    margin-right : 10px;
-}
+/*#right-custom-content, #left-custom-content, #slide-custom-content {*/
+    /*margin-bottom: 10px;*/
+    /*margin-right : 10px;*/
+    /*background  : -webkit-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.15)); *//* For Safari 5.1 to 6.0 */
 
+/*}*/
+
+#slide-custom-content {
+    margin-right : 0;
+}
 .capabilities-header {
     background-color : rgba(0, 96, 102, 1);
     margin: 0 !important;
@@ -794,6 +825,11 @@ footer p {
 
 .ui-footer-fixed {
     padding-bottom: 0;
+}
+
+.ui-header-fixed {
+    top: 0px;
+    padding-top: 0px;
 }
 
 .ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover {
