@@ -35,18 +35,10 @@ body {
     font-size      : 12pt;
 }
 
-@media screen and (min-width : 1200px) {
-
-    body {
-        font-size : 14pt;
-    }
-}
-
-
 @media screen and (min-width : 1600px) {
 
     body {
-        font-size : 16pt;
+        font-size : 14pt;
     }
 }
 
@@ -295,8 +287,8 @@ footer p {
     float       : left;
     font-size   : 1em;
     list-style  : none;
-    padding-top : 3em;
     text-align  : center;
+    line-height: 12pt;
 }
 
 .landing-menu-item:nth-child(7n+7) {
@@ -304,6 +296,7 @@ footer p {
 }
 
 .landing-menu-item img, .slidee img {
+    margin-bottom: 12pt;
     width  : 90px;
     height : 90px;
 }
@@ -405,7 +398,7 @@ footer p {
 .market-image-round {
     margin-top: 15px;
     border-radius: 50%;
-    width: 50%;
+    width: 35%;
 }
 
 
@@ -454,7 +447,9 @@ footer p {
     background  : linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* Standard syntax (must be last) */
 }
 
-
+#page-container.fittings {
+    background : none;
+}
 
 #page-container a {
     color       : white;
