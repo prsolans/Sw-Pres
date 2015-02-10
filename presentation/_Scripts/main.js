@@ -1096,7 +1096,6 @@ function show_submenu(id) {
             }
         }
         else if (this.parent == 7 || this.id == 7) {
-console.log('2');
             partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
         }
     });
