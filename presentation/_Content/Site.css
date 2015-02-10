@@ -117,6 +117,7 @@ p, li, li ul li {
     border-top    : 25px solid transparent;
     border-bottom : 25px solid transparent;
     border-left   : 25px solid goldenrod;
+    margin-left: 15px;
 position: relative;
 top: 40%;}
 
@@ -324,8 +325,16 @@ footer p {
     }
 
 }
+
+#left-custom-content {
+    margin-right: 30px;
+}
 #left-custom-image {
     width : 95%;
+}
+
+.market-button {
+    margin: 30px 0;
 }
 
 #main-content {
@@ -347,6 +356,15 @@ footer p {
     width      : 100%;
     margin     : auto;
 }
+
+/*.market-panel#three {*/
+    /*font-size: .9em;*/
+/*}*/
+
+/*.market-panel#three img {*/
+    /*height: 90px;*/
+    /*width: 90*/
+/*}*/
 
 .market-panel-right {
     content             : attr(testClass);
@@ -444,6 +462,7 @@ footer p {
 }
 
 #page-content ul {
+    padding-top: 15px;
     font-size : 1em;
     color     : white;
 }
@@ -533,6 +552,10 @@ footer p {
 
 .product-landing-item img {
     margin-bottom: 40px;
+}
+
+#right-column {
+    margin-left: 30px;
 }
 
 .secondary {
@@ -714,9 +737,9 @@ footer p {
     text-decoration: none;
 }
 .video-caption {
-    padding-top : 9px;
+    padding-top : 19px;
     text-align  : center;
-    width       : 90%;
+    width       : 100%;
 }
 
 #video-modal-link {
