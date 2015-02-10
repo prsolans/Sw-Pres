@@ -20,8 +20,6 @@ html {
     background             : black;
 }
 
-
-
 body {
     margin: 0;
     overflow-x:hidden;
@@ -296,7 +294,7 @@ footer p {
 }
 
 .landing-menu-item img, .slidee img {
-    margin-bottom: 12pt;
+    margin: 12pt 0;
     width  : 90px;
     height : 90px;
 }
@@ -310,14 +308,14 @@ footer p {
 
 }
 
-@media screen and (min-width : 1800px) {
+/*@media screen and (min-width : 1800px) {
 
     .landing-menu-item img, .slidee img {
         width: 180px;
         height:180px
     }
 
-}
+}*/
 
 #left-custom-content {
     margin-right: 30px;
