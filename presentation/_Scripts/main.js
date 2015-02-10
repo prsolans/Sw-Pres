@@ -1086,14 +1086,11 @@ function show_submenu(id) {
 
     $.each(items, function () {
         if (this.title == page.title) {
-            if(this.parent == 7){
+            if(this.parent == 7 || this.id == 7){
                 partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
-                console.log('2');
-
             }
 
             if(this.parent != 4){
-            console.log('1');
             productDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
             productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></div>';
             }
