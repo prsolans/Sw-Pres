@@ -31,22 +31,21 @@
 
 <!-- Screen 1 -->
 <div data-role='page' id="page-container">
-    <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+    <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay' data-tap-toggle="false">
     </div>
     <!-- /panel -->
-    <div id="header-row" class='header-row' data-role='header' data-position='fixed'>
+    <div id="header-row" class='header-row' data-role='header' data-position='fixed' data-tap-toggle="false">
         <a href="detail.html?pageId=7">< Power</a>
     </div>
     <!-- /header -->
     <div class="clearfix">&nbsp;</div>
 
-    <div class="market-section" data-role="main" id="main-content" style="overflow: auto; width: 100%;">
+    <div class="market-section" data-role="main" id="main-content" style="overflow: hidden; width: 100%;">
         <div class="row market-panel" id="one">
             <div class="col-xs-4 col-xs-offset-1">
                 <img src="/presentation/_Content/images/markets/power/slide1.png" class="market-slide-image"/></div>
             <div class="col-xs-5 col-xs-offset-1"><h1>Keep your plant running</h1>
-
-                <p>Keeping a power plant running is a 24-hour job. Something's always moving&mdash;and you can't stop either. It's on you to keep systems up and the lights on. So many moving parts to the
+                <p style="padding-top: 10px;">Keeping a power plant running is a 24-hour job. Something's always moving&mdash;and you can't stop either. It's on you to keep systems up and the lights on. So many moving parts to the
                     equation. Corrective maintenance, lengthy shutdowns&mdash;any of these can shift the balance of power away from production and into lost revenue. The last thing you want to worry about is a
                     leaking or failed component.</p>
 
@@ -174,7 +173,7 @@
                                         steam and condensate systems utility plant operations let you tap into our system evaluations, engineering, and training programs, based on your unique requirements. </p>
                                 </div>
                                 <div class="col-sm-4">
-                                    <img src="/presentation/_Content/images/markets/power/customize-tab.jpg" style="max-height: 600px;"/>
+                                    <img src="/presentation/_Content/images/markets/power/customize-tab.jpg" style="max-height: 400px;"/>
                                 </div>
                             </div>
                         </div>
@@ -197,11 +196,11 @@
         </div>
     </div>
 
-    <div id="fixed-footer" data-role="footer" data-position="fixed">
+    <div id="fixed-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
         <h1 class="footer-title footer-title-up markets-header">MARKETS</h1>
 
         <div class="frame" style="display: none;">
-            <ul class="slidee">
+            <ul class="markets-bottom-menu-list slidee">
             </ul>
         </div>
 

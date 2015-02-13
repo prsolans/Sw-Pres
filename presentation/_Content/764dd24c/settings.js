@@ -13,13 +13,19 @@ var theseSettings = get_presentation_settings();
 
 var presentationDirectory = theseSettings[0].assetDir;
 
-var marketList = '[{ "id": 0, "title": "Power", "slug": "power" }' +
+var marketList = '[' +
+    '{ "id": 0, "title": "Power", "slug": "power" },' +
+    '{ "id": 1, "title": "Oil and Gas", "slug": "oilGas" },' +
+    '{ "id": 2, "title": "Alternative Fuels", "slug": "alternativeFuels" },' +
+    '{ "id": 3, "title": "Chemical", "slug": "chemical" },' +
+    '{ "id": 4, "title": "Semiconductor", "slug": "semiconductor" }' +
     ']';
 
 var videoList = '[' +
     '{ "page_element": "ceo-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"One Swagelok<br/>Art Anton <br/>Swagelok President and CEO"},' +
+        '{ "page_element": "introScreen-video", "videofile":"/presentation/_Content/videos/SWAGELOK_Ext_BrandEssence_01-21c.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"One Swagelok<br/>Art Anton <br/>Swagelok President and CEO"},' +
     '{ "page_element": "oneSwagelok-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"One Swagelok<br/>Art Anton <br/>Swagelok President and CEO"},' +
-    '{ "page_element": "distributor-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
+    '{ "page_element": "distributor-video", "videofile":"/presentation/_Content/videos/distributor_video_andreas.mp4", "posterfile":"/presentation/_Content/videos/distributor_video_andreas.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":"A Word from Andreas Rueb<br/>Swagelok D&uuml;sseldorf Managing Director"},' +
     '{ "page_element": "businessModel-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/video_gerbitz.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Business Model"},' +
     '{ "page_element": "marketsCustomers-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/video_wilson.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Bob Wilson<br/>Swagelok Vice President, Marketing"},' +
     '{ "page_element": "engineering-video", "videofile":"/presentation/_Content/videos/swagelok_video_artAnton.mp4", "posterfile":"/presentation/_Content/videos/video_peace.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Dave Peace Diogenes<br/>Need Title"},' +
@@ -57,7 +63,7 @@ var content = '[' +
     '{"page_id":"customSolutions", "page_element":"left-custom-image", "src":"' + presentationDirectory + 'images/customSolutions.jpg"}' +
     ']';
 
-get_available_markets(marketList);
+//get_available_markets(marketList);
 get_custom_content(layoutsList, content);
 
 if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash') {

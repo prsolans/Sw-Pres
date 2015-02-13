@@ -28,12 +28,12 @@
 </head>
 <body>
     <!-- Add your site or application content here -->
-    <div data-role='page' data-pageid="4" id="page-container fittings" style="">
+    <div data-role='page' data-pageid="4" id="page-container" class="fittings" style="">
 
-        <div data-role='panel' id='sectionMenu' data-position='right' data-display='overlay'>
+        <div data-role='panel' id='sectionMenu' data-position='right' data-tap-toggle="false" data-display='overlay'>
         </div>
         <!-- /panel -->
-        <div id="header-row" class='header-row' data-role='header' data-position='fixed'>
+        <div id="header-row" class='header-row' data-role='header' data-tap-toggle="false" data-position='fixed' >
         </div>
 
         <!-- /header -->
@@ -52,11 +52,10 @@
                     </div>
                 </div>
         </div>
-        <div id="fixed-footer" data-role="footer" data-position="fixed">
+        <div id="fixed-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
             <h1 class="footer-title footer-title-up products-header">PRODUCTS</h1>
             <div class="frame" style="display: none;">
-                <ul class="slidee">
-                </ul>
+                <ul class="slidee"></ul>
             </div>
 
         </div>
@@ -65,6 +64,8 @@
     <script src="/presentation/_Scripts/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
+
+
             // -------------------------------------------------------------
             //   Basic Navigation
             // -------------------------------------------------------------

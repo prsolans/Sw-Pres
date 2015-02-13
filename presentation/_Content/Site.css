@@ -33,6 +33,10 @@ body {
     font-size      : 12pt;
 }
 
+a {
+    color: white;
+    }
+
 @media screen and (min-width : 1600px) {
 
     body {
@@ -108,8 +112,10 @@ p, li, li ul li {
     border-bottom : 25px solid transparent;
     border-left   : 25px solid goldenrod;
     margin-left: 15px;
-position: relative;
-top: 40%;}
+    position: relative;
+    top: 40%;
+    cursor: pointer;
+}
 
 .arrow-left {
     float: left;
@@ -119,7 +125,45 @@ top: 40%;}
     border-bottom : 25px solid transparent;
     border-right   : 25px solid goldenrod;
     position: relative;
-    top: 40%;}
+    top: 40%;
+    cursor: pointer;
+}
+
+#fixed-footer .arrow-right {
+    width         : 0;
+    height        : 0;
+    border-top    : 25px solid transparent;
+    border-bottom : 25px solid transparent;
+    border-left   : 25px solid goldenrod;
+    margin-left: 15px;
+    position: absolute;
+    top: 50%;
+    z-index: 5000;
+    right: 10px;
+    cursor: pointer;
+}
+
+#fixed-footer .arrow-right:hover {
+    border-left   : 25px solid orange;
+}
+
+#fixed-footer .arrow-left:hover {
+    border-right   : 25px solid goldenrod;
+}
+
+
+#fixed-footer .arrow-left {
+    width         : 0;
+    height        : 0;
+    border-top    : 25px solid transparent;
+    border-bottom : 25px solid transparent;
+    border-right   : 25px solid goldenrod;
+    position: absolute;
+    top: 50%;
+    z-index: 5000;
+    left: 10px;
+    cursor: pointer;
+
 }
 
 .bottom-menu-list {
@@ -190,6 +234,7 @@ footer p {
 .footer-title-up, .footer-title-up a, .footer-title-up a:visited, .footer-title-up a:hover, .footer-title-up a:focus, .footer-title-down, .footer-title-down a, .footer-title-down a:visited, .footer-title-down a:hover, .footer-title-down a:focus {
     text-decoration : none !important;
     text-transform  : uppercase;
+    cursor: pointer;
 }
 
 .footer-title-up:after, .show-menu-up:after {
@@ -246,6 +291,7 @@ footer p {
 }
 
 .full-width-band {
+    padding: 0;
     margin     : 0;
     width      : 100%;
     background : #003a77;
@@ -289,17 +335,23 @@ footer p {
     line-height: 12pt;
 }
 
-.landing-menu-item:nth-child(7n+7) {
+.landing-menu-item:nth-child(7n+7), .landing-menu-item:nth-child(7n+13) {
     clear : left;
 }
 
 .landing-menu-item img, .slidee img {
+    border-radius: 50%;
     margin: 12pt 0;
     width  : 90px;
     height : 90px;
 }
 
-@media screen and (min-width : 1200px) {
+.landing-menu-item img {
+        margin-top: 16px;
+
+}
+
+@media screen and (min-width : 1600px) {
 
     .landing-menu-item img, .slidee img {
         width: 110px;
@@ -308,14 +360,11 @@ footer p {
 
 }
 
-/*@media screen and (min-width : 1800px) {
-
-    .landing-menu-item img, .slidee img {
-        width: 180px;
-        height:180px
+    #fixed-footer .landing-menu-item img, #fixed-footer .slidee img {
+        width: 110px;
+        height: 110px;
     }
-
-}*/
+}
 
 #left-custom-content {
     margin-right: 30px;
@@ -330,7 +379,7 @@ footer p {
 
 #main-content {
     position: absolute;
-    top: 125px;
+    top: 110px;
     margin-top: 50px;
     padding-bottom: 100px;
     overflow: hidden;
@@ -430,7 +479,7 @@ footer p {
 .menu-list {
     position : absolute;
     left     : -2000px;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
 }
 
 #page-container {
@@ -447,6 +496,10 @@ footer p {
 
 #page-container.fittings {
     background : none;
+      min-height : 768px !important;
+    overflow-y: scroll;
+    height: 100%;
+    padding-top: 125px !important;
 }
 
 #page-container a {
@@ -543,6 +596,9 @@ footer p {
     min-height: 100px;
 }
 
+.product-landing-item a {
+    color: white;
+}
 .product-landing-item img {
     margin-bottom: 40px;
 }
@@ -580,7 +636,7 @@ footer p {
     content            : ' \25CF';
     font-size          : 80px;
     float              : right;
-    margin-top         : -40px;
+    margin-top         : -45px;
     margin-right       : 40px;
     -webkit-box-shadow : none;
     box-shadow         : none;
@@ -591,7 +647,7 @@ footer p {
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -65px;
+    margin-top   : -45px;
     margin-right : 40px;
 }
 
@@ -600,7 +656,7 @@ footer p {
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -65px;
+    margin-top   : -45px;
     margin-right : 40px;
 }
 
@@ -609,7 +665,7 @@ footer p {
     content      : ' \25CF';
     font-size    : 80px;
     float        : right;
-    margin-top   : -65px;
+    margin-top   : -45px;
     margin-right : 40px;
 }
 
@@ -658,7 +714,7 @@ footer p {
 }
 
 #submenu-content {
-
+    padding-left: 30px;
     margin-top  : 20px;
     padding-top : 15px;
     position    : relative;
@@ -696,6 +752,10 @@ footer p {
     min-height    : 60px;
 }
 
+#submenu-content ul li a.active {
+    color: goldenrod;
+}
+
 #submenu-content ul li span {
     min-height    : 50px;
     display       : table-cell;
@@ -729,6 +789,8 @@ footer p {
 .submenu-links {
     text-decoration: none;
 }
+
+
 .video-caption {
     padding-top : 19px;
     text-align  : center;
@@ -754,6 +816,14 @@ footer p {
     margin     : auto;
     margin-top : 50px;
 }
+   
+.view-content-text {
+    position:relative; left: 260px; color:white; font-family: 'EurostileLTPro', 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    text-transform:uppercase;
+}
+
+
 
 /* LANDING ANIMATIONS */
 .landing-animation {
@@ -802,6 +872,7 @@ footer p {
 
 .nav-tabs {
     border-bottom : 1px solid #6d1a42;
+    margin-bottom: 21px;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav > li > a:hover, .nav > li > a:focus {
@@ -847,6 +918,12 @@ footer p {
     top: 0px;
     padding-top: 0px;
 }
+
+.ui-header-fixed.ui-fixed-hidden {
+    top 0px !important;
+    padding-top: 0px !important;
+}
+
 
 .ui-page-theme-a a:hover, html .ui-bar-a a:hover, html .ui-body-a a:hover, html body .ui-group-theme-a a:hover {
     color : white;

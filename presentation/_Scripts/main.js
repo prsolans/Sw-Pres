@@ -43,46 +43,55 @@ var pagelist = '{' +
     '{ "pageSlug":"quality", "id": 40, "title": "Zero Customer Disappointments", "menu":"quality", "menuTitle":"Quality", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>There is a phrase that every Swagelok executive, engineer and shop floor associate knows – Zero Customer Disappointments. It is a way of life. </p> <p>We strive to ensure the customer has a perfect experience with every product and service, every time and that they deliver on the promise of safety and total peace of mind.</p> <p>That’s the standard we hold ourselves to. </p> <p>We’re at the point where “zero” is really possible, and we’re on a mission to make it happen.</p>" },' +
     '{ "pageSlug":"manufacturing", "id": 41, "title": "Nonstop operation.", "menu":"manufacturing", "menuTitle":"Manufacturing", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We own the product manufacturing process from start to finish. This way we can control the maximum number of variables, ensuring product quality. </p> <p>We make some of our own cutting tools and we’re very deliberate about the machines we buy. Then, we are disciplined about routine service. And we run a predictive maintenance program that addresses repairs before there is a breakdown. </p> <p>Our machines must be in the very best operating condition, executing at the tightest tolerances. </p> <p>What is our motivation for such exactitude? It’s product quality. It’s zero customer disappointments. And it’s the safety of our machine operators.</p>" },' +
     '{ "pageSlug":"globalSourcing", "id": 42, "title": "Suppliers we can count on.", "menu":"globalSourcing", "menuTitle":"Gobal Sourcing, Risk Mitigation", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Swagelok comes through to customers again and again partly due to the quality of our supply base. </p> <p>We look long and hard to find our suppliers and apply enormous amounts of scrutiny. We’re looking not just at the product and quality systems, but also their values and quality of leadership.</p> <p>With so much riding on our suppliers, we ask them to take extraordinary measures – in some cases, to keep their proprietary secrets in escrow – in others, to keep extra inventory on hand.</p> <p>We do everything we can to mitigate risk. That’s our promise to customers.</p>" },' +
-    '{ "pageSlug":"financialStewardship", "id": 43, "title": "A mission with momentum.", "menu":"undefined", "menuTitle":"Financial Stewardship", "filename": "capabilities/detail", "layout": "mission", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
+    '{ "pageSlug":"financialStewardship", "id": 43, "title": "A mission with momentum.", "menu":"undefined", "menuTitle":"Financial Stewardship", "filename": "capabilities/detail", "layout": "doubleVideoRight", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
     '{ "pageSlug":"associates", "id": 44, "title": "One team of thousands.", "menu":"associates", "menuTitle":"Associates", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We strive for nothing less than an exceptional customer experience. And so much of that depends on our people&mdash;our distributors, corporate leaders, and associates worldwide. </p> <p>These are rare individuals with a passion for service. They are on a mission, going to extraordinary lengths with the customer in mind.</p> <p>For the majority of our customers, their most direct experience is through our distributors. They are backed by cross-functional teams in engineering, sales and fulfillment&mdash;about 3,600 distributor associates at 225 stocking locations in 70 countries. </p> <p>We’re one interconnected global organization&mdash;“One Swagelok”&mdash;engineered to perform for you, our valued customer.</p>" },' +
-    '{ "pageSlug":"socialResponsibility", "id": 45, "title": "Engineering a better world.", "menu":"undefined", "menuTitle":"Social Responsibility", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" }' +
+    '{ "pageSlug":"socialResponsibility", "id": 45, "title": "Engineering a better world.", "menu":"undefined", "menuTitle":"Social Responsibility", "filename": "capabilities/detail", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" },' +
+    '{ "pageSlug":"", "id": 46, "title": "Miniature Modular Systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-miniatureModular" },' +
+    '{ "pageSlug":"", "id": 47, "title": "Pre-Engineered Subsystems (PrESS)", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-PRESS" },' +
+    '{ "pageSlug":"", "id": 48, "title": "Quick Connects", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-quickConnects" },' +
+    '{ "pageSlug":"", "id": 49, "title": "Regulators", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-regulators" },' +
+    '{ "pageSlug":"", "id": 50, "title": "Sample Cylinders", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-sampleCylinder" },' +
+    '{ "pageSlug":"", "id": 51, "title": "Tubing and Accessories", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-tubingAccessories" },' +
+    '{ "pageSlug":"", "id": 52, "title": "Welding Systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-welding" },' +
+        '{ "pageSlug":"chemical", "id": 53, "title": "Chemical","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-chemical" },' +
+    '{ "pageSlug":"semiconductor", "id": 54, "title": "Semiconductor","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-semiconductor" }' +
+
     ']}';
 
-        //var idleTime = 0;
-            //var videoWasOpenedAtPageLoad = false;
+//var idleTime = 0;
+//var videoWasOpenedAtPageLoad = false;
 
 
-            //$(document).delegate("body", "touchmove", false);
-            //$(document).delegate("body", "scrollstart", false);
+//$(document).delegate("body", "touchmove", false);
+//$(document).delegate("body", "scrollstart", false);
 
 PAGE_ID = sessionStorage.getItem('PAGE_ID');
 
-        if (window.location.protocol == "http:") {
+if (window.location.protocol == "http:") {
 
-                var pathname = window.location.pathname;
+        var pathname = window.location.pathname;
 
-        console.log(pathname);
-            if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname == '/presentation/') {
+    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname == '/presentation/') {
 
 
 
         PAGE_ID = 1;
-                setLinks(PAGE_ID, PAGE_ID);
+        setLinks(PAGE_ID, PAGE_ID);
 
-                PRESENTATION_ID = getCookie('PRESENTATION_ID');
+        PRESENTATION_ID = getCookie('PRESENTATION_ID');
 
-                if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
-                    PRESENTATION_ID = getParameterByName('p');
-                    setCookie('PRESENTATION_ID', PRESENTATION_ID);
-                    }
-                    }
+        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
+            PRESENTATION_ID = getParameterByName('p');
+            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+        }
+    }
 
-    PRESENTATION_ID = getCookie('PRESENTATION_ID');
+    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
 
     if (PRESENTATION_ID) {
         $.getScript('/presentation/_Content/' +PRESENTATION_ID + '/settings.js');
-        }
-        }
+    }
+}
 
     var bajb_backdetect={
             Version: '1.0.0', Description: 'Back Button Detection', Browser: {IE: !!(window.attachEvent&&!window.opera), Safari: navigator.userAgent.indexOf('Apple') >-1, Opera: !!window.opera}, FrameLoaded: 0, FrameTry: 0, FrameTimeout: null, OnBack : function() {alert('Back Button Clicked') }, BAJBFrame: function() {var BAJBOnBack =document.getElementById('BAJBOnBack'); if(bajb_backdetect.FrameLoaded>1) {if(bajb_backdetect.FrameLoaded ==2) { bajb_backdetect.OnBack(); history.back() }}bajb_backdetect.FrameLoaded++; if(bajb_backdetect.FrameLoaded==1) {
@@ -119,19 +128,19 @@ bajb_backdetect.OnBack = function () {
 //
 //        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
 //            PRESENTATION_ID = getParameterByName('p');
-    //            setCookie('PRESENTATION_ID', PRESENTATION_ID);
-    //        }
-    //    }
-    //
-    //    DOMAIN = pathname[0];
-    //
-    //    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
-    //    PAGE_ID = sessionStorage.getItem('PAGE_ID');
-    //
-    //    if (PRESENTATION_ID) {
-    //        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
-    //    }
-    //}
+//            setCookie('PRESENTATION_ID', PRESENTATION_ID);
+//        }
+//    }
+//
+//    DOMAIN = pathname[0];
+//
+//    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
+//    PAGE_ID = sessionStorage.getItem('PAGE_ID');
+//
+//    if (PRESENTATION_ID) {
+//        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
+//    }
+//}
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
 
@@ -142,6 +151,7 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
     });
     $.ajaxSetup({async: false});
 
+    get_child_pages('5'); // Markets
     get_child_pages('4'); // Products
     get_child_pages('3'); // Capabilities
 
@@ -160,12 +170,12 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
         localStorage.setItem('pageLayout', pageDetails[0].layout);
         localStorage.setItem('hasCaseStudy', false);
 
-        } else {
+    } else {
         // Sorry! No Web Storage support..
         alert('Sorry! No Web Storage support...');
-        }
+    }
 
-        });
+});
 
 $(document).ready(function pageReady() {
 
@@ -177,44 +187,50 @@ $(document).ready(function pageReady() {
 
     panelmenu.on('panelbeforeopen', function () {
         $('#section-menu-button').hide();
-            $('.row').css('opacity', '.3');
-            });
+        $('.row').css('opacity', '.3');
+    });
 
     panelmenu.on('panelclose', function () {
         $('#section-menu-button').show();
         $('.row').css('opacity', '1');
 
-        });
+    });
+        set_content_area_size();
 
     $('#page-container').css('height', $(window).height()).show();
 
-    set_content_area_size();
 
 });
 
-    /**
-     * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
-     * Utilized for main menu page, section landing page, and bottom nav within the section
-     */
+/**
+ * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ */
 function get_available_markets() {
     var livemarkets = JSON.parse(marketList);
-
     var thisPage = getObjects(JSON.parse(pagelist), 'pageSlug', localStorage.getItem('pageSlug'));
 
     if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
         $.each(livemarkets, function () {
-            var obj = getObjects(JSON.parse(pagelist), 'title', this.title);
-            var html = '<li class="col-xs-2 landing-menu-item"><a href="/presentation/' +obj[0].filename + '.html" onclick="setLinks(' +obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/menu/' +obj[0].menu + '.png"/><br/> ' +this.title + '</a></li>';
-            $('.item-menu').append(html);
-            });
-            }
-            }
+            var obj = getObjects(JSON.parse(pagelist), 'pageSlug', this.slug);
 
-                /**
-                 * Get child pages for Capabilities and Products sections, and display links to the pages
-                 * Utilized for main menu page, section landing page, and bottom nav within the section
-                 * @param section
-                 */
+
+            var html = '<li class="col-xs-2 landing-menu-item" style="margin-top: 30px;"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></li>';
+            $('.item-menu').append(html);
+
+
+            var viewport = $(window).width();
+            var width = viewport / 6;
+            $('.item-menu li').css('width', width*.8);
+        });
+    }
+}
+
+/**
+ * Get child pages for Capabilities and Products sections, and display links to the pages
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ * @param section
+ */
 function get_child_pages(section) {
 
     var count = 0;
@@ -226,30 +242,52 @@ function get_child_pages(section) {
     var select = JSON.parse(pagelist);
     var items = select.pages;
     var fileDepth = get_file_location();
-
     $.each(items, function () {
 
         if (this.parent == section) {
-
             var parent = get_page_details(section);
             var title = parent.title.toLowerCase();
 
-            var html = '<li class="col-xs-2 landing-menu-item"><a href="/presentation/' +this.filename + '.html" onclick="setLinks(' + this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' +this.title + '</a></div>';
+            var childId = this.id;
+
+            if (title == 'markets') {
+                childId = 14// set to Power market as default
+                }
+            if (title == 'products') {
+                childId = 18// set to Fittings product by default
+            }
+
+            var href = '#';
+
+            if (this.pageSlug == 'fittings' || this.pageSlug == 'power' || title == 'capabilities') {
+                href = '/presentation/' + this.filename + '.html';
+            }
+
+            var html = '<li class="col-xs-2 landing-menu-item"><a href="'+href+'" onclick="setLinks(' + childId + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' +this.title + '</a></div>';
             var element = title + '-child-pages-list';
             var listClass = title + '-bottom-menu-list';
+            if (thisPage.pageSlug != 'mainMenu') {
+                if (title == 'markets') {
+                    $('.slidee').addClass('markets-bottom-menu-list');
+                    listClass = '';
+                }
+            }
+           
+
             $("." +element).append(html);
             if (thisParent.id == section || thisParent.parent == section) {
-                var li = '<li class="' +listClass + ' bottom-menu-list"><a href="/presentation/' + this.filename + '.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/menu/' +this.menu + '.png"/><br/>' +this.title + '</a></li>';
+               
+                var li = '<li class="'+listClass+' bottom-menu-list"><a href="'+href+'" onclick="setLinks(' + childId + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + this.menu + '.png"/><br/>' + this.title + '</a></li>';
                 $('.slidee').append(li);
 
                 var viewport = $(window).width();
                 var width = viewport / 6;
                 $('.slidee li').css('width', width);
             }
-            }
-            });
+        }
+    });
 
-
+ 
     if (thisPage.pageSlug == 'mainMenu') {
 
         var width = $(window).width();
@@ -260,7 +298,7 @@ function get_child_pages(section) {
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
         $('.frame').append('<span class="arrow glyphicon glyphicon-chevron-right" id="arrow-three"></span>');
     }
-    }
+}
 
 function get_custom_content(layouts, content) {
 
@@ -270,33 +308,33 @@ function get_custom_content(layouts, content) {
 
     if (thisLayout != false) {
         set_page_layout(thisLayout);
-        }
+    }
 
     var thisContent = getObjects(JSON.parse(content), 'page_id', thisPage);
 
     $.each(thisContent, function () {
 
-                    if (typeof this !== "undefined") {
+        if (typeof this !== "undefined") {
 
             var elementId = this.page_element;
 
             if (this.html != undefined) {
                 var html = this.html;
                 $('#' + elementId).html(html);
-                }
+            }
 
             if (this.src != undefined) {
                 var src = this.src;
                 $('#' +elementId).attr('src', src);
-}
-}
-});
+            }
+        }
+    });
 
     load_page_info(localStorage.getItem('PAGE_ID'));
 
     if (thisLayout == 'market' || thisLayout == 'case-study') {
         show_market_slides();
-}
+    }
 
     show_accordion_icons();
 
@@ -313,7 +351,7 @@ function get_file_location() {
     var path = filepath.split("Content/");
 
     return path[0];
-    }
+}
 
 /**
  * Given the current page container ID, checks the JSON containing generic page information and returns array of information relative to the existing page
@@ -336,13 +374,13 @@ function get_page_layout(layouts) {
     if (typeof thisLayout[0]!== "undefined") {
         page_layout = thisLayout[0].page_layout;
         localStorage.setItem('pageLayout', page_layout);
-        }
-        else {
+    }
+    else {
         page_layout = localStorage.getItem('pageLayout');
-        }
+    }
 
     return page_layout;
-        }
+}
 
 function get_presentation_settings() {
     if (settings) {
@@ -351,58 +389,60 @@ function get_presentation_settings() {
         if (presSettings[0].hasCaseStudy == true) {
             localStorage.setItem('hasCaseStudy', true);
 
-}
-}
-else {
-    console.log('ERROR: Presentations settings JSON feed');
-}
-$.each(presSettings, function () {
-    $('#header-title').html(this.division);
-
-    $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
-    if (localStorage.getItem('hasCaseStudy') == 'true') { 
-            $('#case-study-link').attr('onclick', 'setLinks(13, ' +sessionStorage.getItem("PAGE_ID") + ')');
-                $('#case-study-link').attr('href', '/presentation/capabilities/slides.html');
-                }
-                });
-
-        return presSettings;
-                }
-
-    function get_video_details(videoList) {
-        var livevideos = JSON.parse(videoList);
-
-        var pickVideo = false;
-
-        if (localStorage.getItem('pageLayout') == 'text-video') {
-            pickVideo = localStorage.getItem('pageSlug') + '-video';
+        }
     }
-    else if (localStorage.getItem('pageLayout') == 'mission') {
-            pickVideo = 'mission';
+    else {
+        console.log('ERROR: Presentations settings JSON feed');
+    }
+    $.each(presSettings, function () {
+        $('#header-title').html(this.division);
+
+        $('#client-logo').attr('src', this.assetDir + 'images/logo.png');
+        if (localStorage.getItem('hasCaseStudy') == 'true') {
+            $('#case-study-link').attr('onclick', 'setLinks(13, ' +sessionStorage.getItem("PAGE_ID") + ')');
+            $('#case-study-link').attr('href', '/presentation/capabilities/slides.html');
+        }
+    });
+
+    return presSettings;
+}
+
+function get_video_details(videoList) {
+    var livevideos = JSON.parse(videoList);
+
+    var pickVideo = false;
+
+    if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'splash') {
+        pickVideo = localStorage.getItem('pageSlug') + '-video';
+    }
+    else if (localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'doubleVideoRight') {
+        pickVideo = 'mission';
+    }
+
+    $.each(livevideos, function () {
+
+        if (pickVideo == 'mission') {
+            if (this.page_element != 'ceo-video' && this.page_element != 'distributor-video') {
+                return true;
             }
+        }
+        else if (pickVideo != false) {
+           
+            if (pickVideo != this.page_element) {
+                return true;
+            }
+        }
 
-        $.each(livevideos, function () {
 
-            if (pickVideo == 'mission') {
-                if (this.page_element != 'ceo-video' && this.page_element != 'distributor-video') {
-                    return true;
-                }
-                }
-                else if (pickVideo != false) {
-                if (pickVideo != this.page_element) {
-                    return true;
-                }
-                }
-
-            var posterImage = this.posterfile;
-            var video = this.videofile;
-            var subtitles = this.subtitlefile;
-            var element = this.page_element;
-            var videoCaption = this.caption;
+        var posterImage = this.posterfile;
+        var video = this.videofile;
+        var subtitles = this.subtitlefile;
+        var element = this.page_element;
+        var videoCaption = this.caption;
 
 
             $('#' +element + '-poster').attr('src', posterImage);
-            $('#' + element + '-caption').html(videoCaption);
+        $('#' + element + '-caption').html(videoCaption);
 
         var html = '<video id="' +element + '" class="video-js vjs-default-skin" controls preload="auto" data-setup=""><source id="' +element + '-mp4-path" src="" type="video/mp4" /><!--<track kind="subtitles" src="' + subtitles + '" srclang="en" label="English" default data-ajax="false">--><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>';
 
@@ -428,7 +468,7 @@ $.each(presSettings, function () {
             function resizeVideoJS() {
                 var width = document.getElementById(id).parentElement.offsetWidth;
                 myPlayer.width(width).height(width * aspectRatio);
-                }
+            }
 
             var videoModal = $("#" +element + "-modal");
 
@@ -443,28 +483,28 @@ $.each(presSettings, function () {
 
                 $(window).resize(function () {
                     resizeVideoJS();
-                    });
+                });
 
                 $('#' + element + '_html5_api').on('click', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
-                    });
+                });
 
                 $('#' +element + '_html5_api').on('tap', function () {
                     videoModal.modal('hide');
                     show_animated_overlay();
                 });
 
-                });
+            });
 
             videoModal.on('hidden.bs.modal', function () {
                 myPlayer.pause();
-                });
+            });
 
-                });
+        });
 
-                });
-                }
+    });
+}
 
 function load_page_elements(fileDepth) {
     var pageID = getParameterByName('pageId');
@@ -487,15 +527,15 @@ function load_page_elements(fileDepth) {
 
     if (pageID == 1) {
         $('#view-content-link').attr('href', 'mainMenu.html?pageId=2');
-        }
+    }
 
-        }
+}
 
-        /**
-         * Using the page ID, gather and display page layout and HTML content
-         * @param id
-         * @param fileDepth
-         */
+/**
+ * Using the page ID, gather and display page layout and HTML content
+ * @param id
+ * @param fileDepth
+ */
 function load_page_info(id) {
 
     var parent;
@@ -515,7 +555,7 @@ function load_page_info(id) {
     headline = page.headline;
     layout = page.layout;
 
-        // Display page information
+    // Display page information
     $('#page-container').attr('data-pageid', id);
     $('body').css('background', 'url(/presentation/_Content/images/backgrounds/' + background + '.jpg)');
     $('body').css('background-size', 'cover').css('background-repeat', 'no-repeat');
@@ -525,93 +565,93 @@ function load_page_info(id) {
     }
     else {
         $('#page-title').html(headline);
-        }
+    }
 
     if(content != undefined) {
         if (layout == 'text-video') {
             $('#left-custom-content').html(content);
-            }
+        }
         if (layout == 'text-only') {
             $('#left-custom-content').html(content);
             $('#right-custom-content').html('');
-            }
-            else if (layout == 'mission' || layout == 'product' || layout == 'landing') {
-                $('#page-content').append(content);
-            }
-            }
-            else {
-                $('#page-content').html(content);
-            }
+        }
+            else if (layout == 'mission' || layout == 'product' || layout == 'landing' || layout == 'doubleVideoRight') {
+            $('#page-content').append(content);
+        }
+    }
+    else {
+        $('#page-content').html(content);
+    }
 
-            if (parent != '0') {
+    if (parent != '0') {
 
-                var thisParent = get_page_details(parent);
-                var thisParentsParent = get_page_details(thisParent.parent);
+        var thisParent = get_page_details(parent);
+        var thisParentsParent = get_page_details(thisParent.parent);
 
                 var submenu = '<span class="submenu-links"><a href="/presentation/' +thisParent.title.toLowerCase() + '/index.html" onclick="setLinks(' +thisParent.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' +thisParent.title + '</a></span>';
 
-                if (thisParentsParent.id == '5') { // Parent is Markets homepage
+        if (thisParentsParent.id == '5') { // Parent is Markets homepage
                     submenu = '<span class="submenu-links"><a href="/presentation/' +thisParentsParent.title.toLowerCase() + '/detail.html" onclick="setLinks(' +thisParent.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' + thisParent.title + '</a></span>';
-                    }
+        }
 
-                if (thisParentsParent.id == '4') { // Parent is Products homepage
+        if (thisParentsParent.id == '4') { // Parent is Products homepage
                     submenu = '<span class="submenu-links"><a href="/presentation/' + thisParentsParent.title.toLowerCase() + '/index.html" onclick="setLinks(' +thisParentsParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' +thisParentsParent.title + '</a></span>';
-                    }
+        }
 
-                if (thisParent.id == '7') { // Parent is One Swagelok homepage
+        if (thisParent.id == '7') { // Parent is One Swagelok homepage
                     submenu = '<span class="submenu-links"><a href="/presentation/' +thisParentsParent.title.toLowerCase() + '/index.html" onclick="setLinks(' +thisParentsParent.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false">&lt; ' +thisParentsParent.title + '</a></span>';
-                    }
+        }
 
-                $("#submenu").html(submenu);
+        $("#submenu").html(submenu);
 
-                if (thisParent.id == '4' || thisParentsParent.id == '4') { // Parent or Grandparent is in Products category
+        if (thisParent.id == '4' || thisParentsParent.id == '4') { // Parent or Grandparent is in Products category
                     var html = '<a href="" id="show-menu" class="show-menu-down">' +title + '</a>';
-                    $('#submenu').append(html);
-                    show_submenu(id);
-                    }
+            $('#submenu').append(html);
+            show_submenu(id);
+        }
 
-                if (thisParent.id == '7' || page.id == '7') { // Parent is One Swagelok page
+        if (thisParent.id == '7' || page.id == '7') { // Parent is One Swagelok page
             var displayTitle = page.title;
             if (thisParent.id == '7') {
                 displayTitle = thisParent.title;
-                }
+            }
             var html = '<a href="" id="show-menu" class="show-menu-down">' +displayTitle + '</a>';
             $('#submenu').append(html);
             show_submenu(id);
-            }
+        }
 
-            }
+    }
 
-            }
+}
 
 function set_content_area_size() {
     var height = $(document).height();
-    var headerHeight = 125;
+    var headerHeight = 165;
     var footerHeight = $('.ui-footer').height();
 
     var contentHeight = height -headerHeight -footerHeight;
 
     $('#main-content').css('height', contentHeight);
-    }
+}
 
 function set_page_layout(pageLayout) {
 
     // Set page layout
     $('#section-menu-button').show();
     $('#view-content-button').hide();
-                // Home will be replaced by app functionality
-                    //if (pageLayout == 'home') {
-                    //    get_available_presentations();
-                    //    $('#section-menu-button').hide();
-                    //    $('#view-content-button').show();
-                    //}
-                    if (pageLayout == 'splash') {
-                        show_animated_overlay();
+    // Home will be replaced by app functionality
+    //if (pageLayout == 'home') {
+    //    get_available_presentations();
+    //    $('#section-menu-button').hide();
+    //    $('#view-content-button').show();
+    //}
+    if (pageLayout == 'splash') {
+        show_animated_overlay();
 
-                    //resize band based on page height
-                    var pageHeight = window.innerHeight;
-                    $(".full-width-band").css('height', pageHeight * .30);
-                    $(".full-width-band img").css('height', pageHeight * .30);
+        //resize band based on page height
+        var pageHeight = window.innerHeight;
+        $(".full-width-band").css('height', pageHeight * .30);
+        $(".full-width-band img").css('height', pageHeight * .30);
 
         $('#section-menu-button').hide();
     }
@@ -624,10 +664,10 @@ function set_page_layout(pageLayout) {
         $(".menu-list").css('height', pageHeight * .27).css('clear', 'both');
         $(".frame").css('height', pageHeight * .27);
         $("#section-menu-button").hide();
-        }
+    }
     if(pageLayout == 'market' || pageLayout == 'case-study') {
         show_bottom_nav();
-        }
+    }
     if (pageLayout == 'product') {
         show_bottom_nav();
     }
@@ -648,6 +688,27 @@ function set_page_layout(pageLayout) {
 
         $('.distributor-video-cell').html(distributorContainer);
         $('.ceo-video-cell').html(ceoContainer);
+    }
+     if (pageLayout == 'doubleVideoRight') {
+        show_bottom_nav();
+
+        $('#right-column').removeClass('col-xs-6').addClass('col-xs-5');
+        var baseContent = '<h1 id="page-title">&nbsp;</h1><div id="page-content"></div>';
+        var videoRow = '<div class="col-sm-9 distributor-video-cell">Video</div><div class="col-sm-9 ceo-video-cell">Video</div>';
+
+        //$('#left-column').remove();
+        //$('#right-column').remove();
+        //$('.row:first').append(baseContent);
+        //$('.row.secondary').append(videoRow);
+        $('#left-column').html(baseContent);
+        $('#right-column').html(videoRow);
+
+        var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="/presentation/_Content/videos/video_cavoli.jpg" width="100%" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption">Jim Cavoli, Swagelok Vice President and Chief Financial Officer, Doing the right thing over long term</p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+
+        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="/presentation/_Content/videos/video_lopiccolo.jpg" width="100%" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption">Matt LoPiccolo, Swagelok, Vice President, IS & Chief Information Officer, SAP as an example of investing in the company, one source of truth, doing it the right way</p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+
+        $('.distributor-video-cell').html(distributorContainer);
+        $('.ceo-video-cell').html(ceoContainer);
         }
     if (pageLayout == 'text-video') {
         show_bottom_nav();
@@ -662,7 +723,7 @@ function set_page_layout(pageLayout) {
 
         $('.' +pageSlug + '-video-cell').html(videoContainer);
 
-        }
+    }
     if (pageLayout == 'text-image') {
         $('#left-column').removeClass('col-xs-6').addClass('col-xs-4 col-lg-5');
         $('#right-column').removeClass('col-xs-6').addClass('col-xs-7 col-lg-6');
@@ -672,54 +733,54 @@ function set_page_layout(pageLayout) {
 
         show_bottom_nav();
 
-}
+    }
     if (pageLayout == 'text-only') {
         show_bottom_nav();
 
-        }
+    }
 
     $('body').show();
-        }
+}
 
-            function show_accordion_icons() {
+function show_accordion_icons() {
 
-                $('a[data-toggle]').click(function () {
-                    $('.collapse').on('shown.bs.collapse', function () {
+    $('a[data-toggle]').click(function () {
+        $('.collapse').on('shown.bs.collapse', function () {
             $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
-            }).on('hidden.bs.collapse', function () {
-                $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
-                });
-                });
-                }
+        }).on('hidden.bs.collapse', function () {
+            $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+}
 
-    /**
-     * Controls the display of the overlay when the intro page is loaded.
-     */
-    function show_animated_overlay() {
+/**
+ * Controls the display of the overlay when the intro page is loaded.
+ */
+function show_animated_overlay() {
     var delayTime = 1000;
 
     var docHeight = $(document).height();
     var narrowHeight = docHeight * .25;
-        var centerHeight = docHeight * .49;
+    var centerHeight = docHeight * .49;
         var docBottom = $(document).height() -narrowHeight;
 
     var body = $("body");
 
     body.append("<div id='overlay-top'></div>");
-        body.append("<div id='overlay-center'></div>");
-        body.append("<div id='overlay-bottom'></div>");
+    body.append("<div id='overlay-center'></div>");
+    body.append("<div id='overlay-bottom'></div>");
 
-        $("#overlay-top")
-            .height(narrowHeight)
-            .css({
-                'opacity': 1,
+    $("#overlay-top")
+        .height(narrowHeight)
+        .css({
+            'opacity': 1,
             'position': 'absolute',
             'top': 0,
             'left': 0,
             'background-color': '#003a77',
             'width': '100%',
             'z-index': 5000
-            });
+        });
     $("#overlay-center")
         .height(centerHeight)
         .css({
@@ -732,7 +793,7 @@ function set_page_layout(pageLayout) {
             'z-index': 5000,
             'margin-top': 5,
             'margin-bottom': 5
-            });
+        });
     $("#overlay-bottom")
         .height(narrowHeight)
         .css({
@@ -751,139 +812,162 @@ function set_page_layout(pageLayout) {
             'top': narrowHeight,
             'left': -3000,
             'width': '100%'
-            });
+        });
 
     $('#overlay-center').delay(delayTime).animate({
-            left: 3000
+        left: 3000
     }, 600);
     $('#overlay-top').delay(delayTime).animate({
-    left: -3000
-            }, 1000);
+        left: -3000
+    }, 1000);
     $('#overlay-bottom').delay(delayTime).animate({
                 left: - 3000
-                }, 800);
+    }, 800);
 
-            $('.fly-in').delay(delayTime).animate({
-                left: 0
-                }, 1500);
+    $('.fly-in').delay(delayTime).animate({
+        left: 0
+    }, 1500);
 
-                }
+}
 
-        function show_animated_menu() {
-            var delayTime = 500;
+function show_animated_menu() {
+    var delayTime = 500;
 
-            $('.capabilities-row .menu-header').animate({
-                    left: 0
-            }, 1000);
+    $('.capabilities-row .menu-header').animate({
+        left: 0
+    }, 1000);
 
     $('.products-row .menu-header').animate({
-                    left: 0
+        left: 0
     }, 1300);
 
     $('.markets-row .menu-header').animate({
-                left: 0
-                }, 1600);
+        left: 0
+    }, 1600);
 
-                // Calculate width of header element
-                // It is set as a percentage, but we need a px dimension
-                var documentWidth = $(document).width();
-                var columnWidth = documentWidth / 12;
-                var newWidth = columnWidth * 2;
+    // Calculate width of header element
+    // It is set as a percentage, but we need a px dimension
+    var documentWidth = $(document).width();
+    var columnWidth = documentWidth / 12;
+    var newWidth = columnWidth * 2;
 
-                $('.capabilities-row .menu-list').delay(delayTime).animate({
+    $('.capabilities-row .menu-list').delay(delayTime).animate({
                     left : newWidth
-                    }, 800);
+    }, 800);
 
-                $('.products-row .menu-list').delay(delayTime).animate({
-                        left: newWidth
-                }, 1200);
+    $('.products-row .menu-list').delay(delayTime).animate({
+        left: newWidth
+    }, 1200);
 
-                $('.markets-row .menu-list').delay(delayTime).animate({
-                        left: newWidth
-                }, 1600);
+    $('.markets-row .menu-list').delay(delayTime).animate({
+        left: newWidth
+    }, 1600);
 
-                var capX =0;
-                var prodX = 0;
-                var liWidth = $('.landing-menu-item').outerWidth();
-                if(capX == 0) {
-                    $('.arrow-left.capabilities').hide();
-                }
+    var capX =0;
+    var prodX = 0;
+    var liWidth = $('.landing-menu-item').outerWidth();
+    if(capX == 0) {
+        $('.arrow-left.capabilities').hide();
+    }
                 if(prodX==0) {
-                    $('.arrow-left.products').hide();
-                    }
+        $('.arrow-left.products').hide();
+    }
 
-                $('.arrow-right.capabilities').click(function () {
+    $('.slidee').each(function () {
 
-                    capX -= liWidth;
+        var slideeA = $(this);
+        var slideeWidthA = $(slideeA).find('li').first().outerWidth();
 
-                    var menuItems = $('.slidee.capabilities-child-pages-list li').length;
-                    var overallListWidth = liWidth*menuItems;
+        var menuItemsA = $(slideeA).find('li').length;
+        var overallListWidthA = slideeWidthA * menuItemsA;
 
-                    if(overallListWidth -(liWidth*6) +capX <= 0) {
-                        $('.arrow-right.capabilities').hide(); }
-                        else {
-            $('.arrow-right.capabilities').show();
-                        }
-                    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
-                    $('.arrow-left.capabilities').show();
-                    });
-
-                $('.arrow-left.capabilities').click(function() {
-                    capX += liWidth;
-
-        var menuItems = $('.slidee.capabilities-child-pages-list li').length;
-        var overallListWidth = liWidth * menuItems;
-        if(capX == 0) {
-            $('.arrow-left.capabilities').hide();
-            }
-        if(overallListWidth -(liWidth*6) +capX <= 0) {
-            $('.arrow-right.capabilities').hide();
-                    }
-        else {
-            $('.arrow-right.capabilities').show();
+        if (overallListWidthA - (slideeWidthA * 6) + capX <= 0) {
+            $(slideeA).parent().parent().find('.arrow-right').hide();
         }
-                    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+ 'px)');
-
-                    });
-
-
-                $('.arrow-right.products').click(function() {
-                    prodX -= liWidth;
-
-                    var menuItems = $('.slidee.products-child-pages-list li').length;
-                    var overallListWidth = liWidth * menuItems;
-
-                    if(overallListWidth -(liWidth*6) + prodX <= 0) {
-                        $('.arrow-right.products').hide(); }
-                    else {
-                        $('.arrow-right.products').show(); }
-                    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-                    $('.arrow-left.products').show();
-                    console.log(overallListWidth -(liWidth*6) +prodX);
+        else {
+            $(slideeA).parent().parent().find('.arrow-right').show();
+        }
 
     });
 
-    $('.arrow-left.products').click(function() {
-        prodX += liWidth;
+    $('body').on('click', '.arrow-right', function(){
 
-        var menuItems = $('.slidee.products-child-pages-list li').length;
-        var overallListWidth = liWidth *menuItems;
+        var slidee = $(this).parent().find('.slidee');
 
-        if(overallListWidth -(liWidth *6) +prodX <= 0) {
-            $('.arrow-right.products').hide(); }
-        else {
-            $('.arrow-right.products').show(); }
+        capX -= $(slidee).find('li').first().outerWidth();
 
-        $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-        if(prodX == 0) {
-            $('.arrow-left.products').hide();
+        var menuItems = $(slidee).find('li').length;
+        var overallListWidth = liWidth*menuItems;
+
+        if(overallListWidth - (liWidth*6) + capX <= 0) {
+            $(this).hide();
         }
-        console.log(overallListWidth -(liWidth*6) +prodX);
-
-        });
+        else{
+            $(this).show();
         }
+        $(slidee).css('transform', 'translateX('+capX+'px)');
+        $(this).parent().find('.arrow-left').show();
 
-            function show_bottom_nav() {
+    });
+
+    $('body').on('click', '.arrow-left', function () {
+
+        var slidee = $(this).parent().find('.slidee');
+
+        capX += $(slidee).find('li').first().outerWidth();
+
+        var menuItems = $(slidee).find('li').length;
+        var overallListWidth = liWidth*menuItems;
+        if(capX == 0){
+            $('.arrow-left.capabilities').hide();
+        }
+        if(overallListWidth - (liWidth*6) + capX <= 0) {
+            $(this).parent().find('.arrow-right').hide();  }
+        else{
+            $(this).parent().find('.arrow-right').show();
+        }
+        $(slidee).css('transform', 'translateX(' + capX + 'px)');
+
+    });
+
+
+    //$('.arrow-right.products').click(function(){
+    //    prodX -= liWidth;
+
+    //    var menuItems = $('.slidee.products-child-pages-list li').length;
+    //    var overallListWidth = liWidth*menuItems;
+
+    //    if(overallListWidth - (liWidth*6) + prodX <= 0) {
+    //        $('.arrow-right.products').hide();  }
+    //    else{
+    //        $('.arrow-right.products').show();}
+    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+    //    $('.arrow-left.products').show();
+    //    console.log(overallListWidth - (liWidth*6) + prodX);
+
+    //});
+
+    //$('.arrow-left.products').click(function(){
+    //    prodX += liWidth;
+
+    //    var menuItems = $('.slidee.products-child-pages-list li').length;
+    //    var overallListWidth = liWidth*menuItems;
+
+    //    if(overallListWidth - (liWidth*6) + prodX <= 0) {
+    //        $('.arrow-right.products').hide();  }
+    //    else{
+    //        $('.arrow-right.products').show();}
+
+    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+    //    if(prodX == 0){
+    //        $('.arrow-left.products').hide();
+    //    }
+    //    console.log(overallListWidth - (liWidth*6) + prodX);
+
+    //});
+}
+
+function show_bottom_nav() {
     var delayTime = 300;
 
     var docHeight = $(document).height();
@@ -899,7 +983,7 @@ function set_page_layout(pageLayout) {
             'left': center,
             'text-align': 'center',
             'margin': 'auto'
-            });
+        });
 
     $("#footer-menu-link")
         .css({
@@ -910,67 +994,130 @@ function set_page_layout(pageLayout) {
             'height': docHeight * .05,
             'width': '100%',
             'z-index': 5000
-            });
+        });
 
-    //$('.frame')
-    //    .css({
-  //          'height': docHeight * .20 + 'px'
- //   }).prepend('<div class="arrow-left capabilities"></div> <div class="arrow-right capabilities"></div>');
+    $('.frame')
+        .css({
+            'height': docHeight * .23 + 'px'
+    }).prepend('<div class="arrow-left"></div> <div class="arrow-right"></div>');
 
 
-$('.footer-title-up').on('click', function () {
-            //alert('clicked');
-            if ($('.frame').is(":visible")) {
+    $('.footer-title-up').on('click', function () {
+        if ($('.frame').is(":visible")) {
             $('.row').css('opacity', '1');
             $('.footer-title').removeClass('footer-title-down').addClass('footer-title-up');
             $('.frame').hide(200);
-            }
-            else {
+        }
+        else {
             $('.row').css('opacity', '.3');
             $('.footer-title').removeClass('footer-title-up').addClass('footer-title-down');
             $('.frame').show(200);
-            }
-            });
+        }
+    });
 
-        var capX =0;
-        var prodX = 0;
-        var liWidth = $('.landing-menu-item').outerWidth();
+    var capX =0;
+    var prodX = 0;
+    var liWidth = $('.landing-menu-item').outerWidth();
 
-        if(capX == 0) {
-            $('.arrow-left.capabilities').hide();
+    if(capX == 0) {
+        $('.arrow-left.capabilities').hide();
     }
     if(prodX==0) {
         $('.arrow-left.products').hide();
+    }
+
+    $('.slidee').each(function () {
+
+        var slideeA = $(this);
+        var slideeWidthA = $(slideeA).find('li').first().outerWidth();
+
+        var menuItemsA = $(slideeA).find('li').length;
+        var overallListWidthA = slideeWidthA * menuItemsA;
+
+        if (capX == 0) {
+            $(slideeA).parent().parent().find('.arrow-left').hide();
         }
 
-    $('.arrow-right.capabilities').click(function() {
-        capX -= liWidth;
-        $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
-        $('.arrow-left.capabilities').show();
-        });
-
-        $('.arrow-left.capabilities').click(function() {
-            capX += liWidth;
-        $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
-        if(capX == 0) {
-            $('.arrow-left.capabilities').hide();
+        if (overallListWidthA - (slideeWidthA * 6) + capX <= 0) {
+            $(slideeA).parent().parent().find('.arrow-right').hide();
         }
+        else {
+            $(slideeA).parent().parent().find('.arrow-right').show();
+        }
+
     });
-    $('.arrow-right.products').click(function() {
-        prodX -= liWidth;
-        $('.products-child-pages-list').css('transform', 'translateX(' +prodX+'px)');
-        $('.arrow-left.products').show();
-        });
 
-    $('.arrow-left.products').click(function() {
-        prodX += liWidth;
-        $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-        if(prodX == 0) {
-            $('.arrow-left.products').hide();
+    $('body').on('click', '.arrow-right', function () {
+
+        var slidee = $(this).parent().find('.slidee');
+        var slideeWidth = $(slidee).find('li').first().outerWidth();
+
+        capX -= slideeWidth;
+
+        var menuItems = $(slidee).find('li').length;
+        var overallListWidth = slideeWidth * menuItems;
+
+        if (overallListWidth - (slideeWidth * 6) + capX <= 0) {
+            $(this).hide();
         }
-        });
+        else {
+            $(this).show();
+        }
+        $(slidee).css('transform', 'translateX(' + capX + 'px)');
+        $(this).parent().find('.arrow-left').show();
 
-            }
+    });
+
+    $('body').on('click', '.arrow-left', function () {
+
+        var slidee = $(this).parent().find('.slidee');
+        var slideeWidth = $(slidee).find('li').first().outerWidth();
+
+        capX += slideeWidth;
+
+        var menuItems = $(slidee).find('li').length;
+        var overallListWidth = slideeWidth * menuItems;
+        if (capX == 0) {
+            $(this).parent().find('.arrow-left').hide();
+        }
+        if (overallListWidth - (slideeWidth * 6) + capX <= 0) {
+            $(this).parent().find('.arrow-right').hide();
+        }
+        else {
+            $(this).parent().find('.arrow-right').show();
+        }
+        $(slidee).css('transform', 'translateX(' + capX + 'px)');
+
+    });
+
+    //$('.arrow-right.capabilities').click(function(){
+    //    capX -= liWidth;
+    //    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
+    //    $('.arrow-left.capabilities').show();
+    //});
+
+    //$('.arrow-left.capabilities').click(function(){
+    //    capX += liWidth;
+    //    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
+    //    if(capX == 0){
+    //        $('.arrow-left.capabilities').hide();
+    //    }
+    //});
+    //$('.arrow-right.products').click(function(){
+    //    prodX -= liWidth;
+    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+    //    $('.arrow-left.products').show();
+    //});
+
+    //$('.arrow-left.products').click(function(){
+    //    prodX += liWidth;
+    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
+    //    if(prodX == 0){
+    //        $('.arrow-left.products').hide();
+    //    }
+    //});
+
+}
 
 function show_market_slides() {
 
@@ -980,8 +1127,8 @@ function show_market_slides() {
     var two = one.next('.market-panel');
     var three = two.next('.market-panel');
 
-        var width = $('.market-section').width();
-        var offset = one.offset();
+    var width = $('.market-section').width();
+    var offset = one.offset();
 
     var leftEdge = width -offset.left;
 
@@ -999,7 +1146,7 @@ function show_market_slides() {
         'left': width,
         'width': width,
         'z-index': 5000
-        });
+    });
     three.css({
         'opacity': 1,
         'position': 'absolute',
@@ -1008,7 +1155,7 @@ function show_market_slides() {
         'z-index': 5000
     });
 
-    var sectionHeight = $(three).height() -20;
+    var sectionHeight = $(three).height() +20;
 
     $('.market-section').css('height', sectionHeight);
 
@@ -1019,21 +1166,21 @@ function show_market_slides() {
             $('#dot-' +id).addClass('dot-active');
             $('.market-panel').animate({
                     left: '-=' +leftEdge
-                    }, 800);
-                    }
-                    });
+            }, 800);
+        }
+    });
 
-                    $('.market-panel').on("swiperight", function () {
+    $('.market-panel').on("swiperight", function () {
 
-                        var id = $(this).attr('id');
-                        if (id != 'one') {
+        var id = $(this).attr('id');
+        if (id != 'one') {
             $('.dot').removeClass('dot-active');
             $('#dot-' +id).addClass('dot-active');
 
             $('.market-panel').animate({
                     left: '+=' +leftEdge
-                }, 800);
-            }
+            }, 800);
+        }
 
     });
 
@@ -1046,7 +1193,7 @@ function show_market_slides() {
 
         if($(this).hasClass('dot')) {
             $(this).addClass('dot-active');
-            }
+        }
         else {
             $('#dot-'+thisSlide).addClass('dot-active');
         }
@@ -1057,37 +1204,37 @@ function show_market_slides() {
             }, 800);
             $('#two').animate({
                 left: width
-                    }, 800);
-                    $('#three').animate({
-                        left: width * 2
-                    }, 800);
+            }, 800);
+            $('#three').animate({
+                left: width * 2
+            }, 800);
         }
         if (thisSlide == "two") {
             $('#two').animate({
-                        left: offset.left
+                left: offset.left
             }, 800);
             $('#one').animate({
                 left: offset.left - width
-                }, 800);
+            }, 800);
             $('#three').animate({
                     left : width
             }, 800);
-            }
+        }
         if (thisSlide == "three") {
             $('#three').animate({
                 left: offset.left
-                }, 800);
+            }, 800);
             $('#two').animate({
                     left: offset.left -width
             }, 800);
             $('#one').animate({
                 left: offset.left - width * 2
-                }, 800);
-                }
+            }, 800);
+        }
 
     });
 
-    }
+}
 
 function show_submenu(id) {
 
@@ -1105,18 +1252,22 @@ function show_submenu(id) {
     $.each(items, function () {
         if (this.title == page.title) {
             if(this.parent == 7 || this.id == 7) {
-                partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
+                partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="active"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
             }
 
-            if(this.parent != 4) {
-            productDropdown += '<li><a href="detail.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.headline + '<span></a></li>';
-            productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="detail.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.headline + '<span></a></div>';
+            if (this.parent != 4) {
+                var activeClass = '';
+                if(this.id == localStorage.getItem('PAGE_ID')){
+                    activeClass = 'active';
+                }
+                productDropdown += '<li><a href="detail.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
+                productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="detail.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.headline + '<span></a></div>';
             }
-            }
-            else if (this.parent == 7 || this.id == 7) {
+        }
+        else if (this.parent == 7 || this.id == 7) {
             partnerDropdown += '<li><a href="detail.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.menuTitle + '<span></a></li>';
-            }
-            });
+        }
+    });
 
     productDropdown += '</ul></div>';
     partnerDropdown += '</ul></div>';
@@ -1125,14 +1276,14 @@ function show_submenu(id) {
     if (page.parent == 4 || parent.parent == 4) {
 
         $('#submenu').append(productDropdown);
-        }
+    }
     if (page.parent == 4) {
         $('#product-landing-list').html(productLandingList);
-        }
-        else if (page.id == 7 || page.parent == 7) {
+    }
+    else if (page.id == 7 || page.parent == 7) {
         $('#submenu').append(partnerDropdown);
 
-        }
+    }
 
     $('#show-menu').on('click', function () {
 
@@ -1141,7 +1292,7 @@ function show_submenu(id) {
         if (page.id == 7 || page.parent == 7) {
             buttonClass = "capabilities";
 
-            }
+        }
 
         if ($('#submenu-content').is(':visible')) {
             $('.row').css('opacity', '1');
@@ -1153,8 +1304,8 @@ function show_submenu(id) {
             $('.row').css('opacity', '.1');
             $('#submenu-content').slideToggle(200);
             $('.show-menu-down').removeClass('show-menu-down').addClass('show-menu-up').addClass(buttonClass);
-}
-});
+        }
+    });
 
 }
 
@@ -1166,7 +1317,7 @@ function getParameterByName(name) {
     var regex = new RegExp("[\\?&]" +name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results === null ? "": decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+}
 
 function getObjects(obj, key, val) {
     var objects =[];
@@ -1176,8 +1327,8 @@ function getObjects(obj, key, val) {
             objects = objects.concat(getObjects(obj[i], key, val));
     } else if (i == key && obj[key]== val) {
             objects.push(obj);
-}
-}
+        }
+    }
     return objects;
 }
 
@@ -1205,7 +1356,7 @@ function getCookie(cname) {
         var c = ca[i];
         while (c.charAt(0) == ' ') c = c.substring(1);
         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-}
+    }
     return "";
 }
 
