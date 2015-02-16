@@ -134,9 +134,9 @@
 
     <style>
         #right-column {
-            margin-left: 0;
+                     margin-left: 0;
 
-        }
+                 }
         #left-column {
             padding-right: 30px;
         }
@@ -153,7 +153,6 @@
         });
 
         $(document).ready(function () {
-            console.log('1');
 
             var nextPage = parseInt(sessionStorage.getItem('PAGE_ID')) + 1;
             if(sessionStorage.getItem('PAGE_ID') == 7 ){
@@ -163,9 +162,6 @@
             var previousPage = parseInt(sessionStorage.getItem('PAGE_ID')) - 1;
             var previousPageDetails = get_page_details(previousPage);
 
-
-
-console.log(nextPageDetails.filename);
             if (previousPageDetails.filename == 'capabilities/submenu') {
                 var html = '<a data-url="product.html" onclick="showPrevious(' + previousPage + ')">';
                 html += '<span class="arrow glyphicon glyphicon-chevron-left" id="arrow-left"></span>';

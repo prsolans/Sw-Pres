@@ -42,11 +42,7 @@
     <div class="clearfix">&nbsp;</div>
     <div data-role="main" id="main-content">
         <div class="row">
-            <div class="col-xs-1">
-                <span class="arrow glyphicon glyphicon-chevron-left" id="arrow-left"></span>
-
-            </div>
-            <div class="col-xs-5" id="left-column">
+            <div class="col-xs-6" id="left-column">
                 <h1 id="page-title">&nbsp;</h1>
 
                 <div id="left-custom-content"><p>
@@ -95,7 +91,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xs-5" id="right-column">
+            <div class="col-xs-6" id="right-column">
                 <h1 id="page-title">&nbsp;</h1>
 
                 <div id="right-custom-content"><p>
@@ -108,10 +104,6 @@
                 </p>
                 </div>
             </div>
-            <div class="col-xs-1">
-                <span class="arrow glyphicon glyphicon-chevron-right" id="arrow-right"></span>
-
-            </div>
         </div>
 
         <div class="row secondary">
@@ -121,7 +113,7 @@
     </div>
 
     <div id="fixed-footer" data-role="footer" data-position="fixed" data-tap-toggle="false">
-        
+
         <h1 class="footer-title footer-title-up capabilities-header">CAPABILITIES</h1>
 
         <div class="frame" style="display: none;">
@@ -133,10 +125,20 @@
     <script src="/presentation/_Scripts/bootstrap.min.js"></script>
     <link href="/presentation/_Scripts/video-js/video-js.min.css" rel="stylesheet">
     <script src="/presentation/_Scripts/video-js/video.js"></script>
+    <style>
+        #right-column {
+            margin-left: 0;
 
+        }
+        #left-column {
+            padding-right: 30px;
+        }
+    </style>
     <script>
 
         $(document).ready(function () {
+
+//            set_page_layout(localStorage.getItem('pageLayout'));
 
             // -------------------------------------------------------------
             //   Basic Navigation
