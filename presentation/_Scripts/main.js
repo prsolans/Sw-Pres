@@ -1265,11 +1265,14 @@ function show_submenu(id) {
     $('.dots-row').empty();
 
     $.each(items, function () {
-
+        if (this.parent == 18 && page.filename == 'products/product') {
+            $('.dots-row').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot" id="' + this.pageSlug + '-dot"></span></a>');
+        }
         if (this.title == page.title) {
+
             // 7 is the page ID for the One Swagelok (Your Global Partner) content;
             if(this.parent == 7 || this.id == 7) {
-                $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
+                //$('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
                 partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="active"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
             }
 
@@ -1281,11 +1284,18 @@ function show_submenu(id) {
                 productDropdown += '<li><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
                 productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="product.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.headline + '<span></a></div>';
             }
+
+
         }
-        else if (this.parent == 7 || this.id == 7) {
+
+        if (this.parent == 7 && page.filename == 'capabilities/submenu') {
+            console.log(this.title);
             $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot" id="'+this.pageSlug+'-dot"></span></a>');
             partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.menuTitle + '<span></a></li>';
         }
+
+
+
 
 
     });
