@@ -627,6 +627,7 @@ function load_page_info(id) {
             var html = '<a href="" id="show-menu" class="show-menu-down">' +displayTitle + '</a>';
             $('#submenu').append(html);
             show_submenu(id);
+
         }
 
     }
@@ -984,16 +985,6 @@ function show_bottom_nav() {
     var linkTop = docHeight * .95;
 
     var dotLocation = linkTop -docHeight * .05;
-    var center = $(document).width() / 2 -($('.dot').width() * 5);
-
-    $(".dots-row")
-        .css({
-            'position': 'absolute',
-            'top': dotLocation,
-            'left': center,
-            'text-align': 'center',
-            'margin': 'auto'
-        });
 
     $("#footer-menu-link")
         .css({
@@ -1099,6 +1090,19 @@ function show_bottom_nav() {
         $(slidee).css('transform', 'translateX(' + capX + 'px)');
 
     });
+
+    var center = $('#main-content').width() / 2 -($('.dot').width() * $('.dot').length);
+
+    //alert(center);
+
+    $(".dots-row")
+        .css({
+            'position': 'relative',
+            'top': dotLocation *.85,
+            'text-align': 'center',
+            'margin': 'auto'
+        });
+
 
     //$('.arrow-right.capabilities').click(function(){
     //    capX -= liWidth;
@@ -1258,10 +1262,14 @@ function show_submenu(id) {
     var partnerDropdown = '<div id="submenu-content" class="submenu-capabilities" style="display: none;"><ul>';
     var productLandingList = '';
 
+    $('.dots-row').empty();
 
     $.each(items, function () {
+
         if (this.title == page.title) {
+            // 7 is the page ID for the One Swagelok (Your Global Partner) content;
             if(this.parent == 7 || this.id == 7) {
+                $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
                 partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="active"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
             }
 
@@ -1275,8 +1283,11 @@ function show_submenu(id) {
             }
         }
         else if (this.parent == 7 || this.id == 7) {
+            $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot" id="'+this.pageSlug+'-dot"></span></a>');
             partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.menuTitle + '<span></a></li>';
         }
+
+
     });
 
     productDropdown += '</ul></div>';
@@ -1357,8 +1368,7 @@ function setLinks(toPage, fromPage, exdays) {
     var d = new Date();
     d.setTime(d.getTime() +(exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" +d.toUTCString();
-
-
+    $('#main-container').pagecontainer("change", "submenu.html", {transition: "flip"});
 }
 
 function getCookie(cname) {
