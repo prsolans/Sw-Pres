@@ -64,7 +64,7 @@ var content = '[' +
     ']';
 
 //get_available_markets(marketList);
-get_custom_content(layoutsList, content);
+get_custom_content(content);
 
 if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash') {
     get_video_details(videoList);
