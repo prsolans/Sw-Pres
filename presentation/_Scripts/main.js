@@ -12,8 +12,8 @@ var pagelist = '{' +
     '{ "pageSlug":"services", "id": 9, "title": "Services", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-services" },' +
     '{ "pageSlug":"delivery", "id": 10, "title": "Delivery", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-delivery" },' +
     '{ "pageSlug":"training", "id": 11, "title": "Training", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-training" },' +
-    '{ "pageSlug":"customSolutions", "id": 12, "title": "Custom Solutions", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
-    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/slides", "layout": "case-study", "parent":"3", "background":"capabilities2", "menu":"ca-partner" },' +
+    '{ "pageSlug":"customSolutions", "id": 12, "title": "Custom Solutions", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-custom" },' +
+    '{ "pageSlug":"applications", "id": 13, "title": "Applications", "filename": "capabilities/slides", "layout": "case-study", "parent":"3", "background":"capabilities2", "menu":"ca-applications" },' +
     '{ "pageSlug":"power", "id": 14, "title": "Power", "filename": "markets/detail","layout": "market", "parent":"5", "background":"power", "menu":"ma-power" },' +
     '{ "pageSlug":"powerDetail", "id": 15, "title": "Power - Detail", "filename": "products/slides", "layout": "market", "parent":"14", "background":"power-blur", "menu":"pr-leak" },' +
     '{ "pageSlug":"oilGas", "id": 16, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
@@ -30,12 +30,6 @@ var pagelist = '{' +
     '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-weld", "menu":"weld", "headline":"Weld Fittings & Adapters", "htmlContent":"<p>Ultrahigh-purity, specially cleaned, and industrial weld fittings from Swagelok are engineered to make permanent, high-integrity connections. Made from a special grade of SAF 2507™ super duplex material, our weld fittings and adapters offer excellent corrosion resistance in chloride-containing environments. <p>From general industrial to ultrahigh-purity applications, count on high-integrity connections that last with weld fittings from Swagelok, available in a variety of materials, sizes, and shapes. Options include: <ul> <li>Micro-Fit&reg; High-Purity Tube Butt Weld Fittings</li> <li>Pipe Socket Weld Fittings</li> <li>Tube Butt Weld Automatic Fittings</li> <li>Tube Butt Weld Fittings</li> <li>Tube Socket Weld Automatic Fittings</li> <li>Tube Socket Weld Fittings</li> <li>Weld Adapter Fittings</li> </ul>"},' +
     '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-bco", "menu":"bco", "headline":"BType VCO&reg; L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO&reg; fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO&reg; Bodies</li> <li>VCO&reg; Nuts</li> <li>VCO&reg; Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
     '{ "pageSlug":"", "id": 29, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-fittings", "menu":"ts-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from 1/2 to 4 inches, our selection includes: <ul> <li>TS Fittings</li></ul>"},' +
-    '{ "pageSlug":"", "id": 30, "title": "Valves", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
-    '{ "pageSlug":"", "id": 31, "title": "Filters", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
-    '{ "pageSlug":"", "id": 32, "title": "Hoses and Flexible Tubing", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
-    '{ "pageSlug":"", "id": 33, "title": "Leak Detectors, Lubricants and Sealers", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" },' +
-    '{ "pageSlug":"", "id": 34, "title": "Measurement Devices", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "pageSlug":"", "id": 35, "title": "Case Study", "filename": "casestudy/slides", "layout": "text-only", "parent":"0", "background":"case-study" },' +
     '{ "pageSlug":"businessModel", "id": 36, "title": "Expanding to make the world smaller.", "menu":"undefined", "menuTitle":"Business Model", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We continue to refine our unique business model that puts local inventory close to the customer in regions throughout the world. We establish distributors as independent businesses, staffed with local people who are focused only on Swagelok products and building trust with customers. </p> <p>This model is our cornerstone and it sets us apart. </p> <p>Our distributors are closely connected with Swagelok and with each other. Anywhere in the world, you can get the same top-flight service from Swagelok. But if you design and specify in one location and your job site is another, distributors in both locations will work with you as one team. </p> <p>We are one interconnected global organization – “One Swagelok.” </p>" },' +
     '{ "pageSlug":"marketsCustomers", "id": 37, "title": "More than parts&mdash;partnerships.", "menu":"more-than-parts", "menuTitle":"Markets and Customers", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Our customers need more than a components supplier. They need our help across their operations. <p>Our technical experts work directly with the customer to see problems and challenges firsthand and anticipate what customer needs will be next year – or in three to five years. We aim to be ready with the right products, support, and applications knowledge. <p>Our materials science group works tirelessly to understand process and environmental conditions in oil fields. In the lab our engineers test new technologies for natural gas vehicles, semiconductor tools, and more. <p>We conduct research with national laboratories and serve on standards committees because it is our mission to know and to be ready on behalf of our customers." },' +
     '{ "pageSlug":"engineering", "id": 38, "title": "In pursuit of answers.", "menu":"in-pursuit-of-answers", "menuTitle":"Engineering", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We’re a practical company. For us, innovation starts with a customer’s problem. </p> <p>Our engineers are motivated by in-person interactions with the customer. Understanding the issues. Talking them over. Weighing options. A customer challenge is what we rally around. </p> <p>At the same time, we’re focused on safety. It’s our job to protect our customers and their applications. All Swagelok engineers know this. Every day, it’s on their mind. </p> <p>We’re not a public company under pressure for short-term results. We’re focused on doing the right thing. </p> <p>When a new product hits the market, it must be bulletproof. </p>" },' +
@@ -46,16 +40,20 @@ var pagelist = '{' +
     '{ "pageSlug":"financialStewardship", "id": 43, "title": "A mission with momentum.", "menu":"undefined", "menuTitle":"Financial Stewardship", "filename": "capabilities/submenu", "layout": "doubleVideoRight", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
     '{ "pageSlug":"associates", "id": 44, "title": "One team of thousands.", "menu":"associates", "menuTitle":"Associates", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We strive for nothing less than an exceptional customer experience. And so much of that depends on our people&mdash;our distributors, corporate leaders, and associates worldwide. </p> <p>These are rare individuals with a passion for service. They are on a mission, going to extraordinary lengths with the customer in mind.</p> <p>For the majority of our customers, their most direct experience is through our distributors. They are backed by cross-functional teams in engineering, sales and fulfillment&mdash;about 3,600 distributor associates at 225 stocking locations in 70 countries. </p> <p>We’re one interconnected global organization&mdash;“One Swagelok”&mdash;engineered to perform for you, our valued customer.</p>" },' +
     '{ "pageSlug":"socialResponsibility", "id": 45, "title": "Engineering a better world.", "menu":"undefined", "menuTitle":"Social Responsibility", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" },' +
-    '{ "pageSlug":"", "id": 46, "title": "Miniature Modular Systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-miniatureModular" },' +
-    '{ "pageSlug":"", "id": 47, "title": "Pre-Engineered Subsystems (PrESS)", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-PRESS" },' +
-    '{ "pageSlug":"", "id": 48, "title": "Quick Connects", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-quickConnects" },' +
-    '{ "pageSlug":"", "id": 49, "title": "Regulators", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-regulators" },' +
-    '{ "pageSlug":"", "id": 50, "title": "Sample Cylinders", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-sampleCylinder" },' +
-    '{ "pageSlug":"", "id": 51, "title": "Tubing and Accessories", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-tubingAccessories" },' +
-    '{ "pageSlug":"", "id": 52, "title": "Welding Systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-welding" },' +
-        '{ "pageSlug":"chemical", "id": 53, "title": "Chemical","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-chemical" },' +
-    '{ "pageSlug":"semiconductor", "id": 54, "title": "Semiconductor","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-semiconductor" }' +
-
+    '{ "pageSlug":"chemical", "id": 53, "title": "Chemical","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-chemical" },' +
+    '{ "pageSlug":"semiconductor", "id": 54, "title": "Semiconductor","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-semiconductor" },' +
+    '{ "pageSlug":"valves", "id": 60, "title": "Valves", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
+    '{ "pageSlug":"hoses", "id": 61, "title": "Hoses and Flexible Tubing", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "pageSlug":"regulators", "id": 62, "title": "Regulators", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-regulators" },' +
+    '{ "pageSlug":"quickConnects", "id": 63, "title": "Quick-connects", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-quickConnects" },' +
+    '{ "pageSlug":"measurementDevices", "id": 64, "title": "Measurement devices", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
+    '{ "pageSlug":"tubing", "id": 65, "title": "Tubing and tools", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-tubingAccessories" },' +
+    '{ "pageSlug":"filters", "id": 66, "title": "Filters", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
+    '{ "pageSlug":"sampleCylinders", "id": 67, "title": "Sample cylinders", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-sampleCylinder" },' +
+    '{ "pageSlug":"mpcModular", "id": 68, "title": "MPC modular systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-miniatureModular" },' +
+    '{ "pageSlug":"pre-engineered", "id": 69, "title": "Pre-Engineered Subsystems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-PRESS" },' +
+    '{ "pageSlug":"welding", "id": 70, "title": "Welding systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-welding" },' +
+    '{ "pageSlug":"leakDetector", "id": 71, "title": "Leak detectors, lubricants and sealants", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" }' +
     ']}';
 
 //var idleTime = 0;
@@ -1098,7 +1096,7 @@ function show_bottom_nav() {
     $(".dots-row")
         .css({
             'position': 'relative',
-            'top': dotLocation *.85,
+            'top': dotLocation *.75,
             'text-align': 'center',
             'margin': 'auto'
         });
@@ -1255,18 +1253,22 @@ function show_submenu(id) {
     var page = get_page_details(id);
     var parent = get_page_details(page.parent);
 
+console.log(parent);
     var select = JSON.parse(pagelist);
     var items = select.pages;
 
     var productDropdown = '<div id="submenu-content" class="submenu-products" style="display: none;"><ul>';
     var partnerDropdown = '<div id="submenu-content" class="submenu-capabilities" style="display: none;"><ul>';
+
     var productLandingList = '';
 
     $('.dots-row').empty();
 
     $.each(items, function () {
         if (this.parent == 18 && page.filename == 'products/product') {
-            $('.dots-row').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot" id="' + this.pageSlug + '-dot"></span></a>');
+            var activeClass = '';
+            if (this.headline == page.headline) { activeClass = 'dot-active'; }
+            $('.dots-row').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot '+activeClass+'" id="' + this.pageSlug + '-dot"></span></a>');
         }
         if (this.title == page.title) {
 
@@ -1278,7 +1280,8 @@ function show_submenu(id) {
 
             if (this.parent != 4) {
                 var activeClass = '';
-                if(this.id == localStorage.getItem('PAGE_ID')){
+                if (this.headline == page.headline) {
+                    alert(this.id);
                     activeClass = 'active';
                 }
                 productDropdown += '<li><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
@@ -1288,12 +1291,13 @@ function show_submenu(id) {
 
         }
 
-        if (this.parent == 7 && page.filename == 'capabilities/submenu') {
-            console.log(this.title);
-            $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot" id="'+this.pageSlug+'-dot"></span></a>');
-            partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.menuTitle + '<span></a></li>';
-        }
+        else if (this.parent == 7 && page.filename == 'capabilities/submenu' || this.id == 7) {
 
+            var activeClass = '';
+            if (this.title == page.title) { activeClass = 'dot-active'; }
+            $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot ' + activeClass + '" id="' + this.pageSlug + '-dot"></span></a>');
+            partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
+        }
 
 
 
