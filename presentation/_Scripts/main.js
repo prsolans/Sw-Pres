@@ -30,16 +30,16 @@ var pagelist = '{' +
     '{ "pageSlug":"", "id": 27, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-weld", "menu":"weld", "headline":"Weld Fittings & Adapters", "htmlContent":"<p>Ultrahigh-purity, specially cleaned, and industrial weld fittings from Swagelok are engineered to make permanent, high-integrity connections. Made from a special grade of SAF 2507™ super duplex material, our weld fittings and adapters offer excellent corrosion resistance in chloride-containing environments. <p>From general industrial to ultrahigh-purity applications, count on high-integrity connections that last with weld fittings from Swagelok, available in a variety of materials, sizes, and shapes. Options include: <ul> <li>Micro-Fit&reg; High-Purity Tube Butt Weld Fittings</li> <li>Pipe Socket Weld Fittings</li> <li>Tube Butt Weld Automatic Fittings</li> <li>Tube Butt Weld Fittings</li> <li>Tube Socket Weld Automatic Fittings</li> <li>Tube Socket Weld Fittings</li> <li>Weld Adapter Fittings</li> </ul>"},' +
     '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-bco", "menu":"bco", "headline":"BType VCO&reg; L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO&reg; fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO&reg; Bodies</li> <li>VCO&reg; Nuts</li> <li>VCO&reg; Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
     '{ "pageSlug":"", "id": 29, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-fittings", "menu":"ts-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from 1/2 to 4 inches, our selection includes: <ul> <li>TS Fittings</li></ul>"},' +
-    '{ "pageSlug":"businessModel", "id": 36, "title": "Expanding to make the world smaller.", "menu":"undefined", "menuTitle":"Business Model", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We continue to refine our unique business model that puts local inventory close to the customer in regions throughout the world. We establish distributors as independent businesses, staffed with local people who are focused only on Swagelok products and building trust with customers. </p> <p>This model is our cornerstone and it sets us apart. </p> <p>Our distributors are closely connected with Swagelok and with each other. Anywhere in the world, you can get the same top-flight service from Swagelok. But if you design and specify in one location and your job site is another, distributors in both locations will work with you as one team. </p> <p>We are one interconnected global organization – “One Swagelok.” </p>" },' +
-    '{ "pageSlug":"marketsCustomers", "id": 37, "title": "More than parts&mdash;partnerships.", "menu":"more-than-parts", "menuTitle":"Markets and Customers", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Our customers need more than a components supplier. They need our help across their operations. <p>Our technical experts work directly with the customer to see problems and challenges firsthand and anticipate what customer needs will be next year – or in three to five years. We aim to be ready with the right products, support, and applications knowledge. <p>Our materials science group works tirelessly to understand process and environmental conditions in oil fields. In the lab our engineers test new technologies for natural gas vehicles, semiconductor tools, and more. <p>We conduct research with national laboratories and serve on standards committees because it is our mission to know and to be ready on behalf of our customers." },' +
-    '{ "pageSlug":"engineering", "id": 38, "title": "In pursuit of answers.", "menu":"in-pursuit-of-answers", "menuTitle":"Engineering", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We’re a practical company. For us, innovation starts with a customer’s problem. </p> <p>Our engineers are motivated by in-person interactions with the customer. Understanding the issues. Talking them over. Weighing options. A customer challenge is what we rally around. </p> <p>At the same time, we’re focused on safety. It’s our job to protect our customers and their applications. All Swagelok engineers know this. Every day, it’s on their mind. </p> <p>We’re not a public company under pressure for short-term results. We’re focused on doing the right thing. </p> <p>When a new product hits the market, it must be bulletproof. </p>" },' +
-    '{ "pageSlug":"shopFloorCulture", "id": 39, "title": "In the right hands.", "menu":"shopFloorCulture", "menuTitle":"Culture, values and safety", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Anyone who spends any time in a Swagelok manufacturing facility comes away with a sense that here is something exceptional – cleanliness, orderliness, complete adherence to a set of quality and safety practices. </p> <p>On the Swagelok shop floor there are absolutes, and we believe that any deviation could have dire consequences for us and our customers. We achieve this through training, practice, policy, and most importantly culture. </p> <p>Swagelok associates are part owners, and share in the company’s success. </p> <p>Their ideas are heard, they recommend improvements, report things that seem just a little out of the ordinary and serve as the guardians of safety. </p> <p>That’s why Swagelok has experiences double-digit decreases in reported injury cases year after year and we’re now in the top quartile of our industry category. </p>" },' +
-    '{ "pageSlug":"quality", "id": 40, "title": "Zero Customer Disappointments", "menu":"quality", "menuTitle":"Quality", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>There is a phrase that every Swagelok executive, engineer and shop floor associate knows – Zero Customer Disappointments. It is a way of life. </p> <p>We strive to ensure the customer has a perfect experience with every product and service, every time and that they deliver on the promise of safety and total peace of mind.</p> <p>That’s the standard we hold ourselves to. </p> <p>We’re at the point where “zero” is really possible, and we’re on a mission to make it happen.</p>" },' +
-    '{ "pageSlug":"manufacturing", "id": 41, "title": "Nonstop operation.", "menu":"manufacturing", "menuTitle":"Manufacturing", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We own the product manufacturing process from start to finish. This way we can control the maximum number of variables, ensuring product quality. </p> <p>We make some of our own cutting tools and we’re very deliberate about the machines we buy. Then, we are disciplined about routine service. And we run a predictive maintenance program that addresses repairs before there is a breakdown. </p> <p>Our machines must be in the very best operating condition, executing at the tightest tolerances. </p> <p>What is our motivation for such exactitude? It’s product quality. It’s zero customer disappointments. And it’s the safety of our machine operators.</p>" },' +
-    '{ "pageSlug":"globalSourcing", "id": 42, "title": "Suppliers we can count on.", "menu":"globalSourcing", "menuTitle":"Global Sourcing, Risk Mitigation", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Swagelok comes through to customers again and again partly due to the quality of our supply base. </p> <p>We look long and hard to find our suppliers and apply enormous amounts of scrutiny. We’re looking not just at the product and quality systems, but also their values and quality of leadership.</p> <p>With so much riding on our suppliers, we ask them to take extraordinary measures – in some cases, to keep their proprietary secrets in escrow – in others, to keep extra inventory on hand.</p> <p>We do everything we can to mitigate risk. That’s our promise to customers.</p>" },' +
-    '{ "pageSlug":"financialStewardship", "id": 43, "title": "A mission with momentum.", "menu":"undefined", "menuTitle":"Financial Stewardship", "filename": "capabilities/submenu", "layout": "doubleVideoRight", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
-    '{ "pageSlug":"associates", "id": 44, "title": "One team of thousands.", "menu":"associates", "menuTitle":"Associates", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We strive for nothing less than an exceptional customer experience. And so much of that depends on our people&mdash;our distributors, corporate leaders, and associates worldwide. </p> <p>These are rare individuals with a passion for service. They are on a mission, going to extraordinary lengths with the customer in mind.</p> <p>For the majority of our customers, their most direct experience is through our distributors. They are backed by cross-functional teams in engineering, sales and fulfillment&mdash;about 3,600 distributor associates at 225 stocking locations in 70 countries. </p> <p>We’re one interconnected global organization&mdash;“One Swagelok”&mdash;engineered to perform for you, our valued customer.</p>" },' +
-    '{ "pageSlug":"socialResponsibility", "id": 45, "title": "Engineering a better world.", "menu":"undefined", "menuTitle":"Social Responsibility", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" },' +
+    '{ "pageSlug":"businessModel", "id": 30, "title": "Expanding to make the world smaller.", "menu":"undefined", "menuTitle":"Business Model", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We continue to refine our unique business model that puts local inventory close to the customer in regions throughout the world. We establish distributors as independent businesses, staffed with local people who are focused only on Swagelok products and building trust with customers. </p> <p>This model is our cornerstone and it sets us apart. </p> <p>Our distributors are closely connected with Swagelok and with each other. Anywhere in the world, you can get the same top-flight service from Swagelok. But if you design and specify in one location and your job site is another, distributors in both locations will work with you as one team. </p> <p>We are one interconnected global organization – “One Swagelok.” </p>" },' +
+    '{ "pageSlug":"marketsCustomers", "id": 31, "title": "More than parts&mdash;partnerships.", "menu":"more-than-parts", "menuTitle":"Markets and Customers", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Our customers need more than a components supplier. They need our help across their operations. <p>Our technical experts work directly with the customer to see problems and challenges firsthand and anticipate what customer needs will be next year – or in three to five years. We aim to be ready with the right products, support, and applications knowledge. <p>Our materials science group works tirelessly to understand process and environmental conditions in oil fields. In the lab our engineers test new technologies for natural gas vehicles, semiconductor tools, and more. <p>We conduct research with national laboratories and serve on standards committees because it is our mission to know and to be ready on behalf of our customers." },' +
+    '{ "pageSlug":"engineering", "id": 32, "title": "In pursuit of answers.", "menu":"in-pursuit-of-answers", "menuTitle":"Engineering", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We’re a practical company. For us, innovation starts with a customer’s problem. </p> <p>Our engineers are motivated by in-person interactions with the customer. Understanding the issues. Talking them over. Weighing options. A customer challenge is what we rally around. </p> <p>At the same time, we’re focused on safety. It’s our job to protect our customers and their applications. All Swagelok engineers know this. Every day, it’s on their mind. </p> <p>We’re not a public company under pressure for short-term results. We’re focused on doing the right thing. </p> <p>When a new product hits the market, it must be bulletproof. </p>" },' +
+    '{ "pageSlug":"shopFloorCulture", "id": 33, "title": "In the right hands.", "menu":"shopFloorCulture", "menuTitle":"Culture, values and safety", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Anyone who spends any time in a Swagelok manufacturing facility comes away with a sense that here is something exceptional – cleanliness, orderliness, complete adherence to a set of quality and safety practices. </p> <p>On the Swagelok shop floor there are absolutes, and we believe that any deviation could have dire consequences for us and our customers. We achieve this through training, practice, policy, and most importantly culture. </p> <p>Swagelok associates are part owners, and share in the company’s success. </p> <p>Their ideas are heard, they recommend improvements, report things that seem just a little out of the ordinary and serve as the guardians of safety. </p> <p>That’s why Swagelok has experiences double-digit decreases in reported injury cases year after year and we’re now in the top quartile of our industry category. </p>" },' +
+    '{ "pageSlug":"quality", "id": 34, "title": "Zero Customer Disappointments", "menu":"quality", "menuTitle":"Quality", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>There is a phrase that every Swagelok executive, engineer and shop floor associate knows – Zero Customer Disappointments. It is a way of life. </p> <p>We strive to ensure the customer has a perfect experience with every product and service, every time and that they deliver on the promise of safety and total peace of mind.</p> <p>That’s the standard we hold ourselves to. </p> <p>We’re at the point where “zero” is really possible, and we’re on a mission to make it happen.</p>" },' +
+    '{ "pageSlug":"manufacturing", "id": 35, "title": "Nonstop operation.", "menu":"manufacturing", "menuTitle":"Manufacturing", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We own the product manufacturing process from start to finish. This way we can control the maximum number of variables, ensuring product quality. </p> <p>We make some of our own cutting tools and we’re very deliberate about the machines we buy. Then, we are disciplined about routine service. And we run a predictive maintenance program that addresses repairs before there is a breakdown. </p> <p>Our machines must be in the very best operating condition, executing at the tightest tolerances. </p> <p>What is our motivation for such exactitude? It’s product quality. It’s zero customer disappointments. And it’s the safety of our machine operators.</p>" },' +
+    '{ "pageSlug":"globalSourcing", "id": 36, "title": "Suppliers we can count on.", "menu":"globalSourcing", "menuTitle":"Global Sourcing, Risk Mitigation", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Swagelok comes through to customers again and again partly due to the quality of our supply base. </p> <p>We look long and hard to find our suppliers and apply enormous amounts of scrutiny. We’re looking not just at the product and quality systems, but also their values and quality of leadership.</p> <p>With so much riding on our suppliers, we ask them to take extraordinary measures – in some cases, to keep their proprietary secrets in escrow – in others, to keep extra inventory on hand.</p> <p>We do everything we can to mitigate risk. That’s our promise to customers.</p>" },' +
+    '{ "pageSlug":"financialStewardship", "id": 37, "title": "A mission with momentum.", "menu":"undefined", "menuTitle":"Financial Stewardship", "filename": "capabilities/submenu", "layout": "doubleVideoRight", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
+    '{ "pageSlug":"associates", "id": 38, "title": "One team of thousands.", "menu":"associates", "menuTitle":"Associates", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We strive for nothing less than an exceptional customer experience. And so much of that depends on our people&mdash;our distributors, corporate leaders, and associates worldwide. </p> <p>These are rare individuals with a passion for service. They are on a mission, going to extraordinary lengths with the customer in mind.</p> <p>For the majority of our customers, their most direct experience is through our distributors. They are backed by cross-functional teams in engineering, sales and fulfillment&mdash;about 3,600 distributor associates at 225 stocking locations in 70 countries. </p> <p>We’re one interconnected global organization&mdash;“One Swagelok”&mdash;engineered to perform for you, our valued customer.</p>" },' +
+    '{ "pageSlug":"socialResponsibility", "id": 39, "title": "Engineering a better world.", "menu":"undefined", "menuTitle":"Social Responsibility", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" },' +
     '{ "pageSlug":"chemical", "id": 53, "title": "Chemical","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-chemical" },' +
     '{ "pageSlug":"semiconductor", "id": 54, "title": "Semiconductor","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-semiconductor" },' +
     '{ "pageSlug":"valves", "id": 60, "title": "Valves", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
@@ -939,41 +939,6 @@ function show_animated_menu() {
 
     });
 
-
-    //$('.arrow-right.products').click(function(){
-    //    prodX -= liWidth;
-
-    //    var menuItems = $('.slidee.products-child-pages-list li').length;
-    //    var overallListWidth = liWidth*menuItems;
-
-    //    if(overallListWidth - (liWidth*6) + prodX <= 0) {
-    //        $('.arrow-right.products').hide();  }
-    //    else{
-    //        $('.arrow-right.products').show();}
-    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-    //    $('.arrow-left.products').show();
-    //    console.log(overallListWidth - (liWidth*6) + prodX);
-
-    //});
-
-    //$('.arrow-left.products').click(function(){
-    //    prodX += liWidth;
-
-    //    var menuItems = $('.slidee.products-child-pages-list li').length;
-    //    var overallListWidth = liWidth*menuItems;
-
-    //    if(overallListWidth - (liWidth*6) + prodX <= 0) {
-    //        $('.arrow-right.products').hide();  }
-    //    else{
-    //        $('.arrow-right.products').show();}
-
-    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-    //    if(prodX == 0){
-    //        $('.arrow-left.products').hide();
-    //    }
-    //    console.log(overallListWidth - (liWidth*6) + prodX);
-
-    //});
 }
 
 function show_bottom_nav() {
@@ -1091,7 +1056,6 @@ function show_bottom_nav() {
 
     var center = $('#main-content').width() / 2 -($('.dot').width() * $('.dot').length);
 
-    //alert(center);
 
     $(".dots-row")
         .css({
@@ -1100,34 +1064,6 @@ function show_bottom_nav() {
             'text-align': 'center',
             'margin': 'auto'
         });
-
-
-    //$('.arrow-right.capabilities').click(function(){
-    //    capX -= liWidth;
-    //    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
-    //    $('.arrow-left.capabilities').show();
-    //});
-
-    //$('.arrow-left.capabilities').click(function(){
-    //    capX += liWidth;
-    //    $('.capabilities-child-pages-list').css('transform', 'translateX('+capX+'px)');
-    //    if(capX == 0){
-    //        $('.arrow-left.capabilities').hide();
-    //    }
-    //});
-    //$('.arrow-right.products').click(function(){
-    //    prodX -= liWidth;
-    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-    //    $('.arrow-left.products').show();
-    //});
-
-    //$('.arrow-left.products').click(function(){
-    //    prodX += liWidth;
-    //    $('.products-child-pages-list').css('transform', 'translateX('+prodX+'px)');
-    //    if(prodX == 0){
-    //        $('.arrow-left.products').hide();
-    //    }
-    //});
 
 }
 
@@ -1253,7 +1189,6 @@ function show_submenu(id) {
     var page = get_page_details(id);
     var parent = get_page_details(page.parent);
 
-console.log(parent);
     var select = JSON.parse(pagelist);
     var items = select.pages;
 
@@ -1271,17 +1206,15 @@ console.log(parent);
             $('.dots-row').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot '+activeClass+'" id="' + this.pageSlug + '-dot"></span></a>');
         }
         if (this.title == page.title) {
-
             // 7 is the page ID for the One Swagelok (Your Global Partner) content;
             if(this.parent == 7 || this.id == 7) {
-                //$('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
+                $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
                 partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="active"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
             }
 
             if (this.parent != 4) {
                 var activeClass = '';
                 if (this.headline == page.headline) {
-                    alert(this.id);
                     activeClass = 'active';
                 }
                 productDropdown += '<li><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
@@ -1292,7 +1225,6 @@ console.log(parent);
         }
 
         else if (this.parent == 7 && page.filename == 'capabilities/submenu' || this.id == 7) {
-
             var activeClass = '';
             if (this.title == page.title) { activeClass = 'dot-active'; }
             $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot ' + activeClass + '" id="' + this.pageSlug + '-dot"></span></a>');
