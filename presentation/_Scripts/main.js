@@ -6,7 +6,7 @@ var pagelist = '{' +
     '{ "pageSlug":"capabilities", "id": 3, "title": "Capabilities", "filename": "capabilities/index", "layout": "landing", "parent":"0", "background":"main-menu", "htmlContent":"<p>Our unique business model gives customers the ability to work with a global network of local distributors that offer a wide range of services and the quality products for which we’re known.</p>" },' +
     '{ "pageSlug":"products", "id": 4, "title": "Products", "filename": "products/index", "layout": "landing", "parent":"0", "background":"products", "htmlContent":"<p>We manufacture and deliver a wide array of the highest quality valves, fittings, gauges, tubing and other fluid system products and solutions. The breadth of our product offering is always growing. We stock standard parts at 225 locations worldwide and provide products designed for your unique needs."},' +
     '{ "pageSlug":"markets", "id": 5, "title": "Markets", "filename": "markets/index", "layout" : "landing", "parent":"0", "background":"markets2", "htmlContent":"<p>Swagelok is a global developer and provider of high-quality and reliable fluid system solutions including products, assemblies and services for the oil and gas, power, petrochemical, alternative fuels, and semiconductor industries. Select a market to learn more about how we can help you develop solutions to your toughest challenges."},' +
-    '{ "pageSlug":"mission", "id": 6, "title": "Vision and Mission", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-mission", "headline":"Vision and Mission", "htmlContent":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
+    '{ "pageSlug":"mission", "id": 6, "title": "Vision &amp; Mission", "filename": "capabilities/detail", "layout": "mission", "parent":"3", "background":"capabilities2", "menu":"ca-mission", "headline":"Vision &amp; Mission", "htmlContent":"<p>Helping you grow means leveraging the core values on which our company was founded and built: Customer Focus, Quality, Integrity, Respect for the Individual, Innovation, And Continuous Improvement. Our values have value, to our associates, our distributors and their associates, our customers, and their customers.</p>"},' +
     '{ "pageSlug":"oneSwagelok", "id": 7, "title": "Your Global Partner", "menuTitle":"Your Global Partner", "filename": "capabilities/submenu", "layout": "text-video", "parent":"3", "background":"capabilities2", "menu":"ca-partner", "headline":"One Swagelok", "htmlContent":"<p>We’ve always been known for our quality products. Recently, in response to growing customer needs, we’ve improved and increased our expertise and range of global services. We now provide customers with local relationships through our distributors and augment them with advanced services and the backing of a global organization. <p>These services relate not only to logistics and coordination among different regions of the world, but also to advanced training and design in systems and processes; expertise in materials science; fabrication of assemblies; and custom product design. <p>As “One Swagelok”&mdash;one interconnected global organization&mdash;we are developing products and services that are intended to lighten the burden of our customers" },' +
     '{ "pageSlug":"technicalSupportSales", "id":8, "title": "Technical Sales Support", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-support" },' +
     '{ "pageSlug":"services", "id": 9, "title": "Services", "filename": "capabilities/detail", "layout": "text-only", "parent":"3", "background":"capabilities2", "menu":"ca-services" },' +
@@ -19,7 +19,7 @@ var pagelist = '{' +
     '{ "pageSlug":"oilGas", "id": 16, "title": "Oil &amp; Gas","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-oil" },' +
     '{ "pageSlug":"alternativeFuels", "id": 17, "title": "Alternative Fuels","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-alternative" },' +
     '{ "pageSlug":"fittings", "id": 18, "title": "Fittings", "filename": "products/detail", "layout":"product", "parent":"4", "background":"products", "menu":"pr-fittings", "headline":"High-Performance Fittings &amp; Adapters", "htmlContent":"<p>When the world’s most respected companies want to make lasting connections, they turn to Swagelok. From high-purity fittings designed to minimize particle generation and entrapment to high-strength fittings engineered to hold high pressure, Swagelok products deliver dependable, leak-free performance. <p>For more than 65 years, we’ve been solving tough challenges in the oil and gas, chemical processing, power generation, alternative energy, aerospace, and defense industries, establishing a reputation for high quality and high performance. <p>Whether you need fittings for corrosive environments or extreme temperatures, fittings to maintain vacuum or withstand high pressure, or a proven partner who understands your industry&mdash;you’ll be well connected with Swagelok." },' +
-    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-fittings", "menu":"tube-fittings", "headline":"Tube Fittings and Tube Adapters", "htmlContent":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations. <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes: <ul> <li>Elbows</li> <li>Caps and Plugs</li> <li>Chromatograph and Column End</li> <li>Straights </li> <li>Tees</li> <li>Union Crosses</li> <li>High Pressure</li> <li>Medium Pressure</li> <li>Accessories</li> </ul>"},' +
+    '{ "pageSlug":"", "id": 19, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-fittings", "menu":"tube-fittings", "headline":"Tube Fittings & Tube Adapters", "htmlContent":"<p>Swagelok tube fittings and adapters are easy to install and can be disassembled and reassembled many times while retaining their leak-tight seal. Subjected to burn tests, shock impact tests, external pressure tests, finite element analysis, and more, our tube fittings perform beyond all expectations. <p>Available in a variety of materials and configurations, Swagelok tube fittings and adapters deliver robust tube grip, vibration resistance, and leak-free performance. These attributes are critical to the oil and gas, power, chemical and refining, alternative fuels, and semiconductor industries. Our selection of tube fittings and adapters includes: <ul> <li>Elbows</li> <li>Caps and Plugs</li> <li>Chromatograph and Column End</li> <li>Straights </li> <li>Tees</li> <li>Union Crosses</li> <li>High Pressure</li> <li>Medium Pressure</li> <li>Accessories</li> </ul>"},' +
     '{ "pageSlug":"", "id": 20, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-biopharm", "menu":"biopharma", "headline":"Biopharmaceutical Fittings & Adapters", "htmlContent":"<p>Swagelok’s biopharmaceutical fittings and adapters are engineered to solve purity problems inherent in conventional sanitary clamp fittings. Through enhanced drainability and cleanability as well as the virtual elimination of gasket extrusion and fluid holdup, our fittings and adapters limit entrapment areas that can harbor bacteria. <p>Ideal for sanitary processing applications, Swagelok biopharmaceutical products meet ASME-BPE and 3-A sanitary standards. Our selection includes: <ul> <li>TS Series Sanitary Clamps</li> <li>TS Series Sanitary Clamp Caps</li> <li>TS Series Sanitary Clamp Ferrules</li> </ul>"},' +
     '{ "pageSlug":"", "id": 21, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-dielectric", "menu":"dielectric", "headline":"Dielectric Fittings & Adapters", "htmlContent":"<p>Engineered to isolate monitoring instruments from the effects of electrical currents, dielectric fittings work to interrupt cathodic current flow while allowing full fluid flow. These fittings feature molded thermoplastic insulation with excellent electrical, chemical, and ultraviolet resistance as well as low water absorption. This helps maintain dielectric strength and integrity over a wide range of operating conditions. <p>Gaugeable tube fittings and tapered pipe thread end connections provide direct connections to tubing or piping systems. Our selection includes: <ul> <li>Tube Fitting, Dielectric Union, 12 mm Tube OD</li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/4 in. Tube OD</li> <li>Tube Fitting, Dielectric Male Connector, 3/8 in. Tube OD x 1/4 in. Male NPT</li> <li>Tube Fitting, Dielectric Union, 1/2 in. Tube OD </li> <li>Tube Fitting, Dielectric Union, 3/8 in. Tube OD</li> </ul>"},' +
     '{ "pageSlug":"", "id": 22, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-flange", "menu":"flange", "headline":"Flange to Swagelok Tube Fitting Pipe", "htmlContent":"<p>Flange adapters from Swagelok offer a threadless, weldless transition from flanged piping systems to tubing systems, with options designed to meet ASME, DIN, EN, and JIS standards. With a one-piece integrally machined forged body, flange adapters are available with Swagelok tube fitting end connections up to 50 mm and 2 inches. Choose from a range of sizes, pressure classes, and seal faces including flat face, raised face, RTJ, and tongue-and-groove. Our selection includes: <ul> <li>ANSI Flanges</li> <li>DIN Flanges</li> <li>Lap Joint Flanges</li> </ul>"},' +
@@ -31,29 +31,29 @@ var pagelist = '{' +
     '{ "pageSlug":"", "id": 28, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-bco", "menu":"bco", "headline":"BType VCO&reg; L-Ring Face Seal Fittings", "htmlContent":"<p>Inspired by challenges in the pharmaceutical and biotechnology industries, VCO&reg; fittings from Swagelok feature an “L” ring instead of an “O” ring to reduce internal entrapment that can harbor bacteria. Offering enhanced cleanability and drainability, Btype VCO fittings are ideal for steam cleaning, research and development, sampling, or process feed lines as well as any other application that requires frequent assembly and disassembly. Options include: <ul> <li>VCO&reg; Bodies</li> <li>VCO&reg; Nuts</li> <li>VCO&reg; Glands</li> <li>Spare Parts and Accessories</li> </ul>"},' +
     '{ "pageSlug":"", "id": 29, "title": "Fittings", "filename": "products/product", "layout":"product", "parent":"18", "background":"fi-fittings", "menu":"ts-fittings", "headline":"TS Fittings", "htmlContent":"<p>TS Series biopharmaceutical fittings feature controlled gasket compression to virtually eliminate fluid holdup in conventional sanitary clamp fittings. Designed to meet ASME-BPE and 3-A sanitary standards, patented TS fittings feature boreline seals and metal-to-metal stops to improve drainability and cleanability. Leak-free performance throughout a range of pressure-temperature ratings makes TS fittings ideal wherever product purity and integrity are critical. Available in sizes from 1/2 to 4 inches, our selection includes: <ul> <li>TS Fittings</li></ul>"},' +
     '{ "pageSlug":"businessModel", "id": 30, "title": "Expanding to make the world smaller.", "menu":"businessModel", "menuTitle":"Business Model", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We continue to refine our unique business model that puts local inventory close to the customer in regions throughout the world. We establish distributors as independent businesses, staffed with local people who are focused only on Swagelok products and building trust with customers. </p> <p>This model is our cornerstone and it sets us apart. </p> <p>Our distributors are closely connected with Swagelok and with each other. Anywhere in the world, you can get the same top-flight service from Swagelok. But if you design and specify in one location and your job site is another, distributors in both locations will work with you as one team. </p> <p>We are one interconnected global organization – “One Swagelok.” </p>" },' +
-    '{ "pageSlug":"marketsCustomers", "id": 31, "title": "More than parts&mdash;partnerships.", "menu":"marketsCustomers", "menuTitle":"Markets and Customers", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Our customers need more than a components supplier. They need our help across their operations. <p>Our technical experts work directly with the customer to see problems and challenges firsthand and anticipate what customer needs will be next year – or in three to five years. We aim to be ready with the right products, support, and applications knowledge. <p>Our materials science group works tirelessly to understand process and environmental conditions in oil fields. In the lab our engineers test new technologies for natural gas vehicles, semiconductor tools, and more. <p>We conduct research with national laboratories and serve on standards committees because it is our mission to know and to be ready on behalf of our customers." },' +
+    '{ "pageSlug":"marketsCustomers", "id": 31, "title": "More than parts&mdash;partnerships.", "menu":"marketsCustomers", "menuTitle":"Markets & Customers", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Our customers need more than a components supplier. They need our help across their operations. <p>Our technical experts work directly with the customer to see problems and challenges firsthand and anticipate what customer needs will be next year – or in three to five years. We aim to be ready with the right products, support, and applications knowledge. <p>Our materials science group works tirelessly to understand process and environmental conditions in oil fields. In the lab our engineers test new technologies for natural gas vehicles, semiconductor tools, and more. <p>We conduct research with national laboratories and serve on standards committees because it is our mission to know and to be ready on behalf of our customers." },' +
     '{ "pageSlug":"engineering", "id": 32, "title": "In pursuit of answers.", "menu":"engineering", "menuTitle":"Engineering", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We’re a practical company. For us, innovation starts with a customer’s problem. </p> <p>Our engineers are motivated by in-person interactions with the customer. Understanding the issues. Talking them over. Weighing options. A customer challenge is what we rally around. </p> <p>At the same time, we’re focused on safety. It’s our job to protect our customers and their applications. All Swagelok engineers know this. Every day, it’s on their mind. </p> <p>We’re not a public company under pressure for short-term results. We’re focused on doing the right thing. </p> <p>When a new product hits the market, it must be bulletproof. </p>" },' +
-    '{ "pageSlug":"shopFloorCulture", "id": 33, "title": "In the right hands.", "menu":"shopFloorCulture", "menuTitle":"Culture, values and safety", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Anyone who spends any time in a Swagelok manufacturing facility comes away with a sense that here is something exceptional – cleanliness, orderliness, complete adherence to a set of quality and safety practices. </p> <p>On the Swagelok shop floor there are absolutes, and we believe that any deviation could have dire consequences for us and our customers. We achieve this through training, practice, policy, and most importantly culture. </p> <p>Swagelok associates are part owners, and share in the company’s success. </p> <p>Their ideas are heard, they recommend improvements, report things that seem just a little out of the ordinary and serve as the guardians of safety. </p> <p>That’s why Swagelok has experiences double-digit decreases in reported injury cases year after year and we’re now in the top quartile of our industry category. </p>" },' +
+    '{ "pageSlug":"shopFloorCulture", "id": 33, "title": "In the right hands.", "menu":"shopFloorCulture", "menuTitle":"Culture, values & safety", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Anyone who spends any time in a Swagelok manufacturing facility comes away with a sense that here is something exceptional – cleanliness, orderliness, complete adherence to a set of quality and safety practices. </p> <p>On the Swagelok shop floor there are absolutes, and we believe that any deviation could have dire consequences for us and our customers. We achieve this through training, practice, policy, and most importantly culture. </p> <p>Swagelok associates are part owners, and share in the company’s success. </p> <p>Their ideas are heard, they recommend improvements, report things that seem just a little out of the ordinary and serve as the guardians of safety. </p> <p>That’s why Swagelok has experiences double-digit decreases in reported injury cases year after year and we’re now in the top quartile of our industry category. </p>" },' +
     '{ "pageSlug":"quality", "id": 34, "title": "Zero Customer Disappointments", "menu":"quality", "menuTitle":"Quality", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>There is a phrase that every Swagelok executive, engineer and shop floor associate knows – Zero Customer Disappointments. It is a way of life. </p> <p>We strive to ensure the customer has a perfect experience with every product and service, every time and that they deliver on the promise of safety and total peace of mind.</p> <p>That’s the standard we hold ourselves to. </p> <p>We’re at the point where “zero” is really possible, and we’re on a mission to make it happen.</p>" },' +
     '{ "pageSlug":"manufacturing", "id": 35, "title": "Nonstop operation.", "menu":"manufacturing", "menuTitle":"Manufacturing", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We own the product manufacturing process from start to finish. This way we can control the maximum number of variables, ensuring product quality. </p> <p>We make some of our own cutting tools and we’re very deliberate about the machines we buy. Then, we are disciplined about routine service. And we run a predictive maintenance program that addresses repairs before there is a breakdown. </p> <p>Our machines must be in the very best operating condition, executing at the tightest tolerances. </p> <p>What is our motivation for such exactitude? It’s product quality. It’s zero customer disappointments. And it’s the safety of our machine operators.</p>" },' +
-    '{ "pageSlug":"globalSourcing", "id": 36, "title": "Suppliers we can count on.", "menu":"globalSourcing", "menuTitle":"Global Sourcing, Risk Mitigation", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Swagelok comes through to customers again and again partly due to the quality of our supply base. </p> <p>We look long and hard to find our suppliers and apply enormous amounts of scrutiny. We’re looking not just at the product and quality systems, but also their values and quality of leadership.</p> <p>With so much riding on our suppliers, we ask them to take extraordinary measures – in some cases, to keep their proprietary secrets in escrow – in others, to keep extra inventory on hand.</p> <p>We do everything we can to mitigate risk. That’s our promise to customers.</p>" },' +
+    '{ "pageSlug":"globalSourcing", "id": 36, "title": "Suppliers we can count on.", "menu":"globalSourcing", "menuTitle":"Global Sourcing & Risk Mitigation", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>Swagelok comes through to customers again and again partly due to the quality of our supply base. </p> <p>We look long and hard to find our suppliers and apply enormous amounts of scrutiny. We’re looking not just at the product and quality systems, but also their values and quality of leadership.</p> <p>With so much riding on our suppliers, we ask them to take extraordinary measures – in some cases, to keep their proprietary secrets in escrow – in others, to keep extra inventory on hand.</p> <p>We do everything we can to mitigate risk. That’s our promise to customers.</p>" },' +
     '{ "pageSlug":"financialStewardship", "id": 37, "title": "A mission with momentum.", "menu":"financialStewardship", "menuTitle":"Financial Stewardship", "filename": "capabilities/submenu", "layout": "doubleVideoRight", "parent":"7", "background":"capabilities2", "htmlContent":"<p>With the close of 2014, Swagelok achieved its fourth consecutive year of record growth, with an average yearly growth rate of 7% since 2003. <p>We attribute this growth to our values-based approach to fiscal management – doing the right thing for the long term. Our mission is to serve our customers – not only this year, but for many years to come. <p>We are a privately held company and not under pressure to adjust our investments based on economic cycles or demands for short-term profits. Through good economic times and bad, we remain committed to four main areas: our associates; our properties and equipment; our technologies; and our products and services." },' +
     '{ "pageSlug":"associates", "id": 38, "title": "One team of thousands.", "menu":"associates", "menuTitle":"Associates", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>We strive for nothing less than an exceptional customer experience. And so much of that depends on our people&mdash;our distributors, corporate leaders, and associates worldwide. </p> <p>These are rare individuals with a passion for service. They are on a mission, going to extraordinary lengths with the customer in mind.</p> <p>For the majority of our customers, their most direct experience is through our distributors. They are backed by cross-functional teams in engineering, sales and fulfillment&mdash;about 3,600 distributor associates at 225 stocking locations in 70 countries. </p> <p>We’re one interconnected global organization&mdash;“One Swagelok”&mdash;engineered to perform for you, our valued customer.</p>" },' +
     '{ "pageSlug":"socialResponsibility", "id": 39, "title": "Engineering a better world.", "menu":"socialResponsibility", "menuTitle":"Social Responsibility", "filename": "capabilities/submenu", "layout": "text-video", "parent":"7", "background":"capabilities2", "htmlContent":"<p>As a values-driven company, we are looking out not just for our own associates and customers, but also for the environment and the communities in which we live and work. </p> <p>We divert 60% of the waste that would otherwise go to landfills, including items such as paper, cardboard and scrap wood. We are capture up to 120 tons of food compost each year. </p> <p>To reduce energy consumption, we recently replaced roofs over our manufacturing plants, upgraded HVAC systems and compressors, and installed LED lighting in our parking lots.</p> <p>Our manufacturing processes produce a lot of metal cuttings mixed with oil, but we spin off the oil and use it in a second application. Then, we recycle the metal cuttings. Wherever possible, we try to use precious resources twice. </p> <p>At Swagelok, we are on a mission to make the world a better place and we’re safeguarding the environment. </p> <p>We also donate as much as $3.5 million each year to more than 100 local charities each year and have associates serving on more than 70 local nonprofit boards.  </p>" },' +
     '{ "pageSlug":"chemical", "id": 53, "title": "Chemical","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-chemical" },' +
     '{ "pageSlug":"semiconductor", "id": 54, "title": "Semiconductor","filename": "markets/detail","layout": "market", "parent":"5", "background":"main-menu", "menu":"ma-semiconductor" },' +
     '{ "pageSlug":"valves", "id": 60, "title": "Valves", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-valves" },' +
-    '{ "pageSlug":"hoses", "id": 61, "title": "Hoses and Flexible Tubing", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
+    '{ "pageSlug":"hoses", "id": 61, "title": "Hoses & Flexible Tubing", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-hoses" },' +
     '{ "pageSlug":"regulators", "id": 62, "title": "Regulators", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-regulators" },' +
     '{ "pageSlug":"quickConnects", "id": 63, "title": "Quick-connects", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-quickConnects" },' +
     '{ "pageSlug":"measurementDevices", "id": 64, "title": "Measurement devices", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-measure" },' +
-    '{ "pageSlug":"tubing", "id": 65, "title": "Tubing and tools", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-tubingAccessories" },' +
+    '{ "pageSlug":"tubing", "id": 65, "title": "Tubing & tools", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-tubingAccessories" },' +
     '{ "pageSlug":"filters", "id": 66, "title": "Filters", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-filters" },' +
     '{ "pageSlug":"sampleCylinders", "id": 67, "title": "Sample cylinders", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-sampleCylinder" },' +
     '{ "pageSlug":"mpcModular", "id": 68, "title": "MPC modular systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-miniatureModular" },' +
     '{ "pageSlug":"pre-engineered", "id": 69, "title": "Pre-Engineered Subsystems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-PRESS" },' +
     '{ "pageSlug":"welding", "id": 70, "title": "Welding systems", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-welding" },' +
-    '{ "pageSlug":"leakDetector", "id": 71, "title": "Leak detectors, lubricants and sealants", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" }' +
+    '{ "pageSlug":"leakDetector", "id": 71, "title": "Leak detectors, lubricants & sealants", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" }' +
     ']}';
 
 //var idleTime = 0;
@@ -293,7 +293,7 @@ function get_child_pages(section) {
         var liWidth = (width * (5 / 6)) / 6.25;
         $('.slidee li').css('width', liWidth);
 
-        $('.frame').css('height', '175px');
+        $('.frame').css('height', '165px');
         $('.landing-menu-item:nth-child(7n+7)').css('clear', 'none');
         $('.frame').append('<span class="arrow glyphicon glyphicon-chevron-right" id="arrow-three"></span>');
     }
@@ -419,8 +419,11 @@ function get_video_details(videoList) {
     if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'splash') {
         pickVideo = localStorage.getItem('pageSlug') + '-video';
     }
-    else if (localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'doubleVideoRight') {
+    else if (localStorage.getItem('pageLayout') == 'mission' ) {
         pickVideo = 'mission';
+    }
+    else if ( localStorage.getItem('pageLayout') == 'doubleVideoRight') {
+        pickVideo = 'financialStewardship';
     }
 
     $.each(livevideos, function () {
@@ -430,6 +433,7 @@ function get_video_details(videoList) {
                 return true;
             }
         }
+ 
         else if (pickVideo != false) {
            
             if (pickVideo != this.page_element) {
@@ -634,9 +638,12 @@ function load_page_info(id) {
 
 function set_content_area_size() {
     var height = $(document).height();
-    var headerHeight = 165;
-    var footerHeight = $('.ui-footer').height();
+    var headerHeight = 145;
+    var footerHeight = 75;
 
+    var dotsHeight= $('.dots-row').height();
+
+    
     var contentHeight = height -headerHeight -footerHeight;
 
     $('#main-content').css('height', contentHeight);
@@ -682,8 +689,8 @@ function set_page_layout(pageLayout) {
     if (pageLayout == 'mission') {
         show_bottom_nav();
 
-        var baseContent = '<div class="col-sm-5"><h1 id="page-title">&nbsp;</h1><div id="page-content"></div></div>';
-        var videoRow = '<div class="col-sm-5 distributor-video-cell">Video</div><div class="col-sm-5 col-sm-offset-1 ceo-video-cell">Video</div>';
+        var baseContent = '<div class="col-xs-8 col-xs-offset-1"><h1 id="page-title">&nbsp;</h1><div id="page-content"></div></div>';
+        var videoRow = '<div class="col-sm-4 col-xs-offset-1 distributor-video-cell">Video</div><div class="col-sm-4 col-sm-offset-1 ceo-video-cell">Video</div>';
 
         $('#left-column').remove();
         $('#right-column').remove();
@@ -704,16 +711,13 @@ function set_page_layout(pageLayout) {
         var baseContent = '<h1 id="page-title">&nbsp;</h1><div id="page-content"></div>';
         var videoRow = '<div class="col-sm-9 distributor-video-cell">Video</div><div class="col-sm-9 ceo-video-cell">Video</div>';
 
-        //$('#left-column').remove();
-        //$('#right-column').remove();
-        //$('.row:first').append(baseContent);
-        //$('.row.secondary').append(videoRow);
         $('#left-column').html(baseContent);
         $('#right-column').html(videoRow);
 
-        var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="/presentation/_Content/videos/financialStewardship-1.jpg" width="100%" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="distributor-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+         // NOTE: Confirm that modal ID matches link data-target if having trouble seeing modal display
+        var distributorContainer = '<div id="distributor-video-container"> <!-- Button trigger modal --> <img id="distributor-video-poster" src="/presentation/_Content/videos/financialStewardship-1.jpg" width="75%" data-toggle="modal" data-target="#distributor-video-modal">  <p class="video-caption" id="distributor-video-caption"></p><!-- Modal --> <div class="modal fade" id="-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="distributor-video-modal-body"> <video id="distributor_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="distributor-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
-        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="/presentation/_Content/videos/financialStewardship-2.jpg" width="100%" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"     ></p> <!-- Modal --> <div class="modal fade" id="ceo-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        var ceoContainer = '<div id="ceo-video-container"> <!-- Button trigger modal --> <img id="ceo-video-poster" src="/presentation/_Content/videos/financialStewardship-2.jpg" width="75%" data-toggle="modal" data-target="#ceo-video-modal"><p class="video-caption" id="ceo-video-caption"     ></p> <!-- Modal --> <div class="modal fade" id="-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="ceo-video-modal-body"> <video id="ceo_video" class="video-js vjs-default-skin" controls preload="auto" > <source id="ceo-video-mp4-path" src="/presentation/_Content/videos/swagelok_video_artAnton.mp4" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
         $('.distributor-video-cell').html(distributorContainer);
         $('.ceo-video-cell').html(ceoContainer);
@@ -723,18 +727,29 @@ function set_page_layout(pageLayout) {
 
         var pageSlug = localStorage.getItem('pageSlug');
 
+        var baseContent = '<h1 id="page-title">&nbsp;</h1><div id="left-custom-content"></div>';
+        $('#left-column').html(baseContent);
+
         $('#left-column').removeClass('col-xs-6').addClass('col-xs-5');
         $('#right-column').removeClass('col-xs-6').addClass('col-xs-5');
-        $('#right-column').html('<div class="' +pageSlug + '-video-cell" id="video-spot"></div>');
+        $('#right-column').empty();
+        $('#right-column').html('<div class="' + pageSlug + '-video-cell" id="video-spot"></div>');
 
-        var videoContainer = '<div id="' +pageSlug + '-video-container"> <!-- Button trigger modal --> <img width="100%" id="' +pageSlug + '-video-poster" src="" data-toggle="modal" data-target="#' +pageSlug + '-video-modal"> <p class="video-caption" id="' +pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' +pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' +pageSlug + '-modal-body"> <video id="' +pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' +pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
+        // NOTE: Hack to remove links until videos are ready   
+var modalLink = '';
+        if (pageSlug == 'quality' || pageSlug == 'oneSwagelok' || pageSlug == 'engineering') {
+        modalLink = '#' +pageSlug + '-video-modal';
+    }
+        // END NOTE:
+
+        var videoContainer = '<div id="' +pageSlug + '-video-container"> <!-- Button trigger modal --> <img width="100%" id="' +pageSlug + '-video-poster" src="" data-toggle="modal" data-target="'+modalLink+'"> <p class="video-caption" id="' +pageSlug + '-video-caption"></p><!-- Modal --> <div class="modal fade" id="' +pageSlug + '-video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="' +pageSlug + '-modal-body"> <video id="' +pageSlug + '-video" class="video-js vjs-default-skin" controls preload="auto" > <source id="' +pageSlug + '-video-mp4-path" src="" type="video/mp4" /> <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> </video> </div> </div> </div> </div> </div>';
 
         $('.' +pageSlug + '-video-cell').html(videoContainer);
 
     }
     if (pageLayout == 'text-image') {
-        $('#left-column').removeClass('col-xs-6').addClass('col-xs-4 col-lg-5');
-        $('#right-column').removeClass('col-xs-6').addClass('col-xs-7 col-lg-6');
+        $('#left-column').removeClass('col-xs-6').addClass('col-xs-4 col-xs-offset-1 col-lg-5 col-lg-offset-1');
+        $('#right-column').removeClass('col-xs-6').addClass('col-xs-6 col-xs-offset-1 col-lg-5 col-lg-offset-1');
         $('#left-column h1').remove();
         var imageContainer = '<img src="" id="left-custom-image" />';
         $('#left-custom-content').html(imageContainer);
@@ -947,7 +962,7 @@ function show_bottom_nav() {
     var docHeight = $(document).height();
     var linkTop = docHeight * .95;
 
-    var dotLocation = linkTop -docHeight * .05;
+    var dotLocation = linkTop - docHeight * .1;
 
     $("#footer-menu-link")
         .css({
@@ -962,7 +977,7 @@ function show_bottom_nav() {
 
     $('.frame')
         .css({
-            'height': docHeight * .23 + 'px'
+            'height': docHeight * .27 + 'px'
     }).prepend('<div class="arrow-left"></div> <div class="arrow-right"></div>');
 
 
@@ -1203,35 +1218,28 @@ function show_submenu(id) {
         if (this.parent == 18 && page.filename == 'products/product') {
             var activeClass = '';
             if (this.headline == page.headline) { activeClass = 'dot-active'; }
-            $('.dots-row').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot '+activeClass+'" id="' + this.pageSlug + '-dot"></span></a>');
+            $('.dots-row.product').append('<a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot '+activeClass+'" id="' + this.pageSlug + '-dot"></span></a>');
         }
+        else if (this.parent == 7 && page.filename == 'capabilities/submenu' || this.id == 7) {
+            var activeClass = '';
+            if (this.title == page.title) { activeClass = 'active'; }
+            $('.dots-row.partner').append('<a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-' + activeClass + '" id="' + this.pageSlug + '-dot"></span></a>');
+            partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
+        }
+
         if (this.title == page.title) {
-            // 7 is the page ID for the One Swagelok (Your Global Partner) content;
-            if(this.parent == 7 || this.id == 7) {
-                $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')"><span class="dot dot-active" id="'+this.pageSlug+'-dot"></span></a>');
-                partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' +this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="active"><img src="' + fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
-            }
 
             if (this.parent != 4) {
                 var activeClass = '';
                 if (this.headline == page.headline) {
                     activeClass = 'active';
                 }
-                productDropdown += '<li><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="'+activeClass+'"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
-                productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="product.html" onclick="setLinks(' +this.id + ', ' +sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' +fileDepth + 'Content/images/icons/' +this.menu + '-square.png" /><span>' +this.headline + '<span></a></div>';
+                productDropdown += '<li><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false" class="' + activeClass + '"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></li>';
+                productLandingList += '<div class="col-xs-6 col-md-4 product-landing-item"><a href="product.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.headline + '<span></a></div>';
             }
 
 
         }
-
-        else if (this.parent == 7 && page.filename == 'capabilities/submenu' || this.id == 7) {
-            var activeClass = '';
-            if (this.title == page.title) { activeClass = 'dot-active'; }
-            $('.dots-row').append('<a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')"><span class="dot ' + activeClass + '" id="' + this.pageSlug + '-dot"></span></a>');
-            partnerDropdown += '<li><a href="submenu.html" onclick="setLinks(' + this.id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/icons/' + this.menu + '-square.png" /><span>' + this.menuTitle + '<span></a></li>';
-        }
-
-
 
 
     });
