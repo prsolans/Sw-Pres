@@ -1,26 +1,42 @@
 presID = '764dd24c';
 
-var fileDepth = get_file_location();
-var menuDepth = "";
-if (fileDepth == "../../") {
-        menuDepth = "../";
-    }
-
-
+/*
+ * settings: General settings items for this presentation
+ * {string} id 
+ * {string} division - Swagelok distributor name
+ * {string} client - Client name
+ * {string} assetDir - Absolute path of presentation-specific folder, based on id
+ * {boolean} hasCaseStudy 
+ * 
+ */
 var settings = '[{ "id": "'+presID+'", "division":"Swagelok D&uuml;sseldorf", "client":"Tata", "assetDir":"/presentation/_Content/' + presID + '/", "hasCaseStudy":true }]';
 
 var theseSettings = get_presentation_settings();
-
 var presentationDirectory = theseSettings[0].assetDir;
 
+/*
+ * marketList: List of markets that are displayed within this presentation
+ * {string} title - Market presentation title
+ * {string} slug - Market slug
+ * 
+ */
 var marketList = '[' +
-    '{ "id": 0, "title": "Power", "slug": "power" },' +
-    '{ "id": 1, "title": "Oil and Gas", "slug": "oilGas" },' +
-    '{ "id": 2, "title": "Alternative Fuels", "slug": "alternativeFuels" },' +
-    '{ "id": 3, "title": "Chemical", "slug": "chemical" },' +
-    '{ "id": 4, "title": "Semiconductor", "slug": "semiconductor" }' +
+    '{ "title": "Power", "slug": "power" },' +
+    '{ "title": "Oil &amp; Gas", "slug": "oilGas" },' +
+    '{ "title": "Alternative Fuels", "slug": "alternativeFuels" },' +
+    '{ "title": "Chemical", "slug": "chemical" },' +
+    '{ "title": "Semiconductor", "slug": "semiconductor" }' +
     ']';
 
+/*
+ * videoList: List of videos for display in the presentation
+ * {string} page_element - DOM element where the video is displayed
+ * {string} videofile - Absolute path to mp4 location
+ * {string} posterfile - Absolute path to jpg location
+ * {string} [subtitlefile] - Absolute path to vtt subtitle track (optional)
+ * {string} [caption] - HTML caption text (optional)
+ * 
+ */
 var videoList = '[' +
     '{ "page_element": "ceo-video", "videofile":"/presentation/_Content/videos/Swagelok Distrib Art 03-HD.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Art Anton <br/>Swagelok President and CEO"},' +
     '{ "page_element": "introScreen-video", "videofile":"/presentation/_Content/videos/SWAGELOK_Ext_BrandEssence_01-21c.mp4", "posterfile":"/presentation/_Content/videos/swagelok_video_artAnton.jpg", "subtitlefile":"/presentation/_Content/videos/swagelok_video_artAnton.vtt", "caption":"Art Anton <br/>Swagelok President and CEO"},' +
@@ -37,6 +53,11 @@ var videoList = '[' +
     '{ "page_element": "globalSourcing-video", "videofile":"", "posterfile":"/presentation/_Content/videos/globalSourcing.jpg", "subtitlefile":"/presentation/_Content/videos/distributor_video_andreas.vtt", "caption":""}' +
     ']';
 
+/*
+ * layoutsList: List of pages that have changed from the default layout (text-only)
+ * {string} page_id - The page slug of the page where the content is displayed
+ * {string} page_layout - The non-standard layout for this page
+ */
 var layoutsList = '[' +
     '{"page_id":"technicalSupportSales", "page_layout":"text-image"},' +
     '{"page_id":"training", "page_layout":"text-image"},' +
@@ -45,6 +66,12 @@ var layoutsList = '[' +
     '{"page_id":"customSolutions", "page_layout":"text-image"}' +
     ']';
 
+/*
+ * content: Presentation-specific HTML content and page/element info for where to display it
+ * {string} page_id - The page slug of the page where the content is displayed
+ * {string} page_element - The DOM id for the element where the content is to be displayed
+ * {string} html - HTML content
+ */
 var content = '[' +
     '{"page_id":"services", "page_element":"right-custom-content", "html":"<p>Quality, efficiency, and safety are the leading elements of our service portfolio. We deliver optimized support for our customers when selecting, ordering, using, and maintaining our fluid system components. Our objective is to guarantee the smooth and efficient functionality of all Swagelok components and Custom Solutions. <h3>Services-Portfolio</h3> <div class=\'panel-group\' id=\'accordion\' role=\'tablist\' aria-multiselectable=\'true\'> <div class=\'panel panel-default\'> <div class=\'panel-heading\' role=\'tab\' id=\'headingOne\'> <h4 class=\'panel-title\'> <a data-toggle=\'collapse\' data-parent=\'#accordion\' href=\'#collapseOne\' aria-expanded=\'true\' aria-controls=\'collapseOne\'> <span class=\'glyphicon glyphicon-minus\'></span> Solutions</a> </h4> </div> <div id=\'collapseOne\' class=\'panel-collapse collapse in\' role=\'tabpanel\' aria-labelledby=\'headingOne\'> <div class=\'panel-body\'> <ul> <li>Creating individual applications at highest Swagelok quality</li> <li>External workbench for our customers – one competent partner throughout the whole project lifecycle</li> <li>Reducing time and costs for planning, purchasing, and assembling </li> </ul> </div> </div> </div> <div class=\'panel \'> <div class=\'panel-heading\' role=\'tab\' id=\'headingTwo\'> <h4 class=\'panel-title\'></span> <a  data-toggle=\'collapse\' data-parent=\'#accordion\' href=\'#collapseTwo\' aria-expanded=\'false\' aria-controls=\'collapseTwo\'> <span class=\'glyphicon glyphicon-plus\'></span> eBusiness</a> </h4> </div> <div id=\'collapseTwo\' class=\'panel-collapse collapse\' role=\'tabpanel\' aria-labelledby=\'headingTwo\'> <div class=\'panel-body\'> <ul> <li>Swagelok eStore</li> <li>Customized eBusiness solutions that can reduce ordering time </li> <li>CAD templates and sales drawings – ability to download high-quality, original CAD drawings</li> </ul> </div> </div> </div> <div class=\'panel \'> <div class=\'panel-heading\' role=\'tab\' id=\'headingThree\'> <h4 class=\'panel-title\'><a  data-toggle=\'collapse\' data-parent=\'#accordion\' href=\'#collapseThree\' aria-expanded=\'false\' aria-controls=\'collapseThree\'> <span class=\'glyphicon glyphicon-plus\'></span> Product Selection Tool</a> </h4> </div> <div id=\'collapseThree\' class=\'panel-collapse collapse\' role=\'tabpanel\' aria-labelledby=\'headingThree\'> <div class=\'panel-body\'> <ul> <li>eDTR Tool (Electronic Desktop Technical Reference), our electronic Swagelok catalogue </li> <li>Available on USB flash drive or as an app</li> </ul> </div> </div> </div> <div class=\'panel \'> <div class=\'panel-heading\' role=\'tab\' id=\'headingFour\'> <h4 class=\'panel-title\'><a  data-toggle=\'collapse\' data-parent=\'#accordion\' href=\'#collapseFour\' aria-expanded=\'false\' aria-controls=\'collapseFour\'> <span class=\'glyphicon glyphicon-plus\'></span> Energy Management Services</a> </h4> </div> <div id=\'collapseFour\' class=\'panel-collapse collapse\' role=\'tabpanel\' aria-labelledby=\'headingFour\'> <div class=\'panel-body\'> <ul> <li>Identifying and analyzing leaks in a facility</li> <li>Providing a solution that helps target the problems </li> </ul> </div> </div> </div> <div class=\'panel \'> <div class=\'panel-heading\' role=\'tab\' id=\'headingFive\'> <h4 class=\'panel-title\'><a  data-toggle=\'collapse\' data-parent=\'#accordion\' href=\'#collapseFive\' aria-expanded=\'false\' aria-controls=\'collapseFive\'> <span class=\'glyphicon glyphicon-plus\'></span> Equipment and Tools</a> </h4> </div> <div id=\'collapseFive\' class=\'panel-collapse collapse\' role=\'tabpanel\' aria-labelledby=\'headingFive\'> <div class=\'panel-body\'> <h3>Product Delivery Services</h3> <ul> <li>Just-in-time delivery helps our customers reduce the time and cost of maintaining a reliable supply chain</li> <li>Emergency service</li> <li>Delivery 24/7</li> <li>In-house delivery service</li> </ul> <h3>Supply Chain Management</h3> <ul> <li>Consignment stock – weekly delivery</li> <li>VMI (Vendor-Managed Inventory)</li> <li>Barcode scanner for consignment stock at Siemens</li> <li>Custom Kitting – pre-packing of several components according to customer needs</li> </ul> <h3>Training</h3> <ul> <li>Training and Competence Center</li> <li>On-site training at customer facilities</li> </ul> </div> </div> </div> </div>"},' +
     '{"page_id":"services", "page_element":"page-title", "html":"<p>Services</p>"},' +
@@ -63,7 +90,6 @@ var content = '[' +
     '{"page_id":"customSolutions", "page_element":"left-custom-image", "src":"' + presentationDirectory + 'images/customSolutions.jpg"}' +
     ']';
 
-//get_available_markets(marketList);
 get_custom_content(content);
 
 if (localStorage.getItem('pageLayout') == 'text-video' || localStorage.getItem('pageLayout') == 'mission' || localStorage.getItem('pageLayout') == 'splash') {

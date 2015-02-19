@@ -1,3 +1,14 @@
+/*
+ * pagelist: HTML details for core static pages in the presentation
+ * {string} pageSlug - unique text ID {preferred for readability}
+ * {number} id - unique number ID {should be phased out}
+ * {string} title - page title
+ * {string} filename - page template to use for layout
+ * {string} layout - layout to use {should be phased out in favor of additional filename options}
+ * {string} parent - parent id {currently using id, should be moved to pageSlug}
+ * {string} background - filename of the body background image 
+ */
+
 var pagelist = '{' +
     '"pages": [ ' +
     '{ "pageSlug":"", "id": 0, "title": "Presentation Lists", "filename": "index", "layout": "home", "parent":"0", "background":"home2" },' +
@@ -56,13 +67,6 @@ var pagelist = '{' +
     '{ "pageSlug":"leakDetector", "id": 71, "title": "Leak detectors, lubricants & sealants", "filename": "products/detail", "layout": "product", "parent":"4", "background":"main-menu", "menu":"pr-leak" }' +
     ']}';
 
-//var idleTime = 0;
-//var videoWasOpenedAtPageLoad = false;
-
-
-//$(document).delegate("body", "touchmove", false);
-//$(document).delegate("body", "scrollstart", false);
-
 PAGE_ID = sessionStorage.getItem('PAGE_ID');
 
 if (window.location.protocol == "http:") {
@@ -114,31 +118,11 @@ bajb_backdetect.OnBack = function () {
     setLinks(sessionStorage.getItem("PREVIOUS_PAGE_ID"), sessionStorage.getItem("PAGE_ID"));
 }
 
-//if (window.location.protocol == "file:") {
-//    var pathname = window.location.pathname.split('/presentation/');
-//
-//    if (typeof PAGE_ID == 'undefined' || PAGE_ID == '1' || PAGE_ID == '' || pathname[1] == '/presentation/') {
-//
-//        PAGE_ID = 1;
-//        setLinks(PAGE_ID, PAGE_ID);
-//
-//        PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
-//
-//        if (typeof getParameterByName('p') != 'undefined' && getParameterByName('p') != '') {
-//            PRESENTATION_ID = getParameterByName('p');
-//            setCookie('PRESENTATION_ID', PRESENTATION_ID);
-//        }
-//    }
-//
-//    DOMAIN = pathname[0];
-//
-//    PRESENTATION_ID = sessionStorage.getItem('PRESENTATION_ID');
-//    PAGE_ID = sessionStorage.getItem('PAGE_ID');
-//
-//    if (PRESENTATION_ID) {
-//        $.getScript(DOMAIN + '/presentation/_Content/' + PRESENTATION_ID + '/settings.js');
-//    }
-//}
+var fileDepth = get_file_location();
+var menuDepth = "";
+if (fileDepth == "../../") {
+    menuDepth = "../";
+}
 
 $(document).on("pagebeforecreate", function pagePrebuild() {
 
@@ -149,9 +133,13 @@ $(document).on("pagebeforecreate", function pagePrebuild() {
     });
     $.ajaxSetup({async: true});
 
-    get_child_pages('5'); // Markets
-    get_child_pages('4'); // Products
-    get_child_pages('3'); // Capabilities
+    var markets = getObjects(JSON.parse(pagelist), 'pageSlug', 'markets');
+    var products = getObjects(JSON.parse(pagelist), 'pageSlug', 'products');
+    var capabilities = getObjects(JSON.parse(pagelist), 'pageSlug', 'capabilities');
+
+    get_child_pages(markets[0].id); // Markets
+    get_child_pages(products[0].id); // Products
+    get_child_pages(capabilities[0].id); // Capabilities
 
     var filepath = $('link').first().attr('href');
     var path = filepath.split("Content/");
@@ -193,37 +181,12 @@ $(document).ready(function pageReady() {
         $('.row').css('opacity', '1');
 
     });
-        set_content_area_size();
+
+    set_content_area_size();
 
     $('#page-container').css('height', $(window).height()).show();
 
-
 });
-
-
-/**
- * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
- * Utilized for main menu page, section landing page, and bottom nav within the section
- */
-function get_available_markets() {
-    var livemarkets = JSON.parse(marketList);
-    var thisPage = getObjects(JSON.parse(pagelist), 'pageSlug', localStorage.getItem('pageSlug'));
-
-    if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
-        $.each(livemarkets, function () {
-            var obj = getObjects(JSON.parse(pagelist), 'pageSlug', this.slug);
-
-
-            var html = '<li class="col-xs-2 landing-menu-item" style="margin-top: 30px;"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></li>';
-            $('.item-menu').append(html);
-
-
-            var viewport = $(window).width();
-            var width = viewport / 6;
-            $('.item-menu li').css('width', width*.8);
-        });
-    }
-}
 
 /**
  * Get child pages for Capabilities and Products sections, and display links to the pages
@@ -343,7 +306,6 @@ function get_custom_content(content) {
     show_accordion_icons();
 
 }
-
 
 /**
  * Checks page header to determine the depth of the current page within the file structure
@@ -1431,4 +1393,29 @@ function getCookie(cname) {
 //
 //    return livevideos;
 //
+//}
+
+
+/**
+ * Checks the presentation specific settings and displays links to all markets that have been setup to appear within this presentation
+ * Utilized for main menu page, section landing page, and bottom nav within the section
+ */
+//function get_available_markets() {
+//    var livemarkets = JSON.parse(marketList);
+//    var thisPage = getObjects(JSON.parse(pagelist), 'pageSlug', localStorage.getItem('pageSlug'));
+
+//    if (thisPage[0].pageSlug == 'mainMenu' || thisPage[0].pageSlug == 'markets' || thisPage[0].parent == '5') {
+//        $.each(livemarkets, function () {
+//            var obj = getObjects(JSON.parse(pagelist), 'pageSlug', this.slug);
+
+
+//            var html = '<li class="col-xs-2 landing-menu-item" style="margin-top: 30px;"><a href="/presentation/' + obj[0].filename + '.html" onclick="setLinks(' + obj[0].id + ', ' + sessionStorage.getItem("PAGE_ID") + ')" data-ajax="false"><img src="' + fileDepth + 'Content/images/menu/' + obj[0].menu + '.png"/><br/> ' + this.title + '</a></li>';
+//            $('.item-menu').append(html);
+
+
+//            var viewport = $(window).width();
+//            var width = viewport / 6;
+//            $('.item-menu li').css('width', width*.8);
+//        });
+//    }
 //}
