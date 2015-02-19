@@ -113,13 +113,19 @@
 
         $(document).ready(function () {
 
+            var previousPage = parseInt(sessionStorage.getItem('PAGE_ID')) - 1;
+
+            if(localStorage.getItem('pageSlug') == 'businessModel' ){
+                previousPage = 7; // DANGER = must be revised if/when pageList is modified
+            }
+            var previousPageDetails = get_page_details(previousPage);
+
             var nextPage = parseInt(sessionStorage.getItem('PAGE_ID')) + 1;
-            if(sessionStorage.getItem('PAGE_ID') == 7 ){
+            if(localStorage.getItem('pageSlug') == 'oneSwagelok' ){
                 nextPage = 30; // DANGER = must be revised if/when pageList is modified
             }
             var nextPageDetails = get_page_details(nextPage);
-            var previousPage = parseInt(sessionStorage.getItem('PAGE_ID')) - 1;
-            var previousPageDetails = get_page_details(previousPage);
+
 
             if (previousPageDetails.filename == 'capabilities/submenu') {
                 var html = '<a data-url="submenu.html" onclick="showPrevious(' + previousPage + ')">';
@@ -191,12 +197,20 @@
             get_video_details(videoList);
 
             var previousPage = parseInt(toPage) - 1;
+
+            if(localStorage.getItem('pageSlug') == 'businessModel' ){
+                previousPage = 7; // DANGER = must be revised if/when pageList is modified
+            }
+
             var previousPageDetails = get_page_details(previousPage);
 
 
             $('#video-spot').addClass(previousPageDetails.pageSlug+'-video-cell');
 
             var nextPage = parseInt(toPage) + 1;
+            if(localStorage.getItem('pageSlug') == 'oneSwagelok' ){
+                nextPage = 30; // DANGER = must be revised if/when pageList is modified
+            }
             $('#main-container').pagecontainer("change", "submenu.html", {transition: "flip"});
             if (previousPageDetails.filename == 'capabilities/submenu') {
                 var html = '<a data-url="product.html" onclick="showPrevious(' + previousPage + ')">';
@@ -228,7 +242,13 @@
             $('#video-spot').removeClass(videoClass);
 
             var previousPage = parseInt(toPage) - 1;
+            if(localStorage.getItem('pageSlug') == 'businessModel' ){
+                previousPage = 7; // DANGER = must be revised if/when pageList is modified
+            }
             var nextPage = parseInt(toPage) + 1;
+            if(localStorage.getItem('pageSlug') == 'oneSwagelok' ){
+                nextPage = 30; // DANGER = must be revised if/when pageList is modified
+            }
             var nextPageDetails = get_page_details(nextPage);
             $('#video-spot').addClass(nextPageDetails.pageSlug+'-video-cell');
             $('#main-container').pagecontainer("change", "submenu.html", {transition: "flip"});
