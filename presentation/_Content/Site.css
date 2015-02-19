@@ -26,9 +26,7 @@ body {
     height: 100%;
     padding-top    : 50px;
     padding-bottom : 20px;
-    /*font-family    : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Verdana, sans-serif;*/
     font-family: 'EurostileLTPro', 'Open Sans', sans-serif;
-    /*font-family    : 'Forza A', 'Forza B', Arial, Helvetica, sans-serif;*/
     font-weight    : 100;
     font-size      : 12pt;
 }
@@ -169,7 +167,7 @@ p, li, li ul li {
 }
 
 .bottom-menu-list {
-    padding-top: 1em !important;
+    padding-top: 0em !important;
 }
 
 .button {
@@ -462,7 +460,7 @@ footer p {
 }
 
 .markets-intro {
-    margin-top : 360px;
+    margin-top : 260px;
 }
 
 .menu-header {
@@ -487,8 +485,8 @@ footer p {
 
 #page-container {
     background : none;
-    min-height : 768px !important;
-    overflow-y: scroll;
+    min-height : 608px !important;
+    /*overflow-y: scroll;*/
     height: 100%;
     padding-top: 125px !important;
     background  : -webkit-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05)); /* For Safari 5.1 to 6.0 */
@@ -499,7 +497,7 @@ footer p {
 
 #page-container.fittings {
     background : none;
-      min-height : 768px !important;
+      min-height : 608px !important;
     overflow-y: scroll;
     height: 100%;
     padding-top: 125px !important;
@@ -522,7 +520,7 @@ footer p {
 }
 
 .products-intro {
-    margin-top : 180px;
+    margin-top : 140px;
 }
 
 .ribbon {
@@ -561,6 +559,9 @@ footer p {
 
 #page-headline {
     height : 31px;
+}
+
+.page-title {
 }
 
 .products-header {
