@@ -4,7 +4,7 @@ Front-end layout for dynamic Swagelok Distributor presentation
 ## Contents
 
 * _Content: All assets including CSS, fonts, images and videos for all presentations
-    ** Custom folders include presentation-specific settings files and assets.
+* ** Custom folders include presentation-specific settings files and assets.
 * _Scripts: All custom and third-party JS required for the presentations
 * capabilities, markets, products: Page templates for three main sections of site content
 * index.html: Homepage layout
